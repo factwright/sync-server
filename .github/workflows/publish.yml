@@ -1,0 +1,90 @@
+name: Publish
+
+# Puts each Factwright release's sync server here, ready to deploy. Every six hours, and when run
+# by hand from the Actions tab, it looks for a release of factwright/factwright that isn't here
+# yet. It builds that release's server from its public source with the copy script there
+# (apps/server/scripts/sync-server-copy.ts), then commits it, tagged with the version. It needs no
+# keys: it only reads factwright/factwright, and writes only here. In a copy of this repository,
+# such as one Cloudflare's Deploy button made, it does nothing.
+#
+# GitHub pauses a public repository's schedule after 60 days with no activity. Running this by
+# hand starts it again.
+on:
+  schedule:
+    - cron: '41 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+
+jobs:
+  publish:
+    name: Publish the newest release's sync server
+    if: github.repository == 'factwright/sync-server'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: published
+          fetch-depth: 0
+      # A release from before the server could be made ready to deploy has no copy script, so
+      # it's left for the next one.
+      - name: Find the newest release, if it isn't here yet
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh release view --repo factwright/factwright --json tagName --jq .tagName)
+          if ! [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::factwright/factwright's newest release is called \"$tag\", not like v1.2.3."
+            exit 1
+          fi
+          if git -C published rev-parse --quiet --verify "refs/tags/$tag" > /dev/null; then
+            echo "Factwright $tag's sync server is here already."
+          elif ! gh api --silent "repos/factwright/factwright/contents/apps/server/scripts/sync-server-copy.ts?ref=$tag" 2> /dev/null; then
+            echo "Factwright $tag came before its sync server could be made ready to deploy."
+          else
+            echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.release.outputs.tag
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: factwright/factwright
+          ref: ${{ steps.release.outputs.tag }}
+          path: source
+          persist-credentials: false
+      - if: steps.release.outputs.tag
+        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        with:
+          package_json_file: source/package.json
+      - if: steps.release.outputs.tag
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: source/.nvmrc
+          cache: pnpm
+          cache-dependency-path: source/pnpm-lock.yaml
+      - if: steps.release.outputs.tag
+        name: Make it, from that release's source
+        working-directory: source
+        run: |
+          pnpm install --frozen-lockfile --filter "@factwright/server..." --filter "@factwright/web..."
+          pnpm --filter @factwright/server copy
+      - if: steps.release.outputs.tag
+        name: Commit it, tagged with the version
+        working-directory: published
+        env:
+          TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          # This version's copy replaces the last one, apart from this workflow. The history keeps each.
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .github -exec rm -rf {} +
+          cp -R ../source/apps/server/dist/sync-server/. .
+          git add --all
+          git -c user.name='github-actions[bot]' \
+            -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit --quiet -m "Factwright $TAG's sync server" \
+            -m "Made from https://github.com/factwright/factwright/tree/$TAG/apps/server"
+          git tag "$TAG"
+          git push --quiet origin HEAD:main "refs/tags/$TAG"
