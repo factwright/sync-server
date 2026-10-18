@@ -1,0 +1,30 @@
+{
+  "name": "factwright-sync",
+  "version": "0.9.0",
+  "private": true,
+  "description": "Factwright’s sync server, ready to deploy to your own Cloudflare account.",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy",
+    "dev": "wrangler d1 migrations apply DB --local && wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "4.145.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "BETTER_AUTH_SECRET": {
+        "description": "Signs sign-ins. Any long random text, such as what `openssl rand -base64 32` prints."
+      },
+      "GITHUB_CLIENT_ID": {
+        "description": "Your GitHub OAuth app’s client ID, for signing in with GitHub."
+      },
+      "GITHUB_CLIENT_SECRET": {
+        "description": "Your GitHub OAuth app’s client secret."
+      },
+      "ALLOWED_GITHUB_USERS": {
+        "description": "Your GitHub user name, such as `octocat`: only the accounts named here can sign in. To let in someone else, add their user name after a comma. Left empty, anyone with GitHub can."
+      }
+    }
+  }
+}

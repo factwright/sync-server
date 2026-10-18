@@ -1,0 +1,6 @@
+# The secrets the server needs. The Deploy to Cloudflare button asks for each one.
+# To run it on your computer, copy this file to .dev.vars and fill them in.
+BETTER_AUTH_SECRET=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+ALLOWED_GITHUB_USERS=
