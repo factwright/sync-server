@@ -32498,7 +32498,7 @@ var init_dist3 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs
 var kysely_adapter_exports = {};
 __export(kysely_adapter_exports, {
   createKyselyAdapter: () => createKyselyAdapter,
@@ -32510,7 +32510,7 @@ __export(kysely_adapter_exports, {
   toPhysicalSchema: () => toPhysicalSchema
 });
 var init_kysely_adapter = __esm({
-  "../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs"() {
+  "../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs"() {
     init_dist3();
   }
 });
@@ -32708,7 +32708,7 @@ function readDesktopAsk(values) {
 }
 __name(readDesktopAsk, "readDesktopAsk");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/cookies/cookie-utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/cookie-utils.mjs
 function tryDecode(str) {
   if (str.indexOf("%") === -1) return str;
   try {
@@ -32835,10 +32835,10 @@ function setRequestCookie(headers, name, value) {
 }
 __name(setRequestCookie, "setRequestCookie");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/package.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/package.mjs
 var version = "1.7.7";
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/version.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/version.mjs
 var PACKAGE_VERSION = version;
 
 // ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/index.mjs
@@ -34487,7 +34487,7 @@ var createHMAC = /* @__PURE__ */ __name((algorithm2 = "SHA-256", encoding = "non
   return hmac3;
 }, "createHMAC");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/plugins/bearer/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/bearer/index.mjs
 var BEARER_SCHEME = "bearer ";
 function tryDecode3(str) {
   try {
@@ -34583,7 +34583,7 @@ var userSchema = coreSchema.extend({
   image: string2().nullish()
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/schema.mjs
 init_error2();
 
 // ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/db.mjs
@@ -34597,7 +34597,7 @@ function filterOutputFields(data, additionalFields) {
 }
 __name(filterOutputFields, "filterOutputFields");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/schema.mjs
 var cache = /* @__PURE__ */ new WeakMap();
 function getFields(options, modelName, mode) {
   const cacheKey = `${modelName}:${mode}`;
@@ -34746,7 +34746,7 @@ function mergeSchema(schema3, newSchema) {
 }
 __name(mergeSchema, "mergeSchema");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/time.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/time.mjs
 var SEC = 1e3;
 var MIN = SEC * 60;
 var HOUR = MIN * 60;
@@ -34821,7 +34821,7 @@ function sec(value) {
 }
 __name(sec, "sec");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/plugins/device-authorization/error-codes.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/error-codes.mjs
 init_error_codes();
 var DEVICE_AUTHORIZATION_ERROR_CODES = defineErrorCodes({
   INVALID_DEVICE_CODE: "Invalid device code",
@@ -34839,7 +34839,7 @@ var DEVICE_AUTHORIZATION_ERROR_CODES = defineErrorCodes({
   AUTHENTICATION_REQUIRED: "Authentication required"
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/plugins/device-authorization/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/schema.mjs
 init_zod();
 var schema = { deviceCode: {
   fields: {
@@ -34901,11 +34901,11 @@ object({
   scope: string2().optional()
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/crypto/random.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/random.mjs
 init_random();
 var generateRandomString = createRandomStringGenerator("a-z", "0-9", "A-Z", "-_");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/context/store-capabilities.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/store-capabilities.mjs
 function hasServerSessionStore(options) {
   return !!options.database || !!options.secondaryStorage;
 }
@@ -34919,7 +34919,7 @@ function shouldBindAccountCookieToSessionUser(options) {
 }
 __name(shouldBindAccountCookieToSessionUser, "shouldBindAccountCookieToSessionUser");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/date.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/date.mjs
 var getDate = /* @__PURE__ */ __name((span, unit = "ms") => {
   return new Date(Date.now() + (unit === "sec" ? span * 1e3 : span));
 }, "getDate");
@@ -37380,7 +37380,7 @@ function decodeJwt(jwt) {
 }
 __name(decodeJwt, "decodeJwt");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/crypto/jwt.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/jwt.mjs
 async function signJWT(payload, secret, expiresIn = 3600) {
   return await new SignJWT(payload).setProtectedHeader({ alg: "HS256" }).setIssuedAt().setExpirationTime(Math.floor(Date.now() / 1e3) + expiresIn).sign(new TextEncoder().encode(secret));
 }
@@ -37524,7 +37524,7 @@ async function symmetricDecodeJWT(token, secret, salt2) {
 }
 __name(symmetricDecodeJWT, "symmetricDecodeJWT");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/cookies/session-store.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/session-store.mjs
 init_json();
 init_zod();
 var MAX_COOKIE_SIZE = 4050;
@@ -37679,7 +37679,7 @@ var getSessionQuerySchema = optional(object({
   disableRefresh: coerce_exports.boolean().meta({ description: "Disable session refresh. Useful for checking session status, without updating the session" }).optional()
 }));
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/wildcard.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/wildcard.mjs
 function escapeRegExpChar(char) {
   if (char === "-" || char === "^" || char === "$" || char === "+" || char === "." || char === "(" || char === ")" || char === "|" || char === "[" || char === "]" || char === "{" || char === "}" || char === "*" || char === "?" || char === "\\") return `\\${char}`;
   else return char;
@@ -37764,7 +37764,7 @@ function wildcardMatch(pattern, options) {
 }
 __name(wildcardMatch, "wildcardMatch");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/url.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/url.mjs
 init_env();
 init_error2();
 var SLASH_CHAR_CODE = "/".charCodeAt(0);
@@ -37946,13 +37946,13 @@ function resolveBaseURL(config3, basePath, source, loadEnv, trustedProxyHeaders)
 }
 __name(resolveBaseURL, "resolveBaseURL");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/is-promise.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/is-promise.mjs
 function isPromise(obj) {
   return !!obj && (typeof obj === "object" || typeof obj === "function") && typeof obj.then === "function";
 }
 __name(isPromise, "isPromise");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/cookies/cache.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/cache.mjs
 init_env();
 init_json();
 init_zod();
@@ -37985,7 +37985,7 @@ function parseCompactCookieCache(value) {
 }
 __name(parseCompactCookieCache, "parseCompactCookieCache");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/cookies/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/index.mjs
 init_env();
 init_error2();
 init_json();
@@ -38004,7 +38004,7 @@ var binary = {
   encode: encoder3.encode
 };
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/cookies/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/index.mjs
 function createCookieGetter(options) {
   const baseURLString = typeof options.baseURL === "string" ? options.baseURL : void 0;
   const dynamicProtocol = typeof options.baseURL === "object" && options.baseURL !== null ? options.baseURL.protocol : void 0;
@@ -38377,10 +38377,10 @@ var queueAfterTransactionHook = /* @__PURE__ */ __name(async (hook, options) => 
   store.pendingHooks.push(executeHook);
 }, "queueAfterTransactionHook");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/state/should-session-refresh.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/state/should-session-refresh.mjs
 var { get: getShouldSkipSessionRefresh, set: setShouldSkipSessionRefresh } = defineRequestState(() => false);
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/session.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/session.mjs
 init_error2();
 init_zod();
 var getSession = /* @__PURE__ */ __name(() => createAuthEndpoint("/get-session", {
@@ -38790,7 +38790,7 @@ var revokeOtherSessions = createAuthEndpoint("/revoke-other-sessions", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/plugins/device-authorization/routes.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/routes.mjs
 init_error2();
 init_zod();
 var defaultCharset = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -39498,7 +39498,7 @@ var defaultGenerateUserCode = /* @__PURE__ */ __name((length) => {
   return Array.from(crypto.getRandomValues(chars)).map((byte) => defaultCharset[byte % 32]).join("");
 }, "defaultGenerateUserCode");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/plugins/device-authorization/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/index.mjs
 init_error2();
 init_zod();
 var timeStringSchema = custom((val) => {
@@ -39579,7 +39579,7 @@ var deviceAuthorization = /* @__PURE__ */ __name((options = {}) => {
   };
 }, "deviceAuthorization");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/auth/trusted-origins.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/auth/trusted-origins.mjs
 var CONTROL_CHARACTER_PATTERN = /[\u0000-\u001f\u007f-\u009f]/;
 var RELATIVE_URL_PARSER_ORIGIN = "https://better-auth.invalid";
 var ENCODED_PATH_SEPARATOR_PATTERN = /%2[fF]|%5[cC]/;
@@ -39649,7 +39649,7 @@ var matchesOriginPattern = /* @__PURE__ */ __name((url, pattern, settings) => {
   return parsed.path === parsedPattern.path || parsed.path.startsWith(`${parsedPattern.path}/`);
 }, "matchesOriginPattern");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
 init_error2();
 
 // ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/url.mjs
@@ -39694,7 +39694,7 @@ function deprecate(fn, message2, logger2) {
 }
 __name(deprecate, "deprecate");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
 function shouldSkipCSRFForBackwardCompat(ctx) {
   return ctx.context.skipOriginCheck === true && ctx.context.options.advanced?.disableCSRFCheck === void 0;
 }
@@ -39820,7 +39820,7 @@ async function validateFormCsrf(ctx) {
 }
 __name(validateFormCsrf, "validateFormCsrf");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/rate-limiter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/rate-limiter/index.mjs
 init_error2();
 
 // ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/ip.mjs
@@ -39999,7 +39999,7 @@ function createRateLimitKey(ip, path) {
 }
 __name(createRateLimitKey, "createRateLimitKey");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/rate-limiter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/rate-limiter/index.mjs
 var memory = /* @__PURE__ */ new Map();
 var MEMORY_STORE_MAX_ENTRIES = 1e5;
 function pruneMemoryStore() {
@@ -40313,11 +40313,11 @@ function getDefaultSpecialRules() {
 }
 __name(getDefaultSpecialRules, "getDefaultSpecialRules");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/state/oauth.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/state/oauth.mjs
 var { get: getRawOAuthState, set: setOAuthState } = defineRequestState(() => null);
 var { get: getOAuthServerContext, set: setOAuthServerContext } = defineRequestState(() => null);
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/validate-user-info.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/validate-user-info.mjs
 init_error2();
 function assertValidUserInfoSource(source) {
   if (!source?.method) throw new APIError2("FORBIDDEN", {
@@ -40382,7 +40382,7 @@ function createHash(algorithm2, encoding) {
 }
 __name(createHash, "createHash");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/verification-token-storage.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/verification-token-storage.mjs
 var defaultKeyHasher = /* @__PURE__ */ __name(async (identifier) => {
   const hash = await createHash("SHA-256").digest(new TextEncoder().encode(identifier));
   return base64Url.encode(new Uint8Array(hash), { padding: false });
@@ -40406,7 +40406,7 @@ function getStorageOption(identifier, config3) {
 }
 __name(getStorageOption, "getStorageOption");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/with-hooks.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/with-hooks.mjs
 init_pure_index();
 function getWithHooks(adapter, ctx) {
   const withSpan = createWithSpan(ctx.options);
@@ -40653,7 +40653,7 @@ function getWithHooks(adapter, ctx) {
 }
 __name(getWithHooks, "getWithHooks");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/internal-adapter.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/internal-adapter.mjs
 init_error2();
 init_id();
 init_json();
@@ -41588,7 +41588,7 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
   };
 }, "createInternalAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/context/helpers.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/helpers.mjs
 init_env();
 init_error2();
 
@@ -41827,7 +41827,7 @@ function isLoopbackHost(host) {
 }
 __name(isLoopbackHost, "isLoopbackHost");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/context/helpers.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/helpers.mjs
 async function runPluginInit(context) {
   let options = context.options;
   const plugins = options.plugins || [];
@@ -41967,7 +41967,7 @@ async function getTrustedProviders(options, request) {
 }
 __name(getTrustedProviders, "getTrustedProviders");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/oauth2/account-key.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/account-key.mjs
 init_error2();
 function toOAuthProfileRecord(profile) {
   return profile;
@@ -41997,7 +41997,7 @@ async function resolveOAuthAccountKeyForAPI(provider2, tokens, profile) {
 }
 __name(resolveOAuthAccountKeyForAPI, "resolveOAuthAccountKeyForAPI");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/oauth2/errors.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/errors.mjs
 var OAUTH_CALLBACK_ERROR_CODES = {
   NO_CODE: "no_code",
   PROVIDER_NOT_FOUND: "oauth_provider_not_found",
@@ -42072,7 +42072,7 @@ async function verifyPassword(hash, password) {
 }
 __name(verifyPassword, "verifyPassword");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/crypto/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/password.mjs
 var hashPassword$1 = hashPassword;
 var verifyPassword$1 = /* @__PURE__ */ __name(async ({ hash, password }) => {
   return verifyPassword(hash, password);
@@ -42958,7 +42958,7 @@ var xchacha20poly1305 = /* @__PURE__ */ wrapCipher(
   /* @__PURE__ */ _poly1305_aead(xchacha20)
 );
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/crypto/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/index.mjs
 var ENVELOPE_PREFIX = "$ba$";
 function parseEnvelope(data) {
   if (!data.startsWith(ENVELOPE_PREFIX)) return null;
@@ -43009,7 +43009,7 @@ var symmetricDecrypt = /* @__PURE__ */ __name(async ({ key, data }) => {
   throw new Error("Cannot decrypt legacy bare-hex payload: no legacy secret available. Set BETTER_AUTH_SECRET for backwards compatibility.");
 }, "symmetricDecrypt");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/oauth2/utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/utils.mjs
 function isLikelyEncrypted(token) {
   if (token.startsWith("$ba$")) return true;
   return token.length % 2 === 0 && /^[0-9a-f]+$/i.test(token);
@@ -43041,7 +43041,7 @@ function getOAuthCallbackPath(provider2) {
 }
 __name(getOAuthCallbackPath, "getOAuthCallbackPath");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/request.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/request.mjs
 function safeCloneRequest(request) {
   if (!request) return;
   try {
@@ -43064,7 +43064,7 @@ function safeCloneRequest(request) {
 }
 __name(safeCloneRequest, "safeCloneRequest");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/email-verification.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/email-verification.mjs
 init_error2();
 init_zod();
 async function createEmailVerificationToken(secret, email3, updateTo, expiresIn = 3600, extraPayload) {
@@ -43371,7 +43371,7 @@ var verifyEmail = createAuthEndpoint("/verify-email", {
   });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/oauth2/link-account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/link-account.mjs
 init_env();
 init_error2();
 
@@ -44313,7 +44313,7 @@ async function verifyProviderIdToken(provider2, token, nonce, ctx) {
 }
 __name(verifyProviderIdToken, "verifyProviderIdToken");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/oauth2/link-account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/link-account.mjs
 function linkOAuthAccountFailure(code, message2) {
   return {
     linked: false,
@@ -44678,7 +44678,7 @@ async function applyUpdateUserInfoOnLink(c, userId, userInfo) {
 }
 __name(applyUpdateUserInfoOnLink, "applyUpdateUserInfoOnLink");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/crypto/purpose.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/purpose.mjs
 var salt = utf8ToBytes("better-auth:oauth-encryption:v1");
 function deriveSecret(secret, purpose) {
   return bytesToHex(hkdf(sha256, utf8ToBytes(secret), salt, utf8ToBytes(`better-auth:${purpose}:v1`), 32));
@@ -44694,7 +44694,7 @@ function derivePurposeKey(secret, purpose) {
 }
 __name(derivePurposeKey, "derivePurposeKey");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/state.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/state.mjs
 init_error2();
 init_zod();
 var stateDataSchema = looseObject({
@@ -44845,7 +44845,7 @@ async function parseGenericState(c, state, settings) {
 }
 __name(parseGenericState, "parseGenericState");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/oauth2/state.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/state.mjs
 init_error2();
 function generateIdTokenNonce(provider2) {
   return provider2.requiresIdTokenNonce ? generateRandomString(32) : void 0;
@@ -44903,7 +44903,7 @@ async function parseState(c) {
 }
 __name(parseState, "parseState");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/account.mjs
 init_error2();
 
 // ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/apple.mjs
@@ -47854,7 +47854,7 @@ var socialProviders = {
 var socialProviderList = Object.keys(socialProviders);
 var SocialProviderListEnum = _enum(socialProviderList).or(string2());
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/account.mjs
 init_zod();
 function parseStoredScopes(scope) {
   if (!scope) return [];
@@ -48429,10 +48429,10 @@ var accountInfo = createAuthEndpoint("/account-info", {
   });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/hide-metadata.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/hide-metadata.mjs
 var HIDE_METADATA = { scope: "server" };
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/callback.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/callback.mjs
 init_json();
 init_zod();
 var schema2 = object({
@@ -48634,7 +48634,7 @@ var callbackOAuth = createAuthEndpoint("/callback/:id", {
   throw c.redirect(toRedirectTo);
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/error.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/error.mjs
 init_env();
 function sanitize(input) {
   return input.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/&(?!amp;|lt;|gt;|quot;|#39;|#x[0-9a-fA-F]+;|#[0-9]+;)/g, "&amp;");
@@ -49018,7 +49018,7 @@ var error2 = createAuthEndpoint("/error", {
   return new Response(html(c.context.options, safeCode, safeDescription), { headers: { "Content-Type": "text/html" } });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/ok.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/ok.mjs
 var ok = createAuthEndpoint("/ok", {
   method: "GET",
   metadata: {
@@ -49042,7 +49042,7 @@ var ok = createAuthEndpoint("/ok", {
   return ctx.json({ ok: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/password.mjs
 init_error2();
 function assertPasswordNotTooShort(ctx, password) {
   if (password.length < ctx.context.password.config.minPasswordLength) {
@@ -49086,7 +49086,7 @@ async function checkPassword(userId, c) {
 }
 __name(checkPassword, "checkPassword");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/password.mjs
 init_error2();
 init_id();
 init_zod();
@@ -49283,7 +49283,7 @@ var verifyPassword2 = createAuthEndpoint("/verify-password", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/sign-in.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/sign-in.mjs
 init_error2();
 init_zod();
 var socialSignInBodySchema = object({
@@ -49637,7 +49637,7 @@ var signInEmail = /* @__PURE__ */ __name(() => createAuthEndpoint("/sign-in/emai
   });
 }), "signInEmail");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/sign-out.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/sign-out.mjs
 init_zod();
 var signOutBodySchema = object({
   callbackURL: string2().meta({ description: "The URL to redirect to after provider logout" }).optional(),
@@ -49730,7 +49730,7 @@ var signOut = createAuthEndpoint("/sign-out", {
   return ctx.json(signOutResponse());
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/sign-up.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/sign-up.mjs
 init_env();
 init_error2();
 init_id();
@@ -49976,7 +49976,7 @@ var signUpEmail = /* @__PURE__ */ __name(() => createAuthEndpoint("/sign-up/emai
   });
 }), "signUpEmail");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/update-session.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/update-session.mjs
 init_error2();
 init_zod();
 var updateSessionBodySchema = record(string2().meta({ description: "Field name must be a string" }), any());
@@ -50028,7 +50028,7 @@ var updateSession = /* @__PURE__ */ __name(() => createAuthEndpoint("/update-ses
   return ctx.json({ session: parseSessionOutput(ctx.context.options, newSession) });
 }), "updateSession");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/routes/update-user.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/update-user.mjs
 init_error2();
 init_zod();
 var updateUserBodySchema = record(string2().meta({ description: "Field name must be a string" }), any());
@@ -50514,7 +50514,7 @@ var changeEmail = createAuthEndpoint("/change-email", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/dispatch.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/dispatch.mjs
 init_env();
 init_error2();
 init_pure_index();
@@ -50755,7 +50755,7 @@ async function dispatchAuthEndpoint(endpoint, input) {
 }
 __name(dispatchAuthEndpoint, "dispatchAuthEndpoint");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/to-auth-endpoints.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/to-auth-endpoints.mjs
 init_error2();
 async function resolveDynamicContext(rawCtx, input) {
   if (rawCtx.baseURL) return rawCtx;
@@ -50798,7 +50798,7 @@ function toAuthEndpoints(endpoints, ctx) {
 }
 __name(toAuthEndpoints, "toAuthEndpoints");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/api/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/index.mjs
 init_env();
 init_error2();
 init_pure_index();
@@ -53046,7 +53046,7 @@ async function handleApi(request, env2, auth) {
 }
 __name(handleApi, "handleApi");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/adapter-base.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/adapter-base.mjs
 init_env();
 async function getBaseAdapter(options, handleDirectDatabase) {
   let adapter;
@@ -53070,7 +53070,7 @@ async function getBaseAdapter(options, handleDirectDatabase) {
 }
 __name(getBaseAdapter, "getBaseAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/adapter-kysely.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/adapter-kysely.mjs
 init_error2();
 async function getAdapter(options) {
   return getBaseAdapter(options, async (opts) => {
@@ -53086,7 +53086,7 @@ async function getAdapter(options) {
 }
 __name(getAdapter, "getAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/get-schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/get-schema.mjs
 init_internal();
 function getSchema(config3) {
   const { indexesByTable, tables } = getAuthTablesWithResolvedIndexes(config3);
@@ -53125,7 +53125,7 @@ function getSchema(config3) {
 }
 __name(getSchema, "getSchema");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/db/get-migration.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/get-migration.mjs
 init_env();
 init_error2();
 init_dist3();
@@ -53806,10 +53806,10 @@ async function getMigrations(config3, { throwOnUnsafe = true } = {}) {
 }
 __name(getMigrations, "getMigrations");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/utils/constants.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/constants.mjs
 var DEFAULT_SECRET = "better-auth-secret-12345678901234567890";
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/context/secret-utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/secret-utils.mjs
 init_error2();
 function estimateEntropy(str) {
   const unique = new Set(str).size;
@@ -53860,7 +53860,7 @@ function buildSecretConfig(secrets, legacySecret) {
 }
 __name(buildSecretConfig, "buildSecretConfig");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/context/create-context.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/create-context.mjs
 init_env();
 init_error2();
 init_id();
@@ -54251,7 +54251,7 @@ async function createTelemetry(options, context) {
 }
 __name(createTelemetry, "createTelemetry");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/context/create-context.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/create-context.mjs
 function estimateEntropy2(str) {
   const unique = new Set(str).size;
   if (unique === 0) return 0;
@@ -54458,7 +54458,7 @@ Most of the features of Better Auth will not work correctly.`);
 }
 __name(createAuthContext, "createAuthContext");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/context/init.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/init.mjs
 init_error2();
 init_dist3();
 var init = /* @__PURE__ */ __name(async (options) => {
@@ -54473,7 +54473,7 @@ var init = /* @__PURE__ */ __name(async (options) => {
   return ctx;
 }, "init");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/auth/base.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/auth/base.mjs
 init_error2();
 init_internal();
 var createBetterAuth = /* @__PURE__ */ __name((options, initFn) => {
@@ -54534,12 +54534,12 @@ var createBetterAuth = /* @__PURE__ */ __name((options, initFn) => {
   };
 }, "createBetterAuth");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/auth/full.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/auth/full.mjs
 var betterAuth = /* @__PURE__ */ __name((options) => {
   return createBetterAuth(options, init);
 }, "betterAuth");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.3_@types+node@_2696c1e03ffc4d84d5d553144f06e213/node_modules/better-auth/dist/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/index.mjs
 init_env();
 init_error2();
 init_error_codes();
