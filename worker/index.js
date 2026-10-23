@@ -51125,7 +51125,7 @@ __name(extensionRedirects, "extensionRedirects");
 var extension = /* @__PURE__ */ __name((redirects) => ({
   id: CLIENTS.extension,
   kind: "extension",
-  name: "Save to Factwright",
+  name: "the Factwright extension",
   readAsk,
   returnsTo: /* @__PURE__ */ __name(async (redirect) => (await redirects()).includes(redirect), "returnsTo"),
   answerAt: /* @__PURE__ */ __name((redirect, answer) => `${redirect}#${answer}`, "answerAt")
@@ -51144,7 +51144,8 @@ __name(extensionSignIn, "extensionSignIn");
 
 // src/auth-options.ts
 var DEVICE_CLIENTS = new Set(Object.values(CLIENTS));
-var EXTENSION_NAME = "Save to Factwright in";
+var EXTENSION_NAME = "Factwright in";
+var OLD_EXTENSION_NAME = "Save to Factwright in";
 var DAY_SECONDS = 24 * 60 * 60;
 var PROVIDER_TOKENS = {
   accessToken: null,
@@ -51318,10 +51319,14 @@ function decoded(text) {
   }
 }
 __name(decoded, "decoded");
-var DEVICE_NAME = /^(Factwright on .{1,100}|(Save to Factwright in )?(Edge|Firefox|Chrome|Safari|A browser)( on (iPhone|iPad|Android|Mac|Windows|Linux))?)$/;
+var DEVICE_NAME = /^(Factwright on .{1,100}|(Factwright in )?(Edge|Firefox|Chrome|Safari|A browser)( on (iPhone|iPad|Android|Mac|Windows|Linux))?)$/;
 function deviceName(userAgent) {
   const agent = userAgent ?? "";
   if (DEVICE_NAME.test(agent)) return agent;
+  if (agent.startsWith(`${OLD_EXTENSION_NAME} `)) {
+    const renamed = `${EXTENSION_NAME} ${agent.slice(OLD_EXTENSION_NAME.length + 1)}`;
+    if (DEVICE_NAME.test(renamed)) return renamed;
+  }
   const app = /^Factwright\/\S+ \((.{1,300})\)$/.exec(agent);
   if (app?.[1]) return `Factwright on ${decoded(app[1]).slice(0, 100)}`;
   const browser = /Edg\//.test(agent) ? "Edge" : /Firefox\/|FxiOS\//.test(agent) ? "Firefox" : /Chrome\/|CriOS\//.test(agent) ? "Chrome" : /Safari\//.test(agent) ? "Safari" : "A browser";
