@@ -2,7 +2,7 @@
 
 Factwright’s sync server, built and ready to run in your own Cloudflare account, for free. Factwright, its browser extension and the web view on your phone can all sync through it, end-to-end encrypted: the server only ever holds locked data.
 
-This is the server from Factwright 0.15.0, made from [apps/server at dfe809c](https://github.com/factwright/factwright/tree/dfe809c782cbe3cac2faa19a5f50e3cac9555786/apps/server) with nothing changed. Its source is there, under the AGPL.
+This is the server from Factwright 0.16.0, made from [apps/server at be9e6b2](https://github.com/factwright/factwright/tree/be9e6b210084deeb0e664731d4f3fc7b09c10493/apps/server) with nothing changed. Its source is there, under the AGPL.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/factwright/sync-server)
 
