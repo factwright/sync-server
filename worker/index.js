@@ -41,7 +41,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/error.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/error.mjs
 function isErrorStackTraceLimitWritable() {
   const desc = Object.getOwnPropertyDescriptor(Error, "stackTraceLimit");
   if (desc === void 0) return Object.isExtensible(Error);
@@ -84,7 +84,7 @@ function makeErrorForHideStackFrame(Base, clazz) {
 }
 var statusCodes, InternalAPIError, ValidationError, BetterCallError, kAPIErrorHeaderSymbol, APIError;
 var init_error = __esm({
-  "../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/error.mjs"() {
+  "../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/error.mjs"() {
     __name(isErrorStackTraceLimitWritable, "isErrorStackTraceLimitWritable");
     __name(hideInternalStackFrames, "hideInternalStackFrames");
     __name(makeErrorForHideStackFrame, "makeErrorForHideStackFrame");
@@ -7095,7 +7095,7 @@ var init_zod = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/context/global.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/global.mjs
 function __getBetterAuthGlobal() {
   if (!globalThis[symbol]) {
     globalThis[symbol] = {
@@ -7120,18 +7120,18 @@ function getBetterAuthVersion() {
 }
 var symbol, bind, __context, __betterAuthVersion;
 var init_global = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/context/global.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/global.mjs"() {
     symbol = /* @__PURE__ */ Symbol.for("better-auth:global");
     bind = null;
     __context = {};
-    __betterAuthVersion = "1.7.7";
+    __betterAuthVersion = "1.7.10";
     __name(__getBetterAuthGlobal, "__getBetterAuthGlobal");
     __name(__getCurrentEndpointContext, "__getCurrentEndpointContext");
     __name(getBetterAuthVersion, "getBetterAuthVersion");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/error-codes.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/error-codes.mjs
 function defineErrorCodes(codes) {
   return Object.fromEntries(Object.entries(codes).map(([key, value]) => [key, {
     code: key,
@@ -7140,15 +7140,15 @@ function defineErrorCodes(codes) {
   }]));
 }
 var init_error_codes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/error-codes.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/error-codes.mjs"() {
     __name(defineErrorCodes, "defineErrorCodes");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/error/codes.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/codes.mjs
 var BASE_ERROR_CODES;
 var init_codes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/error/codes.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/codes.mjs"() {
     init_error_codes();
     BASE_ERROR_CODES = defineErrorCodes({
       USER_NOT_FOUND: "User not found",
@@ -7204,10 +7204,10 @@ var init_codes = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/error/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/index.mjs
 var BetterAuthError, APIError2;
 var init_error2 = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/error/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/index.mjs"() {
     init_codes();
     init_error();
     BetterAuthError = class extends Error {
@@ -7241,7 +7241,293 @@ var init_error2 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/database-index.mjs
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/bytes.mjs
+function toBufferSource(data) {
+  if (typeof data === "string") return new TextEncoder().encode(data);
+  if (!ArrayBuffer.isView(data)) return data;
+  if (data.buffer instanceof ArrayBuffer) return data;
+  return new Uint8Array(data.buffer, data.byteOffset, data.byteLength).slice();
+}
+function toUint8Array(data) {
+  if (typeof data === "string") return new TextEncoder().encode(data);
+  return new Uint8Array(data);
+}
+var init_bytes = __esm({
+  "../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/bytes.mjs"() {
+    __name(toBufferSource, "toBufferSource");
+    __name(toUint8Array, "toUint8Array");
+  }
+});
+
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/base64.mjs
+function getAlphabet(urlSafe) {
+  return urlSafe ? "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_" : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+}
+function base64Encode(data, alphabet, padding) {
+  let result = "";
+  let buffer = 0;
+  let shift = 0;
+  for (const byte of data) {
+    buffer = buffer << 8 | byte;
+    shift += 8;
+    while (shift >= 6) {
+      shift -= 6;
+      result += alphabet[buffer >> shift & 63];
+    }
+  }
+  if (shift > 0) result += alphabet[buffer << 6 - shift & 63];
+  if (padding) {
+    const padCount = (4 - result.length % 4) % 4;
+    result += "=".repeat(padCount);
+  }
+  return result;
+}
+function base64Decode(data, alphabet) {
+  const decodeMap = /* @__PURE__ */ new Map();
+  for (let i = 0; i < alphabet.length; i++) decodeMap.set(alphabet[i], i);
+  const result = [];
+  let buffer = 0;
+  let bitsCollected = 0;
+  for (const char of data) {
+    if (char === "=") break;
+    const value = decodeMap.get(char);
+    if (value === void 0) throw new Error(`Invalid Base64 character: ${char}`);
+    buffer = buffer << 6 | value;
+    bitsCollected += 6;
+    if (bitsCollected >= 8) {
+      bitsCollected -= 8;
+      result.push(buffer >> bitsCollected & 255);
+    }
+  }
+  return Uint8Array.from(result);
+}
+var base642, base64Url;
+var init_base64 = __esm({
+  "../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/base64.mjs"() {
+    init_bytes();
+    __name(getAlphabet, "getAlphabet");
+    __name(base64Encode, "base64Encode");
+    __name(base64Decode, "base64Decode");
+    base642 = {
+      encode(data, options = {}) {
+        const alphabet = getAlphabet(false);
+        return base64Encode(toUint8Array(data), alphabet, options.padding ?? true);
+      },
+      decode(data) {
+        if (typeof data !== "string") data = new TextDecoder().decode(data);
+        const alphabet = getAlphabet(data.includes("-") || data.includes("_"));
+        return base64Decode(data, alphabet);
+      }
+    };
+    base64Url = {
+      encode(data, options = {}) {
+        const alphabet = getAlphabet(true);
+        return base64Encode(toUint8Array(data), alphabet, options.padding ?? true);
+      },
+      decode(data) {
+        return base64Decode(data, getAlphabet(data.includes("-") || data.includes("_")));
+      }
+    };
+  }
+});
+
+// ../../node_modules/.pnpm/@noble+hashes@2.4.0/node_modules/@noble/hashes/utils.js
+function isBytes(a) {
+  return a instanceof Uint8Array || ArrayBuffer.isView(a) && a.constructor.name === "Uint8Array" && "BYTES_PER_ELEMENT" in a && a.BYTES_PER_ELEMENT === 1;
+}
+function anumber(n, title = "") {
+  if (typeof n !== "number")
+    throw new TypeError(atitle(title) + "expected number, got " + typeof n);
+  if (!Number.isSafeInteger(n) || n < 0)
+    throw new RangeError(atitle(title) + "expected integer >= 0, got " + n);
+  return n;
+}
+function abytes(value, length, title = "") {
+  if (isBytes(value) && (length === void 0 || value.length === length))
+    return value;
+  if (length !== void 0)
+    anumber(length, "length");
+  const bytes = isBytes(value);
+  const ofLen = length !== void 0 ? ` of length ${length}` : "";
+  const got = bytes ? `length=${value.length}` : `type=${typeof value}`;
+  const message2 = atitle(title) + "expected Uint8Array" + ofLen + ", got " + got;
+  if (!bytes)
+    throw new TypeError(message2);
+  throw new RangeError(message2);
+}
+function ahash(h) {
+  if (typeof h !== "function" || typeof h.create !== "function")
+    throw new TypeError("expected hash wrapped by utils.createHasher");
+  anumber(h.outputLen);
+  anumber(h.blockLen);
+  if (h.outputLen < 1 || h.blockLen < 1)
+    throw new Error("hash blockLen / outputLen must be >= 1");
+}
+function aexists(instance, checkFinished = true) {
+  if (instance.destroyed)
+    throw new Error("hash was destroyed");
+  if (checkFinished && instance.finished)
+    throw new Error("digest() was already called");
+}
+function aoutput(out, instance) {
+  abytes(out, void 0, "output");
+  const min = instance.outputLen;
+  if (!(out.length >= min)) {
+    throw new RangeError('"output" expected length >= ' + min);
+  }
+}
+function clean(...arrays) {
+  for (let i = 0; i < arrays.length; i++) {
+    arrays[i].fill(0);
+  }
+}
+function createView(arr) {
+  return new DataView(arr.buffer, arr.byteOffset, arr.byteLength);
+}
+function rotr(word, shift) {
+  return word << 32 - shift | word >>> shift;
+}
+function bytesToHex(bytes) {
+  abytes(bytes);
+  if (hasHexBuiltin)
+    return bytes.toHex();
+  let hex2 = "";
+  for (let i = 0; i < bytes.length; i++) {
+    hex2 += hexes[bytes[i]];
+  }
+  return hex2;
+}
+function asciiToBase16(ch) {
+  return ch >= 48 && ch <= 57 ? ch - 48 : ch >= 65 && ch <= 70 ? ch - (65 - 10) : ch >= 97 && ch <= 102 ? ch - (97 - 10) : void 0;
+}
+function hexToBytes(hex2) {
+  if (typeof hex2 !== "string")
+    throw new TypeError("hex string expected, got " + typeof hex2);
+  if (hasHexBuiltin) {
+    try {
+      return Uint8Array.fromHex(hex2);
+    } catch (error3) {
+      if (error3 instanceof SyntaxError)
+        throw new RangeError(error3.message);
+      throw error3;
+    }
+  }
+  const hl = hex2.length;
+  const al = hl / 2;
+  if (hl % 2)
+    throw new RangeError("hex string expected, got unpadded hex of length " + hl);
+  const array2 = new Uint8Array(al);
+  for (let ai = 0, hi = 0; ai < al; ai++, hi += 2) {
+    const n1 = asciiToBase16(hex2.charCodeAt(hi));
+    const n2 = asciiToBase16(hex2.charCodeAt(hi + 1));
+    if (n1 === void 0 || n2 === void 0) {
+      const char = hex2[hi] + hex2[hi + 1];
+      throw new RangeError('hex string expected, got non-hex character "' + char + '" at index ' + hi);
+    }
+    array2[ai] = n1 * 16 + n2;
+  }
+  return array2;
+}
+function utf8ToBytes(str) {
+  if (typeof str !== "string")
+    throw new TypeError("string expected");
+  const encoded = new TextEncoder().encode(str);
+  try {
+    return new Uint8Array(encoded);
+  } finally {
+    clean(encoded);
+  }
+}
+function checkOpts(defaults, opts, title = "opts") {
+  aopts(defaults, "defaults");
+  if (opts !== void 0)
+    aopts(opts, title);
+  const merged = Object.assign(/* @__PURE__ */ Object.create(null), defaults, opts);
+  return merged;
+}
+function createHasher(hashCons, info2 = {}) {
+  if (typeof hashCons !== "function")
+    throw new TypeError('"hashCons" expected function, got type=' + typeof hashCons);
+  info2 = checkOpts({}, info2, "info");
+  const hashC = /* @__PURE__ */ __name((msg, opts) => hashCons(opts).update(msg).digest(), "hashC");
+  const tmp = hashCons(void 0);
+  hashC.outputLen = tmp.outputLen;
+  hashC.blockLen = tmp.blockLen;
+  hashC.canXOF = tmp.canXOF;
+  hashC.create = (opts) => hashCons(opts);
+  Object.assign(hashC, info2);
+  return Object.freeze(hashC);
+}
+var atitle, aobject, aopts, hasHexBuiltin, hexes, oidNist;
+var init_utils = __esm({
+  "../../node_modules/.pnpm/@noble+hashes@2.4.0/node_modules/@noble/hashes/utils.js"() {
+    __name(isBytes, "isBytes");
+    atitle = /* @__PURE__ */ __name((title) => title ? `"${title}" ` : "", "atitle");
+    __name(anumber, "anumber");
+    __name(abytes, "abytes");
+    __name(ahash, "ahash");
+    aobject = /* @__PURE__ */ __name((value, label) => {
+      if (value === null || typeof value !== "object" || Array.isArray(value))
+        throw new TypeError((label === "object" ? "" : `"${label}" `) + "expected object, got type=" + typeof value);
+    }, "aobject");
+    aopts = /* @__PURE__ */ __name((value, label) => {
+      aobject(value, label);
+      const proto = Object.getPrototypeOf(value);
+      if (proto !== Object.prototype && proto !== null)
+        throw new TypeError(`"${label}" expected plain object`);
+      if (Object.hasOwn(value, "__proto__"))
+        throw new TypeError(`"${label}.__proto__" is not allowed`);
+    }, "aopts");
+    __name(aexists, "aexists");
+    __name(aoutput, "aoutput");
+    __name(clean, "clean");
+    __name(createView, "createView");
+    __name(rotr, "rotr");
+    hasHexBuiltin = /* @__PURE__ */ (() => (
+      // @ts-ignore
+      typeof Uint8Array.from([]).toHex === "function" && typeof Uint8Array.fromHex === "function"
+    ))();
+    hexes = /* @__PURE__ */ Array.from({ length: 256 }, (_, i) => i.toString(16).padStart(2, "0"));
+    __name(bytesToHex, "bytesToHex");
+    __name(asciiToBase16, "asciiToBase16");
+    __name(hexToBytes, "hexToBytes");
+    __name(utf8ToBytes, "utf8ToBytes");
+    __name(checkOpts, "checkOpts");
+    __name(createHasher, "createHasher");
+    oidNist = /* @__PURE__ */ __name((suffix) => ({
+      // Current NIST hashAlgs suffixes used here fit in one DER subidentifier octet.
+      // Larger suffix values would need base-128 OID encoding and a different length byte.
+      oid: Uint8Array.from([6, 9, 96, 134, 72, 1, 101, 3, 4, 2, suffix])
+    }), "oidNist");
+  }
+});
+
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/hex.mjs
+var toBytes, hex;
+var init_hex = __esm({
+  "../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/hex.mjs"() {
+    init_bytes();
+    init_utils();
+    toBytes = /* @__PURE__ */ __name((data) => hexToBytes(data), "toBytes");
+    hex = {
+      encode: /* @__PURE__ */ __name((data) => {
+        const buffer = toUint8Array(data);
+        if (buffer.byteLength === 0) return "";
+        let result = "";
+        for (const byte of buffer) result += byte.toString(16).padStart(2, "0");
+        return result;
+      }, "encode"),
+      decode: /* @__PURE__ */ __name((data) => {
+        if (!data) return "";
+        if (typeof data === "string") return new TextDecoder().decode(toBytes(data));
+        return new TextDecoder().decode(data);
+      }, "decode"),
+      toBytes
+    };
+  }
+});
+
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/database-index.mjs
 function getPortableDatabaseIdentifierKey(identifier) {
   return identifier.toLowerCase();
 }
@@ -7393,7 +7679,7 @@ function resolveDatabaseSchemaIndexes(sources) {
 }
 var MAX_DATABASE_INDEX_NAME_BYTES, MAX_DATABASE_INDEX_FIELDS;
 var init_database_index = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/database-index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/database-index.mjs"() {
     init_error2();
     MAX_DATABASE_INDEX_NAME_BYTES = 63;
     MAX_DATABASE_INDEX_FIELDS = 16;
@@ -7409,7 +7695,7 @@ var init_database_index = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/get-tables.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/get-tables.mjs
 function mergeTableIndexes(...indexCollections) {
   const indexes = [];
   const seenIndexDefinitions = /* @__PURE__ */ new Set();
@@ -7438,7 +7724,7 @@ function getAuthTablesWithResolvedIndexes(options) {
 }
 var buildAuthTables, getAuthTables;
 var init_get_tables = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/get-tables.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/get-tables.mjs"() {
     init_database_index();
     __name(mergeTableIndexes, "mergeTableIndexes");
     buildAuthTables = /* @__PURE__ */ __name((options) => {
@@ -7714,7 +8000,7 @@ var init_get_tables = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/random.mjs
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/random.mjs
 function expandAlphabet(alphabet) {
   switch (alphabet) {
     case "a-z":
@@ -7731,16 +8017,10 @@ function expandAlphabet(alphabet) {
 }
 function createRandomStringGenerator(...baseAlphabets) {
   const baseCharSet = baseAlphabets.map(expandAlphabet).join("");
-  if (baseCharSet.length === 0) {
-    throw new Error(
-      "No valid characters provided for random string generation."
-    );
-  }
+  if (baseCharSet.length === 0) throw new Error("No valid characters provided for random string generation.");
   const baseCharSetLength = baseCharSet.length;
   return (length, ...alphabets) => {
-    if (length <= 0) {
-      throw new Error("Length must be a positive integer.");
-    }
+    if (length <= 0) throw new Error("Length must be a positive integer.");
     let charSet = baseCharSet;
     let charSetLength = baseCharSetLength;
     if (alphabets.length > 0) {
@@ -7759,21 +8039,19 @@ function createRandomStringGenerator(...baseAlphabets) {
         bufIndex = 0;
       }
       rand = buf[bufIndex++];
-      if (rand < maxValid) {
-        result += charSet[rand % charSetLength];
-      }
+      if (rand < maxValid) result += charSet[rand % charSetLength];
     }
     return result;
   };
 }
 var init_random = __esm({
-  "../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/random.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/random.mjs"() {
     __name(expandAlphabet, "expandAlphabet");
     __name(createRandomStringGenerator, "createRandomStringGenerator");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/env-impl.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/env-impl.mjs
 function toBoolean(val) {
   return val ? val !== "false" : false;
 }
@@ -7790,7 +8068,7 @@ function getBooleanEnvVar(key, fallback = true) {
 }
 var _envShim, _getEnv, env, nodeENV, isProduction, isDevelopment, isTest, ENV;
 var init_env_impl = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/env-impl.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/env-impl.mjs"() {
     _envShim = /* @__PURE__ */ Object.create(null);
     _getEnv = /* @__PURE__ */ __name((useShim) => globalThis.process?.env || globalThis.Deno?.env.toObject() || globalThis.__env__ || (useShim ? _envShim : globalThis), "_getEnv");
     env = new Proxy(_envShim, {
@@ -7849,7 +8127,7 @@ var init_env_impl = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/color-depth.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/color-depth.mjs
 function getColorDepth() {
   if (getEnvVar("FORCE_COLOR") !== void 0) switch (getEnvVar("FORCE_COLOR")) {
     case "":
@@ -7895,7 +8173,7 @@ function getColorDepth() {
 }
 var COLORS_2, COLORS_16, COLORS_256, COLORS_16m, TERM_ENVS, CI_ENVS_MAP, TERM_ENVS_REG_EXP;
 var init_color_depth = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/color-depth.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/color-depth.mjs"() {
     init_env_impl();
     COLORS_2 = 1;
     COLORS_16 = 4;
@@ -7946,13 +8224,13 @@ var init_color_depth = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/logger.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/logger.mjs
 function shouldPublishLog(currentLogLevel, logLevel) {
   return levels.indexOf(logLevel) >= levels.indexOf(currentLogLevel);
 }
 var TTY_COLORS, levels, levelColors, formatMessage, createLogger, defaultLogger, getCurrentLogger, logger;
 var init_logger = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/logger.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/logger.mjs"() {
     init_global();
     init_color_depth();
     TTY_COLORS = {
@@ -8045,7 +8323,7 @@ var init_logger = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/json.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/json.mjs
 function reviveDate(value) {
   if (typeof value === "string" && iso8601Regex.test(value)) {
     const date4 = new Date(value);
@@ -8079,7 +8357,7 @@ function safeJSONParse(data) {
 }
 var iso8601Regex;
 var init_json = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/json.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/json.mjs"() {
     init_logger();
     iso8601Regex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/;
     __name(reviveDate, "reviveDate");
@@ -8088,15 +8366,15 @@ var init_json = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/index.mjs
 var init_env = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/env/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/index.mjs"() {
     init_env_impl();
     init_logger();
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/schema-diff.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-diff.mjs
 function getExpectedSchema(options, { usePlural = false } = {}) {
   const expected = {};
   for (const table2 of Object.values(getAuthTables(options))) {
@@ -8189,7 +8467,7 @@ function formatSchemaMismatch(findings, source) {
 }
 var applyHint, relaxHint, sourceLabel, repairHint, migrationHint, SchemaMismatchError;
 var init_schema_diff = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/schema-diff.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-diff.mjs"() {
     init_error2();
     init_get_tables();
     __name(getExpectedSchema, "getExpectedSchema");
@@ -8234,7 +8512,7 @@ var init_schema_diff = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/schema-check.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-check.mjs
 function checksSchema(options) {
   return options.advanced?.database?.validateSchema !== false;
 }
@@ -8288,7 +8566,7 @@ function createSchemaCheck(find, source, database) {
 }
 var schemaChecks, schemaRevisions;
 var init_schema_check = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/schema-check.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-check.mjs"() {
     init_schema_diff();
     __name(checksSchema, "checksSchema");
     schemaChecks = /* @__PURE__ */ new WeakMap();
@@ -9940,10 +10218,10 @@ var require_src = __commonJS({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs
 var import_semantic_conventions, ATTR_OPERATION_ID, ATTR_HOOK_TYPE, ATTR_CONTEXT;
 var init_attributes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs"() {
     import_semantic_conventions = __toESM(require_src(), 1);
     ATTR_OPERATION_ID = "better_auth.operation_id";
     ATTR_HOOK_TYPE = "better_auth.hook.type";
@@ -9951,7 +10229,7 @@ var init_attributes = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/instrumentation/noop.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/noop.mjs
 function createNoopSpan() {
   const span = {
     end() {
@@ -10001,7 +10279,7 @@ function noopWithSpan(_name, _attributes, fn) {
 }
 var noopOpenTelemetryAPI;
 var init_noop = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/instrumentation/noop.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/noop.mjs"() {
     __name(createNoopSpan, "createNoopSpan");
     __name(createNoopTracer, "createNoopTracer");
     __name(createNoopTraceAPI, "createNoopTraceAPI");
@@ -10011,22 +10289,22 @@ var init_noop = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs
 function createWithSpan(_options) {
   return noopWithSpan;
 }
 var init_pure_index = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs"() {
     init_attributes();
     init_noop();
     __name(createWithSpan, "createWithSpan");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/id.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/id.mjs
 var generateId;
 var init_id = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/id.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/id.mjs"() {
     init_random();
     generateId = /* @__PURE__ */ __name((size) => {
       return createRandomStringGenerator("a-z", "A-Z", "0-9")(size || 32);
@@ -10034,10 +10312,10 @@ var init_id = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs
 var initGetDefaultModelName;
 var init_get_default_model_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs"() {
     init_error2();
     initGetDefaultModelName = /* @__PURE__ */ __name(({ usePlural, schema: schema3 }) => {
       const getDefaultModelName = /* @__PURE__ */ __name((model) => {
@@ -10058,43 +10336,30 @@ var init_get_default_model_name = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs
-var initGetDefaultFieldName;
-var init_get_default_field_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs"() {
-    init_error2();
-    init_get_default_model_name();
-    initGetDefaultFieldName = /* @__PURE__ */ __name(({ schema: schema3, usePlural }) => {
-      const getDefaultModelName = initGetDefaultModelName({
-        schema: schema3,
-        usePlural
-      });
-      const getDefaultFieldName = /* @__PURE__ */ __name(({ field, model: inputModel }) => {
-        if (field === "id" || field === "_id") return "id";
-        const modelKey = getDefaultModelName(inputModel);
-        let f = schema3[modelKey]?.fields[field];
-        if (!f) {
-          const result = Object.entries(schema3[modelKey].fields).find(([_, f2]) => f2.fieldName === field);
-          if (result) {
-            f = result[1];
-            field = result[0];
-          }
-        }
-        if (!f) throw new BetterAuthError(`Field ${field} not found in model ${modelKey}`);
-        return field;
-      }, "getDefaultFieldName");
-      return getDefaultFieldName;
-    }, "initGetDefaultFieldName");
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs
+function encodeDeterministicId(digest2, options) {
+  const generateId3 = options.advanced?.database?.generateId;
+  if (generateId3 === "serial" && !warnedSerialDeterministicId) {
+    warnedSerialDeterministicId = true;
+    logger.warn('Single-use checks (such as SAML assertion IDs, DPoP proofs, and private_key_jwt assertions) need string ids and are not enforced with `advanced.database.generateId: "serial"`.');
   }
-});
-
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs
-var initGetIdField;
+  if (generateId3 !== "uuid") return base64Url.encode(digest2, { padding: false });
+  const bytes = digest2.slice(0, 16);
+  bytes[6] = bytes[6] & 15 | 80;
+  bytes[8] = bytes[8] & 63 | 128;
+  const value = hex.encode(bytes);
+  return `${value.slice(0, 8)}-${value.slice(8, 12)}-${value.slice(12, 16)}-${value.slice(16, 20)}-${value.slice(20)}`;
+}
+var warnedSerialDeterministicId, initGetIdField;
 var init_get_id_field = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs"() {
     init_logger();
     init_id();
     init_get_default_model_name();
+    init_base64();
+    init_hex();
+    warnedSerialDeterministicId = false;
+    __name(encodeDeterministicId, "encodeDeterministicId");
     initGetIdField = /* @__PURE__ */ __name(({ usePlural, schema: schema3, disableIdGeneration, options, customIdGenerator, supportsUUIDs }) => {
       const getDefaultModelName = initGetDefaultModelName({
         usePlural,
@@ -10156,14 +10421,55 @@ var init_get_id_field = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs
-var initGetFieldAttributes;
-var init_get_field_attributes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs"() {
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/internal.mjs
+var init_internal = __esm({
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/internal.mjs"() {
+    init_database_index();
+    init_get_tables();
+    init_schema_diff();
+    init_schema_check();
+    init_get_id_field();
+  }
+});
+
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs
+var initGetDefaultFieldName;
+var init_get_default_field_name = __esm({
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs"() {
     init_error2();
     init_get_default_model_name();
-    init_get_default_field_name();
+    initGetDefaultFieldName = /* @__PURE__ */ __name(({ schema: schema3, usePlural }) => {
+      const getDefaultModelName = initGetDefaultModelName({
+        schema: schema3,
+        usePlural
+      });
+      const getDefaultFieldName = /* @__PURE__ */ __name(({ field, model: inputModel }) => {
+        if (field === "id" || field === "_id") return "id";
+        const modelKey = getDefaultModelName(inputModel);
+        let f = schema3[modelKey]?.fields[field];
+        if (!f) {
+          const result = Object.entries(schema3[modelKey].fields).find(([_, f2]) => f2.fieldName === field);
+          if (result) {
+            f = result[1];
+            field = result[0];
+          }
+        }
+        if (!f) throw new BetterAuthError(`Field ${field} not found in model ${modelKey}`);
+        return field;
+      }, "getDefaultFieldName");
+      return getDefaultFieldName;
+    }, "initGetDefaultFieldName");
+  }
+});
+
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs
+var initGetFieldAttributes;
+var init_get_field_attributes = __esm({
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs"() {
+    init_error2();
+    init_get_default_model_name();
     init_get_id_field();
+    init_get_default_field_name();
     initGetFieldAttributes = /* @__PURE__ */ __name(({ usePlural, schema: schema3, options, customIdGenerator, disableIdGeneration }) => {
       const getDefaultModelName = initGetDefaultModelName({
         usePlural,
@@ -10197,10 +10503,10 @@ var init_get_field_attributes = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs
 var initGetFieldName;
 var init_get_field_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs"() {
     init_get_default_model_name();
     init_get_default_field_name();
     initGetFieldName = /* @__PURE__ */ __name(({ schema: schema3, usePlural }) => {
@@ -10226,10 +10532,10 @@ var init_get_field_name = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs
 var initGetModelName;
 var init_get_model_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs"() {
     init_get_default_model_name();
     initGetModelName = /* @__PURE__ */ __name(({ usePlural, schema: schema3 }) => {
       const getDefaultModelName = initGetDefaultModelName({
@@ -10246,7 +10552,7 @@ var init_get_model_name = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/utils.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/utils.mjs
 function withApplyDefault(value, field, action) {
   if (action === "update") {
     if (value === void 0 && field.onUpdate !== void 0) {
@@ -10265,13 +10571,13 @@ function withApplyDefault(value, field, action) {
   }
   return value;
 }
-var init_utils = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/utils.mjs"() {
+var init_utils2 = __esm({
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/utils.mjs"() {
     __name(withApplyDefault, "withApplyDefault");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs
 function createAtomicFallbacks(context) {
   const { adapter, adapterId } = context;
   const outputId = Object.entries(context.mapKeysTransformOutput ?? {}).find(([, field]) => field === "id")?.[0] ?? "id";
@@ -10394,7 +10700,7 @@ function createAtomicFallbacks(context) {
 }
 var MAX_ATTEMPTS, scalar, readSchema, setSchema, mutationSchema, counterSchema;
 var init_atomic_fallback = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs"() {
     init_error2();
     init_zod();
     MAX_ATTEMPTS = 5;
@@ -10419,7 +10725,7 @@ var init_atomic_fallback = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/factory.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/factory.mjs
 function formatTransactionId(transactionId2) {
   if (getColorDepth() < 8) return `#${transactionId2}`;
   return `${TTY_COLORS.fg.magenta}#${transactionId2}${TTY_COLORS.reset}`;
@@ -10435,20 +10741,20 @@ function formatAction(action) {
 }
 var debugLogs, transactionId, createAsIsTransaction, createAdapterFactory;
 var init_factory = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/factory.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/factory.mjs"() {
     init_error2();
     init_get_tables();
     init_color_depth();
     init_logger();
+    init_get_default_model_name();
+    init_get_id_field();
     init_json();
     init_atomic_fallback();
-    init_get_default_model_name();
     init_get_default_field_name();
-    init_get_id_field();
     init_get_field_attributes();
     init_get_field_name();
     init_get_model_name();
-    init_utils();
+    init_utils2();
     init_pure_index();
     debugLogs = [];
     transactionId = -1;
@@ -11304,16 +11610,16 @@ ${separator}`]);
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/index.mjs
 var init_adapter = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/adapter/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/index.mjs"() {
     init_get_field_name();
     init_get_model_name();
     init_factory();
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_2158312ec14853dd64ac06e8186dc4b1/node_modules/@better-auth/memory-adapter/dist/index.mjs
+// ../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_ab0fdbf99ced4ff70d89eaedb0154c0e/node_modules/@better-auth/memory-adapter/dist/index.mjs
 var dist_exports = {};
 __export(dist_exports, {
   memoryAdapter: () => memoryAdapter
@@ -11378,7 +11684,7 @@ function rowChanged(baseRow, cloneRow) {
 }
 var memoryAdapter;
 var init_dist = __esm({
-  "../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_2158312ec14853dd64ac06e8186dc4b1/node_modules/@better-auth/memory-adapter/dist/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_ab0fdbf99ced4ff70d89eaedb0154c0e/node_modules/@better-auth/memory-adapter/dist/index.mjs"() {
     init_adapter();
     init_env();
     __name(insensitiveCompare, "insensitiveCompare");
@@ -31233,7 +31539,7 @@ var init_dist2 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs
 function sqliteIntegerPrimaryKeyColumn(columns) {
   const primaryKeys = columns.filter((column) => column.pk > 0);
   const primaryKey = primaryKeys.length === 1 ? primaryKeys[0] : void 0;
@@ -31308,7 +31614,7 @@ function createSqliteIntrospector(db) {
 }
 var DEFAULT_MIGRATION_TABLE2, DEFAULT_MIGRATION_LOCK_TABLE2;
 var init_sqlite_introspector_DSCAP82F = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs"() {
     init_dist2();
     DEFAULT_MIGRATION_TABLE2 = "kysely_migration";
     DEFAULT_MIGRATION_LOCK_TABLE2 = "kysely_migration_lock";
@@ -31321,34 +31627,24 @@ var init_sqlite_introspector_DSCAP82F = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/internal.mjs
-var init_internal = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/internal.mjs"() {
-    init_database_index();
-    init_get_tables();
-    init_schema_diff();
-    init_schema_check();
-  }
-});
-
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/string.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/string.mjs
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 var init_string = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/string.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/string.mjs"() {
     __name(capitalizeFirstLetter, "capitalizeFirstLetter");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs
 var bun_sqlite_dialect_DoOVo4ja_exports = {};
 __export(bun_sqlite_dialect_DoOVo4ja_exports, {
   BunSqliteDialect: () => BunSqliteDialect
 });
 var BunSqliteAdapter, BunSqliteDriver, BunSqliteConnection, ConnectionMutex2, BunSqliteQueryCompiler, BunSqliteDialect;
 var init_bun_sqlite_dialect_DoOVo4ja = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_dist2();
     BunSqliteAdapter = class {
@@ -31492,14 +31788,14 @@ var init_bun_sqlite_dialect_DoOVo4ja = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs
 var node_sqlite_dialect_exports = {};
 __export(node_sqlite_dialect_exports, {
   NodeSqliteDialect: () => NodeSqliteDialect
 });
 var NodeSqliteAdapter, NodeSqliteDriver, NodeSqliteConnection, ConnectionMutex3, NodeSqliteQueryCompiler, NodeSqliteDialect;
 var init_node_sqlite_dialect = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_dist2();
     NodeSqliteAdapter = class {
@@ -31643,9 +31939,9 @@ var init_node_sqlite_dialect = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-Cru74LbR.mjs
-var d1_sqlite_dialect_Cru74LbR_exports = {};
-__export(d1_sqlite_dialect_Cru74LbR_exports, {
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-m0f01-4z.mjs
+var d1_sqlite_dialect_m0f01_4z_exports = {};
+__export(d1_sqlite_dialect_m0f01_4z_exports, {
   D1SqliteDialect: () => D1SqliteDialect,
   createD1IndexIntrospector: () => createD1IndexIntrospector
 });
@@ -31680,8 +31976,8 @@ function createD1IndexIntrospector(database) {
   };
 }
 var D1SqliteAdapter, D1SqliteDriver, D1SqliteConnection, D1SqliteIntrospector, D1SqliteQueryCompiler, D1SqliteDialect;
-var init_d1_sqlite_dialect_Cru74LbR = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-Cru74LbR.mjs"() {
+var init_d1_sqlite_dialect_m0f01_4z = __esm({
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-m0f01-4z.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_dist2();
     __name(quoteSqliteStringLiteral, "quoteSqliteStringLiteral");
@@ -31689,6 +31985,9 @@ var init_d1_sqlite_dialect_Cru74LbR = __esm({
     D1SqliteAdapter = class extends SqliteAdapter {
       static {
         __name(this, "D1SqliteAdapter");
+      }
+      get supportsMultipleConnections() {
+        return true;
       }
     };
     D1SqliteDriver = class {
@@ -31809,7 +32108,7 @@ var init_d1_sqlite_dialect_Cru74LbR = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/index.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/index.mjs
 function getKyselyDatabaseType(db) {
   if (!db) return null;
   if ("dialect" in db) return getKyselyDatabaseType(db.dialect);
@@ -31933,7 +32232,7 @@ async function findSchemaProblems(db, dbType, expected) {
 }
 var createKyselyAdapter, kyselyAdapter;
 var init_dist3 = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@bet_e634cb8c9ba639d5a1eb368bdd259776/node_modules/@better-auth/kysely-adapter/dist/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/index.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_error2();
     init_dist2();
@@ -32016,7 +32315,7 @@ var init_dist3 = __esm({
         }
       }
       if ("batch" in db && "exec" in db && "prepare" in db) {
-        const { createD1IndexIntrospector: createD1IndexIntrospector2, D1SqliteDialect: D1SqliteDialect2 } = await Promise.resolve().then(() => (init_d1_sqlite_dialect_Cru74LbR(), d1_sqlite_dialect_Cru74LbR_exports));
+        const { createD1IndexIntrospector: createD1IndexIntrospector2, D1SqliteDialect: D1SqliteDialect2 } = await Promise.resolve().then(() => (init_d1_sqlite_dialect_m0f01_4z(), d1_sqlite_dialect_m0f01_4z_exports));
         dialect = new D1SqliteDialect2({ database: db });
         introspectIndexes = createD1IndexIntrospector2(db);
         transaction = false;
@@ -32498,7 +32797,7 @@ var init_dist3 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs
 var kysely_adapter_exports = {};
 __export(kysely_adapter_exports, {
   createKyselyAdapter: () => createKyselyAdapter,
@@ -32510,7 +32809,7 @@ __export(kysely_adapter_exports, {
   toPhysicalSchema: () => toPhysicalSchema
 });
 var init_kysely_adapter = __esm({
-  "../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs"() {
+  "../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs"() {
     init_dist3();
   }
 });
@@ -32708,7 +33007,7 @@ function readDesktopAsk(values) {
 }
 __name(readDesktopAsk, "readDesktopAsk");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/cookie-utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/cookie-utils.mjs
 function tryDecode(str) {
   if (str.indexOf("%") === -1) return str;
   try {
@@ -32835,13 +33134,13 @@ function setRequestCookie(headers, name, value) {
 }
 __name(setRequestCookie, "setRequestCookie");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/package.mjs
-var version = "1.7.7";
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/package.mjs
+var version = "1.7.10";
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/version.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/version.mjs
 var PACKAGE_VERSION = version;
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/index.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/index.mjs
 init_error();
 
 // ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/index.mjs
@@ -32852,7 +33151,7 @@ function getWebcryptoSubtle() {
 }
 __name(getWebcryptoSubtle, "getWebcryptoSubtle");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/crypto.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/crypto.mjs
 var algorithm = {
   name: "HMAC",
   hash: "SHA-256"
@@ -32883,7 +33182,7 @@ var signCookieValue = /* @__PURE__ */ __name(async (value, secret) => {
   return value;
 }, "signCookieValue");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/utils.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/utils.mjs
 init_error();
 var jsonContentTypeRegex = /^application\/([a-z0-9.+-]*\+)?json/i;
 async function getBody(request, allowedMediaTypes) {
@@ -32969,13 +33268,15 @@ function isRequest(obj) {
 }
 __name(isRequest, "isRequest");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/cookies.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/cookies.mjs
+var COOKIE_PREFIXES = {
+  secure: "__Secure-",
+  host: "__Host-"
+};
 var getCookieKey = /* @__PURE__ */ __name((key, prefix) => {
-  let finalKey = key;
-  if (prefix) if (prefix === "secure") finalKey = "__Secure-" + key;
-  else if (prefix === "host") finalKey = "__Host-" + key;
-  else return;
-  return finalKey;
+  if (!prefix) return key;
+  if (prefix !== "secure" && prefix !== "host") return void 0;
+  return COOKIE_PREFIXES[prefix] + key;
 }, "getCookieKey");
 function parseCookies2(str) {
   if (typeof str !== "string") throw new TypeError("argument str must be a string");
@@ -33001,49 +33302,55 @@ function parseCookies2(str) {
   return cookies;
 }
 __name(parseCookies2, "parseCookies");
-var _serialize = /* @__PURE__ */ __name((key, value, opt = {}) => {
-  let cookie;
-  if (opt?.prefix === "secure") cookie = `${`__Secure-${key}`}=${value}`;
-  else if (opt?.prefix === "host") cookie = `${`__Host-${key}`}=${value}`;
-  else cookie = `${key}=${value}`;
-  if (key.startsWith("__Secure-") && !opt.secure) opt.secure = true;
-  if (key.startsWith("__Host-")) {
-    if (!opt.secure) opt.secure = true;
-    if (opt.path !== "/") opt.path = "/";
-    if (opt.domain) opt.domain = void 0;
+function resolveCookie(name, value, options = {}) {
+  const resolvedName = getCookieKey(name, options.prefix) ?? name;
+  const resolvedOptions = { ...options };
+  const lowerName = resolvedName.toLowerCase();
+  if (lowerName.startsWith("__host-")) {
+    resolvedOptions.secure = true;
+    resolvedOptions.path = "/";
+    resolvedOptions.domain = void 0;
+  } else if (lowerName.startsWith("__secure-")) resolvedOptions.secure = true;
+  if (resolvedOptions.partitioned === true || resolvedOptions.sameSite?.toLowerCase() === "none") resolvedOptions.secure = true;
+  return {
+    name: resolvedName,
+    value,
+    options: resolvedOptions
+  };
+}
+__name(resolveCookie, "resolveCookie");
+function serializeCookieValue({ name, value, options }) {
+  let cookie = `${name}=${value}`;
+  if (typeof options.maxAge === "number" && options.maxAge >= 0) {
+    if (options.maxAge > 3456e4) throw new Error("Cookies Max-Age SHOULD NOT be greater than 400 days (34560000 seconds) in duration.");
+    cookie += `; Max-Age=${Math.floor(options.maxAge)}`;
   }
-  if (opt && typeof opt.maxAge === "number" && opt.maxAge >= 0) {
-    if (opt.maxAge > 3456e4) throw new Error("Cookies Max-Age SHOULD NOT be greater than 400 days (34560000 seconds) in duration.");
-    cookie += `; Max-Age=${Math.floor(opt.maxAge)}`;
+  if (options.domain) cookie += `; Domain=${options.domain}`;
+  if (options.path) cookie += `; Path=${options.path}`;
+  if (options.expires) {
+    if (options.expires.getTime() - Date.now() > 3456e7) throw new Error("Cookies Expires SHOULD NOT be greater than 400 days (34560000 seconds) in the future.");
+    cookie += `; Expires=${options.expires.toUTCString()}`;
   }
-  if (opt.domain && opt.prefix !== "host") cookie += `; Domain=${opt.domain}`;
-  if (opt.path) cookie += `; Path=${opt.path}`;
-  if (opt.expires) {
-    if (opt.expires.getTime() - Date.now() > 3456e7) throw new Error("Cookies Expires SHOULD NOT be greater than 400 days (34560000 seconds) in the future.");
-    cookie += `; Expires=${opt.expires.toUTCString()}`;
-  }
-  if (opt.httpOnly) cookie += "; HttpOnly";
-  if (opt.secure) cookie += "; Secure";
-  if (opt.sameSite) cookie += `; SameSite=${opt.sameSite.charAt(0).toUpperCase() + opt.sameSite.slice(1)}`;
-  if (opt.partitioned) {
-    if (!opt.secure) opt.secure = true;
-    cookie += "; Partitioned";
-  }
+  if (options.httpOnly) cookie += "; HttpOnly";
+  if (options.secure) cookie += "; Secure";
+  if (options.sameSite) cookie += `; SameSite=${options.sameSite.charAt(0).toUpperCase() + options.sameSite.slice(1)}`;
+  if (options.partitioned) cookie += "; Partitioned";
   return cookie;
-}, "_serialize");
+}
+__name(serializeCookieValue, "serializeCookieValue");
 var serializeCookie = /* @__PURE__ */ __name((key, value, opt) => {
   value = encodeURIComponent(value);
-  return _serialize(key, value, opt);
+  return serializeCookieValue(resolveCookie(key, value, opt));
 }, "serializeCookie");
 var serializeSignedCookie = /* @__PURE__ */ __name(async (key, value, secret, opt) => {
   value = await signCookieValue(value, secret);
-  return _serialize(key, value, opt);
+  return serializeCookieValue(resolveCookie(key, value, opt));
 }, "serializeSignedCookie");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/context.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/context.mjs
 init_error();
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/validator.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/validator.mjs
 async function runValidation(options, context = {}) {
   const request = {
     body: context.body,
@@ -33095,13 +33402,13 @@ function fromError(error3, validating) {
 }
 __name(fromError, "fromError");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/context.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/context.mjs
 var createInternalContext = /* @__PURE__ */ __name(async (context, { options, path }) => {
   const headers = new Headers();
   let responseStatus = void 0;
   const { data, error: error3 } = await runValidation(options, context);
   if (error3) throw new ValidationError(error3.message, error3.issues);
-  const requestHeaders = "headers" in context ? context.headers instanceof Headers ? context.headers : new Headers(context.headers) : "request" in context && isRequest(context.request) ? context.request.headers : null;
+  const requestHeaders = context.headers !== void 0 ? context.headers instanceof Headers ? context.headers : new Headers(context.headers) : "request" in context && isRequest(context.request) ? context.request.headers : null;
   const requestCookies = requestHeaders?.get("cookie");
   const parsedCookies = requestCookies ? parseCookies2(requestCookies) : void 0;
   const internalContext = {
@@ -33186,7 +33493,7 @@ var createInternalContext = /* @__PURE__ */ __name(async (context, { options, pa
   return internalContext;
 }, "createInternalContext");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/to-response.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/to-response.mjs
 function isJSONSerializable(value) {
   if (value === void 0) return false;
   const t = typeof value;
@@ -33286,11 +33593,13 @@ function toResponse(data, init2) {
       copyHeaders(headers2, safeHeaders);
     }
     headers2.set("Content-Type", "application/json");
+    const status = data.status ?? init2?.status ?? routerResponse?.status;
+    const statusText = init2?.statusText ?? routerResponse?.statusText;
     return new Response(JSON.stringify(body2), {
       ...routerResponse,
       headers: headers2,
-      status: data.status ?? init2?.status ?? routerResponse?.status,
-      statusText: init2?.statusText ?? routerResponse?.statusText
+      ...status === void 0 ? {} : { status },
+      ...statusText === void 0 ? {} : { statusText }
     });
   }
   if (isAPIError(data)) return toResponse(data.body, {
@@ -33331,7 +33640,7 @@ function toResponse(data, init2) {
 }
 __name(toResponse, "toResponse");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/endpoint.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/endpoint.mjs
 init_error();
 function createEndpoint(pathOrOptions, handlerOrOptions, handlerOrNever) {
   const path = typeof pathOrOptions === "string" ? pathOrOptions : void 0;
@@ -33366,7 +33675,7 @@ function createEndpoint(pathOrOptions, handlerOrOptions, handlerOrNever) {
     });
     const headers = internalContext.responseHeaders;
     const status = internalContext.responseStatus;
-    return context.asResponse ? toResponse(response, {
+    return context.asResponse ? toResponse(response, status === void 0 ? { headers } : {
       headers,
       status
     }) : context.returnHeaders ? context.returnStatus ? {
@@ -33409,7 +33718,7 @@ createEndpoint.create = (opts) => {
   return createConfiguredEndpoint;
 };
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/middleware.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/middleware.mjs
 init_error();
 function createMiddleware(optionsOrHandler, handler) {
   const internalHandler = /* @__PURE__ */ __name(async (inputCtx) => {
@@ -33456,7 +33765,7 @@ createMiddleware.create = (opts) => {
   return fn;
 };
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/openapi.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/openapi.mjs
 init_zod();
 var paths = {};
 function getTypeFromZodType(zodType) {
@@ -34088,7 +34397,7 @@ function pushSorted(matches, match, dynamicTerminal) {
 }
 __name(pushSorted, "pushSorted");
 
-// ../../node_modules/.pnpm/better-call@1.4.0_zod@4.6.5/node_modules/better-call/dist/router.mjs
+// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/router.mjs
 var createRouter$1 = /* @__PURE__ */ __name((endpoints, config3) => {
   if (!config3?.openapi?.disabled) {
     const openapi = {
@@ -34196,30 +34505,54 @@ var createRouter$1 = /* @__PURE__ */ __name((endpoints, config3) => {
   };
 }, "createRouter$1");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
 init_global();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/async_hooks/index.mjs
-var AsyncLocalStoragePromise = import(
-  /* @vite-ignore */
-  /* webpackIgnore: true */
-  "node:async_hooks"
-).then((mod) => mod.AsyncLocalStorage).catch((err) => {
-  if ("AsyncLocalStorage" in globalThis) return globalThis.AsyncLocalStorage;
-  if (typeof window !== "undefined") return null;
-  console.warn("[better-auth] Warning: AsyncLocalStorage is not available in this environment. Some features may not work as expected.");
-  console.warn("[better-auth] Please read more about this warning at https://better-auth.com/docs/installation#mount-handler");
-  console.warn("[better-auth] If you are using Cloudflare Workers, please see: https://developers.cloudflare.com/workers/configuration/compatibility-flags/#nodejs-compatibility-flag");
-  throw err;
-});
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/async_hooks/index.mjs
+var cachedAsyncLocalStorageConstructor;
+var availabilityWarningLogged = false;
+function getBuiltinAsyncLocalStorage() {
+  try {
+    return globalThis.process?.getBuiltinModule?.("node:async_hooks")?.AsyncLocalStorage;
+  } catch {
+    return;
+  }
+}
+__name(getBuiltinAsyncLocalStorage, "getBuiltinAsyncLocalStorage");
 async function getAsyncLocalStorage() {
-  const mod = await AsyncLocalStoragePromise;
-  if (mod === null) throw new Error("getAsyncLocalStorage is only available in server code");
-  else return mod;
+  if (cachedAsyncLocalStorageConstructor) return cachedAsyncLocalStorageConstructor;
+  const builtinConstructor = getBuiltinAsyncLocalStorage();
+  if (builtinConstructor) {
+    cachedAsyncLocalStorageConstructor ??= builtinConstructor;
+    return cachedAsyncLocalStorageConstructor;
+  }
+  try {
+    const { AsyncLocalStorage: constructor } = await import(
+      /* @vite-ignore */
+      /* webpackIgnore: true */
+      "node:async_hooks"
+    );
+    cachedAsyncLocalStorageConstructor ??= constructor;
+    return cachedAsyncLocalStorageConstructor;
+  } catch (err) {
+    const constructor = globalThis.AsyncLocalStorage;
+    if (typeof constructor === "function") {
+      cachedAsyncLocalStorageConstructor ??= constructor;
+      return cachedAsyncLocalStorageConstructor;
+    }
+    if (typeof window !== "undefined") throw new Error("getAsyncLocalStorage is only available in server code");
+    if (!availabilityWarningLogged) {
+      availabilityWarningLogged = true;
+      console.warn("[better-auth] Warning: AsyncLocalStorage is not available in this environment. Some features may not work as expected.");
+      console.warn("[better-auth] Please read more about this warning at https://better-auth.com/docs/installation#mount-handler");
+      console.warn("[better-auth] If you are using Cloudflare Workers, please see: https://developers.cloudflare.com/workers/configuration/compatibility-flags/#nodejs-compatibility-flag");
+    }
+    throw err;
+  }
 }
 __name(getAsyncLocalStorage, "getAsyncLocalStorage");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
 var getExistingEndpointContextStorage = /* @__PURE__ */ __name(() => {
   return __getBetterAuthGlobal().context.endpointContextAsyncStorage;
 }, "getExistingEndpointContextStorage");
@@ -34245,14 +34578,14 @@ async function runWithEndpointContext(authEndpointContext, fn) {
 }
 __name(runWithEndpointContext, "runWithEndpointContext");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/is-api-error.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/is-api-error.mjs
 init_error2();
 function isAPIError2(error3) {
   return error3 instanceof APIError || error3 instanceof APIError2 || error3?.name === "APIError";
 }
 __name(isAPIError2, "isAPIError");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/api/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/api/index.mjs
 var NO_STORE_HEADERS = {
   "Cache-Control": "no-store",
   Pragma: "no-cache"
@@ -34308,186 +34641,37 @@ function withServerOnly(options) {
 __name(withServerOnly, "withServerOnly");
 createAuthEndpoint.serverOnly = (options, handler) => createAuthEndpoint(withServerOnly(options), handler);
 
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/hex.mjs
-var hexadecimal = "0123456789abcdef";
-var hex = {
-  encode: /* @__PURE__ */ __name((data) => {
-    if (typeof data === "string") {
-      data = new TextEncoder().encode(data);
-    }
-    if (data.byteLength === 0) {
-      return "";
-    }
-    const buffer = new Uint8Array(data);
-    let result = "";
-    for (const byte of buffer) {
-      result += byte.toString(16).padStart(2, "0");
-    }
-    return result;
-  }, "encode"),
-  decode: /* @__PURE__ */ __name((data) => {
-    if (!data) {
-      return "";
-    }
-    if (typeof data === "string") {
-      if (data.length % 2 !== 0) {
-        throw new Error("Invalid hexadecimal string");
-      }
-      if (!new RegExp(`^[${hexadecimal}]+$`).test(data)) {
-        throw new Error("Invalid hexadecimal string");
-      }
-      const result = new Uint8Array(data.length / 2);
-      for (let i = 0; i < data.length; i += 2) {
-        result[i / 2] = parseInt(data.slice(i, i + 2), 16);
-      }
-      return new TextDecoder().decode(result);
-    }
-    return new TextDecoder().decode(data);
-  }, "decode")
-};
-
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/base64.mjs
-function getAlphabet(urlSafe) {
-  return urlSafe ? "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_" : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-}
-__name(getAlphabet, "getAlphabet");
-function base64Encode(data, alphabet, padding) {
-  let result = "";
-  let buffer = 0;
-  let shift = 0;
-  for (const byte of data) {
-    buffer = buffer << 8 | byte;
-    shift += 8;
-    while (shift >= 6) {
-      shift -= 6;
-      result += alphabet[buffer >> shift & 63];
-    }
-  }
-  if (shift > 0) {
-    result += alphabet[buffer << 6 - shift & 63];
-  }
-  if (padding) {
-    const padCount = (4 - result.length % 4) % 4;
-    result += "=".repeat(padCount);
-  }
-  return result;
-}
-__name(base64Encode, "base64Encode");
-function base64Decode(data, alphabet) {
-  const decodeMap = /* @__PURE__ */ new Map();
-  for (let i = 0; i < alphabet.length; i++) {
-    decodeMap.set(alphabet[i], i);
-  }
-  const result = [];
-  let buffer = 0;
-  let bitsCollected = 0;
-  for (const char of data) {
-    if (char === "=")
-      break;
-    const value = decodeMap.get(char);
-    if (value === void 0) {
-      throw new Error(`Invalid Base64 character: ${char}`);
-    }
-    buffer = buffer << 6 | value;
-    bitsCollected += 6;
-    if (bitsCollected >= 8) {
-      bitsCollected -= 8;
-      result.push(buffer >> bitsCollected & 255);
-    }
-  }
-  return Uint8Array.from(result);
-}
-__name(base64Decode, "base64Decode");
-var base642 = {
-  encode(data, options = {}) {
-    const alphabet = getAlphabet(false);
-    const buffer = typeof data === "string" ? new TextEncoder().encode(data) : new Uint8Array(data);
-    return base64Encode(buffer, alphabet, options.padding ?? true);
-  },
-  decode(data) {
-    if (typeof data !== "string") {
-      data = new TextDecoder().decode(data);
-    }
-    const urlSafe = data.includes("-") || data.includes("_");
-    const alphabet = getAlphabet(urlSafe);
-    return base64Decode(data, alphabet);
-  }
-};
-var base64Url = {
-  encode(data, options = {}) {
-    const alphabet = getAlphabet(true);
-    const buffer = typeof data === "string" ? new TextEncoder().encode(data) : new Uint8Array(data);
-    return base64Encode(buffer, alphabet, options.padding ?? true);
-  },
-  decode(data) {
-    const urlSafe = data.includes("-") || data.includes("_");
-    const alphabet = getAlphabet(urlSafe);
-    return base64Decode(data, alphabet);
-  }
-};
-
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/index.mjs
-function getWebcryptoSubtle2() {
-  const cr = typeof globalThis !== "undefined" && globalThis.crypto;
-  if (cr && typeof cr.subtle === "object" && cr.subtle != null)
-    return cr.subtle;
-  throw new Error("crypto.subtle must be defined");
-}
-__name(getWebcryptoSubtle2, "getWebcryptoSubtle");
-
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/hmac.mjs
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/hmac.mjs
+init_bytes();
+init_base64();
+init_hex();
 var createHMAC = /* @__PURE__ */ __name((algorithm2 = "SHA-256", encoding = "none") => {
   const hmac3 = {
     importKey: /* @__PURE__ */ __name(async (key, keyUsage) => {
-      return getWebcryptoSubtle2().importKey(
-        "raw",
-        typeof key === "string" ? new TextEncoder().encode(key) : key,
-        { name: "HMAC", hash: { name: algorithm2 } },
-        false,
-        [keyUsage]
-      );
+      return getWebcryptoSubtle().importKey("raw", toBufferSource(key), {
+        name: "HMAC",
+        hash: { name: algorithm2 }
+      }, false, [keyUsage]);
     }, "importKey"),
     sign: /* @__PURE__ */ __name(async (hmacKey, data) => {
-      if (typeof hmacKey === "string") {
-        hmacKey = await hmac3.importKey(hmacKey, "sign");
-      }
-      const signature = await getWebcryptoSubtle2().sign(
-        "HMAC",
-        hmacKey,
-        typeof data === "string" ? new TextEncoder().encode(data) : data
-      );
-      if (encoding === "hex") {
-        return hex.encode(signature);
-      }
-      if (encoding === "base64" || encoding === "base64url" || encoding === "base64urlnopad") {
-        return base64Url.encode(signature, {
-          padding: encoding !== "base64urlnopad"
-        });
-      }
+      if (typeof hmacKey === "string") hmacKey = await hmac3.importKey(hmacKey, "sign");
+      const signature = await getWebcryptoSubtle().sign("HMAC", hmacKey, toBufferSource(data));
+      if (encoding === "hex") return hex.encode(signature);
+      if (encoding === "base64") return base642.encode(signature);
+      if (encoding === "base64url" || encoding === "base64urlnopad") return base64Url.encode(signature, { padding: encoding !== "base64urlnopad" });
       return signature;
     }, "sign"),
     verify: /* @__PURE__ */ __name(async (hmacKey, data, signature) => {
-      if (typeof hmacKey === "string") {
-        hmacKey = await hmac3.importKey(hmacKey, "verify");
-      }
-      if (encoding === "hex") {
-        signature = hex.decode(signature);
-      }
-      if (encoding === "base64" || encoding === "base64url" || encoding === "base64urlnopad") {
-        signature = await base642.decode(signature);
-      }
-      return getWebcryptoSubtle2().verify(
-        "HMAC",
-        hmacKey,
-        typeof signature === "string" ? new TextEncoder().encode(signature) : signature,
-        typeof data === "string" ? new TextEncoder().encode(data) : data
-      );
+      if (typeof hmacKey === "string") hmacKey = await hmac3.importKey(hmacKey, "verify");
+      if (encoding === "hex") signature = typeof signature === "string" ? hex.toBytes(signature) : signature;
+      if (encoding === "base64" || encoding === "base64url" || encoding === "base64urlnopad") signature = await base642.decode(signature);
+      return getWebcryptoSubtle().verify("HMAC", hmacKey, toBufferSource(signature), toBufferSource(data));
     }, "verify")
   };
   return hmac3;
 }, "createHMAC");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/bearer/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/bearer/index.mjs
 var BEARER_SCHEME = "bearer ";
 function tryDecode3(str) {
   try {
@@ -34553,10 +34737,10 @@ var bearer = /* @__PURE__ */ __name((options) => {
   };
 }, "bearer");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/index.mjs
 init_get_tables();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/schema/shared.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema/shared.mjs
 init_zod();
 var coreSchema = object({
   id: string2(),
@@ -34564,7 +34748,7 @@ var coreSchema = object({
   updatedAt: date2().default(() => /* @__PURE__ */ new Date())
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/schema/session.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema/session.mjs
 init_zod();
 var sessionSchema = coreSchema.extend({
   userId: coerce_exports.string(),
@@ -34574,7 +34758,7 @@ var sessionSchema = coreSchema.extend({
   userAgent: string2().nullish()
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/db/schema/user.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema/user.mjs
 init_zod();
 var userSchema = coreSchema.extend({
   email: string2().transform((val) => val.toLowerCase()),
@@ -34583,10 +34767,10 @@ var userSchema = coreSchema.extend({
   image: string2().nullish()
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/schema.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/db.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/db.mjs
 function filterOutputFields(data, additionalFields) {
   if (!data || !additionalFields) return data;
   const returnFiltered = Object.entries(additionalFields).filter(([, { returned }]) => returned === false).map(([key]) => key);
@@ -34597,7 +34781,7 @@ function filterOutputFields(data, additionalFields) {
 }
 __name(filterOutputFields, "filterOutputFields");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/schema.mjs
 var cache = /* @__PURE__ */ new WeakMap();
 function getFields(options, modelName, mode) {
   const cacheKey = `${modelName}:${mode}`;
@@ -34746,7 +34930,7 @@ function mergeSchema(schema3, newSchema) {
 }
 __name(mergeSchema, "mergeSchema");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/time.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/time.mjs
 var SEC = 1e3;
 var MIN = SEC * 60;
 var HOUR = MIN * 60;
@@ -34821,7 +35005,7 @@ function sec(value) {
 }
 __name(sec, "sec");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/error-codes.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/error-codes.mjs
 init_error_codes();
 var DEVICE_AUTHORIZATION_ERROR_CODES = defineErrorCodes({
   INVALID_DEVICE_CODE: "Invalid device code",
@@ -34839,7 +35023,7 @@ var DEVICE_AUTHORIZATION_ERROR_CODES = defineErrorCodes({
   AUTHENTICATION_REQUIRED: "Authentication required"
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/schema.mjs
 init_zod();
 var schema = { deviceCode: {
   fields: {
@@ -34901,11 +35085,11 @@ object({
   scope: string2().optional()
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/random.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/random.mjs
 init_random();
 var generateRandomString = createRandomStringGenerator("a-z", "0-9", "A-Z", "-_");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/store-capabilities.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/store-capabilities.mjs
 function hasServerSessionStore(options) {
   return !!options.database || !!options.secondaryStorage;
 }
@@ -34919,145 +35103,13 @@ function shouldBindAccountCookieToSessionUser(options) {
 }
 __name(shouldBindAccountCookieToSessionUser, "shouldBindAccountCookieToSessionUser");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/date.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/date.mjs
 var getDate = /* @__PURE__ */ __name((span, unit = "ms") => {
   return new Date(Date.now() + (unit === "sec" ? span * 1e3 : span));
 }, "getDate");
 
-// ../../node_modules/.pnpm/@noble+hashes@2.4.0/node_modules/@noble/hashes/utils.js
-function isBytes(a) {
-  return a instanceof Uint8Array || ArrayBuffer.isView(a) && a.constructor.name === "Uint8Array" && "BYTES_PER_ELEMENT" in a && a.BYTES_PER_ELEMENT === 1;
-}
-__name(isBytes, "isBytes");
-var atitle = /* @__PURE__ */ __name((title) => title ? `"${title}" ` : "", "atitle");
-function anumber(n, title = "") {
-  if (typeof n !== "number")
-    throw new TypeError(atitle(title) + "expected number, got " + typeof n);
-  if (!Number.isSafeInteger(n) || n < 0)
-    throw new RangeError(atitle(title) + "expected integer >= 0, got " + n);
-  return n;
-}
-__name(anumber, "anumber");
-function abytes(value, length, title = "") {
-  if (isBytes(value) && (length === void 0 || value.length === length))
-    return value;
-  if (length !== void 0)
-    anumber(length, "length");
-  const bytes = isBytes(value);
-  const ofLen = length !== void 0 ? ` of length ${length}` : "";
-  const got = bytes ? `length=${value.length}` : `type=${typeof value}`;
-  const message2 = atitle(title) + "expected Uint8Array" + ofLen + ", got " + got;
-  if (!bytes)
-    throw new TypeError(message2);
-  throw new RangeError(message2);
-}
-__name(abytes, "abytes");
-function ahash(h) {
-  if (typeof h !== "function" || typeof h.create !== "function")
-    throw new TypeError("expected hash wrapped by utils.createHasher");
-  anumber(h.outputLen);
-  anumber(h.blockLen);
-  if (h.outputLen < 1 || h.blockLen < 1)
-    throw new Error("hash blockLen / outputLen must be >= 1");
-}
-__name(ahash, "ahash");
-var aobject = /* @__PURE__ */ __name((value, label) => {
-  if (value === null || typeof value !== "object" || Array.isArray(value))
-    throw new TypeError((label === "object" ? "" : `"${label}" `) + "expected object, got type=" + typeof value);
-}, "aobject");
-var aopts = /* @__PURE__ */ __name((value, label) => {
-  aobject(value, label);
-  const proto = Object.getPrototypeOf(value);
-  if (proto !== Object.prototype && proto !== null)
-    throw new TypeError(`"${label}" expected plain object`);
-  if (Object.hasOwn(value, "__proto__"))
-    throw new TypeError(`"${label}.__proto__" is not allowed`);
-}, "aopts");
-function aexists(instance, checkFinished = true) {
-  if (instance.destroyed)
-    throw new Error("hash was destroyed");
-  if (checkFinished && instance.finished)
-    throw new Error("digest() was already called");
-}
-__name(aexists, "aexists");
-function aoutput(out, instance) {
-  abytes(out, void 0, "output");
-  const min = instance.outputLen;
-  if (!(out.length >= min)) {
-    throw new RangeError('"output" expected length >= ' + min);
-  }
-}
-__name(aoutput, "aoutput");
-function clean(...arrays) {
-  for (let i = 0; i < arrays.length; i++) {
-    arrays[i].fill(0);
-  }
-}
-__name(clean, "clean");
-function createView(arr) {
-  return new DataView(arr.buffer, arr.byteOffset, arr.byteLength);
-}
-__name(createView, "createView");
-function rotr(word, shift) {
-  return word << 32 - shift | word >>> shift;
-}
-__name(rotr, "rotr");
-var hasHexBuiltin = /* @__PURE__ */ (() => (
-  // @ts-ignore
-  typeof Uint8Array.from([]).toHex === "function" && typeof Uint8Array.fromHex === "function"
-))();
-var hexes = /* @__PURE__ */ Array.from({ length: 256 }, (_, i) => i.toString(16).padStart(2, "0"));
-function bytesToHex(bytes) {
-  abytes(bytes);
-  if (hasHexBuiltin)
-    return bytes.toHex();
-  let hex2 = "";
-  for (let i = 0; i < bytes.length; i++) {
-    hex2 += hexes[bytes[i]];
-  }
-  return hex2;
-}
-__name(bytesToHex, "bytesToHex");
-function utf8ToBytes(str) {
-  if (typeof str !== "string")
-    throw new TypeError("string expected");
-  const encoded = new TextEncoder().encode(str);
-  try {
-    return new Uint8Array(encoded);
-  } finally {
-    clean(encoded);
-  }
-}
-__name(utf8ToBytes, "utf8ToBytes");
-function checkOpts(defaults, opts, title = "opts") {
-  aopts(defaults, "defaults");
-  if (opts !== void 0)
-    aopts(opts, title);
-  const merged = Object.assign(/* @__PURE__ */ Object.create(null), defaults, opts);
-  return merged;
-}
-__name(checkOpts, "checkOpts");
-function createHasher(hashCons, info2 = {}) {
-  if (typeof hashCons !== "function")
-    throw new TypeError('"hashCons" expected function, got type=' + typeof hashCons);
-  info2 = checkOpts({}, info2, "info");
-  const hashC = /* @__PURE__ */ __name((msg, opts) => hashCons(opts).update(msg).digest(), "hashC");
-  const tmp = hashCons(void 0);
-  hashC.outputLen = tmp.outputLen;
-  hashC.blockLen = tmp.blockLen;
-  hashC.canXOF = tmp.canXOF;
-  hashC.create = (opts) => hashCons(opts);
-  Object.assign(hashC, info2);
-  return Object.freeze(hashC);
-}
-__name(createHasher, "createHasher");
-var oidNist = /* @__PURE__ */ __name((suffix) => ({
-  // Current NIST hashAlgs suffixes used here fit in one DER subidentifier octet.
-  // Larger suffix values would need base-128 OID encoding and a different length byte.
-  oid: Uint8Array.from([6, 9, 96, 134, 72, 1, 101, 3, 4, 2, suffix])
-}), "oidNist");
-
 // ../../node_modules/.pnpm/@noble+hashes@2.4.0/node_modules/@noble/hashes/hmac.js
+init_utils();
 var _HMAC = class {
   static {
     __name(this, "_HMAC");
@@ -35138,6 +35190,7 @@ var hmac = /* @__PURE__ */ (() => {
 })();
 
 // ../../node_modules/.pnpm/@noble+hashes@2.4.0/node_modules/@noble/hashes/hkdf.js
+init_utils();
 var HKDF_COUNTER = /* @__PURE__ */ Uint8Array.of(0);
 var EMPTY_BUFFER = /* @__PURE__ */ Uint8Array.of();
 function expand(hash, prk, info2, length = 32, _recycled) {
@@ -35211,6 +35264,7 @@ function setU64FromNum(view, byteOffset, n, isLE2) {
 __name(setU64FromNum, "setU64FromNum");
 
 // ../../node_modules/.pnpm/@noble+hashes@2.4.0/node_modules/@noble/hashes/_md.js
+init_utils();
 function Chi(a, b, c) {
   return a & b ^ ~a & c;
 }
@@ -35329,6 +35383,7 @@ var SHA256_IV = /* @__PURE__ */ Uint32Array.from([
 ]);
 
 // ../../node_modules/.pnpm/@noble+hashes@2.4.0/node_modules/@noble/hashes/sha2.js
+init_utils();
 var SHA256_K = /* @__PURE__ */ Uint32Array.from([
   1116352408,
   1899447441,
@@ -37380,7 +37435,7 @@ function decodeJwt(jwt) {
 }
 __name(decodeJwt, "decodeJwt");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/jwt.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/jwt.mjs
 async function signJWT(payload, secret, expiresIn = 3600) {
   return await new SignJWT(payload).setProtectedHeader({ alg: "HS256" }).setIssuedAt().setExpirationTime(Math.floor(Date.now() / 1e3) + expiresIn).sign(new TextEncoder().encode(secret));
 }
@@ -37524,7 +37579,7 @@ async function symmetricDecodeJWT(token, secret, salt2) {
 }
 __name(symmetricDecodeJWT, "symmetricDecodeJWT");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/session-store.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/session-store.mjs
 init_json();
 init_zod();
 var MAX_COOKIE_SIZE = 4050;
@@ -37679,7 +37734,7 @@ var getSessionQuerySchema = optional(object({
   disableRefresh: coerce_exports.boolean().meta({ description: "Disable session refresh. Useful for checking session status, without updating the session" }).optional()
 }));
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/wildcard.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/wildcard.mjs
 function escapeRegExpChar(char) {
   if (char === "-" || char === "^" || char === "$" || char === "+" || char === "." || char === "(" || char === ")" || char === "|" || char === "[" || char === "]" || char === "{" || char === "}" || char === "*" || char === "?" || char === "\\") return `\\${char}`;
   else return char;
@@ -37764,7 +37819,7 @@ function wildcardMatch(pattern, options) {
 }
 __name(wildcardMatch, "wildcardMatch");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/url.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/url.mjs
 init_env();
 init_error2();
 var SLASH_CHAR_CODE = "/".charCodeAt(0);
@@ -37946,13 +38001,13 @@ function resolveBaseURL(config3, basePath, source, loadEnv, trustedProxyHeaders)
 }
 __name(resolveBaseURL, "resolveBaseURL");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/is-promise.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/is-promise.mjs
 function isPromise(obj) {
   return !!obj && (typeof obj === "object" || typeof obj === "function") && typeof obj.then === "function";
 }
 __name(isPromise, "isPromise");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/cache.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/cache.mjs
 init_env();
 init_json();
 init_zod();
@@ -37985,26 +38040,24 @@ function parseCompactCookieCache(value) {
 }
 __name(parseCompactCookieCache, "parseCompactCookieCache");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/index.mjs
 init_env();
 init_error2();
 init_json();
+init_base64();
 
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/binary.mjs
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/binary.mjs
 var decoders = /* @__PURE__ */ new Map();
 var encoder3 = new TextEncoder();
 var binary = {
   decode: /* @__PURE__ */ __name((data, encoding = "utf-8") => {
-    if (!decoders.has(encoding)) {
-      decoders.set(encoding, new TextDecoder(encoding));
-    }
-    const decoder3 = decoders.get(encoding);
-    return decoder3.decode(data);
+    if (!decoders.has(encoding)) decoders.set(encoding, new TextDecoder(encoding));
+    return decoders.get(encoding).decode(data);
   }, "decode"),
-  encode: encoder3.encode
+  encode: /* @__PURE__ */ __name((input) => encoder3.encode(input), "encode")
 };
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/cookies/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/index.mjs
 function createCookieGetter(options) {
   const baseURLString = typeof options.baseURL === "string" ? options.baseURL : void 0;
   const dynamicProtocol = typeof options.baseURL === "object" && options.baseURL !== null ? options.baseURL.protocol : void 0;
@@ -38225,10 +38278,10 @@ function deleteSessionCookie(ctx, skipDontRememberMe) {
 }
 __name(deleteSessionCookie, "deleteSessionCookie");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/context/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/index.mjs
 init_global();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/context/request-state.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/request-state.mjs
 init_global();
 var ensureAsyncStorage = /* @__PURE__ */ __name(async () => {
   const betterAuthGlobal = __getBetterAuthGlobal();
@@ -38274,9 +38327,10 @@ function defineRequestState(initFn) {
 }
 __name(defineRequestState, "defineRequestState");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/context/transaction.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/transaction.mjs
 init_global();
 init_schema_check();
+init_logger();
 var ensureAsyncStorage2 = /* @__PURE__ */ __name(async () => {
   const betterAuthGlobal = __getBetterAuthGlobal();
   const existing = betterAuthGlobal.context.adapterAsyncStorage;
@@ -38325,12 +38379,13 @@ var runWithTransaction = /* @__PURE__ */ __name(async (adapter, fn, options) => 
     if (als.getStore()?.isTransactionActive) return fn();
     const pendingSchemaCheck = runtimeSchemaCheckFor(adapter)?.();
     if (pendingSchemaCheck) await pendingSchemaCheck;
-    const pendingHooks = [];
+    let pendingHooks = [];
     let result;
     let error3;
     let hasError = false;
     try {
       result = await adapter.transaction(async (trx) => {
+        pendingHooks = [];
         return als.run({
           adapter: trx,
           pendingHooks,
@@ -38341,16 +38396,29 @@ var runWithTransaction = /* @__PURE__ */ __name(async (adapter, fn, options) => 
       hasError = true;
       error3 = e;
     }
-    if (hasError) throw error3;
-    for (const hook of pendingHooks) try {
-      await hook();
-    } catch (error4) {
-      if (!options?.onAfterCommitHookError) throw error4;
-      try {
-        await options.onAfterCommitHookError(error4);
-      } catch {
+    const runPendingHooks = /* @__PURE__ */ __name(async (unhandledErrors) => {
+      for (const hook of pendingHooks) try {
+        await hook();
+      } catch (hookError) {
+        if (!options?.onAfterCommitHookError) {
+          if (unhandledErrors === "throw") throw hookError;
+          try {
+            logger.error("Failed to run an after-commit hook for work that could not roll back", hookError);
+          } catch {
+          }
+          continue;
+        }
+        try {
+          await options.onAfterCommitHookError(hookError);
+        } catch {
+        }
       }
+    }, "runPendingHooks");
+    if (hasError) {
+      if (adapter.options?.adapterConfig.transaction === false) await runPendingHooks("log");
+      throw error3;
     }
+    await runPendingHooks("throw");
     return result;
   }).catch((err) => {
     if (!called) return fn();
@@ -38377,10 +38445,10 @@ var queueAfterTransactionHook = /* @__PURE__ */ __name(async (hook, options) => 
   store.pendingHooks.push(executeHook);
 }, "queueAfterTransactionHook");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/state/should-session-refresh.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/state/should-session-refresh.mjs
 var { get: getShouldSkipSessionRefresh, set: setShouldSkipSessionRefresh } = defineRequestState(() => false);
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/session.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/session.mjs
 init_error2();
 init_zod();
 var getSession = /* @__PURE__ */ __name(() => createAuthEndpoint("/get-session", {
@@ -38790,7 +38858,7 @@ var revokeOtherSessions = createAuthEndpoint("/revoke-other-sessions", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/routes.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/routes.mjs
 init_error2();
 init_zod();
 var defaultCharset = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -39498,7 +39566,7 @@ var defaultGenerateUserCode = /* @__PURE__ */ __name((length) => {
   return Array.from(crypto.getRandomValues(chars)).map((byte) => defaultCharset[byte % 32]).join("");
 }, "defaultGenerateUserCode");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/plugins/device-authorization/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/index.mjs
 init_error2();
 init_zod();
 var timeStringSchema = custom((val) => {
@@ -39579,7 +39647,7 @@ var deviceAuthorization = /* @__PURE__ */ __name((options = {}) => {
   };
 }, "deviceAuthorization");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/auth/trusted-origins.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/auth/trusted-origins.mjs
 var CONTROL_CHARACTER_PATTERN = /[\u0000-\u001f\u007f-\u009f]/;
 var RELATIVE_URL_PARSER_ORIGIN = "https://better-auth.invalid";
 var ENCODED_PATH_SEPARATOR_PATTERN = /%2[fF]|%5[cC]/;
@@ -39649,10 +39717,10 @@ var matchesOriginPattern = /* @__PURE__ */ __name((url, pattern, settings) => {
   return parsed.path === parsedPattern.path || parsed.path.startsWith(`${parsedPattern.path}/`);
 }, "matchesOriginPattern");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/url.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/url.mjs
 function normalizePathname(requestUrl, basePath) {
   let pathname;
   try {
@@ -39681,7 +39749,7 @@ function appendQueryParams(input, params) {
 }
 __name(appendQueryParams, "appendQueryParams");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/deprecate.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/deprecate.mjs
 function deprecate(fn, message2, logger2) {
   let warned = false;
   return function(...args) {
@@ -39694,7 +39762,7 @@ function deprecate(fn, message2, logger2) {
 }
 __name(deprecate, "deprecate");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
 function shouldSkipCSRFForBackwardCompat(ctx) {
   return ctx.context.skipOriginCheck === true && ctx.context.options.advanced?.disableCSRFCheck === void 0;
 }
@@ -39820,10 +39888,10 @@ async function validateFormCsrf(ctx) {
 }
 __name(validateFormCsrf, "validateFormCsrf");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/rate-limiter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/rate-limiter/index.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/ip.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/ip.mjs
 init_env_impl();
 init_zod();
 var ipv4Schema = ipv42();
@@ -39999,7 +40067,7 @@ function createRateLimitKey(ip, path) {
 }
 __name(createRateLimitKey, "createRateLimitKey");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/rate-limiter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/rate-limiter/index.mjs
 var memory = /* @__PURE__ */ new Map();
 var MEMORY_STORE_MAX_ENTRIES = 1e5;
 function pruneMemoryStore() {
@@ -40313,11 +40381,11 @@ function getDefaultSpecialRules() {
 }
 __name(getDefaultSpecialRules, "getDefaultSpecialRules");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/state/oauth.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/state/oauth.mjs
 var { get: getRawOAuthState, set: setOAuthState } = defineRequestState(() => null);
 var { get: getOAuthServerContext, set: setOAuthServerContext } = defineRequestState(() => null);
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/validate-user-info.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/validate-user-info.mjs
 init_error2();
 function assertValidUserInfoSource(source) {
   if (!source?.method) throw new APIError2("FORBIDDEN", {
@@ -40355,34 +40423,27 @@ async function assertValidUserInfo(ctx, data) {
 }
 __name(assertValidUserInfo, "assertValidUserInfo");
 
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/hash.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/verification-token-storage.mjs
+init_base64();
+
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/hash.mjs
+init_bytes();
+init_base64();
 function createHash(algorithm2, encoding) {
-  return {
-    digest: /* @__PURE__ */ __name(async (input) => {
-      const encoder4 = new TextEncoder();
-      const data = typeof input === "string" ? encoder4.encode(input) : input;
-      const hashBuffer = await getWebcryptoSubtle2().digest(algorithm2, data);
-      if (encoding === "hex") {
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
-        return hashHex;
-      }
-      if (encoding === "base64" || encoding === "base64url" || encoding === "base64urlnopad") {
-        if (encoding.includes("url")) {
-          return base64Url.encode(hashBuffer, {
-            padding: encoding !== "base64urlnopad"
-          });
-        }
-        const hashBase64 = base642.encode(hashBuffer);
-        return hashBase64;
-      }
-      return hashBuffer;
-    }, "digest")
-  };
+  return { digest: /* @__PURE__ */ __name(async (input) => {
+    const data = toBufferSource(input);
+    const hashBuffer = await getWebcryptoSubtle().digest(algorithm2, data);
+    if (encoding === "hex") return Array.from(new Uint8Array(hashBuffer)).map((b) => b.toString(16).padStart(2, "0")).join("");
+    if (encoding === "base64" || encoding === "base64url" || encoding === "base64urlnopad") {
+      if (encoding.includes("url")) return base64Url.encode(hashBuffer, { padding: encoding !== "base64urlnopad" });
+      return base642.encode(hashBuffer);
+    }
+    return hashBuffer;
+  }, "digest") };
 }
 __name(createHash, "createHash");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/verification-token-storage.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/verification-token-storage.mjs
 var defaultKeyHasher = /* @__PURE__ */ __name(async (identifier) => {
   const hash = await createHash("SHA-256").digest(new TextEncoder().encode(identifier));
   return base64Url.encode(new Uint8Array(hash), { padding: false });
@@ -40406,7 +40467,7 @@ function getStorageOption(identifier, config3) {
 }
 __name(getStorageOption, "getStorageOption");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/with-hooks.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/with-hooks.mjs
 init_pure_index();
 function getWithHooks(adapter, ctx) {
   const withSpan = createWithSpan(ctx.options);
@@ -40653,10 +40714,11 @@ function getWithHooks(adapter, ctx) {
 }
 __name(getWithHooks, "getWithHooks");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/internal-adapter.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/internal-adapter.mjs
 init_error2();
 init_id();
 init_json();
+init_internal();
 function getTTLSeconds(expiresAt, now3 = Date.now()) {
   const expiresMs = typeof expiresAt === "number" ? expiresAt : expiresAt.getTime();
   return Math.max(Math.floor((expiresMs - now3) / 1e3), 0);
@@ -40668,6 +40730,7 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
   const secondaryStorage = options.secondaryStorage;
   const verificationConsumeLocks = /* @__PURE__ */ new Map();
   const sessionExpiration = options.session?.expiresIn || 3600 * 24 * 7;
+  const databaseSessionFallbackEnabled = !!secondaryStorage && options.session?.storeSessionInDatabase === true && options.session?.preserveSessionInDatabase !== true;
   const { createWithHooks, updateWithHooks, updateManyWithHooks, deleteWithHooks, deleteManyWithHooks, consumeOneWithHooks } = getWithHooks(adapter, ctx);
   const endPreservedSessions = /* @__PURE__ */ __name((where) => {
     const liveSessions = [...where, {
@@ -40814,6 +40877,17 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
       }, "account", void 0);
     }, "createAccount"),
     listSessions: /* @__PURE__ */ __name(async (userId, options2) => {
+      if (databaseSessionFallbackEnabled) return (await (await getCurrentAdapter(adapter)).findMany({
+        model: "session",
+        where: [{
+          field: "userId",
+          value: userId
+        }, {
+          field: "expiresAt",
+          value: /* @__PURE__ */ new Date(),
+          operator: "gt"
+        }]
+      })).map((session) => parseSessionOutput(ctx.options, session));
       if (secondaryStorage) {
         const currentList = await secondaryStorage.get(`active-sessions-${userId}`);
         if (!currentList) return [];
@@ -40889,7 +40963,7 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
         return ctx2?.headers || ctx2?.request?.headers;
       })();
       const storeInDb = options.session?.storeSessionInDatabase;
-      const databaseSessionFallbackEnabled = storeInDb === true && options.session?.preserveSessionInDatabase !== true;
+      const deferMirror = storageOptions?.deferSecondaryStorageWrites === true && databaseSessionFallbackEnabled;
       const { id: _, ...rest } = override || {};
       let sessionId;
       if (secondaryStorage && !storeInDb) {
@@ -40944,18 +41018,18 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
         }), sessionTTL);
         return sessionData;
       }, "mirrorSessionToSecondaryStorage");
-      const res = await createWithHooks(data, "session", secondaryStorage ? {
+      return await createWithHooks(data, "session", secondaryStorage ? {
         fn: /* @__PURE__ */ __name(async (sessionData) => {
-          return storageOptions?.deferSecondaryStorageWrites ? sessionData : mirrorSessionToSecondaryStorage(sessionData);
+          if (!deferMirror) return mirrorSessionToSecondaryStorage(sessionData);
+          await queueAfterTransactionHook(async () => {
+            await mirrorSessionToSecondaryStorage(sessionData);
+          }, { onError(error3) {
+            logger2.error("Failed to mirror committed session to secondary storage", error3);
+          } });
+          return sessionData;
         }, "fn"),
         executeMainFn: storeInDb
       } : void 0);
-      if (secondaryStorage && storageOptions?.deferSecondaryStorageWrites && res) await queueAfterTransactionHook(async () => {
-        await mirrorSessionToSecondaryStorage(res);
-      }, databaseSessionFallbackEnabled ? { onError(error3) {
-        logger2.error("Failed to mirror committed session to secondary storage", error3);
-      } } : void 0);
-      return res;
     }, "createSession"),
     findSession: /* @__PURE__ */ __name(async (token) => {
       if (secondaryStorage) {
@@ -40996,54 +41070,57 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
       };
     }, "findSession"),
     findSessions: /* @__PURE__ */ __name(async (sessionTokens, options2) => {
-      if (secondaryStorage) {
-        const sessions2 = [];
-        for (const sessionToken of sessionTokens) {
-          const sessionStringified = await secondaryStorage.get(sessionToken);
-          if (sessionStringified) try {
-            const s = typeof sessionStringified === "string" ? JSON.parse(sessionStringified) : sessionStringified;
-            if (!s) continue;
-            const expiresAt = new Date(s.session.expiresAt);
-            if (options2?.onlyActiveSessions && expiresAt <= /* @__PURE__ */ new Date()) continue;
-            const session = {
-              session: {
-                ...s.session,
-                expiresAt: new Date(s.session.expiresAt)
-              },
-              user: {
-                ...s.user,
-                createdAt: new Date(s.user.createdAt),
-                updatedAt: new Date(s.user.updatedAt)
-              }
-            };
-            sessions2.push(session);
-          } catch {
-            continue;
-          }
+      const uniqueTokens = [...new Set(sessionTokens)];
+      const sessionsByToken = /* @__PURE__ */ new Map();
+      const missingTokens = [];
+      if (secondaryStorage) for (const sessionToken of uniqueTokens) {
+        const sessionStringified = await secondaryStorage.get(sessionToken);
+        if (sessionStringified) try {
+          const s = typeof sessionStringified === "string" ? JSON.parse(sessionStringified) : sessionStringified;
+          if (!s) continue;
+          const expiresAt = new Date(s.session.expiresAt);
+          if (options2?.onlyActiveSessions && expiresAt <= /* @__PURE__ */ new Date()) continue;
+          const session = {
+            session: {
+              ...s.session,
+              expiresAt: new Date(s.session.expiresAt)
+            },
+            user: {
+              ...s.user,
+              createdAt: new Date(s.user.createdAt),
+              updatedAt: new Date(s.user.updatedAt)
+            }
+          };
+          sessionsByToken.set(sessionToken, session);
+        } catch {
+          continue;
         }
-        return sessions2;
+        else missingTokens.push(sessionToken);
       }
-      const sessions = await (await getCurrentAdapter(adapter)).findMany({
-        model: "session",
-        where: [{
-          field: "token",
-          value: sessionTokens,
-          operator: "in"
-        }, ...options2?.onlyActiveSessions ? [{
-          field: "expiresAt",
-          value: /* @__PURE__ */ new Date(),
-          operator: "gt"
-        }] : []],
-        join: { user: true }
-      });
-      if (!sessions.length) return [];
-      if (sessions.some((session) => !session.user)) return [];
-      return sessions.map((_session) => {
-        const { user, ...session } = _session;
-        return {
+      const databaseTokens = secondaryStorage ? missingTokens : uniqueTokens;
+      if (databaseTokens.length > 0 && (!secondaryStorage || databaseSessionFallbackEnabled)) {
+        const databaseSessions = await (await getCurrentAdapter(adapter)).findMany({
+          model: "session",
+          limit: databaseTokens.length,
+          where: [{
+            field: "token",
+            value: databaseTokens,
+            operator: "in"
+          }, ...options2?.onlyActiveSessions ? [{
+            field: "expiresAt",
+            value: /* @__PURE__ */ new Date(),
+            operator: "gt"
+          }] : []],
+          join: { user: true }
+        });
+        for (const { user, ...session } of databaseSessions) if (user) sessionsByToken.set(session.token, {
           session,
           user
-        };
+        });
+      }
+      return uniqueTokens.flatMap((token) => {
+        const session = sessionsByToken.get(token);
+        return session ? [session] : [];
       });
     }, "findSessions"),
     updateSession: /* @__PURE__ */ __name(async (sessionToken, session) => {
@@ -41508,7 +41585,9 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
     * already taken.
     *
     * The `verification.identifier` column is non-unique, so uniqueness comes
-    * from a deterministic primary key (`SHA-256` of `reserve:<identifier>`).
+    * from a deterministic primary key (`SHA-256` of `reserve:<identifier>`,
+    * encoded by `encodeDeterministicId` so the configured id strategy keeps
+    * it; see its note on `generateId: "serial"`).
     * The database path is atomic: the primary key turns the INSERT into the
     * first-writer-wins gate, and a duplicate is detected portably by
     * re-reading the row rather than matching adapter-specific errors.
@@ -41522,7 +41601,7 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
     * is best-effort there (it is intended for development and tests).
     */
     reserveVerificationValue: /* @__PURE__ */ __name(async (data) => {
-      const reservationId = base64Url.encode(new Uint8Array(await createHash("SHA-256").digest(new TextEncoder().encode("reserve:" + data.identifier))), { padding: false });
+      const reservationId = encodeDeterministicId(new Uint8Array(await createHash("SHA-256").digest(new TextEncoder().encode("reserve:" + data.identifier))), options);
       const storageOption = getStorageOption(data.identifier, options.verification?.storeIdentifier);
       const storedIdentifier = await processIdentifier(data.identifier, storageOption);
       if (secondaryStorage && !options.verification?.storeInDatabase) throw new BetterAuthError("reserveVerificationValue requires database-backed verification storage. Set verification.storeInDatabase to true for flows that reserve verification values.");
@@ -41588,7 +41667,7 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
   };
 }, "createInternalAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/helpers.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/helpers.mjs
 init_env();
 init_error2();
 
@@ -41663,7 +41742,7 @@ var defuArrayFn = createDefu((object2, key, currentValue) => {
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/host.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/host.mjs
 var CLOUD_METADATA_HOSTS = /* @__PURE__ */ new Set([
   "metadata.google.internal",
   "metadata.goog",
@@ -41827,7 +41906,7 @@ function isLoopbackHost(host) {
 }
 __name(isLoopbackHost, "isLoopbackHost");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/helpers.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/helpers.mjs
 async function runPluginInit(context) {
   let options = context.options;
   const plugins = options.plugins || [];
@@ -41967,7 +42046,7 @@ async function getTrustedProviders(options, request) {
 }
 __name(getTrustedProviders, "getTrustedProviders");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/account-key.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/account-key.mjs
 init_error2();
 function toOAuthProfileRecord(profile) {
   return profile;
@@ -41997,7 +42076,7 @@ async function resolveOAuthAccountKeyForAPI(provider2, tokens, profile) {
 }
 __name(resolveOAuthAccountKeyForAPI, "resolveOAuthAccountKeyForAPI");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/errors.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/errors.mjs
 var OAUTH_CALLBACK_ERROR_CODES = {
   NO_CODE: "no_code",
   PROVIDER_NOT_FOUND: "oauth_provider_not_found",
@@ -42026,7 +42105,7 @@ function missingEmailLogMessage(providerId, options) {
 }
 __name(missingEmailLogMessage, "missingEmailLogMessage");
 
-// ../../node_modules/.pnpm/@better-auth+utils@0.4.2/node_modules/@better-auth/utils/dist/password.node.mjs
+// ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/password.node.mjs
 import { randomBytes as randomBytes2, scrypt } from "node:crypto";
 var config2 = {
   N: 16384,
@@ -42036,43 +42115,31 @@ var config2 = {
 };
 function generateKey(password, salt2) {
   return new Promise((resolve, reject) => {
-    scrypt(
-      password.normalize("NFKC"),
-      salt2,
-      config2.dkLen,
-      {
-        N: config2.N,
-        r: config2.r,
-        p: config2.p,
-        maxmem: 128 * config2.N * config2.r * 2
-      },
-      (err, key) => {
-        if (err)
-          reject(err);
-        else
-          resolve(key);
-      }
-    );
+    scrypt(password.normalize("NFKC"), salt2, config2.dkLen, {
+      N: config2.N,
+      r: config2.r,
+      p: config2.p,
+      maxmem: 128 * config2.N * config2.r * 2
+    }, (err, key) => {
+      if (err) reject(err);
+      else resolve(key);
+    });
   });
 }
 __name(generateKey, "generateKey");
 async function hashPassword(password) {
   const salt2 = randomBytes2(16).toString("hex");
-  const key = await generateKey(password, salt2);
-  return `${salt2}:${key.toString("hex")}`;
+  return `${salt2}:${(await generateKey(password, salt2)).toString("hex")}`;
 }
 __name(hashPassword, "hashPassword");
 async function verifyPassword(hash, password) {
   const [salt2, key] = hash.split(":");
-  if (!salt2 || !key) {
-    throw new Error("Invalid password hash");
-  }
-  const targetKey = await generateKey(password, salt2);
-  return targetKey.toString("hex") === key;
+  if (!salt2 || !key) throw new Error("Invalid password hash");
+  return (await generateKey(password, salt2)).toString("hex") === key;
 }
 __name(verifyPassword, "verifyPassword");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/password.mjs
 var hashPassword$1 = hashPassword;
 var verifyPassword$1 = /* @__PURE__ */ __name(async ({ hash, password }) => {
   return verifyPassword(hash, password);
@@ -42174,11 +42241,11 @@ function bytesToHex2(bytes) {
   return hex2;
 }
 __name(bytesToHex2, "bytesToHex");
-function asciiToBase16(ch) {
+function asciiToBase162(ch) {
   return ch >= 48 && ch <= 57 ? ch - 48 : ch >= 65 && ch <= 70 ? ch - (65 - 10) : ch >= 97 && ch <= 102 ? ch - (97 - 10) : void 0;
 }
-__name(asciiToBase16, "asciiToBase16");
-function hexToBytes(hex2) {
+__name(asciiToBase162, "asciiToBase16");
+function hexToBytes2(hex2) {
   if (typeof hex2 !== "string")
     throw new TypeError("hex string expected, got " + typeof hex2);
   if (hasHexBuiltin2) {
@@ -42196,8 +42263,8 @@ function hexToBytes(hex2) {
     throw new RangeError("hex string expected, got unpadded hex of length " + hl);
   const array2 = new Uint8Array(al);
   for (let ai = 0, hi = 0; ai < al; ai++, hi += 2) {
-    const n1 = asciiToBase16(hex2.charCodeAt(hi));
-    const n2 = asciiToBase16(hex2.charCodeAt(hi + 1));
+    const n1 = asciiToBase162(hex2.charCodeAt(hi));
+    const n2 = asciiToBase162(hex2.charCodeAt(hi + 1));
     if (n1 === void 0 || n2 === void 0) {
       const char = hex2[hi] + hex2[hi + 1];
       throw new RangeError('hex string expected, got non-hex character "' + char + '" at index ' + hi);
@@ -42206,7 +42273,7 @@ function hexToBytes(hex2) {
   }
   return array2;
 }
-__name(hexToBytes, "hexToBytes");
+__name(hexToBytes2, "hexToBytes");
 function utf8ToBytes2(str) {
   if (typeof str !== "string")
     throw new TypeError("string expected");
@@ -42958,7 +43025,7 @@ var xchacha20poly1305 = /* @__PURE__ */ wrapCipher(
   /* @__PURE__ */ _poly1305_aead(xchacha20)
 );
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/index.mjs
 var ENVELOPE_PREFIX = "$ba$";
 function parseEnvelope(data) {
   if (!data.startsWith(ENVELOPE_PREFIX)) return null;
@@ -42985,7 +43052,7 @@ async function rawEncrypt(secret, data) {
 __name(rawEncrypt, "rawEncrypt");
 async function rawDecrypt(secret, hex2) {
   const keyAsBytes = await createHash("SHA-256").digest(secret);
-  const dataAsBytes = hexToBytes(hex2);
+  const dataAsBytes = hexToBytes2(hex2);
   const chacha = managedNonce(xchacha20poly1305)(new Uint8Array(keyAsBytes));
   return new TextDecoder().decode(chacha.decrypt(dataAsBytes));
 }
@@ -43009,7 +43076,7 @@ var symmetricDecrypt = /* @__PURE__ */ __name(async ({ key, data }) => {
   throw new Error("Cannot decrypt legacy bare-hex payload: no legacy secret available. Set BETTER_AUTH_SECRET for backwards compatibility.");
 }, "symmetricDecrypt");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/utils.mjs
 function isLikelyEncrypted(token) {
   if (token.startsWith("$ba$")) return true;
   return token.length % 2 === 0 && /^[0-9a-f]+$/i.test(token);
@@ -43041,7 +43108,7 @@ function getOAuthCallbackPath(provider2) {
 }
 __name(getOAuthCallbackPath, "getOAuthCallbackPath");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/request.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/request.mjs
 function safeCloneRequest(request) {
   if (!request) return;
   try {
@@ -43064,7 +43131,7 @@ function safeCloneRequest(request) {
 }
 __name(safeCloneRequest, "safeCloneRequest");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/email-verification.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/email-verification.mjs
 init_error2();
 init_zod();
 async function createEmailVerificationToken(secret, email3, updateTo, expiresIn = 3600, extraPayload) {
@@ -43371,11 +43438,12 @@ var verifyEmail = createAuthEndpoint("/verify-email", {
   });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/link-account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/link-account.mjs
 init_env();
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/utils.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/utils.mjs
+init_base64();
 function parseScopeField(scope) {
   if (Array.isArray(scope)) return scope.map((s) => typeof s === "string" ? s.trim() : "").filter(Boolean);
   if (typeof scope === "string") return scope.trim().split(/\s+/).filter(Boolean);
@@ -43416,7 +43484,7 @@ async function generateCodeChallenge(codeVerifier) {
 }
 __name(generateCodeChallenge, "generateCodeChallenge");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/create-authorization-url.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/create-authorization-url.mjs
 var RESERVED_AUTHORIZATION_PARAMS = [
   "state",
   "client_id",
@@ -43470,11 +43538,12 @@ async function createAuthorizationURL({ id, options, authorizationEndpoint: auth
 }
 __name(createAuthorizationURL, "createAuthorizationURL");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/authorization-params.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/authorization-params.mjs
 init_zod();
 var additionalAuthorizationParamsSchema = record(string2(), string2()).refine((value) => !Object.keys(value).some((key) => RESERVED_AUTHORIZATION_PARAMS_SET.has(key)), { message: `additionalParams cannot include reserved OAuth parameters: ${RESERVED_AUTHORIZATION_PARAMS.join(", ")}` }).meta({ description: "Extra query parameters to append to the provider authorization URL (e.g. Cognito identity_provider, Google hd)." }).optional();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/basic-credentials.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/basic-credentials.mjs
+init_base64();
 function formUrlEncode(value) {
   return new URLSearchParams({ v: value }).toString().slice(2);
 }
@@ -43485,7 +43554,7 @@ function encodeBasicCredentials(clientId, clientSecret) {
 }
 __name(encodeBasicCredentials, "encodeBasicCredentials");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/client-assertion.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/client-assertion.mjs
 var CLIENT_ASSERTION_TYPE = "urn:ietf:params:oauth:client-assertion-type:jwt-bearer";
 async function resolveClientAssertionParams({ getClientAssertion, context }) {
   return {
@@ -43495,7 +43564,7 @@ async function resolveClientAssertionParams({ getClientAssertion, context }) {
 }
 __name(resolveClientAssertionParams, "resolveClientAssertionParams");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
 init_error2();
 
 // ../../node_modules/.pnpm/@better-fetch+fetch@1.3.2/node_modules/@better-fetch/fetch/dist/index.js
@@ -43974,7 +44043,7 @@ var betterFetch = /* @__PURE__ */ __name(async (url, options) => {
   };
 }, "betterFetch");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
 var httpRedirectStatuses = /* @__PURE__ */ new Set([
   301,
   302,
@@ -44010,7 +44079,7 @@ async function fetchRefusingRedirects(url, options) {
 }
 __name(fetchRefusingRedirects, "fetchRefusingRedirects");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/token-endpoint-auth.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/token-endpoint-auth.mjs
 function getDefaultTokenEndpointAuth(options, authentication) {
   if (authentication === "basic") return { method: "client_secret_basic" };
   if (options.clientSecret) return { method: "client_secret_post" };
@@ -44115,7 +44184,7 @@ async function applyTokenEndpointAuth({ body, headers, options, tokenEndpoint: t
 }
 __name(applyTokenEndpointAuth, "applyTokenEndpointAuth");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/refresh-access-token.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/refresh-access-token.mjs
 var BLOCKED_REFRESH_TOKEN_PARAMS_SET = /* @__PURE__ */ new Set([
   "grant_type",
   "refresh_token",
@@ -44197,7 +44266,7 @@ async function refreshAccessToken({ refreshToken: refreshToken2, options, tokenE
 }
 __name(refreshAccessToken, "refreshAccessToken");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/validate-authorization-code.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/validate-authorization-code.mjs
 async function authorizationCodeRequest({ code, codeVerifier, redirectURI, options, authentication, tokenEndpointAuth, tokenEndpoint: tokenEndpoint4, deviceId, headers, additionalParams = {}, resource }) {
   options = typeof options === "function" ? await options() : options;
   const request = buildAuthorizationCodeRequest({
@@ -44268,7 +44337,7 @@ async function validateAuthorizationCode({ code, codeVerifier, redirectURI, opti
 }
 __name(validateAuthorizationCode, "validateAuthorizationCode");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/oauth2/verify-id-token.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/verify-id-token.mjs
 async function sha256Hex(value) {
   const data = new TextEncoder().encode(value);
   const digest2 = await crypto.subtle.digest("SHA-256", data);
@@ -44302,7 +44371,8 @@ async function verifyProviderIdToken(provider2, token, nonce, ctx) {
       issuer: config3.issuer,
       audience: config3.audience,
       algorithms: config3.algorithms ?? (alg2 ? [alg2] : void 0),
-      maxTokenAge: config3.maxTokenAge
+      maxTokenAge: config3.maxTokenAge,
+      clockTolerance: 30
     });
     if (nonce && !await nonceMatches(payload.nonce, nonce, config3.nonceComparison)) return false;
     if (config3.verifyClaims && !config3.verifyClaims(payload)) return false;
@@ -44313,7 +44383,7 @@ async function verifyProviderIdToken(provider2, token, nonce, ctx) {
 }
 __name(verifyProviderIdToken, "verifyProviderIdToken");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/link-account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/link-account.mjs
 function linkOAuthAccountFailure(code, message2) {
   return {
     linked: false,
@@ -44678,7 +44748,8 @@ async function applyUpdateUserInfoOnLink(c, userId, userInfo) {
 }
 __name(applyUpdateUserInfoOnLink, "applyUpdateUserInfoOnLink");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/crypto/purpose.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/purpose.mjs
+init_utils();
 var salt = utf8ToBytes("better-auth:oauth-encryption:v1");
 function deriveSecret(secret, purpose) {
   return bytesToHex(hkdf(sha256, utf8ToBytes(secret), salt, utf8ToBytes(`better-auth:${purpose}:v1`), 32));
@@ -44694,7 +44765,7 @@ function derivePurposeKey(secret, purpose) {
 }
 __name(derivePurposeKey, "derivePurposeKey");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/state.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/state.mjs
 init_error2();
 init_zod();
 var stateDataSchema = looseObject({
@@ -44845,7 +44916,7 @@ async function parseGenericState(c, state, settings) {
 }
 __name(parseGenericState, "parseGenericState");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/oauth2/state.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/state.mjs
 init_error2();
 function generateIdTokenNonce(provider2) {
   return provider2.requiresIdTokenNonce ? generateRandomString(32) : void 0;
@@ -44903,10 +44974,10 @@ async function parseState(c) {
 }
 __name(parseState, "parseState");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/account.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/apple.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/apple.mjs
 init_error2();
 init_logger();
 var apple = /* @__PURE__ */ __name((options) => {
@@ -44994,7 +45065,7 @@ var getApplePublicKey = /* @__PURE__ */ __name(async (kid) => {
   return await importJWK(jwk, jwk.alg);
 }, "getApplePublicKey");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/atlassian.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/atlassian.mjs
 init_error2();
 init_logger();
 var atlassian = /* @__PURE__ */ __name((options) => {
@@ -45064,7 +45135,7 @@ var atlassian = /* @__PURE__ */ __name((options) => {
           data: profile
         };
       } catch (error3) {
-        logger.error("Failed to fetch user info from Figma:", error3);
+        logger.error("Failed to fetch user info from Atlassian:", error3);
         return null;
       }
     },
@@ -45072,7 +45143,7 @@ var atlassian = /* @__PURE__ */ __name((options) => {
   };
 }, "atlassian");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/cloudflare.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/cloudflare.mjs
 init_logger();
 var authorizationEndpoint = "https://dash.cloudflare.com/oauth2/auth";
 var tokenEndpoint = "https://dash.cloudflare.com/oauth2/token";
@@ -45146,7 +45217,7 @@ var cloudflare = /* @__PURE__ */ __name((options) => {
   };
 }, "cloudflare");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/cognito.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/cognito.mjs
 init_error2();
 init_logger();
 var cognito = /* @__PURE__ */ __name((options) => {
@@ -45289,7 +45360,7 @@ var getCognitoPublicKey = /* @__PURE__ */ __name(async (kid, region, userPoolId)
   }
 }, "getCognitoPublicKey");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/discord.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/discord.mjs
 var discord = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://discord.com/api/oauth2/token";
   return {
@@ -45359,7 +45430,7 @@ var discord = /* @__PURE__ */ __name((options) => {
   };
 }, "discord");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/dropbox.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/dropbox.mjs
 var dropbox = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.dropboxapi.com/oauth2/token";
   return {
@@ -45427,7 +45498,7 @@ var dropbox = /* @__PURE__ */ __name((options) => {
   };
 }, "dropbox");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/facebook.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/facebook.mjs
 init_error2();
 init_logger();
 async function verifyFacebookAccessToken(accessToken, options) {
@@ -45545,7 +45616,7 @@ var facebook = /* @__PURE__ */ __name((options) => {
   };
 }, "facebook");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/figma.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/figma.mjs
 init_error2();
 init_logger();
 var figma = /* @__PURE__ */ __name((options) => {
@@ -45624,7 +45695,7 @@ var figma = /* @__PURE__ */ __name((options) => {
   };
 }, "figma");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/github.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/github.mjs
 init_logger();
 var github = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://github.com/login/oauth/access_token";
@@ -45711,7 +45782,7 @@ var github = /* @__PURE__ */ __name((options) => {
   };
 }, "github");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/gitlab.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/gitlab.mjs
 var cleanDoubleSlashes = /* @__PURE__ */ __name((input = "") => {
   return input.split("://").map((str) => str.replace(/\/{2,}/g, "/")).join("://");
 }, "cleanDoubleSlashes");
@@ -45786,7 +45857,7 @@ var gitlab = /* @__PURE__ */ __name((options) => {
   };
 }, "gitlab");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/google.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/google.mjs
 init_error2();
 init_logger();
 var GOOGLE_ID_TOKEN_MAX_AGE = "1h";
@@ -45897,7 +45968,7 @@ var getGooglePublicKeys = /* @__PURE__ */ __name(async (kid) => {
   return Promise.all(jwks.map((jwk) => importJWK(jwk, GOOGLE_ID_TOKEN_ALGORITHM)));
 }, "getGooglePublicKeys");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/huggingface.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/huggingface.mjs
 var huggingface = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://huggingface.co/oauth/token";
   return {
@@ -45966,7 +46037,7 @@ var huggingface = /* @__PURE__ */ __name((options) => {
   };
 }, "huggingface");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/kakao.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/kakao.mjs
 var kakao = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://kauth.kakao.com/oauth/token";
   return {
@@ -46032,7 +46103,7 @@ var kakao = /* @__PURE__ */ __name((options) => {
   };
 }, "kakao");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/kick.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/kick.mjs
 var kick = /* @__PURE__ */ __name((options) => {
   return {
     id: "kick",
@@ -46096,7 +46167,7 @@ var kick = /* @__PURE__ */ __name((options) => {
   };
 }, "kick");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/line.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/line.mjs
 var line = /* @__PURE__ */ __name((options) => {
   const authorizationEndpoint3 = "https://access.line.me/oauth2/v2.1/authorize";
   const tokenEndpoint4 = "https://api.line.me/oauth2/v2.1/token";
@@ -46188,7 +46259,7 @@ var line = /* @__PURE__ */ __name((options) => {
   };
 }, "line");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/linear.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/linear.mjs
 var linear = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.linear.app/oauth/token";
   return {
@@ -46269,7 +46340,7 @@ var linear = /* @__PURE__ */ __name((options) => {
   };
 }, "linear");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/linkedin.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/linkedin.mjs
 var linkedin = /* @__PURE__ */ __name((options) => {
   const authorizationEndpoint3 = "https://www.linkedin.com/oauth/v2/authorization";
   const tokenEndpoint4 = "https://www.linkedin.com/oauth/v2/accessToken";
@@ -46338,9 +46409,10 @@ var linkedin = /* @__PURE__ */ __name((options) => {
   };
 }, "linkedin");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/microsoft-entra-id.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/microsoft-entra-id.mjs
 init_error2();
 init_logger();
+init_base64();
 var MICROSOFT_CONSUMER_TENANT_ID = "9188040d-6c67-4c5b-b112-36a304b66dad";
 var microsoft = /* @__PURE__ */ __name((options) => {
   const tenant = options.tenantId || "common";
@@ -46396,6 +46468,7 @@ var microsoft = /* @__PURE__ */ __name((options) => {
     },
     idToken: {
       jwks: /* @__PURE__ */ __name((header) => getMicrosoftPublicKey(header.kid, tenant, authority), "jwks"),
+      algorithms: ["RS256"],
       audience: options.clientId,
       maxTokenAge: "1h",
       /**
@@ -46483,10 +46556,10 @@ var getMicrosoftPublicKey = /* @__PURE__ */ __name(async (kid, tenant, authority
   if (!data?.keys) throw new APIError2("BAD_REQUEST", { message: "Keys not found" });
   const jwk = data.keys.find((key) => key.kid === kid);
   if (!jwk) throw new Error(`JWK with kid ${kid} not found`);
-  return await importJWK(jwk, jwk.alg);
+  return await importJWK(jwk, jwk.alg ?? "RS256");
 }, "getMicrosoftPublicKey");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/naver.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/naver.mjs
 var naver = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://nid.naver.com/oauth2.0/token";
   return {
@@ -46547,7 +46620,7 @@ var naver = /* @__PURE__ */ __name((options) => {
   };
 }, "naver");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/notion.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/notion.mjs
 var notion = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.notion.com/v1/oauth/token";
   return {
@@ -46617,7 +46690,7 @@ var notion = /* @__PURE__ */ __name((options) => {
   };
 }, "notion");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/paybin.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/paybin.mjs
 init_error2();
 init_logger();
 var paybin = /* @__PURE__ */ __name((options) => {
@@ -46694,7 +46767,7 @@ var paybin = /* @__PURE__ */ __name((options) => {
   };
 }, "paybin");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/paypal.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/paypal.mjs
 init_error2();
 init_logger();
 var paypal = /* @__PURE__ */ __name((options) => {
@@ -46806,7 +46879,7 @@ var paypal = /* @__PURE__ */ __name((options) => {
   };
 }, "paypal");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/polar.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/polar.mjs
 var polar = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.polar.sh/v1/oauth2/token";
   return {
@@ -46873,7 +46946,7 @@ var polar = /* @__PURE__ */ __name((options) => {
   };
 }, "polar");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/railway.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/railway.mjs
 var authorizationEndpoint2 = "https://backboard.railway.com/oauth/auth";
 var tokenEndpoint2 = "https://backboard.railway.com/oauth/token";
 var userinfoEndpoint = "https://backboard.railway.com/oauth/me";
@@ -46943,7 +47016,7 @@ var railway = /* @__PURE__ */ __name((options) => {
   };
 }, "railway");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/utils/email.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/email.mjs
 init_zod();
 var PLACEHOLDER_EMAIL_DOMAIN = "placeholder.invalid";
 function createPlaceholderEmail({ identifier, namespace }) {
@@ -46953,7 +47026,7 @@ function createPlaceholderEmail({ identifier, namespace }) {
 }
 __name(createPlaceholderEmail, "createPlaceholderEmail");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/reddit.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/reddit.mjs
 var reddit = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://www.reddit.com/api/v1/access_token";
   const tokenRequestOptions = {
@@ -47028,7 +47101,7 @@ var reddit = /* @__PURE__ */ __name((options) => {
   };
 }, "reddit");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/roblox.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/roblox.mjs
 var roblox = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://apis.roblox.com/oauth/v1/token";
   return {
@@ -47093,7 +47166,7 @@ var roblox = /* @__PURE__ */ __name((options) => {
   };
 }, "roblox");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/salesforce.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/salesforce.mjs
 init_error2();
 init_logger();
 var salesforce = /* @__PURE__ */ __name((options) => {
@@ -47176,7 +47249,7 @@ var salesforce = /* @__PURE__ */ __name((options) => {
   };
 }, "salesforce");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/slack.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/slack.mjs
 var slack = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://slack.com/api/openid.connect.token";
   return {
@@ -47240,7 +47313,7 @@ var slack = /* @__PURE__ */ __name((options) => {
   };
 }, "slack");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/spotify.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/spotify.mjs
 var spotify = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://accounts.spotify.com/api/token";
   return {
@@ -47305,7 +47378,7 @@ var spotify = /* @__PURE__ */ __name((options) => {
   };
 }, "spotify");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/tiktok.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/tiktok.mjs
 var tiktok = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://open.tiktokapis.com/v2/oauth/token/";
   const tokenEndpointAuth = {
@@ -47380,7 +47453,7 @@ var tiktok = /* @__PURE__ */ __name((options) => {
   };
 }, "tiktok");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/twitch.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/twitch.mjs
 init_logger();
 var twitch = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://id.twitch.tv/oauth2/token";
@@ -47451,7 +47524,7 @@ var twitch = /* @__PURE__ */ __name((options) => {
   };
 }, "twitch");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/twitter.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/twitter.mjs
 var twitter = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.x.com/2/oauth2/token";
   return {
@@ -47535,7 +47608,7 @@ var twitter = /* @__PURE__ */ __name((options) => {
   };
 }, "twitter");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/vercel.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/vercel.mjs
 init_error2();
 var vercel = /* @__PURE__ */ __name((options) => {
   return {
@@ -47590,7 +47663,7 @@ var vercel = /* @__PURE__ */ __name((options) => {
   };
 }, "vercel");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/vk.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/vk.mjs
 var vk = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://id.vk.com/oauth2/auth";
   return {
@@ -47666,7 +47739,7 @@ var vk = /* @__PURE__ */ __name((options) => {
   };
 }, "vk");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/wechat.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/wechat.mjs
 var wechat = /* @__PURE__ */ __name((options) => {
   return {
     id: "wechat",
@@ -47754,7 +47827,7 @@ var wechat = /* @__PURE__ */ __name((options) => {
   };
 }, "wechat");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/zoom.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/zoom.mjs
 var zoom = /* @__PURE__ */ __name((userOptions) => {
   const options = {
     pkce: true,
@@ -47811,7 +47884,7 @@ var zoom = /* @__PURE__ */ __name((userOptions) => {
   };
 }, "zoom");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-fetch+fetch@1.3.2_better-call@_b63585350719241c1657a0f197e58f54/node_modules/@better-auth/core/dist/social-providers/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/index.mjs
 init_zod();
 var socialProviders = {
   apple,
@@ -47854,7 +47927,7 @@ var socialProviders = {
 var socialProviderList = Object.keys(socialProviders);
 var SocialProviderListEnum = _enum(socialProviderList).or(string2());
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/account.mjs
 init_zod();
 function parseStoredScopes(scope) {
   if (!scope) return [];
@@ -48429,10 +48502,10 @@ var accountInfo = createAuthEndpoint("/account-info", {
   });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/hide-metadata.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/hide-metadata.mjs
 var HIDE_METADATA = { scope: "server" };
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/callback.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/callback.mjs
 init_json();
 init_zod();
 var schema2 = object({
@@ -48634,7 +48707,7 @@ var callbackOAuth = createAuthEndpoint("/callback/:id", {
   throw c.redirect(toRedirectTo);
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/error.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/error.mjs
 init_env();
 function sanitize(input) {
   return input.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/&(?!amp;|lt;|gt;|quot;|#39;|#x[0-9a-fA-F]+;|#[0-9]+;)/g, "&amp;");
@@ -49018,7 +49091,7 @@ var error2 = createAuthEndpoint("/error", {
   return new Response(html(c.context.options, safeCode, safeDescription), { headers: { "Content-Type": "text/html" } });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/ok.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/ok.mjs
 var ok = createAuthEndpoint("/ok", {
   method: "GET",
   metadata: {
@@ -49042,7 +49115,7 @@ var ok = createAuthEndpoint("/ok", {
   return ctx.json({ ok: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/password.mjs
 init_error2();
 function assertPasswordNotTooShort(ctx, password) {
   if (password.length < ctx.context.password.config.minPasswordLength) {
@@ -49058,6 +49131,23 @@ function assertPasswordNotTooLong(ctx, password) {
   }
 }
 __name(assertPasswordNotTooLong, "assertPasswordNotTooLong");
+async function resetCredentialPassword(ctx, userId, passwordHash, consumeResetToken) {
+  await runWithTransaction(ctx.context.adapter, async () => {
+    await consumeResetToken?.();
+    if (ctx.context.options.emailAndPassword?.revokeSessionsOnPasswordReset) await ctx.context.internalAdapter.deleteUserSessions(userId);
+    if (!await ctx.context.internalAdapter.findCredentialAccount(userId)) {
+      await ctx.context.internalAdapter.createAccount({
+        userId,
+        providerId: "credential",
+        accountId: userId,
+        password: passwordHash
+      });
+      return;
+    }
+    await ctx.context.internalAdapter.updatePassword(userId, passwordHash);
+  });
+}
+__name(resetCredentialPassword, "resetCredentialPassword");
 async function validatePassword(ctx, data) {
   assertPasswordNotTooLong(ctx, data.password);
   const credentialAccount = await ctx.context.internalAdapter.findCredentialAccount(data.userId);
@@ -49086,7 +49176,7 @@ async function checkPassword(userId, c) {
 }
 __name(checkPassword, "checkPassword");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/password.mjs
 init_error2();
 init_id();
 init_zod();
@@ -49233,21 +49323,15 @@ var resetPassword = createAuthEndpoint("/reset-password", {
   assertPasswordNotTooShort(ctx, newPassword);
   assertPasswordNotTooLong(ctx, newPassword);
   const id = `reset-password:${token}`;
-  const verification = await ctx.context.internalAdapter.consumeVerificationValue(id);
-  if (!verification) throw APIError2.from("BAD_REQUEST", BASE_ERROR_CODES.INVALID_TOKEN);
+  const verification = await ctx.context.internalAdapter.findVerificationValue(id);
+  if (!verification || verification.expiresAt < /* @__PURE__ */ new Date()) throw APIError2.from("BAD_REQUEST", BASE_ERROR_CODES.INVALID_TOKEN);
   const userId = verification.value;
   const user = await ctx.context.internalAdapter.findUserById(userId);
   if (!user) throw APIError2.from("BAD_REQUEST", BASE_ERROR_CODES.USER_NOT_FOUND);
-  const hashedPassword = await ctx.context.password.hash(newPassword);
-  if (!await ctx.context.internalAdapter.findCredentialAccount(userId)) await ctx.context.internalAdapter.createAccount({
-    userId,
-    providerId: "credential",
-    accountId: user.id,
-    password: hashedPassword
+  await resetCredentialPassword(ctx, userId, await ctx.context.password.hash(newPassword), async () => {
+    if (!await ctx.context.internalAdapter.consumeVerificationValue(id)) throw APIError2.from("BAD_REQUEST", BASE_ERROR_CODES.INVALID_TOKEN);
   });
-  else await ctx.context.internalAdapter.updatePassword(userId, hashedPassword);
   if (ctx.context.options.emailAndPassword?.onPasswordReset) await ctx.context.options.emailAndPassword.onPasswordReset({ user }, ctx.request);
-  if (ctx.context.options.emailAndPassword?.revokeSessionsOnPasswordReset) await ctx.context.internalAdapter.deleteUserSessions(userId);
   return ctx.json({ status: true });
 });
 var verifyPassword2 = createAuthEndpoint("/verify-password", {
@@ -49283,7 +49367,7 @@ var verifyPassword2 = createAuthEndpoint("/verify-password", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/sign-in.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/sign-in.mjs
 init_error2();
 init_zod();
 var socialSignInBodySchema = object({
@@ -49637,7 +49721,7 @@ var signInEmail = /* @__PURE__ */ __name(() => createAuthEndpoint("/sign-in/emai
   });
 }), "signInEmail");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/sign-out.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/sign-out.mjs
 init_zod();
 var signOutBodySchema = object({
   callbackURL: string2().meta({ description: "The URL to redirect to after provider logout" }).optional(),
@@ -49730,7 +49814,7 @@ var signOut = createAuthEndpoint("/sign-out", {
   return ctx.json(signOutResponse());
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/sign-up.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/sign-up.mjs
 init_env();
 init_error2();
 init_id();
@@ -49963,7 +50047,7 @@ var signUpEmail = /* @__PURE__ */ __name(() => createAuthEndpoint("/sign-up/emai
       token: null,
       user: parseUserOutput(ctx.context.options, createdUser)
     });
-    const session = await ctx.context.internalAdapter.createSession(createdUser.id, rememberMe === false);
+    const session = await ctx.context.internalAdapter.createSession(createdUser.id, rememberMe === false, void 0, void 0, { deferSecondaryStorageWrites: true });
     if (!session) throw APIError2.from("BAD_REQUEST", BASE_ERROR_CODES.FAILED_TO_CREATE_SESSION);
     await setSessionCookie(ctx, {
       session,
@@ -49976,7 +50060,7 @@ var signUpEmail = /* @__PURE__ */ __name(() => createAuthEndpoint("/sign-up/emai
   });
 }), "signUpEmail");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/update-session.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/update-session.mjs
 init_error2();
 init_zod();
 var updateSessionBodySchema = record(string2().meta({ description: "Field name must be a string" }), any());
@@ -50028,7 +50112,7 @@ var updateSession = /* @__PURE__ */ __name(() => createAuthEndpoint("/update-ses
   return ctx.json({ session: parseSessionOutput(ctx.context.options, newSession) });
 }), "updateSession");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/routes/update-user.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/update-user.mjs
 init_error2();
 init_zod();
 var updateUserBodySchema = record(string2().meta({ description: "Field name must be a string" }), any());
@@ -50188,12 +50272,16 @@ var changePassword = createAuthEndpoint("/change-password", {
     hash: account.password,
     password: currentPassword
   })) throw APIError2.from("BAD_REQUEST", BASE_ERROR_CODES.INVALID_PASSWORD);
-  await ctx.context.internalAdapter.updateAccount(account.id, { password: passwordHash });
+  const newSession = await runWithTransaction(ctx.context.adapter, async () => {
+    if (revokeOtherSessions2) await ctx.context.internalAdapter.deleteUserSessions(session.user.id);
+    await ctx.context.internalAdapter.updateAccount(account.id, { password: passwordHash });
+    if (!revokeOtherSessions2) return null;
+    const created = await ctx.context.internalAdapter.createSession(session.user.id, void 0, void 0, void 0, { deferSecondaryStorageWrites: true });
+    if (!created) throw APIError2.from("INTERNAL_SERVER_ERROR", BASE_ERROR_CODES.FAILED_TO_GET_SESSION);
+    return created;
+  });
   let token = null;
-  if (revokeOtherSessions2) {
-    await ctx.context.internalAdapter.deleteUserSessions(session.user.id);
-    const newSession = await ctx.context.internalAdapter.createSession(session.user.id);
-    if (!newSession) throw APIError2.from("INTERNAL_SERVER_ERROR", BASE_ERROR_CODES.FAILED_TO_GET_SESSION);
+  if (newSession) {
     await setSessionCookie(ctx, {
       session: newSession,
       user: session.user
@@ -50514,7 +50602,7 @@ var changeEmail = createAuthEndpoint("/change-email", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/dispatch.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/dispatch.mjs
 init_env();
 init_error2();
 init_pure_index();
@@ -50755,7 +50843,7 @@ async function dispatchAuthEndpoint(endpoint, input) {
 }
 __name(dispatchAuthEndpoint, "dispatchAuthEndpoint");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/to-auth-endpoints.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/to-auth-endpoints.mjs
 init_error2();
 async function resolveDynamicContext(rawCtx, input) {
   if (rawCtx.baseURL) return rawCtx;
@@ -50798,7 +50886,7 @@ function toAuthEndpoints(endpoints, ctx) {
 }
 __name(toAuthEndpoints, "toAuthEndpoints");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/api/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/index.mjs
 init_env();
 init_error2();
 init_pure_index();
@@ -50970,11 +51058,15 @@ var router = /* @__PURE__ */ __name((ctx, options) => {
       }
       return res;
     },
-    onError(e) {
+    async onError(e) {
       if (isAPIError2(e) && e.status === "FOUND") return;
       if (options.onAPIError?.throw) throw e;
       if (options.onAPIError?.onError) {
-        options.onAPIError.onError(e, ctx);
+        try {
+          await options.onAPIError.onError(e, ctx);
+        } catch (hookError) {
+          ctx.logger.error("onAPIError.onError threw", hookError);
+        }
         return;
       }
       const optLogLevel = options.logger?.level;
@@ -53051,7 +53143,7 @@ async function handleApi(request, env2, auth) {
 }
 __name(handleApi, "handleApi");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/adapter-base.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/adapter-base.mjs
 init_env();
 async function getBaseAdapter(options, handleDirectDatabase) {
   let adapter;
@@ -53075,7 +53167,7 @@ async function getBaseAdapter(options, handleDirectDatabase) {
 }
 __name(getBaseAdapter, "getBaseAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/adapter-kysely.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/adapter-kysely.mjs
 init_error2();
 async function getAdapter(options) {
   return getBaseAdapter(options, async (opts) => {
@@ -53091,25 +53183,31 @@ async function getAdapter(options) {
 }
 __name(getAdapter, "getAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/get-schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/get-schema.mjs
 init_internal();
-function getSchema(config3) {
+function buildSchema(config3) {
   const { indexesByTable, tables } = getAuthTablesWithResolvedIndexes(config3);
+  const referenceKeys = /* @__PURE__ */ new Map();
   const schema3 = {};
   for (const key in tables) {
     const table2 = tables[key];
     const fields = table2.fields;
     const actualFields = {};
     Object.entries(fields).forEach(([key2, field]) => {
-      actualFields[field.fieldName || key2] = field;
-      if (field.references) {
-        const refTable = tables[field.references.model];
-        if (refTable) actualFields[field.fieldName || key2].references = {
-          ...field.references,
-          model: refTable.modelName,
-          field: field.references.field
-        };
-      }
+      const reference = field.references;
+      const refTable = reference ? tables[reference.model] : void 0;
+      const actualField = reference && refTable ? {
+        ...field,
+        references: {
+          ...reference,
+          model: refTable.modelName
+        }
+      } : field;
+      actualFields[field.fieldName || key2] = actualField;
+      if (reference) referenceKeys.set(actualField, {
+        modelKey: reference.model,
+        fieldKey: reference.field
+      });
     });
     if (schema3[table2.modelName]) {
       schema3[table2.modelName].fields = {
@@ -53126,11 +53224,15 @@ function getSchema(config3) {
     };
   }
   for (const [tableName, indexes] of indexesByTable) if (schema3[tableName]) schema3[tableName].indexes = indexes;
-  return schema3;
+  return {
+    schema: schema3,
+    tables,
+    referenceKeys
+  };
 }
-__name(getSchema, "getSchema");
+__name(buildSchema, "buildSchema");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/db/get-migration.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/get-migration.mjs
 init_env();
 init_error2();
 init_dist3();
@@ -53470,8 +53572,7 @@ function matchType(columnDataType, fieldType, dbType) {
 }
 __name(matchType, "matchType");
 async function getMigrations(config3, { throwOnUnsafe = true } = {}) {
-  const betterAuthSchema = getSchema(config3);
-  const authTables = getAuthTables(config3);
+  const { schema: betterAuthSchema, tables: authTables, referenceKeys } = buildSchema(config3);
   const logger2 = createLogger(config3.logger);
   const unsafeChanges = [];
   const reportUnsafeChange = /* @__PURE__ */ __name((message2) => {
@@ -53687,14 +53788,18 @@ async function getMigrations(config3, { throwOnUnsafe = true } = {}) {
     schema: authTables,
     usePlural: false
   });
-  function getReferencePath(model, field) {
+  function getReferencePath(field) {
+    const reference = field.references;
+    if (!reference) throw new BetterAuthError("Cannot resolve a field without references.");
+    const keys = referenceKeys.get(field);
+    if (!keys) throw new BetterAuthError(`Missing migration reference metadata for "${reference.model}.${reference.field}".`);
     try {
-      return `${getModelName(model)}.${getFieldName({
-        model,
-        field
+      return `${getModelName(keys.modelKey)}.${getFieldName({
+        model: keys.modelKey,
+        field: keys.fieldKey
       })}`;
     } catch {
-      return `${model}.${field}`;
+      return `${reference.model}.${reference.field}`;
     }
   }
   __name(getReferencePath, "getReferencePath");
@@ -53740,7 +53845,7 @@ async function getMigrations(config3, { throwOnUnsafe = true } = {}) {
       }
       const built = builder.addColumn(fieldName, type, (col) => {
         col = field.required !== false ? col.notNull() : col;
-        if (field.references) col = col.references(getReferencePath(field.references.model, field.references.field)).onDelete(field.references.onDelete || "cascade");
+        if (field.references) col = col.references(getReferencePath(field)).onDelete(field.references.onDelete || "cascade");
         if (timestampDefault) if (dbType === "mysql") col = col.defaultTo(sql`CURRENT_TIMESTAMP(3)`);
         else col = col.defaultTo(sql`CURRENT_TIMESTAMP`);
         else if (staticDefault) col = col.defaultTo(typeof field.defaultValue === "boolean" && (dbType === "sqlite" || dbType === "mssql") ? field.defaultValue ? 1 : 0 : field.defaultValue);
@@ -53768,7 +53873,7 @@ async function getMigrations(config3, { throwOnUnsafe = true } = {}) {
       const type = getType(field, fieldName, getTableIndexStringLength(table2.table, fieldName));
       dbT = dbT.addColumn(fieldName, type, (col) => {
         col = field.required !== false ? col.notNull() : col;
-        if (field.references) col = col.references(getReferencePath(field.references.model, field.references.field)).onDelete(field.references.onDelete || "cascade");
+        if (field.references) col = col.references(getReferencePath(field)).onDelete(field.references.onDelete || "cascade");
         if (field.unique) col = col.unique();
         if (field.type === "date" && typeof field.defaultValue === "function" && (dbType === "postgres" || dbType === "mysql" || dbType === "mssql")) if (dbType === "mysql") col = col.defaultTo(sql`CURRENT_TIMESTAMP(3)`);
         else col = col.defaultTo(sql`CURRENT_TIMESTAMP`);
@@ -53811,10 +53916,10 @@ async function getMigrations(config3, { throwOnUnsafe = true } = {}) {
 }
 __name(getMigrations, "getMigrations");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/utils/constants.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/constants.mjs
 var DEFAULT_SECRET = "better-auth-secret-12345678901234567890";
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/secret-utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/secret-utils.mjs
 init_error2();
 function estimateEntropy(str) {
   const unique = new Set(str).size;
@@ -53865,14 +53970,15 @@ function buildSecretConfig(secrets, legacySecret) {
 }
 __name(buildSecretConfig, "buildSecretConfig");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/create-context.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/create-context.mjs
 init_env();
 init_error2();
 init_id();
 init_internal();
 
-// ../../node_modules/.pnpm/@better-auth+telemetry@1.7.7_@better-auth+core@1.7.7_@better-auth+utils@0.4.2_@better-f_252164e19da40b1450a372125dd49988/node_modules/@better-auth/telemetry/dist/index.mjs
+// ../../node_modules/.pnpm/@better-auth+telemetry@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better_625d6952c06f65c6938be90461a7287e/node_modules/@better-auth/telemetry/dist/index.mjs
 init_env();
+init_base64();
 init_random();
 async function getTelemetryAuthConfig(options, context) {
   return {
@@ -54256,7 +54362,7 @@ async function createTelemetry(options, context) {
 }
 __name(createTelemetry, "createTelemetry");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/create-context.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/create-context.mjs
 function estimateEntropy2(str) {
   const unique = new Set(str).size;
   if (unique === 0) return 0;
@@ -54463,7 +54569,7 @@ Most of the features of Better Auth will not work correctly.`);
 }
 __name(createAuthContext, "createAuthContext");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/context/init.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/init.mjs
 init_error2();
 init_dist3();
 var init = /* @__PURE__ */ __name(async (options) => {
@@ -54478,7 +54584,7 @@ var init = /* @__PURE__ */ __name(async (options) => {
   return ctx;
 }, "init");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/auth/base.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/auth/base.mjs
 init_error2();
 init_internal();
 var createBetterAuth = /* @__PURE__ */ __name((options, initFn) => {
@@ -54539,12 +54645,12 @@ var createBetterAuth = /* @__PURE__ */ __name((options, initFn) => {
   };
 }, "createBetterAuth");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/auth/full.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/auth/full.mjs
 var betterAuth = /* @__PURE__ */ __name((options) => {
   return createBetterAuth(options, init);
 }, "betterAuth");
 
-// ../../node_modules/.pnpm/better-auth@1.7.7_react-dom@19.3.0_react@19.3.0__react@19.3.0_vitest@5.0.4_@types+node@_80617a166d232766a4e03e273503524f/node_modules/better-auth/dist/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/index.mjs
 init_env();
 init_error2();
 init_error_codes();

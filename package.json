@@ -1,6 +1,6 @@
 {
   "name": "factwright-sync",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "private": true,
   "description": "Factwright’s sync server, ready to deploy to your own Cloudflare account.",
   "license": "AGPL-3.0-only",
@@ -9,7 +9,7 @@
     "dev": "wrangler d1 migrations apply DB --local && wrangler dev"
   },
   "devDependencies": {
-    "wrangler": "4.149.0"
+    "wrangler": "4.151.1"
   },
   "cloudflare": {
     "bindings": {
