@@ -1,9 +1,5 @@
-var __create = Object.create;
 var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __esm = (fn, res, err) => function __init() {
   if (err) throw err[0];
@@ -13,35 +9,12 @@ var __esm = (fn, res, err) => function __init() {
     throw err = [e], e;
   }
 };
-var __commonJS = (cb, mod) => function __require() {
-  try {
-    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-  } catch (e) {
-    throw mod = 0, e;
-  }
-};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
 };
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/error.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/error.mjs
 function isErrorStackTraceLimitWritable() {
   const desc = Object.getOwnPropertyDescriptor(Error, "stackTraceLimit");
   if (desc === void 0) return Object.isExtensible(Error);
@@ -84,7 +57,7 @@ function makeErrorForHideStackFrame(Base, clazz) {
 }
 var statusCodes, InternalAPIError, ValidationError, BetterCallError, kAPIErrorHeaderSymbol, APIError;
 var init_error = __esm({
-  "../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/error.mjs"() {
+  "../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/error.mjs"() {
     __name(isErrorStackTraceLimitWritable, "isErrorStackTraceLimitWritable");
     __name(hideInternalStackFrames, "hideInternalStackFrames");
     __name(makeErrorForHideStackFrame, "makeErrorForHideStackFrame");
@@ -149,7 +122,7 @@ var init_error = __esm({
       headers;
       statusCode;
       constructor(status = "INTERNAL_SERVER_ERROR", body = void 0, headers = {}, statusCode = typeof status === "number" ? status : statusCodes[status]) {
-        super(body?.message, body?.cause ? { cause: body.cause } : void 0);
+        super(body?.message, body && "cause" in body ? { cause: body.cause } : void 0);
         this.status = status;
         this.body = body;
         this.headers = headers;
@@ -158,6 +131,15 @@ var init_error = __esm({
         this.status = status;
         this.headers = headers;
         this.statusCode = statusCode;
+        if (body && "cause" in body) {
+          const { cause, ...publicBody } = body;
+          this.body = Object.defineProperty(publicBody, "cause", {
+            value: cause,
+            writable: true,
+            configurable: true
+          });
+          return;
+        }
         this.body = body;
       }
     };
@@ -7095,7 +7077,7 @@ var init_zod = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/global.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/context/global.mjs
 function __getBetterAuthGlobal() {
   if (!globalThis[symbol]) {
     globalThis[symbol] = {
@@ -7120,18 +7102,18 @@ function getBetterAuthVersion() {
 }
 var symbol, bind, __context, __betterAuthVersion;
 var init_global = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/global.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/context/global.mjs"() {
     symbol = /* @__PURE__ */ Symbol.for("better-auth:global");
     bind = null;
     __context = {};
-    __betterAuthVersion = "1.7.10";
+    __betterAuthVersion = "1.7.12";
     __name(__getBetterAuthGlobal, "__getBetterAuthGlobal");
     __name(__getCurrentEndpointContext, "__getCurrentEndpointContext");
     __name(getBetterAuthVersion, "getBetterAuthVersion");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/error-codes.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/error-codes.mjs
 function defineErrorCodes(codes) {
   return Object.fromEntries(Object.entries(codes).map(([key, value]) => [key, {
     code: key,
@@ -7140,15 +7122,15 @@ function defineErrorCodes(codes) {
   }]));
 }
 var init_error_codes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/error-codes.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/error-codes.mjs"() {
     __name(defineErrorCodes, "defineErrorCodes");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/codes.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/error/codes.mjs
 var BASE_ERROR_CODES;
 var init_codes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/codes.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/error/codes.mjs"() {
     init_error_codes();
     BASE_ERROR_CODES = defineErrorCodes({
       USER_NOT_FOUND: "User not found",
@@ -7204,10 +7186,10 @@ var init_codes = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/error/index.mjs
 var BetterAuthError, APIError2;
 var init_error2 = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/error/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/error/index.mjs"() {
     init_codes();
     init_error();
     BetterAuthError = class extends Error {
@@ -7231,10 +7213,16 @@ var init_error2 = __esm({
       static fromStatus(status, body) {
         return new APIError3(status, body);
       }
-      static from(status, error3) {
+      static from(status, error3, options) {
+        const { code, message: message2 } = error3;
+        if (options?.cause === void 0) return new APIError3(status, {
+          message: message2,
+          code
+        });
         return new APIError3(status, {
-          message: error3.message,
-          code: error3.code
+          message: message2,
+          code,
+          cause: options.cause
         });
       }
     };
@@ -7527,7 +7515,7 @@ var init_hex = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/database-index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/database-index.mjs
 function getPortableDatabaseIdentifierKey(identifier) {
   return identifier.toLowerCase();
 }
@@ -7679,7 +7667,7 @@ function resolveDatabaseSchemaIndexes(sources) {
 }
 var MAX_DATABASE_INDEX_NAME_BYTES, MAX_DATABASE_INDEX_FIELDS;
 var init_database_index = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/database-index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/database-index.mjs"() {
     init_error2();
     MAX_DATABASE_INDEX_NAME_BYTES = 63;
     MAX_DATABASE_INDEX_FIELDS = 16;
@@ -7695,7 +7683,7 @@ var init_database_index = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/get-tables.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/get-tables.mjs
 function mergeTableIndexes(...indexCollections) {
   const indexes = [];
   const seenIndexDefinitions = /* @__PURE__ */ new Set();
@@ -7724,7 +7712,7 @@ function getAuthTablesWithResolvedIndexes(options) {
 }
 var buildAuthTables, getAuthTables;
 var init_get_tables = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/get-tables.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/get-tables.mjs"() {
     init_database_index();
     __name(mergeTableIndexes, "mergeTableIndexes");
     buildAuthTables = /* @__PURE__ */ __name((options) => {
@@ -8051,7 +8039,7 @@ var init_random = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/env-impl.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/env-impl.mjs
 function toBoolean(val) {
   return val ? val !== "false" : false;
 }
@@ -8068,7 +8056,7 @@ function getBooleanEnvVar(key, fallback = true) {
 }
 var _envShim, _getEnv, env, nodeENV, isProduction, isDevelopment, isTest, ENV;
 var init_env_impl = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/env-impl.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/env-impl.mjs"() {
     _envShim = /* @__PURE__ */ Object.create(null);
     _getEnv = /* @__PURE__ */ __name((useShim) => globalThis.process?.env || globalThis.Deno?.env.toObject() || globalThis.__env__ || (useShim ? _envShim : globalThis), "_getEnv");
     env = new Proxy(_envShim, {
@@ -8127,7 +8115,7 @@ var init_env_impl = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/color-depth.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/color-depth.mjs
 function getColorDepth() {
   if (getEnvVar("FORCE_COLOR") !== void 0) switch (getEnvVar("FORCE_COLOR")) {
     case "":
@@ -8173,7 +8161,7 @@ function getColorDepth() {
 }
 var COLORS_2, COLORS_16, COLORS_256, COLORS_16m, TERM_ENVS, CI_ENVS_MAP, TERM_ENVS_REG_EXP;
 var init_color_depth = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/color-depth.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/color-depth.mjs"() {
     init_env_impl();
     COLORS_2 = 1;
     COLORS_16 = 4;
@@ -8224,13 +8212,13 @@ var init_color_depth = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/logger.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/logger.mjs
 function shouldPublishLog(currentLogLevel, logLevel) {
   return levels.indexOf(logLevel) >= levels.indexOf(currentLogLevel);
 }
 var TTY_COLORS, levels, levelColors, formatMessage, createLogger, defaultLogger, getCurrentLogger, logger;
 var init_logger = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/logger.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/logger.mjs"() {
     init_global();
     init_color_depth();
     TTY_COLORS = {
@@ -8323,7 +8311,7 @@ var init_logger = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/json.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/json.mjs
 function reviveDate(value) {
   if (typeof value === "string" && iso8601Regex.test(value)) {
     const date4 = new Date(value);
@@ -8357,7 +8345,7 @@ function safeJSONParse(data) {
 }
 var iso8601Regex;
 var init_json = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/json.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/json.mjs"() {
     init_logger();
     iso8601Regex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/;
     __name(reviveDate, "reviveDate");
@@ -8366,15 +8354,15 @@ var init_json = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/index.mjs
 var init_env = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/env/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/env/index.mjs"() {
     init_env_impl();
     init_logger();
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-diff.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/schema-diff.mjs
 function getExpectedSchema(options, { usePlural = false } = {}) {
   const expected = {};
   for (const table2 of Object.values(getAuthTables(options))) {
@@ -8467,7 +8455,7 @@ function formatSchemaMismatch(findings, source) {
 }
 var applyHint, relaxHint, sourceLabel, repairHint, migrationHint, SchemaMismatchError;
 var init_schema_diff = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-diff.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/schema-diff.mjs"() {
     init_error2();
     init_get_tables();
     __name(getExpectedSchema, "getExpectedSchema");
@@ -8512,7 +8500,7 @@ var init_schema_diff = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-check.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/schema-check.mjs
 function checksSchema(options) {
   return options.advanced?.database?.validateSchema !== false;
 }
@@ -8566,7 +8554,7 @@ function createSchemaCheck(find, source, database) {
 }
 var schemaChecks, schemaRevisions;
 var init_schema_check = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema-check.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/schema-check.mjs"() {
     init_schema_diff();
     __name(checksSchema, "checksSchema");
     schemaChecks = /* @__PURE__ */ new WeakMap();
@@ -8579,1657 +8567,21 @@ var init_schema_check = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/internal/utils.js
-var require_utils = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/internal/utils.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.createConstMap = void 0;
-    // @__NO_SIDE_EFFECTS__
-    function createConstMap(values) {
-      let res = {};
-      const len = values.length;
-      for (let lp = 0; lp < len; lp++) {
-        const val = values[lp];
-        if (val) {
-          res[String(val).toUpperCase().replace(/[-.]/g, "_")] = val;
-        }
-      }
-      return res;
-    }
-    __name(createConstMap, "createConstMap");
-    exports.createConstMap = createConstMap;
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/trace/SemanticAttributes.js
-var require_SemanticAttributes = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/trace/SemanticAttributes.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.SEMATTRS_NET_HOST_CARRIER_ICC = exports.SEMATTRS_NET_HOST_CARRIER_MNC = exports.SEMATTRS_NET_HOST_CARRIER_MCC = exports.SEMATTRS_NET_HOST_CARRIER_NAME = exports.SEMATTRS_NET_HOST_CONNECTION_SUBTYPE = exports.SEMATTRS_NET_HOST_CONNECTION_TYPE = exports.SEMATTRS_NET_HOST_NAME = exports.SEMATTRS_NET_HOST_PORT = exports.SEMATTRS_NET_HOST_IP = exports.SEMATTRS_NET_PEER_NAME = exports.SEMATTRS_NET_PEER_PORT = exports.SEMATTRS_NET_PEER_IP = exports.SEMATTRS_NET_TRANSPORT = exports.SEMATTRS_FAAS_INVOKED_REGION = exports.SEMATTRS_FAAS_INVOKED_PROVIDER = exports.SEMATTRS_FAAS_INVOKED_NAME = exports.SEMATTRS_FAAS_COLDSTART = exports.SEMATTRS_FAAS_CRON = exports.SEMATTRS_FAAS_TIME = exports.SEMATTRS_FAAS_DOCUMENT_NAME = exports.SEMATTRS_FAAS_DOCUMENT_TIME = exports.SEMATTRS_FAAS_DOCUMENT_OPERATION = exports.SEMATTRS_FAAS_DOCUMENT_COLLECTION = exports.SEMATTRS_FAAS_EXECUTION = exports.SEMATTRS_FAAS_TRIGGER = exports.SEMATTRS_EXCEPTION_ESCAPED = exports.SEMATTRS_EXCEPTION_STACKTRACE = exports.SEMATTRS_EXCEPTION_MESSAGE = exports.SEMATTRS_EXCEPTION_TYPE = exports.SEMATTRS_DB_SQL_TABLE = exports.SEMATTRS_DB_MONGODB_COLLECTION = exports.SEMATTRS_DB_REDIS_DATABASE_INDEX = exports.SEMATTRS_DB_HBASE_NAMESPACE = exports.SEMATTRS_DB_CASSANDRA_COORDINATOR_DC = exports.SEMATTRS_DB_CASSANDRA_COORDINATOR_ID = exports.SEMATTRS_DB_CASSANDRA_SPECULATIVE_EXECUTION_COUNT = exports.SEMATTRS_DB_CASSANDRA_IDEMPOTENCE = exports.SEMATTRS_DB_CASSANDRA_TABLE = exports.SEMATTRS_DB_CASSANDRA_CONSISTENCY_LEVEL = exports.SEMATTRS_DB_CASSANDRA_PAGE_SIZE = exports.SEMATTRS_DB_CASSANDRA_KEYSPACE = exports.SEMATTRS_DB_MSSQL_INSTANCE_NAME = exports.SEMATTRS_DB_OPERATION = exports.SEMATTRS_DB_STATEMENT = exports.SEMATTRS_DB_NAME = exports.SEMATTRS_DB_JDBC_DRIVER_CLASSNAME = exports.SEMATTRS_DB_USER = exports.SEMATTRS_DB_CONNECTION_STRING = exports.SEMATTRS_DB_SYSTEM = exports.SEMATTRS_AWS_LAMBDA_INVOKED_ARN = void 0;
-    exports.SEMATTRS_MESSAGING_DESTINATION_KIND = exports.SEMATTRS_MESSAGING_DESTINATION = exports.SEMATTRS_MESSAGING_SYSTEM = exports.SEMATTRS_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES = exports.SEMATTRS_AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS = exports.SEMATTRS_AWS_DYNAMODB_SCANNED_COUNT = exports.SEMATTRS_AWS_DYNAMODB_COUNT = exports.SEMATTRS_AWS_DYNAMODB_TOTAL_SEGMENTS = exports.SEMATTRS_AWS_DYNAMODB_SEGMENT = exports.SEMATTRS_AWS_DYNAMODB_SCAN_FORWARD = exports.SEMATTRS_AWS_DYNAMODB_TABLE_COUNT = exports.SEMATTRS_AWS_DYNAMODB_EXCLUSIVE_START_TABLE = exports.SEMATTRS_AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES = exports.SEMATTRS_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES = exports.SEMATTRS_AWS_DYNAMODB_SELECT = exports.SEMATTRS_AWS_DYNAMODB_INDEX_NAME = exports.SEMATTRS_AWS_DYNAMODB_ATTRIBUTES_TO_GET = exports.SEMATTRS_AWS_DYNAMODB_LIMIT = exports.SEMATTRS_AWS_DYNAMODB_PROJECTION = exports.SEMATTRS_AWS_DYNAMODB_CONSISTENT_READ = exports.SEMATTRS_AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY = exports.SEMATTRS_AWS_DYNAMODB_PROVISIONED_READ_CAPACITY = exports.SEMATTRS_AWS_DYNAMODB_ITEM_COLLECTION_METRICS = exports.SEMATTRS_AWS_DYNAMODB_CONSUMED_CAPACITY = exports.SEMATTRS_AWS_DYNAMODB_TABLE_NAMES = exports.SEMATTRS_HTTP_CLIENT_IP = exports.SEMATTRS_HTTP_ROUTE = exports.SEMATTRS_HTTP_SERVER_NAME = exports.SEMATTRS_HTTP_RESPONSE_CONTENT_LENGTH_UNCOMPRESSED = exports.SEMATTRS_HTTP_RESPONSE_CONTENT_LENGTH = exports.SEMATTRS_HTTP_REQUEST_CONTENT_LENGTH_UNCOMPRESSED = exports.SEMATTRS_HTTP_REQUEST_CONTENT_LENGTH = exports.SEMATTRS_HTTP_USER_AGENT = exports.SEMATTRS_HTTP_FLAVOR = exports.SEMATTRS_HTTP_STATUS_CODE = exports.SEMATTRS_HTTP_SCHEME = exports.SEMATTRS_HTTP_HOST = exports.SEMATTRS_HTTP_TARGET = exports.SEMATTRS_HTTP_URL = exports.SEMATTRS_HTTP_METHOD = exports.SEMATTRS_CODE_LINENO = exports.SEMATTRS_CODE_FILEPATH = exports.SEMATTRS_CODE_NAMESPACE = exports.SEMATTRS_CODE_FUNCTION = exports.SEMATTRS_THREAD_NAME = exports.SEMATTRS_THREAD_ID = exports.SEMATTRS_ENDUSER_SCOPE = exports.SEMATTRS_ENDUSER_ROLE = exports.SEMATTRS_ENDUSER_ID = exports.SEMATTRS_PEER_SERVICE = void 0;
-    exports.DBSYSTEMVALUES_FILEMAKER = exports.DBSYSTEMVALUES_DERBY = exports.DBSYSTEMVALUES_FIREBIRD = exports.DBSYSTEMVALUES_ADABAS = exports.DBSYSTEMVALUES_CACHE = exports.DBSYSTEMVALUES_EDB = exports.DBSYSTEMVALUES_FIRSTSQL = exports.DBSYSTEMVALUES_INGRES = exports.DBSYSTEMVALUES_HANADB = exports.DBSYSTEMVALUES_MAXDB = exports.DBSYSTEMVALUES_PROGRESS = exports.DBSYSTEMVALUES_HSQLDB = exports.DBSYSTEMVALUES_CLOUDSCAPE = exports.DBSYSTEMVALUES_HIVE = exports.DBSYSTEMVALUES_REDSHIFT = exports.DBSYSTEMVALUES_POSTGRESQL = exports.DBSYSTEMVALUES_DB2 = exports.DBSYSTEMVALUES_ORACLE = exports.DBSYSTEMVALUES_MYSQL = exports.DBSYSTEMVALUES_MSSQL = exports.DBSYSTEMVALUES_OTHER_SQL = exports.SemanticAttributes = exports.SEMATTRS_MESSAGE_UNCOMPRESSED_SIZE = exports.SEMATTRS_MESSAGE_COMPRESSED_SIZE = exports.SEMATTRS_MESSAGE_ID = exports.SEMATTRS_MESSAGE_TYPE = exports.SEMATTRS_RPC_JSONRPC_ERROR_MESSAGE = exports.SEMATTRS_RPC_JSONRPC_ERROR_CODE = exports.SEMATTRS_RPC_JSONRPC_REQUEST_ID = exports.SEMATTRS_RPC_JSONRPC_VERSION = exports.SEMATTRS_RPC_GRPC_STATUS_CODE = exports.SEMATTRS_RPC_METHOD = exports.SEMATTRS_RPC_SERVICE = exports.SEMATTRS_RPC_SYSTEM = exports.SEMATTRS_MESSAGING_KAFKA_TOMBSTONE = exports.SEMATTRS_MESSAGING_KAFKA_PARTITION = exports.SEMATTRS_MESSAGING_KAFKA_CLIENT_ID = exports.SEMATTRS_MESSAGING_KAFKA_CONSUMER_GROUP = exports.SEMATTRS_MESSAGING_KAFKA_MESSAGE_KEY = exports.SEMATTRS_MESSAGING_RABBITMQ_ROUTING_KEY = exports.SEMATTRS_MESSAGING_CONSUMER_ID = exports.SEMATTRS_MESSAGING_OPERATION = exports.SEMATTRS_MESSAGING_MESSAGE_PAYLOAD_COMPRESSED_SIZE_BYTES = exports.SEMATTRS_MESSAGING_MESSAGE_PAYLOAD_SIZE_BYTES = exports.SEMATTRS_MESSAGING_CONVERSATION_ID = exports.SEMATTRS_MESSAGING_MESSAGE_ID = exports.SEMATTRS_MESSAGING_URL = exports.SEMATTRS_MESSAGING_PROTOCOL_VERSION = exports.SEMATTRS_MESSAGING_PROTOCOL = exports.SEMATTRS_MESSAGING_TEMP_DESTINATION = void 0;
-    exports.FAASINVOKEDPROVIDERVALUES_ALIBABA_CLOUD = exports.FaasDocumentOperationValues = exports.FAASDOCUMENTOPERATIONVALUES_DELETE = exports.FAASDOCUMENTOPERATIONVALUES_EDIT = exports.FAASDOCUMENTOPERATIONVALUES_INSERT = exports.FaasTriggerValues = exports.FAASTRIGGERVALUES_OTHER = exports.FAASTRIGGERVALUES_TIMER = exports.FAASTRIGGERVALUES_PUBSUB = exports.FAASTRIGGERVALUES_HTTP = exports.FAASTRIGGERVALUES_DATASOURCE = exports.DbCassandraConsistencyLevelValues = exports.DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_SERIAL = exports.DBCASSANDRACONSISTENCYLEVELVALUES_SERIAL = exports.DBCASSANDRACONSISTENCYLEVELVALUES_ANY = exports.DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_ONE = exports.DBCASSANDRACONSISTENCYLEVELVALUES_THREE = exports.DBCASSANDRACONSISTENCYLEVELVALUES_TWO = exports.DBCASSANDRACONSISTENCYLEVELVALUES_ONE = exports.DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_QUORUM = exports.DBCASSANDRACONSISTENCYLEVELVALUES_QUORUM = exports.DBCASSANDRACONSISTENCYLEVELVALUES_EACH_QUORUM = exports.DBCASSANDRACONSISTENCYLEVELVALUES_ALL = exports.DbSystemValues = exports.DBSYSTEMVALUES_COCKROACHDB = exports.DBSYSTEMVALUES_MEMCACHED = exports.DBSYSTEMVALUES_ELASTICSEARCH = exports.DBSYSTEMVALUES_GEODE = exports.DBSYSTEMVALUES_NEO4J = exports.DBSYSTEMVALUES_DYNAMODB = exports.DBSYSTEMVALUES_COSMOSDB = exports.DBSYSTEMVALUES_COUCHDB = exports.DBSYSTEMVALUES_COUCHBASE = exports.DBSYSTEMVALUES_REDIS = exports.DBSYSTEMVALUES_MONGODB = exports.DBSYSTEMVALUES_HBASE = exports.DBSYSTEMVALUES_CASSANDRA = exports.DBSYSTEMVALUES_COLDFUSION = exports.DBSYSTEMVALUES_H2 = exports.DBSYSTEMVALUES_VERTICA = exports.DBSYSTEMVALUES_TERADATA = exports.DBSYSTEMVALUES_SYBASE = exports.DBSYSTEMVALUES_SQLITE = exports.DBSYSTEMVALUES_POINTBASE = exports.DBSYSTEMVALUES_PERVASIVE = exports.DBSYSTEMVALUES_NETEZZA = exports.DBSYSTEMVALUES_MARIADB = exports.DBSYSTEMVALUES_INTERBASE = exports.DBSYSTEMVALUES_INSTANTDB = exports.DBSYSTEMVALUES_INFORMIX = void 0;
-    exports.MESSAGINGOPERATIONVALUES_RECEIVE = exports.MessagingDestinationKindValues = exports.MESSAGINGDESTINATIONKINDVALUES_TOPIC = exports.MESSAGINGDESTINATIONKINDVALUES_QUEUE = exports.HttpFlavorValues = exports.HTTPFLAVORVALUES_QUIC = exports.HTTPFLAVORVALUES_SPDY = exports.HTTPFLAVORVALUES_HTTP_2_0 = exports.HTTPFLAVORVALUES_HTTP_1_1 = exports.HTTPFLAVORVALUES_HTTP_1_0 = exports.NetHostConnectionSubtypeValues = exports.NETHOSTCONNECTIONSUBTYPEVALUES_LTE_CA = exports.NETHOSTCONNECTIONSUBTYPEVALUES_NRNSA = exports.NETHOSTCONNECTIONSUBTYPEVALUES_NR = exports.NETHOSTCONNECTIONSUBTYPEVALUES_IWLAN = exports.NETHOSTCONNECTIONSUBTYPEVALUES_TD_SCDMA = exports.NETHOSTCONNECTIONSUBTYPEVALUES_GSM = exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSPAP = exports.NETHOSTCONNECTIONSUBTYPEVALUES_EHRPD = exports.NETHOSTCONNECTIONSUBTYPEVALUES_LTE = exports.NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_B = exports.NETHOSTCONNECTIONSUBTYPEVALUES_IDEN = exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSPA = exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSUPA = exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSDPA = exports.NETHOSTCONNECTIONSUBTYPEVALUES_CDMA2000_1XRTT = exports.NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_A = exports.NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_0 = exports.NETHOSTCONNECTIONSUBTYPEVALUES_CDMA = exports.NETHOSTCONNECTIONSUBTYPEVALUES_UMTS = exports.NETHOSTCONNECTIONSUBTYPEVALUES_EDGE = exports.NETHOSTCONNECTIONSUBTYPEVALUES_GPRS = exports.NetHostConnectionTypeValues = exports.NETHOSTCONNECTIONTYPEVALUES_UNKNOWN = exports.NETHOSTCONNECTIONTYPEVALUES_UNAVAILABLE = exports.NETHOSTCONNECTIONTYPEVALUES_CELL = exports.NETHOSTCONNECTIONTYPEVALUES_WIRED = exports.NETHOSTCONNECTIONTYPEVALUES_WIFI = exports.NetTransportValues = exports.NETTRANSPORTVALUES_OTHER = exports.NETTRANSPORTVALUES_INPROC = exports.NETTRANSPORTVALUES_PIPE = exports.NETTRANSPORTVALUES_UNIX = exports.NETTRANSPORTVALUES_IP = exports.NETTRANSPORTVALUES_IP_UDP = exports.NETTRANSPORTVALUES_IP_TCP = exports.FaasInvokedProviderValues = exports.FAASINVOKEDPROVIDERVALUES_GCP = exports.FAASINVOKEDPROVIDERVALUES_AZURE = exports.FAASINVOKEDPROVIDERVALUES_AWS = void 0;
-    exports.MessageTypeValues = exports.MESSAGETYPEVALUES_RECEIVED = exports.MESSAGETYPEVALUES_SENT = exports.RpcGrpcStatusCodeValues = exports.RPCGRPCSTATUSCODEVALUES_UNAUTHENTICATED = exports.RPCGRPCSTATUSCODEVALUES_DATA_LOSS = exports.RPCGRPCSTATUSCODEVALUES_UNAVAILABLE = exports.RPCGRPCSTATUSCODEVALUES_INTERNAL = exports.RPCGRPCSTATUSCODEVALUES_UNIMPLEMENTED = exports.RPCGRPCSTATUSCODEVALUES_OUT_OF_RANGE = exports.RPCGRPCSTATUSCODEVALUES_ABORTED = exports.RPCGRPCSTATUSCODEVALUES_FAILED_PRECONDITION = exports.RPCGRPCSTATUSCODEVALUES_RESOURCE_EXHAUSTED = exports.RPCGRPCSTATUSCODEVALUES_PERMISSION_DENIED = exports.RPCGRPCSTATUSCODEVALUES_ALREADY_EXISTS = exports.RPCGRPCSTATUSCODEVALUES_NOT_FOUND = exports.RPCGRPCSTATUSCODEVALUES_DEADLINE_EXCEEDED = exports.RPCGRPCSTATUSCODEVALUES_INVALID_ARGUMENT = exports.RPCGRPCSTATUSCODEVALUES_UNKNOWN = exports.RPCGRPCSTATUSCODEVALUES_CANCELLED = exports.RPCGRPCSTATUSCODEVALUES_OK = exports.MessagingOperationValues = exports.MESSAGINGOPERATIONVALUES_PROCESS = void 0;
-    var utils_1 = require_utils();
-    var TMP_AWS_LAMBDA_INVOKED_ARN = "aws.lambda.invoked_arn";
-    var TMP_DB_SYSTEM = "db.system";
-    var TMP_DB_CONNECTION_STRING = "db.connection_string";
-    var TMP_DB_USER = "db.user";
-    var TMP_DB_JDBC_DRIVER_CLASSNAME = "db.jdbc.driver_classname";
-    var TMP_DB_NAME = "db.name";
-    var TMP_DB_STATEMENT = "db.statement";
-    var TMP_DB_OPERATION = "db.operation";
-    var TMP_DB_MSSQL_INSTANCE_NAME = "db.mssql.instance_name";
-    var TMP_DB_CASSANDRA_KEYSPACE = "db.cassandra.keyspace";
-    var TMP_DB_CASSANDRA_PAGE_SIZE = "db.cassandra.page_size";
-    var TMP_DB_CASSANDRA_CONSISTENCY_LEVEL = "db.cassandra.consistency_level";
-    var TMP_DB_CASSANDRA_TABLE = "db.cassandra.table";
-    var TMP_DB_CASSANDRA_IDEMPOTENCE = "db.cassandra.idempotence";
-    var TMP_DB_CASSANDRA_SPECULATIVE_EXECUTION_COUNT = "db.cassandra.speculative_execution_count";
-    var TMP_DB_CASSANDRA_COORDINATOR_ID = "db.cassandra.coordinator.id";
-    var TMP_DB_CASSANDRA_COORDINATOR_DC = "db.cassandra.coordinator.dc";
-    var TMP_DB_HBASE_NAMESPACE = "db.hbase.namespace";
-    var TMP_DB_REDIS_DATABASE_INDEX = "db.redis.database_index";
-    var TMP_DB_MONGODB_COLLECTION = "db.mongodb.collection";
-    var TMP_DB_SQL_TABLE = "db.sql.table";
-    var TMP_EXCEPTION_TYPE = "exception.type";
-    var TMP_EXCEPTION_MESSAGE = "exception.message";
-    var TMP_EXCEPTION_STACKTRACE = "exception.stacktrace";
-    var TMP_EXCEPTION_ESCAPED = "exception.escaped";
-    var TMP_FAAS_TRIGGER = "faas.trigger";
-    var TMP_FAAS_EXECUTION = "faas.execution";
-    var TMP_FAAS_DOCUMENT_COLLECTION = "faas.document.collection";
-    var TMP_FAAS_DOCUMENT_OPERATION = "faas.document.operation";
-    var TMP_FAAS_DOCUMENT_TIME = "faas.document.time";
-    var TMP_FAAS_DOCUMENT_NAME = "faas.document.name";
-    var TMP_FAAS_TIME = "faas.time";
-    var TMP_FAAS_CRON = "faas.cron";
-    var TMP_FAAS_COLDSTART = "faas.coldstart";
-    var TMP_FAAS_INVOKED_NAME = "faas.invoked_name";
-    var TMP_FAAS_INVOKED_PROVIDER = "faas.invoked_provider";
-    var TMP_FAAS_INVOKED_REGION = "faas.invoked_region";
-    var TMP_NET_TRANSPORT = "net.transport";
-    var TMP_NET_PEER_IP = "net.peer.ip";
-    var TMP_NET_PEER_PORT = "net.peer.port";
-    var TMP_NET_PEER_NAME = "net.peer.name";
-    var TMP_NET_HOST_IP = "net.host.ip";
-    var TMP_NET_HOST_PORT = "net.host.port";
-    var TMP_NET_HOST_NAME = "net.host.name";
-    var TMP_NET_HOST_CONNECTION_TYPE = "net.host.connection.type";
-    var TMP_NET_HOST_CONNECTION_SUBTYPE = "net.host.connection.subtype";
-    var TMP_NET_HOST_CARRIER_NAME = "net.host.carrier.name";
-    var TMP_NET_HOST_CARRIER_MCC = "net.host.carrier.mcc";
-    var TMP_NET_HOST_CARRIER_MNC = "net.host.carrier.mnc";
-    var TMP_NET_HOST_CARRIER_ICC = "net.host.carrier.icc";
-    var TMP_PEER_SERVICE = "peer.service";
-    var TMP_ENDUSER_ID = "enduser.id";
-    var TMP_ENDUSER_ROLE = "enduser.role";
-    var TMP_ENDUSER_SCOPE = "enduser.scope";
-    var TMP_THREAD_ID = "thread.id";
-    var TMP_THREAD_NAME = "thread.name";
-    var TMP_CODE_FUNCTION = "code.function";
-    var TMP_CODE_NAMESPACE = "code.namespace";
-    var TMP_CODE_FILEPATH = "code.filepath";
-    var TMP_CODE_LINENO = "code.lineno";
-    var TMP_HTTP_METHOD = "http.method";
-    var TMP_HTTP_URL = "http.url";
-    var TMP_HTTP_TARGET = "http.target";
-    var TMP_HTTP_HOST = "http.host";
-    var TMP_HTTP_SCHEME = "http.scheme";
-    var TMP_HTTP_STATUS_CODE = "http.status_code";
-    var TMP_HTTP_FLAVOR = "http.flavor";
-    var TMP_HTTP_USER_AGENT = "http.user_agent";
-    var TMP_HTTP_REQUEST_CONTENT_LENGTH = "http.request_content_length";
-    var TMP_HTTP_REQUEST_CONTENT_LENGTH_UNCOMPRESSED = "http.request_content_length_uncompressed";
-    var TMP_HTTP_RESPONSE_CONTENT_LENGTH = "http.response_content_length";
-    var TMP_HTTP_RESPONSE_CONTENT_LENGTH_UNCOMPRESSED = "http.response_content_length_uncompressed";
-    var TMP_HTTP_SERVER_NAME = "http.server_name";
-    var TMP_HTTP_ROUTE = "http.route";
-    var TMP_HTTP_CLIENT_IP = "http.client_ip";
-    var TMP_AWS_DYNAMODB_TABLE_NAMES = "aws.dynamodb.table_names";
-    var TMP_AWS_DYNAMODB_CONSUMED_CAPACITY = "aws.dynamodb.consumed_capacity";
-    var TMP_AWS_DYNAMODB_ITEM_COLLECTION_METRICS = "aws.dynamodb.item_collection_metrics";
-    var TMP_AWS_DYNAMODB_PROVISIONED_READ_CAPACITY = "aws.dynamodb.provisioned_read_capacity";
-    var TMP_AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY = "aws.dynamodb.provisioned_write_capacity";
-    var TMP_AWS_DYNAMODB_CONSISTENT_READ = "aws.dynamodb.consistent_read";
-    var TMP_AWS_DYNAMODB_PROJECTION = "aws.dynamodb.projection";
-    var TMP_AWS_DYNAMODB_LIMIT = "aws.dynamodb.limit";
-    var TMP_AWS_DYNAMODB_ATTRIBUTES_TO_GET = "aws.dynamodb.attributes_to_get";
-    var TMP_AWS_DYNAMODB_INDEX_NAME = "aws.dynamodb.index_name";
-    var TMP_AWS_DYNAMODB_SELECT = "aws.dynamodb.select";
-    var TMP_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES = "aws.dynamodb.global_secondary_indexes";
-    var TMP_AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES = "aws.dynamodb.local_secondary_indexes";
-    var TMP_AWS_DYNAMODB_EXCLUSIVE_START_TABLE = "aws.dynamodb.exclusive_start_table";
-    var TMP_AWS_DYNAMODB_TABLE_COUNT = "aws.dynamodb.table_count";
-    var TMP_AWS_DYNAMODB_SCAN_FORWARD = "aws.dynamodb.scan_forward";
-    var TMP_AWS_DYNAMODB_SEGMENT = "aws.dynamodb.segment";
-    var TMP_AWS_DYNAMODB_TOTAL_SEGMENTS = "aws.dynamodb.total_segments";
-    var TMP_AWS_DYNAMODB_COUNT = "aws.dynamodb.count";
-    var TMP_AWS_DYNAMODB_SCANNED_COUNT = "aws.dynamodb.scanned_count";
-    var TMP_AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS = "aws.dynamodb.attribute_definitions";
-    var TMP_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES = "aws.dynamodb.global_secondary_index_updates";
-    var TMP_MESSAGING_SYSTEM = "messaging.system";
-    var TMP_MESSAGING_DESTINATION = "messaging.destination";
-    var TMP_MESSAGING_DESTINATION_KIND = "messaging.destination_kind";
-    var TMP_MESSAGING_TEMP_DESTINATION = "messaging.temp_destination";
-    var TMP_MESSAGING_PROTOCOL = "messaging.protocol";
-    var TMP_MESSAGING_PROTOCOL_VERSION = "messaging.protocol_version";
-    var TMP_MESSAGING_URL = "messaging.url";
-    var TMP_MESSAGING_MESSAGE_ID = "messaging.message_id";
-    var TMP_MESSAGING_CONVERSATION_ID = "messaging.conversation_id";
-    var TMP_MESSAGING_MESSAGE_PAYLOAD_SIZE_BYTES = "messaging.message_payload_size_bytes";
-    var TMP_MESSAGING_MESSAGE_PAYLOAD_COMPRESSED_SIZE_BYTES = "messaging.message_payload_compressed_size_bytes";
-    var TMP_MESSAGING_OPERATION = "messaging.operation";
-    var TMP_MESSAGING_CONSUMER_ID = "messaging.consumer_id";
-    var TMP_MESSAGING_RABBITMQ_ROUTING_KEY = "messaging.rabbitmq.routing_key";
-    var TMP_MESSAGING_KAFKA_MESSAGE_KEY = "messaging.kafka.message_key";
-    var TMP_MESSAGING_KAFKA_CONSUMER_GROUP = "messaging.kafka.consumer_group";
-    var TMP_MESSAGING_KAFKA_CLIENT_ID = "messaging.kafka.client_id";
-    var TMP_MESSAGING_KAFKA_PARTITION = "messaging.kafka.partition";
-    var TMP_MESSAGING_KAFKA_TOMBSTONE = "messaging.kafka.tombstone";
-    var TMP_RPC_SYSTEM = "rpc.system";
-    var TMP_RPC_SERVICE = "rpc.service";
-    var TMP_RPC_METHOD = "rpc.method";
-    var TMP_RPC_GRPC_STATUS_CODE = "rpc.grpc.status_code";
-    var TMP_RPC_JSONRPC_VERSION = "rpc.jsonrpc.version";
-    var TMP_RPC_JSONRPC_REQUEST_ID = "rpc.jsonrpc.request_id";
-    var TMP_RPC_JSONRPC_ERROR_CODE = "rpc.jsonrpc.error_code";
-    var TMP_RPC_JSONRPC_ERROR_MESSAGE = "rpc.jsonrpc.error_message";
-    var TMP_MESSAGE_TYPE = "message.type";
-    var TMP_MESSAGE_ID = "message.id";
-    var TMP_MESSAGE_COMPRESSED_SIZE = "message.compressed_size";
-    var TMP_MESSAGE_UNCOMPRESSED_SIZE = "message.uncompressed_size";
-    exports.SEMATTRS_AWS_LAMBDA_INVOKED_ARN = TMP_AWS_LAMBDA_INVOKED_ARN;
-    exports.SEMATTRS_DB_SYSTEM = TMP_DB_SYSTEM;
-    exports.SEMATTRS_DB_CONNECTION_STRING = TMP_DB_CONNECTION_STRING;
-    exports.SEMATTRS_DB_USER = TMP_DB_USER;
-    exports.SEMATTRS_DB_JDBC_DRIVER_CLASSNAME = TMP_DB_JDBC_DRIVER_CLASSNAME;
-    exports.SEMATTRS_DB_NAME = TMP_DB_NAME;
-    exports.SEMATTRS_DB_STATEMENT = TMP_DB_STATEMENT;
-    exports.SEMATTRS_DB_OPERATION = TMP_DB_OPERATION;
-    exports.SEMATTRS_DB_MSSQL_INSTANCE_NAME = TMP_DB_MSSQL_INSTANCE_NAME;
-    exports.SEMATTRS_DB_CASSANDRA_KEYSPACE = TMP_DB_CASSANDRA_KEYSPACE;
-    exports.SEMATTRS_DB_CASSANDRA_PAGE_SIZE = TMP_DB_CASSANDRA_PAGE_SIZE;
-    exports.SEMATTRS_DB_CASSANDRA_CONSISTENCY_LEVEL = TMP_DB_CASSANDRA_CONSISTENCY_LEVEL;
-    exports.SEMATTRS_DB_CASSANDRA_TABLE = TMP_DB_CASSANDRA_TABLE;
-    exports.SEMATTRS_DB_CASSANDRA_IDEMPOTENCE = TMP_DB_CASSANDRA_IDEMPOTENCE;
-    exports.SEMATTRS_DB_CASSANDRA_SPECULATIVE_EXECUTION_COUNT = TMP_DB_CASSANDRA_SPECULATIVE_EXECUTION_COUNT;
-    exports.SEMATTRS_DB_CASSANDRA_COORDINATOR_ID = TMP_DB_CASSANDRA_COORDINATOR_ID;
-    exports.SEMATTRS_DB_CASSANDRA_COORDINATOR_DC = TMP_DB_CASSANDRA_COORDINATOR_DC;
-    exports.SEMATTRS_DB_HBASE_NAMESPACE = TMP_DB_HBASE_NAMESPACE;
-    exports.SEMATTRS_DB_REDIS_DATABASE_INDEX = TMP_DB_REDIS_DATABASE_INDEX;
-    exports.SEMATTRS_DB_MONGODB_COLLECTION = TMP_DB_MONGODB_COLLECTION;
-    exports.SEMATTRS_DB_SQL_TABLE = TMP_DB_SQL_TABLE;
-    exports.SEMATTRS_EXCEPTION_TYPE = TMP_EXCEPTION_TYPE;
-    exports.SEMATTRS_EXCEPTION_MESSAGE = TMP_EXCEPTION_MESSAGE;
-    exports.SEMATTRS_EXCEPTION_STACKTRACE = TMP_EXCEPTION_STACKTRACE;
-    exports.SEMATTRS_EXCEPTION_ESCAPED = TMP_EXCEPTION_ESCAPED;
-    exports.SEMATTRS_FAAS_TRIGGER = TMP_FAAS_TRIGGER;
-    exports.SEMATTRS_FAAS_EXECUTION = TMP_FAAS_EXECUTION;
-    exports.SEMATTRS_FAAS_DOCUMENT_COLLECTION = TMP_FAAS_DOCUMENT_COLLECTION;
-    exports.SEMATTRS_FAAS_DOCUMENT_OPERATION = TMP_FAAS_DOCUMENT_OPERATION;
-    exports.SEMATTRS_FAAS_DOCUMENT_TIME = TMP_FAAS_DOCUMENT_TIME;
-    exports.SEMATTRS_FAAS_DOCUMENT_NAME = TMP_FAAS_DOCUMENT_NAME;
-    exports.SEMATTRS_FAAS_TIME = TMP_FAAS_TIME;
-    exports.SEMATTRS_FAAS_CRON = TMP_FAAS_CRON;
-    exports.SEMATTRS_FAAS_COLDSTART = TMP_FAAS_COLDSTART;
-    exports.SEMATTRS_FAAS_INVOKED_NAME = TMP_FAAS_INVOKED_NAME;
-    exports.SEMATTRS_FAAS_INVOKED_PROVIDER = TMP_FAAS_INVOKED_PROVIDER;
-    exports.SEMATTRS_FAAS_INVOKED_REGION = TMP_FAAS_INVOKED_REGION;
-    exports.SEMATTRS_NET_TRANSPORT = TMP_NET_TRANSPORT;
-    exports.SEMATTRS_NET_PEER_IP = TMP_NET_PEER_IP;
-    exports.SEMATTRS_NET_PEER_PORT = TMP_NET_PEER_PORT;
-    exports.SEMATTRS_NET_PEER_NAME = TMP_NET_PEER_NAME;
-    exports.SEMATTRS_NET_HOST_IP = TMP_NET_HOST_IP;
-    exports.SEMATTRS_NET_HOST_PORT = TMP_NET_HOST_PORT;
-    exports.SEMATTRS_NET_HOST_NAME = TMP_NET_HOST_NAME;
-    exports.SEMATTRS_NET_HOST_CONNECTION_TYPE = TMP_NET_HOST_CONNECTION_TYPE;
-    exports.SEMATTRS_NET_HOST_CONNECTION_SUBTYPE = TMP_NET_HOST_CONNECTION_SUBTYPE;
-    exports.SEMATTRS_NET_HOST_CARRIER_NAME = TMP_NET_HOST_CARRIER_NAME;
-    exports.SEMATTRS_NET_HOST_CARRIER_MCC = TMP_NET_HOST_CARRIER_MCC;
-    exports.SEMATTRS_NET_HOST_CARRIER_MNC = TMP_NET_HOST_CARRIER_MNC;
-    exports.SEMATTRS_NET_HOST_CARRIER_ICC = TMP_NET_HOST_CARRIER_ICC;
-    exports.SEMATTRS_PEER_SERVICE = TMP_PEER_SERVICE;
-    exports.SEMATTRS_ENDUSER_ID = TMP_ENDUSER_ID;
-    exports.SEMATTRS_ENDUSER_ROLE = TMP_ENDUSER_ROLE;
-    exports.SEMATTRS_ENDUSER_SCOPE = TMP_ENDUSER_SCOPE;
-    exports.SEMATTRS_THREAD_ID = TMP_THREAD_ID;
-    exports.SEMATTRS_THREAD_NAME = TMP_THREAD_NAME;
-    exports.SEMATTRS_CODE_FUNCTION = TMP_CODE_FUNCTION;
-    exports.SEMATTRS_CODE_NAMESPACE = TMP_CODE_NAMESPACE;
-    exports.SEMATTRS_CODE_FILEPATH = TMP_CODE_FILEPATH;
-    exports.SEMATTRS_CODE_LINENO = TMP_CODE_LINENO;
-    exports.SEMATTRS_HTTP_METHOD = TMP_HTTP_METHOD;
-    exports.SEMATTRS_HTTP_URL = TMP_HTTP_URL;
-    exports.SEMATTRS_HTTP_TARGET = TMP_HTTP_TARGET;
-    exports.SEMATTRS_HTTP_HOST = TMP_HTTP_HOST;
-    exports.SEMATTRS_HTTP_SCHEME = TMP_HTTP_SCHEME;
-    exports.SEMATTRS_HTTP_STATUS_CODE = TMP_HTTP_STATUS_CODE;
-    exports.SEMATTRS_HTTP_FLAVOR = TMP_HTTP_FLAVOR;
-    exports.SEMATTRS_HTTP_USER_AGENT = TMP_HTTP_USER_AGENT;
-    exports.SEMATTRS_HTTP_REQUEST_CONTENT_LENGTH = TMP_HTTP_REQUEST_CONTENT_LENGTH;
-    exports.SEMATTRS_HTTP_REQUEST_CONTENT_LENGTH_UNCOMPRESSED = TMP_HTTP_REQUEST_CONTENT_LENGTH_UNCOMPRESSED;
-    exports.SEMATTRS_HTTP_RESPONSE_CONTENT_LENGTH = TMP_HTTP_RESPONSE_CONTENT_LENGTH;
-    exports.SEMATTRS_HTTP_RESPONSE_CONTENT_LENGTH_UNCOMPRESSED = TMP_HTTP_RESPONSE_CONTENT_LENGTH_UNCOMPRESSED;
-    exports.SEMATTRS_HTTP_SERVER_NAME = TMP_HTTP_SERVER_NAME;
-    exports.SEMATTRS_HTTP_ROUTE = TMP_HTTP_ROUTE;
-    exports.SEMATTRS_HTTP_CLIENT_IP = TMP_HTTP_CLIENT_IP;
-    exports.SEMATTRS_AWS_DYNAMODB_TABLE_NAMES = TMP_AWS_DYNAMODB_TABLE_NAMES;
-    exports.SEMATTRS_AWS_DYNAMODB_CONSUMED_CAPACITY = TMP_AWS_DYNAMODB_CONSUMED_CAPACITY;
-    exports.SEMATTRS_AWS_DYNAMODB_ITEM_COLLECTION_METRICS = TMP_AWS_DYNAMODB_ITEM_COLLECTION_METRICS;
-    exports.SEMATTRS_AWS_DYNAMODB_PROVISIONED_READ_CAPACITY = TMP_AWS_DYNAMODB_PROVISIONED_READ_CAPACITY;
-    exports.SEMATTRS_AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY = TMP_AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY;
-    exports.SEMATTRS_AWS_DYNAMODB_CONSISTENT_READ = TMP_AWS_DYNAMODB_CONSISTENT_READ;
-    exports.SEMATTRS_AWS_DYNAMODB_PROJECTION = TMP_AWS_DYNAMODB_PROJECTION;
-    exports.SEMATTRS_AWS_DYNAMODB_LIMIT = TMP_AWS_DYNAMODB_LIMIT;
-    exports.SEMATTRS_AWS_DYNAMODB_ATTRIBUTES_TO_GET = TMP_AWS_DYNAMODB_ATTRIBUTES_TO_GET;
-    exports.SEMATTRS_AWS_DYNAMODB_INDEX_NAME = TMP_AWS_DYNAMODB_INDEX_NAME;
-    exports.SEMATTRS_AWS_DYNAMODB_SELECT = TMP_AWS_DYNAMODB_SELECT;
-    exports.SEMATTRS_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES = TMP_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES;
-    exports.SEMATTRS_AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES = TMP_AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES;
-    exports.SEMATTRS_AWS_DYNAMODB_EXCLUSIVE_START_TABLE = TMP_AWS_DYNAMODB_EXCLUSIVE_START_TABLE;
-    exports.SEMATTRS_AWS_DYNAMODB_TABLE_COUNT = TMP_AWS_DYNAMODB_TABLE_COUNT;
-    exports.SEMATTRS_AWS_DYNAMODB_SCAN_FORWARD = TMP_AWS_DYNAMODB_SCAN_FORWARD;
-    exports.SEMATTRS_AWS_DYNAMODB_SEGMENT = TMP_AWS_DYNAMODB_SEGMENT;
-    exports.SEMATTRS_AWS_DYNAMODB_TOTAL_SEGMENTS = TMP_AWS_DYNAMODB_TOTAL_SEGMENTS;
-    exports.SEMATTRS_AWS_DYNAMODB_COUNT = TMP_AWS_DYNAMODB_COUNT;
-    exports.SEMATTRS_AWS_DYNAMODB_SCANNED_COUNT = TMP_AWS_DYNAMODB_SCANNED_COUNT;
-    exports.SEMATTRS_AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS = TMP_AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS;
-    exports.SEMATTRS_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES = TMP_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES;
-    exports.SEMATTRS_MESSAGING_SYSTEM = TMP_MESSAGING_SYSTEM;
-    exports.SEMATTRS_MESSAGING_DESTINATION = TMP_MESSAGING_DESTINATION;
-    exports.SEMATTRS_MESSAGING_DESTINATION_KIND = TMP_MESSAGING_DESTINATION_KIND;
-    exports.SEMATTRS_MESSAGING_TEMP_DESTINATION = TMP_MESSAGING_TEMP_DESTINATION;
-    exports.SEMATTRS_MESSAGING_PROTOCOL = TMP_MESSAGING_PROTOCOL;
-    exports.SEMATTRS_MESSAGING_PROTOCOL_VERSION = TMP_MESSAGING_PROTOCOL_VERSION;
-    exports.SEMATTRS_MESSAGING_URL = TMP_MESSAGING_URL;
-    exports.SEMATTRS_MESSAGING_MESSAGE_ID = TMP_MESSAGING_MESSAGE_ID;
-    exports.SEMATTRS_MESSAGING_CONVERSATION_ID = TMP_MESSAGING_CONVERSATION_ID;
-    exports.SEMATTRS_MESSAGING_MESSAGE_PAYLOAD_SIZE_BYTES = TMP_MESSAGING_MESSAGE_PAYLOAD_SIZE_BYTES;
-    exports.SEMATTRS_MESSAGING_MESSAGE_PAYLOAD_COMPRESSED_SIZE_BYTES = TMP_MESSAGING_MESSAGE_PAYLOAD_COMPRESSED_SIZE_BYTES;
-    exports.SEMATTRS_MESSAGING_OPERATION = TMP_MESSAGING_OPERATION;
-    exports.SEMATTRS_MESSAGING_CONSUMER_ID = TMP_MESSAGING_CONSUMER_ID;
-    exports.SEMATTRS_MESSAGING_RABBITMQ_ROUTING_KEY = TMP_MESSAGING_RABBITMQ_ROUTING_KEY;
-    exports.SEMATTRS_MESSAGING_KAFKA_MESSAGE_KEY = TMP_MESSAGING_KAFKA_MESSAGE_KEY;
-    exports.SEMATTRS_MESSAGING_KAFKA_CONSUMER_GROUP = TMP_MESSAGING_KAFKA_CONSUMER_GROUP;
-    exports.SEMATTRS_MESSAGING_KAFKA_CLIENT_ID = TMP_MESSAGING_KAFKA_CLIENT_ID;
-    exports.SEMATTRS_MESSAGING_KAFKA_PARTITION = TMP_MESSAGING_KAFKA_PARTITION;
-    exports.SEMATTRS_MESSAGING_KAFKA_TOMBSTONE = TMP_MESSAGING_KAFKA_TOMBSTONE;
-    exports.SEMATTRS_RPC_SYSTEM = TMP_RPC_SYSTEM;
-    exports.SEMATTRS_RPC_SERVICE = TMP_RPC_SERVICE;
-    exports.SEMATTRS_RPC_METHOD = TMP_RPC_METHOD;
-    exports.SEMATTRS_RPC_GRPC_STATUS_CODE = TMP_RPC_GRPC_STATUS_CODE;
-    exports.SEMATTRS_RPC_JSONRPC_VERSION = TMP_RPC_JSONRPC_VERSION;
-    exports.SEMATTRS_RPC_JSONRPC_REQUEST_ID = TMP_RPC_JSONRPC_REQUEST_ID;
-    exports.SEMATTRS_RPC_JSONRPC_ERROR_CODE = TMP_RPC_JSONRPC_ERROR_CODE;
-    exports.SEMATTRS_RPC_JSONRPC_ERROR_MESSAGE = TMP_RPC_JSONRPC_ERROR_MESSAGE;
-    exports.SEMATTRS_MESSAGE_TYPE = TMP_MESSAGE_TYPE;
-    exports.SEMATTRS_MESSAGE_ID = TMP_MESSAGE_ID;
-    exports.SEMATTRS_MESSAGE_COMPRESSED_SIZE = TMP_MESSAGE_COMPRESSED_SIZE;
-    exports.SEMATTRS_MESSAGE_UNCOMPRESSED_SIZE = TMP_MESSAGE_UNCOMPRESSED_SIZE;
-    exports.SemanticAttributes = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_AWS_LAMBDA_INVOKED_ARN,
-      TMP_DB_SYSTEM,
-      TMP_DB_CONNECTION_STRING,
-      TMP_DB_USER,
-      TMP_DB_JDBC_DRIVER_CLASSNAME,
-      TMP_DB_NAME,
-      TMP_DB_STATEMENT,
-      TMP_DB_OPERATION,
-      TMP_DB_MSSQL_INSTANCE_NAME,
-      TMP_DB_CASSANDRA_KEYSPACE,
-      TMP_DB_CASSANDRA_PAGE_SIZE,
-      TMP_DB_CASSANDRA_CONSISTENCY_LEVEL,
-      TMP_DB_CASSANDRA_TABLE,
-      TMP_DB_CASSANDRA_IDEMPOTENCE,
-      TMP_DB_CASSANDRA_SPECULATIVE_EXECUTION_COUNT,
-      TMP_DB_CASSANDRA_COORDINATOR_ID,
-      TMP_DB_CASSANDRA_COORDINATOR_DC,
-      TMP_DB_HBASE_NAMESPACE,
-      TMP_DB_REDIS_DATABASE_INDEX,
-      TMP_DB_MONGODB_COLLECTION,
-      TMP_DB_SQL_TABLE,
-      TMP_EXCEPTION_TYPE,
-      TMP_EXCEPTION_MESSAGE,
-      TMP_EXCEPTION_STACKTRACE,
-      TMP_EXCEPTION_ESCAPED,
-      TMP_FAAS_TRIGGER,
-      TMP_FAAS_EXECUTION,
-      TMP_FAAS_DOCUMENT_COLLECTION,
-      TMP_FAAS_DOCUMENT_OPERATION,
-      TMP_FAAS_DOCUMENT_TIME,
-      TMP_FAAS_DOCUMENT_NAME,
-      TMP_FAAS_TIME,
-      TMP_FAAS_CRON,
-      TMP_FAAS_COLDSTART,
-      TMP_FAAS_INVOKED_NAME,
-      TMP_FAAS_INVOKED_PROVIDER,
-      TMP_FAAS_INVOKED_REGION,
-      TMP_NET_TRANSPORT,
-      TMP_NET_PEER_IP,
-      TMP_NET_PEER_PORT,
-      TMP_NET_PEER_NAME,
-      TMP_NET_HOST_IP,
-      TMP_NET_HOST_PORT,
-      TMP_NET_HOST_NAME,
-      TMP_NET_HOST_CONNECTION_TYPE,
-      TMP_NET_HOST_CONNECTION_SUBTYPE,
-      TMP_NET_HOST_CARRIER_NAME,
-      TMP_NET_HOST_CARRIER_MCC,
-      TMP_NET_HOST_CARRIER_MNC,
-      TMP_NET_HOST_CARRIER_ICC,
-      TMP_PEER_SERVICE,
-      TMP_ENDUSER_ID,
-      TMP_ENDUSER_ROLE,
-      TMP_ENDUSER_SCOPE,
-      TMP_THREAD_ID,
-      TMP_THREAD_NAME,
-      TMP_CODE_FUNCTION,
-      TMP_CODE_NAMESPACE,
-      TMP_CODE_FILEPATH,
-      TMP_CODE_LINENO,
-      TMP_HTTP_METHOD,
-      TMP_HTTP_URL,
-      TMP_HTTP_TARGET,
-      TMP_HTTP_HOST,
-      TMP_HTTP_SCHEME,
-      TMP_HTTP_STATUS_CODE,
-      TMP_HTTP_FLAVOR,
-      TMP_HTTP_USER_AGENT,
-      TMP_HTTP_REQUEST_CONTENT_LENGTH,
-      TMP_HTTP_REQUEST_CONTENT_LENGTH_UNCOMPRESSED,
-      TMP_HTTP_RESPONSE_CONTENT_LENGTH,
-      TMP_HTTP_RESPONSE_CONTENT_LENGTH_UNCOMPRESSED,
-      TMP_HTTP_SERVER_NAME,
-      TMP_HTTP_ROUTE,
-      TMP_HTTP_CLIENT_IP,
-      TMP_AWS_DYNAMODB_TABLE_NAMES,
-      TMP_AWS_DYNAMODB_CONSUMED_CAPACITY,
-      TMP_AWS_DYNAMODB_ITEM_COLLECTION_METRICS,
-      TMP_AWS_DYNAMODB_PROVISIONED_READ_CAPACITY,
-      TMP_AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY,
-      TMP_AWS_DYNAMODB_CONSISTENT_READ,
-      TMP_AWS_DYNAMODB_PROJECTION,
-      TMP_AWS_DYNAMODB_LIMIT,
-      TMP_AWS_DYNAMODB_ATTRIBUTES_TO_GET,
-      TMP_AWS_DYNAMODB_INDEX_NAME,
-      TMP_AWS_DYNAMODB_SELECT,
-      TMP_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES,
-      TMP_AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES,
-      TMP_AWS_DYNAMODB_EXCLUSIVE_START_TABLE,
-      TMP_AWS_DYNAMODB_TABLE_COUNT,
-      TMP_AWS_DYNAMODB_SCAN_FORWARD,
-      TMP_AWS_DYNAMODB_SEGMENT,
-      TMP_AWS_DYNAMODB_TOTAL_SEGMENTS,
-      TMP_AWS_DYNAMODB_COUNT,
-      TMP_AWS_DYNAMODB_SCANNED_COUNT,
-      TMP_AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS,
-      TMP_AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES,
-      TMP_MESSAGING_SYSTEM,
-      TMP_MESSAGING_DESTINATION,
-      TMP_MESSAGING_DESTINATION_KIND,
-      TMP_MESSAGING_TEMP_DESTINATION,
-      TMP_MESSAGING_PROTOCOL,
-      TMP_MESSAGING_PROTOCOL_VERSION,
-      TMP_MESSAGING_URL,
-      TMP_MESSAGING_MESSAGE_ID,
-      TMP_MESSAGING_CONVERSATION_ID,
-      TMP_MESSAGING_MESSAGE_PAYLOAD_SIZE_BYTES,
-      TMP_MESSAGING_MESSAGE_PAYLOAD_COMPRESSED_SIZE_BYTES,
-      TMP_MESSAGING_OPERATION,
-      TMP_MESSAGING_CONSUMER_ID,
-      TMP_MESSAGING_RABBITMQ_ROUTING_KEY,
-      TMP_MESSAGING_KAFKA_MESSAGE_KEY,
-      TMP_MESSAGING_KAFKA_CONSUMER_GROUP,
-      TMP_MESSAGING_KAFKA_CLIENT_ID,
-      TMP_MESSAGING_KAFKA_PARTITION,
-      TMP_MESSAGING_KAFKA_TOMBSTONE,
-      TMP_RPC_SYSTEM,
-      TMP_RPC_SERVICE,
-      TMP_RPC_METHOD,
-      TMP_RPC_GRPC_STATUS_CODE,
-      TMP_RPC_JSONRPC_VERSION,
-      TMP_RPC_JSONRPC_REQUEST_ID,
-      TMP_RPC_JSONRPC_ERROR_CODE,
-      TMP_RPC_JSONRPC_ERROR_MESSAGE,
-      TMP_MESSAGE_TYPE,
-      TMP_MESSAGE_ID,
-      TMP_MESSAGE_COMPRESSED_SIZE,
-      TMP_MESSAGE_UNCOMPRESSED_SIZE
-    ]);
-    var TMP_DBSYSTEMVALUES_OTHER_SQL = "other_sql";
-    var TMP_DBSYSTEMVALUES_MSSQL = "mssql";
-    var TMP_DBSYSTEMVALUES_MYSQL = "mysql";
-    var TMP_DBSYSTEMVALUES_ORACLE = "oracle";
-    var TMP_DBSYSTEMVALUES_DB2 = "db2";
-    var TMP_DBSYSTEMVALUES_POSTGRESQL = "postgresql";
-    var TMP_DBSYSTEMVALUES_REDSHIFT = "redshift";
-    var TMP_DBSYSTEMVALUES_HIVE = "hive";
-    var TMP_DBSYSTEMVALUES_CLOUDSCAPE = "cloudscape";
-    var TMP_DBSYSTEMVALUES_HSQLDB = "hsqldb";
-    var TMP_DBSYSTEMVALUES_PROGRESS = "progress";
-    var TMP_DBSYSTEMVALUES_MAXDB = "maxdb";
-    var TMP_DBSYSTEMVALUES_HANADB = "hanadb";
-    var TMP_DBSYSTEMVALUES_INGRES = "ingres";
-    var TMP_DBSYSTEMVALUES_FIRSTSQL = "firstsql";
-    var TMP_DBSYSTEMVALUES_EDB = "edb";
-    var TMP_DBSYSTEMVALUES_CACHE = "cache";
-    var TMP_DBSYSTEMVALUES_ADABAS = "adabas";
-    var TMP_DBSYSTEMVALUES_FIREBIRD = "firebird";
-    var TMP_DBSYSTEMVALUES_DERBY = "derby";
-    var TMP_DBSYSTEMVALUES_FILEMAKER = "filemaker";
-    var TMP_DBSYSTEMVALUES_INFORMIX = "informix";
-    var TMP_DBSYSTEMVALUES_INSTANTDB = "instantdb";
-    var TMP_DBSYSTEMVALUES_INTERBASE = "interbase";
-    var TMP_DBSYSTEMVALUES_MARIADB = "mariadb";
-    var TMP_DBSYSTEMVALUES_NETEZZA = "netezza";
-    var TMP_DBSYSTEMVALUES_PERVASIVE = "pervasive";
-    var TMP_DBSYSTEMVALUES_POINTBASE = "pointbase";
-    var TMP_DBSYSTEMVALUES_SQLITE = "sqlite";
-    var TMP_DBSYSTEMVALUES_SYBASE = "sybase";
-    var TMP_DBSYSTEMVALUES_TERADATA = "teradata";
-    var TMP_DBSYSTEMVALUES_VERTICA = "vertica";
-    var TMP_DBSYSTEMVALUES_H2 = "h2";
-    var TMP_DBSYSTEMVALUES_COLDFUSION = "coldfusion";
-    var TMP_DBSYSTEMVALUES_CASSANDRA = "cassandra";
-    var TMP_DBSYSTEMVALUES_HBASE = "hbase";
-    var TMP_DBSYSTEMVALUES_MONGODB = "mongodb";
-    var TMP_DBSYSTEMVALUES_REDIS = "redis";
-    var TMP_DBSYSTEMVALUES_COUCHBASE = "couchbase";
-    var TMP_DBSYSTEMVALUES_COUCHDB = "couchdb";
-    var TMP_DBSYSTEMVALUES_COSMOSDB = "cosmosdb";
-    var TMP_DBSYSTEMVALUES_DYNAMODB = "dynamodb";
-    var TMP_DBSYSTEMVALUES_NEO4J = "neo4j";
-    var TMP_DBSYSTEMVALUES_GEODE = "geode";
-    var TMP_DBSYSTEMVALUES_ELASTICSEARCH = "elasticsearch";
-    var TMP_DBSYSTEMVALUES_MEMCACHED = "memcached";
-    var TMP_DBSYSTEMVALUES_COCKROACHDB = "cockroachdb";
-    exports.DBSYSTEMVALUES_OTHER_SQL = TMP_DBSYSTEMVALUES_OTHER_SQL;
-    exports.DBSYSTEMVALUES_MSSQL = TMP_DBSYSTEMVALUES_MSSQL;
-    exports.DBSYSTEMVALUES_MYSQL = TMP_DBSYSTEMVALUES_MYSQL;
-    exports.DBSYSTEMVALUES_ORACLE = TMP_DBSYSTEMVALUES_ORACLE;
-    exports.DBSYSTEMVALUES_DB2 = TMP_DBSYSTEMVALUES_DB2;
-    exports.DBSYSTEMVALUES_POSTGRESQL = TMP_DBSYSTEMVALUES_POSTGRESQL;
-    exports.DBSYSTEMVALUES_REDSHIFT = TMP_DBSYSTEMVALUES_REDSHIFT;
-    exports.DBSYSTEMVALUES_HIVE = TMP_DBSYSTEMVALUES_HIVE;
-    exports.DBSYSTEMVALUES_CLOUDSCAPE = TMP_DBSYSTEMVALUES_CLOUDSCAPE;
-    exports.DBSYSTEMVALUES_HSQLDB = TMP_DBSYSTEMVALUES_HSQLDB;
-    exports.DBSYSTEMVALUES_PROGRESS = TMP_DBSYSTEMVALUES_PROGRESS;
-    exports.DBSYSTEMVALUES_MAXDB = TMP_DBSYSTEMVALUES_MAXDB;
-    exports.DBSYSTEMVALUES_HANADB = TMP_DBSYSTEMVALUES_HANADB;
-    exports.DBSYSTEMVALUES_INGRES = TMP_DBSYSTEMVALUES_INGRES;
-    exports.DBSYSTEMVALUES_FIRSTSQL = TMP_DBSYSTEMVALUES_FIRSTSQL;
-    exports.DBSYSTEMVALUES_EDB = TMP_DBSYSTEMVALUES_EDB;
-    exports.DBSYSTEMVALUES_CACHE = TMP_DBSYSTEMVALUES_CACHE;
-    exports.DBSYSTEMVALUES_ADABAS = TMP_DBSYSTEMVALUES_ADABAS;
-    exports.DBSYSTEMVALUES_FIREBIRD = TMP_DBSYSTEMVALUES_FIREBIRD;
-    exports.DBSYSTEMVALUES_DERBY = TMP_DBSYSTEMVALUES_DERBY;
-    exports.DBSYSTEMVALUES_FILEMAKER = TMP_DBSYSTEMVALUES_FILEMAKER;
-    exports.DBSYSTEMVALUES_INFORMIX = TMP_DBSYSTEMVALUES_INFORMIX;
-    exports.DBSYSTEMVALUES_INSTANTDB = TMP_DBSYSTEMVALUES_INSTANTDB;
-    exports.DBSYSTEMVALUES_INTERBASE = TMP_DBSYSTEMVALUES_INTERBASE;
-    exports.DBSYSTEMVALUES_MARIADB = TMP_DBSYSTEMVALUES_MARIADB;
-    exports.DBSYSTEMVALUES_NETEZZA = TMP_DBSYSTEMVALUES_NETEZZA;
-    exports.DBSYSTEMVALUES_PERVASIVE = TMP_DBSYSTEMVALUES_PERVASIVE;
-    exports.DBSYSTEMVALUES_POINTBASE = TMP_DBSYSTEMVALUES_POINTBASE;
-    exports.DBSYSTEMVALUES_SQLITE = TMP_DBSYSTEMVALUES_SQLITE;
-    exports.DBSYSTEMVALUES_SYBASE = TMP_DBSYSTEMVALUES_SYBASE;
-    exports.DBSYSTEMVALUES_TERADATA = TMP_DBSYSTEMVALUES_TERADATA;
-    exports.DBSYSTEMVALUES_VERTICA = TMP_DBSYSTEMVALUES_VERTICA;
-    exports.DBSYSTEMVALUES_H2 = TMP_DBSYSTEMVALUES_H2;
-    exports.DBSYSTEMVALUES_COLDFUSION = TMP_DBSYSTEMVALUES_COLDFUSION;
-    exports.DBSYSTEMVALUES_CASSANDRA = TMP_DBSYSTEMVALUES_CASSANDRA;
-    exports.DBSYSTEMVALUES_HBASE = TMP_DBSYSTEMVALUES_HBASE;
-    exports.DBSYSTEMVALUES_MONGODB = TMP_DBSYSTEMVALUES_MONGODB;
-    exports.DBSYSTEMVALUES_REDIS = TMP_DBSYSTEMVALUES_REDIS;
-    exports.DBSYSTEMVALUES_COUCHBASE = TMP_DBSYSTEMVALUES_COUCHBASE;
-    exports.DBSYSTEMVALUES_COUCHDB = TMP_DBSYSTEMVALUES_COUCHDB;
-    exports.DBSYSTEMVALUES_COSMOSDB = TMP_DBSYSTEMVALUES_COSMOSDB;
-    exports.DBSYSTEMVALUES_DYNAMODB = TMP_DBSYSTEMVALUES_DYNAMODB;
-    exports.DBSYSTEMVALUES_NEO4J = TMP_DBSYSTEMVALUES_NEO4J;
-    exports.DBSYSTEMVALUES_GEODE = TMP_DBSYSTEMVALUES_GEODE;
-    exports.DBSYSTEMVALUES_ELASTICSEARCH = TMP_DBSYSTEMVALUES_ELASTICSEARCH;
-    exports.DBSYSTEMVALUES_MEMCACHED = TMP_DBSYSTEMVALUES_MEMCACHED;
-    exports.DBSYSTEMVALUES_COCKROACHDB = TMP_DBSYSTEMVALUES_COCKROACHDB;
-    exports.DbSystemValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_DBSYSTEMVALUES_OTHER_SQL,
-      TMP_DBSYSTEMVALUES_MSSQL,
-      TMP_DBSYSTEMVALUES_MYSQL,
-      TMP_DBSYSTEMVALUES_ORACLE,
-      TMP_DBSYSTEMVALUES_DB2,
-      TMP_DBSYSTEMVALUES_POSTGRESQL,
-      TMP_DBSYSTEMVALUES_REDSHIFT,
-      TMP_DBSYSTEMVALUES_HIVE,
-      TMP_DBSYSTEMVALUES_CLOUDSCAPE,
-      TMP_DBSYSTEMVALUES_HSQLDB,
-      TMP_DBSYSTEMVALUES_PROGRESS,
-      TMP_DBSYSTEMVALUES_MAXDB,
-      TMP_DBSYSTEMVALUES_HANADB,
-      TMP_DBSYSTEMVALUES_INGRES,
-      TMP_DBSYSTEMVALUES_FIRSTSQL,
-      TMP_DBSYSTEMVALUES_EDB,
-      TMP_DBSYSTEMVALUES_CACHE,
-      TMP_DBSYSTEMVALUES_ADABAS,
-      TMP_DBSYSTEMVALUES_FIREBIRD,
-      TMP_DBSYSTEMVALUES_DERBY,
-      TMP_DBSYSTEMVALUES_FILEMAKER,
-      TMP_DBSYSTEMVALUES_INFORMIX,
-      TMP_DBSYSTEMVALUES_INSTANTDB,
-      TMP_DBSYSTEMVALUES_INTERBASE,
-      TMP_DBSYSTEMVALUES_MARIADB,
-      TMP_DBSYSTEMVALUES_NETEZZA,
-      TMP_DBSYSTEMVALUES_PERVASIVE,
-      TMP_DBSYSTEMVALUES_POINTBASE,
-      TMP_DBSYSTEMVALUES_SQLITE,
-      TMP_DBSYSTEMVALUES_SYBASE,
-      TMP_DBSYSTEMVALUES_TERADATA,
-      TMP_DBSYSTEMVALUES_VERTICA,
-      TMP_DBSYSTEMVALUES_H2,
-      TMP_DBSYSTEMVALUES_COLDFUSION,
-      TMP_DBSYSTEMVALUES_CASSANDRA,
-      TMP_DBSYSTEMVALUES_HBASE,
-      TMP_DBSYSTEMVALUES_MONGODB,
-      TMP_DBSYSTEMVALUES_REDIS,
-      TMP_DBSYSTEMVALUES_COUCHBASE,
-      TMP_DBSYSTEMVALUES_COUCHDB,
-      TMP_DBSYSTEMVALUES_COSMOSDB,
-      TMP_DBSYSTEMVALUES_DYNAMODB,
-      TMP_DBSYSTEMVALUES_NEO4J,
-      TMP_DBSYSTEMVALUES_GEODE,
-      TMP_DBSYSTEMVALUES_ELASTICSEARCH,
-      TMP_DBSYSTEMVALUES_MEMCACHED,
-      TMP_DBSYSTEMVALUES_COCKROACHDB
-    ]);
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ALL = "all";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_EACH_QUORUM = "each_quorum";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_QUORUM = "quorum";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_QUORUM = "local_quorum";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ONE = "one";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_TWO = "two";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_THREE = "three";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_ONE = "local_one";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ANY = "any";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_SERIAL = "serial";
-    var TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_SERIAL = "local_serial";
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_ALL = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ALL;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_EACH_QUORUM = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_EACH_QUORUM;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_QUORUM = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_QUORUM;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_QUORUM = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_QUORUM;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_ONE = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ONE;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_TWO = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_TWO;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_THREE = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_THREE;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_ONE = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_ONE;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_ANY = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ANY;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_SERIAL = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_SERIAL;
-    exports.DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_SERIAL = TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_SERIAL;
-    exports.DbCassandraConsistencyLevelValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ALL,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_EACH_QUORUM,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_QUORUM,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_QUORUM,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ONE,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_TWO,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_THREE,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_ONE,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_ANY,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_SERIAL,
-      TMP_DBCASSANDRACONSISTENCYLEVELVALUES_LOCAL_SERIAL
-    ]);
-    var TMP_FAASTRIGGERVALUES_DATASOURCE = "datasource";
-    var TMP_FAASTRIGGERVALUES_HTTP = "http";
-    var TMP_FAASTRIGGERVALUES_PUBSUB = "pubsub";
-    var TMP_FAASTRIGGERVALUES_TIMER = "timer";
-    var TMP_FAASTRIGGERVALUES_OTHER = "other";
-    exports.FAASTRIGGERVALUES_DATASOURCE = TMP_FAASTRIGGERVALUES_DATASOURCE;
-    exports.FAASTRIGGERVALUES_HTTP = TMP_FAASTRIGGERVALUES_HTTP;
-    exports.FAASTRIGGERVALUES_PUBSUB = TMP_FAASTRIGGERVALUES_PUBSUB;
-    exports.FAASTRIGGERVALUES_TIMER = TMP_FAASTRIGGERVALUES_TIMER;
-    exports.FAASTRIGGERVALUES_OTHER = TMP_FAASTRIGGERVALUES_OTHER;
-    exports.FaasTriggerValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_FAASTRIGGERVALUES_DATASOURCE,
-      TMP_FAASTRIGGERVALUES_HTTP,
-      TMP_FAASTRIGGERVALUES_PUBSUB,
-      TMP_FAASTRIGGERVALUES_TIMER,
-      TMP_FAASTRIGGERVALUES_OTHER
-    ]);
-    var TMP_FAASDOCUMENTOPERATIONVALUES_INSERT = "insert";
-    var TMP_FAASDOCUMENTOPERATIONVALUES_EDIT = "edit";
-    var TMP_FAASDOCUMENTOPERATIONVALUES_DELETE = "delete";
-    exports.FAASDOCUMENTOPERATIONVALUES_INSERT = TMP_FAASDOCUMENTOPERATIONVALUES_INSERT;
-    exports.FAASDOCUMENTOPERATIONVALUES_EDIT = TMP_FAASDOCUMENTOPERATIONVALUES_EDIT;
-    exports.FAASDOCUMENTOPERATIONVALUES_DELETE = TMP_FAASDOCUMENTOPERATIONVALUES_DELETE;
-    exports.FaasDocumentOperationValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_FAASDOCUMENTOPERATIONVALUES_INSERT,
-      TMP_FAASDOCUMENTOPERATIONVALUES_EDIT,
-      TMP_FAASDOCUMENTOPERATIONVALUES_DELETE
-    ]);
-    var TMP_FAASINVOKEDPROVIDERVALUES_ALIBABA_CLOUD = "alibaba_cloud";
-    var TMP_FAASINVOKEDPROVIDERVALUES_AWS = "aws";
-    var TMP_FAASINVOKEDPROVIDERVALUES_AZURE = "azure";
-    var TMP_FAASINVOKEDPROVIDERVALUES_GCP = "gcp";
-    exports.FAASINVOKEDPROVIDERVALUES_ALIBABA_CLOUD = TMP_FAASINVOKEDPROVIDERVALUES_ALIBABA_CLOUD;
-    exports.FAASINVOKEDPROVIDERVALUES_AWS = TMP_FAASINVOKEDPROVIDERVALUES_AWS;
-    exports.FAASINVOKEDPROVIDERVALUES_AZURE = TMP_FAASINVOKEDPROVIDERVALUES_AZURE;
-    exports.FAASINVOKEDPROVIDERVALUES_GCP = TMP_FAASINVOKEDPROVIDERVALUES_GCP;
-    exports.FaasInvokedProviderValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_FAASINVOKEDPROVIDERVALUES_ALIBABA_CLOUD,
-      TMP_FAASINVOKEDPROVIDERVALUES_AWS,
-      TMP_FAASINVOKEDPROVIDERVALUES_AZURE,
-      TMP_FAASINVOKEDPROVIDERVALUES_GCP
-    ]);
-    var TMP_NETTRANSPORTVALUES_IP_TCP = "ip_tcp";
-    var TMP_NETTRANSPORTVALUES_IP_UDP = "ip_udp";
-    var TMP_NETTRANSPORTVALUES_IP = "ip";
-    var TMP_NETTRANSPORTVALUES_UNIX = "unix";
-    var TMP_NETTRANSPORTVALUES_PIPE = "pipe";
-    var TMP_NETTRANSPORTVALUES_INPROC = "inproc";
-    var TMP_NETTRANSPORTVALUES_OTHER = "other";
-    exports.NETTRANSPORTVALUES_IP_TCP = TMP_NETTRANSPORTVALUES_IP_TCP;
-    exports.NETTRANSPORTVALUES_IP_UDP = TMP_NETTRANSPORTVALUES_IP_UDP;
-    exports.NETTRANSPORTVALUES_IP = TMP_NETTRANSPORTVALUES_IP;
-    exports.NETTRANSPORTVALUES_UNIX = TMP_NETTRANSPORTVALUES_UNIX;
-    exports.NETTRANSPORTVALUES_PIPE = TMP_NETTRANSPORTVALUES_PIPE;
-    exports.NETTRANSPORTVALUES_INPROC = TMP_NETTRANSPORTVALUES_INPROC;
-    exports.NETTRANSPORTVALUES_OTHER = TMP_NETTRANSPORTVALUES_OTHER;
-    exports.NetTransportValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_NETTRANSPORTVALUES_IP_TCP,
-      TMP_NETTRANSPORTVALUES_IP_UDP,
-      TMP_NETTRANSPORTVALUES_IP,
-      TMP_NETTRANSPORTVALUES_UNIX,
-      TMP_NETTRANSPORTVALUES_PIPE,
-      TMP_NETTRANSPORTVALUES_INPROC,
-      TMP_NETTRANSPORTVALUES_OTHER
-    ]);
-    var TMP_NETHOSTCONNECTIONTYPEVALUES_WIFI = "wifi";
-    var TMP_NETHOSTCONNECTIONTYPEVALUES_WIRED = "wired";
-    var TMP_NETHOSTCONNECTIONTYPEVALUES_CELL = "cell";
-    var TMP_NETHOSTCONNECTIONTYPEVALUES_UNAVAILABLE = "unavailable";
-    var TMP_NETHOSTCONNECTIONTYPEVALUES_UNKNOWN = "unknown";
-    exports.NETHOSTCONNECTIONTYPEVALUES_WIFI = TMP_NETHOSTCONNECTIONTYPEVALUES_WIFI;
-    exports.NETHOSTCONNECTIONTYPEVALUES_WIRED = TMP_NETHOSTCONNECTIONTYPEVALUES_WIRED;
-    exports.NETHOSTCONNECTIONTYPEVALUES_CELL = TMP_NETHOSTCONNECTIONTYPEVALUES_CELL;
-    exports.NETHOSTCONNECTIONTYPEVALUES_UNAVAILABLE = TMP_NETHOSTCONNECTIONTYPEVALUES_UNAVAILABLE;
-    exports.NETHOSTCONNECTIONTYPEVALUES_UNKNOWN = TMP_NETHOSTCONNECTIONTYPEVALUES_UNKNOWN;
-    exports.NetHostConnectionTypeValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_NETHOSTCONNECTIONTYPEVALUES_WIFI,
-      TMP_NETHOSTCONNECTIONTYPEVALUES_WIRED,
-      TMP_NETHOSTCONNECTIONTYPEVALUES_CELL,
-      TMP_NETHOSTCONNECTIONTYPEVALUES_UNAVAILABLE,
-      TMP_NETHOSTCONNECTIONTYPEVALUES_UNKNOWN
-    ]);
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_GPRS = "gprs";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EDGE = "edge";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_UMTS = "umts";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_CDMA = "cdma";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_0 = "evdo_0";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_A = "evdo_a";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_CDMA2000_1XRTT = "cdma2000_1xrtt";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSDPA = "hsdpa";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSUPA = "hsupa";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSPA = "hspa";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_IDEN = "iden";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_B = "evdo_b";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_LTE = "lte";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EHRPD = "ehrpd";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSPAP = "hspap";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_GSM = "gsm";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_TD_SCDMA = "td_scdma";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_IWLAN = "iwlan";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_NR = "nr";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_NRNSA = "nrnsa";
-    var TMP_NETHOSTCONNECTIONSUBTYPEVALUES_LTE_CA = "lte_ca";
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_GPRS = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_GPRS;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_EDGE = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EDGE;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_UMTS = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_UMTS;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_CDMA = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_CDMA;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_0 = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_0;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_A = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_A;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_CDMA2000_1XRTT = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_CDMA2000_1XRTT;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSDPA = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSDPA;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSUPA = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSUPA;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSPA = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSPA;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_IDEN = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_IDEN;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_B = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_B;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_LTE = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_LTE;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_EHRPD = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EHRPD;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_HSPAP = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSPAP;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_GSM = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_GSM;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_TD_SCDMA = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_TD_SCDMA;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_IWLAN = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_IWLAN;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_NR = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_NR;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_NRNSA = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_NRNSA;
-    exports.NETHOSTCONNECTIONSUBTYPEVALUES_LTE_CA = TMP_NETHOSTCONNECTIONSUBTYPEVALUES_LTE_CA;
-    exports.NetHostConnectionSubtypeValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_GPRS,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EDGE,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_UMTS,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_CDMA,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_0,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_A,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_CDMA2000_1XRTT,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSDPA,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSUPA,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSPA,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_IDEN,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EVDO_B,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_LTE,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_EHRPD,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_HSPAP,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_GSM,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_TD_SCDMA,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_IWLAN,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_NR,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_NRNSA,
-      TMP_NETHOSTCONNECTIONSUBTYPEVALUES_LTE_CA
-    ]);
-    var TMP_HTTPFLAVORVALUES_HTTP_1_0 = "1.0";
-    var TMP_HTTPFLAVORVALUES_HTTP_1_1 = "1.1";
-    var TMP_HTTPFLAVORVALUES_HTTP_2_0 = "2.0";
-    var TMP_HTTPFLAVORVALUES_SPDY = "SPDY";
-    var TMP_HTTPFLAVORVALUES_QUIC = "QUIC";
-    exports.HTTPFLAVORVALUES_HTTP_1_0 = TMP_HTTPFLAVORVALUES_HTTP_1_0;
-    exports.HTTPFLAVORVALUES_HTTP_1_1 = TMP_HTTPFLAVORVALUES_HTTP_1_1;
-    exports.HTTPFLAVORVALUES_HTTP_2_0 = TMP_HTTPFLAVORVALUES_HTTP_2_0;
-    exports.HTTPFLAVORVALUES_SPDY = TMP_HTTPFLAVORVALUES_SPDY;
-    exports.HTTPFLAVORVALUES_QUIC = TMP_HTTPFLAVORVALUES_QUIC;
-    exports.HttpFlavorValues = {
-      HTTP_1_0: TMP_HTTPFLAVORVALUES_HTTP_1_0,
-      HTTP_1_1: TMP_HTTPFLAVORVALUES_HTTP_1_1,
-      HTTP_2_0: TMP_HTTPFLAVORVALUES_HTTP_2_0,
-      SPDY: TMP_HTTPFLAVORVALUES_SPDY,
-      QUIC: TMP_HTTPFLAVORVALUES_QUIC
-    };
-    var TMP_MESSAGINGDESTINATIONKINDVALUES_QUEUE = "queue";
-    var TMP_MESSAGINGDESTINATIONKINDVALUES_TOPIC = "topic";
-    exports.MESSAGINGDESTINATIONKINDVALUES_QUEUE = TMP_MESSAGINGDESTINATIONKINDVALUES_QUEUE;
-    exports.MESSAGINGDESTINATIONKINDVALUES_TOPIC = TMP_MESSAGINGDESTINATIONKINDVALUES_TOPIC;
-    exports.MessagingDestinationKindValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_MESSAGINGDESTINATIONKINDVALUES_QUEUE,
-      TMP_MESSAGINGDESTINATIONKINDVALUES_TOPIC
-    ]);
-    var TMP_MESSAGINGOPERATIONVALUES_RECEIVE = "receive";
-    var TMP_MESSAGINGOPERATIONVALUES_PROCESS = "process";
-    exports.MESSAGINGOPERATIONVALUES_RECEIVE = TMP_MESSAGINGOPERATIONVALUES_RECEIVE;
-    exports.MESSAGINGOPERATIONVALUES_PROCESS = TMP_MESSAGINGOPERATIONVALUES_PROCESS;
-    exports.MessagingOperationValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_MESSAGINGOPERATIONVALUES_RECEIVE,
-      TMP_MESSAGINGOPERATIONVALUES_PROCESS
-    ]);
-    var TMP_RPCGRPCSTATUSCODEVALUES_OK = 0;
-    var TMP_RPCGRPCSTATUSCODEVALUES_CANCELLED = 1;
-    var TMP_RPCGRPCSTATUSCODEVALUES_UNKNOWN = 2;
-    var TMP_RPCGRPCSTATUSCODEVALUES_INVALID_ARGUMENT = 3;
-    var TMP_RPCGRPCSTATUSCODEVALUES_DEADLINE_EXCEEDED = 4;
-    var TMP_RPCGRPCSTATUSCODEVALUES_NOT_FOUND = 5;
-    var TMP_RPCGRPCSTATUSCODEVALUES_ALREADY_EXISTS = 6;
-    var TMP_RPCGRPCSTATUSCODEVALUES_PERMISSION_DENIED = 7;
-    var TMP_RPCGRPCSTATUSCODEVALUES_RESOURCE_EXHAUSTED = 8;
-    var TMP_RPCGRPCSTATUSCODEVALUES_FAILED_PRECONDITION = 9;
-    var TMP_RPCGRPCSTATUSCODEVALUES_ABORTED = 10;
-    var TMP_RPCGRPCSTATUSCODEVALUES_OUT_OF_RANGE = 11;
-    var TMP_RPCGRPCSTATUSCODEVALUES_UNIMPLEMENTED = 12;
-    var TMP_RPCGRPCSTATUSCODEVALUES_INTERNAL = 13;
-    var TMP_RPCGRPCSTATUSCODEVALUES_UNAVAILABLE = 14;
-    var TMP_RPCGRPCSTATUSCODEVALUES_DATA_LOSS = 15;
-    var TMP_RPCGRPCSTATUSCODEVALUES_UNAUTHENTICATED = 16;
-    exports.RPCGRPCSTATUSCODEVALUES_OK = TMP_RPCGRPCSTATUSCODEVALUES_OK;
-    exports.RPCGRPCSTATUSCODEVALUES_CANCELLED = TMP_RPCGRPCSTATUSCODEVALUES_CANCELLED;
-    exports.RPCGRPCSTATUSCODEVALUES_UNKNOWN = TMP_RPCGRPCSTATUSCODEVALUES_UNKNOWN;
-    exports.RPCGRPCSTATUSCODEVALUES_INVALID_ARGUMENT = TMP_RPCGRPCSTATUSCODEVALUES_INVALID_ARGUMENT;
-    exports.RPCGRPCSTATUSCODEVALUES_DEADLINE_EXCEEDED = TMP_RPCGRPCSTATUSCODEVALUES_DEADLINE_EXCEEDED;
-    exports.RPCGRPCSTATUSCODEVALUES_NOT_FOUND = TMP_RPCGRPCSTATUSCODEVALUES_NOT_FOUND;
-    exports.RPCGRPCSTATUSCODEVALUES_ALREADY_EXISTS = TMP_RPCGRPCSTATUSCODEVALUES_ALREADY_EXISTS;
-    exports.RPCGRPCSTATUSCODEVALUES_PERMISSION_DENIED = TMP_RPCGRPCSTATUSCODEVALUES_PERMISSION_DENIED;
-    exports.RPCGRPCSTATUSCODEVALUES_RESOURCE_EXHAUSTED = TMP_RPCGRPCSTATUSCODEVALUES_RESOURCE_EXHAUSTED;
-    exports.RPCGRPCSTATUSCODEVALUES_FAILED_PRECONDITION = TMP_RPCGRPCSTATUSCODEVALUES_FAILED_PRECONDITION;
-    exports.RPCGRPCSTATUSCODEVALUES_ABORTED = TMP_RPCGRPCSTATUSCODEVALUES_ABORTED;
-    exports.RPCGRPCSTATUSCODEVALUES_OUT_OF_RANGE = TMP_RPCGRPCSTATUSCODEVALUES_OUT_OF_RANGE;
-    exports.RPCGRPCSTATUSCODEVALUES_UNIMPLEMENTED = TMP_RPCGRPCSTATUSCODEVALUES_UNIMPLEMENTED;
-    exports.RPCGRPCSTATUSCODEVALUES_INTERNAL = TMP_RPCGRPCSTATUSCODEVALUES_INTERNAL;
-    exports.RPCGRPCSTATUSCODEVALUES_UNAVAILABLE = TMP_RPCGRPCSTATUSCODEVALUES_UNAVAILABLE;
-    exports.RPCGRPCSTATUSCODEVALUES_DATA_LOSS = TMP_RPCGRPCSTATUSCODEVALUES_DATA_LOSS;
-    exports.RPCGRPCSTATUSCODEVALUES_UNAUTHENTICATED = TMP_RPCGRPCSTATUSCODEVALUES_UNAUTHENTICATED;
-    exports.RpcGrpcStatusCodeValues = {
-      OK: TMP_RPCGRPCSTATUSCODEVALUES_OK,
-      CANCELLED: TMP_RPCGRPCSTATUSCODEVALUES_CANCELLED,
-      UNKNOWN: TMP_RPCGRPCSTATUSCODEVALUES_UNKNOWN,
-      INVALID_ARGUMENT: TMP_RPCGRPCSTATUSCODEVALUES_INVALID_ARGUMENT,
-      DEADLINE_EXCEEDED: TMP_RPCGRPCSTATUSCODEVALUES_DEADLINE_EXCEEDED,
-      NOT_FOUND: TMP_RPCGRPCSTATUSCODEVALUES_NOT_FOUND,
-      ALREADY_EXISTS: TMP_RPCGRPCSTATUSCODEVALUES_ALREADY_EXISTS,
-      PERMISSION_DENIED: TMP_RPCGRPCSTATUSCODEVALUES_PERMISSION_DENIED,
-      RESOURCE_EXHAUSTED: TMP_RPCGRPCSTATUSCODEVALUES_RESOURCE_EXHAUSTED,
-      FAILED_PRECONDITION: TMP_RPCGRPCSTATUSCODEVALUES_FAILED_PRECONDITION,
-      ABORTED: TMP_RPCGRPCSTATUSCODEVALUES_ABORTED,
-      OUT_OF_RANGE: TMP_RPCGRPCSTATUSCODEVALUES_OUT_OF_RANGE,
-      UNIMPLEMENTED: TMP_RPCGRPCSTATUSCODEVALUES_UNIMPLEMENTED,
-      INTERNAL: TMP_RPCGRPCSTATUSCODEVALUES_INTERNAL,
-      UNAVAILABLE: TMP_RPCGRPCSTATUSCODEVALUES_UNAVAILABLE,
-      DATA_LOSS: TMP_RPCGRPCSTATUSCODEVALUES_DATA_LOSS,
-      UNAUTHENTICATED: TMP_RPCGRPCSTATUSCODEVALUES_UNAUTHENTICATED
-    };
-    var TMP_MESSAGETYPEVALUES_SENT = "SENT";
-    var TMP_MESSAGETYPEVALUES_RECEIVED = "RECEIVED";
-    exports.MESSAGETYPEVALUES_SENT = TMP_MESSAGETYPEVALUES_SENT;
-    exports.MESSAGETYPEVALUES_RECEIVED = TMP_MESSAGETYPEVALUES_RECEIVED;
-    exports.MessageTypeValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_MESSAGETYPEVALUES_SENT,
-      TMP_MESSAGETYPEVALUES_RECEIVED
-    ]);
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/trace/index.js
-var require_trace = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/trace/index.js"(exports) {
-    "use strict";
-    var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
-      if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m, k);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-        desc = { enumerable: true, get: /* @__PURE__ */ __name(function() {
-          return m[k];
-        }, "get") };
-      }
-      Object.defineProperty(o, k2, desc);
-    }) : (function(o, m, k, k2) {
-      if (k2 === void 0) k2 = k;
-      o[k2] = m[k];
-    }));
-    var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-      for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
-    };
-    Object.defineProperty(exports, "__esModule", { value: true });
-    __exportStar(require_SemanticAttributes(), exports);
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.js
-var require_SemanticResourceAttributes = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/resource/SemanticResourceAttributes.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.SEMRESATTRS_K8S_STATEFULSET_NAME = exports.SEMRESATTRS_K8S_STATEFULSET_UID = exports.SEMRESATTRS_K8S_DEPLOYMENT_NAME = exports.SEMRESATTRS_K8S_DEPLOYMENT_UID = exports.SEMRESATTRS_K8S_REPLICASET_NAME = exports.SEMRESATTRS_K8S_REPLICASET_UID = exports.SEMRESATTRS_K8S_CONTAINER_NAME = exports.SEMRESATTRS_K8S_POD_NAME = exports.SEMRESATTRS_K8S_POD_UID = exports.SEMRESATTRS_K8S_NAMESPACE_NAME = exports.SEMRESATTRS_K8S_NODE_UID = exports.SEMRESATTRS_K8S_NODE_NAME = exports.SEMRESATTRS_K8S_CLUSTER_NAME = exports.SEMRESATTRS_HOST_IMAGE_VERSION = exports.SEMRESATTRS_HOST_IMAGE_ID = exports.SEMRESATTRS_HOST_IMAGE_NAME = exports.SEMRESATTRS_HOST_ARCH = exports.SEMRESATTRS_HOST_TYPE = exports.SEMRESATTRS_HOST_NAME = exports.SEMRESATTRS_HOST_ID = exports.SEMRESATTRS_FAAS_MAX_MEMORY = exports.SEMRESATTRS_FAAS_INSTANCE = exports.SEMRESATTRS_FAAS_VERSION = exports.SEMRESATTRS_FAAS_ID = exports.SEMRESATTRS_FAAS_NAME = exports.SEMRESATTRS_DEVICE_MODEL_NAME = exports.SEMRESATTRS_DEVICE_MODEL_IDENTIFIER = exports.SEMRESATTRS_DEVICE_ID = exports.SEMRESATTRS_DEPLOYMENT_ENVIRONMENT = exports.SEMRESATTRS_CONTAINER_IMAGE_TAG = exports.SEMRESATTRS_CONTAINER_IMAGE_NAME = exports.SEMRESATTRS_CONTAINER_RUNTIME = exports.SEMRESATTRS_CONTAINER_ID = exports.SEMRESATTRS_CONTAINER_NAME = exports.SEMRESATTRS_AWS_LOG_STREAM_ARNS = exports.SEMRESATTRS_AWS_LOG_STREAM_NAMES = exports.SEMRESATTRS_AWS_LOG_GROUP_ARNS = exports.SEMRESATTRS_AWS_LOG_GROUP_NAMES = exports.SEMRESATTRS_AWS_EKS_CLUSTER_ARN = exports.SEMRESATTRS_AWS_ECS_TASK_REVISION = exports.SEMRESATTRS_AWS_ECS_TASK_FAMILY = exports.SEMRESATTRS_AWS_ECS_TASK_ARN = exports.SEMRESATTRS_AWS_ECS_LAUNCHTYPE = exports.SEMRESATTRS_AWS_ECS_CLUSTER_ARN = exports.SEMRESATTRS_AWS_ECS_CONTAINER_ARN = exports.SEMRESATTRS_CLOUD_PLATFORM = exports.SEMRESATTRS_CLOUD_AVAILABILITY_ZONE = exports.SEMRESATTRS_CLOUD_REGION = exports.SEMRESATTRS_CLOUD_ACCOUNT_ID = exports.SEMRESATTRS_CLOUD_PROVIDER = void 0;
-    exports.CLOUDPLATFORMVALUES_GCP_COMPUTE_ENGINE = exports.CLOUDPLATFORMVALUES_AZURE_APP_SERVICE = exports.CLOUDPLATFORMVALUES_AZURE_FUNCTIONS = exports.CLOUDPLATFORMVALUES_AZURE_AKS = exports.CLOUDPLATFORMVALUES_AZURE_CONTAINER_INSTANCES = exports.CLOUDPLATFORMVALUES_AZURE_VM = exports.CLOUDPLATFORMVALUES_AWS_ELASTIC_BEANSTALK = exports.CLOUDPLATFORMVALUES_AWS_LAMBDA = exports.CLOUDPLATFORMVALUES_AWS_EKS = exports.CLOUDPLATFORMVALUES_AWS_ECS = exports.CLOUDPLATFORMVALUES_AWS_EC2 = exports.CLOUDPLATFORMVALUES_ALIBABA_CLOUD_FC = exports.CLOUDPLATFORMVALUES_ALIBABA_CLOUD_ECS = exports.CloudProviderValues = exports.CLOUDPROVIDERVALUES_GCP = exports.CLOUDPROVIDERVALUES_AZURE = exports.CLOUDPROVIDERVALUES_AWS = exports.CLOUDPROVIDERVALUES_ALIBABA_CLOUD = exports.SemanticResourceAttributes = exports.SEMRESATTRS_WEBENGINE_DESCRIPTION = exports.SEMRESATTRS_WEBENGINE_VERSION = exports.SEMRESATTRS_WEBENGINE_NAME = exports.SEMRESATTRS_TELEMETRY_AUTO_VERSION = exports.SEMRESATTRS_TELEMETRY_SDK_VERSION = exports.SEMRESATTRS_TELEMETRY_SDK_LANGUAGE = exports.SEMRESATTRS_TELEMETRY_SDK_NAME = exports.SEMRESATTRS_SERVICE_VERSION = exports.SEMRESATTRS_SERVICE_INSTANCE_ID = exports.SEMRESATTRS_SERVICE_NAMESPACE = exports.SEMRESATTRS_SERVICE_NAME = exports.SEMRESATTRS_PROCESS_RUNTIME_DESCRIPTION = exports.SEMRESATTRS_PROCESS_RUNTIME_VERSION = exports.SEMRESATTRS_PROCESS_RUNTIME_NAME = exports.SEMRESATTRS_PROCESS_OWNER = exports.SEMRESATTRS_PROCESS_COMMAND_ARGS = exports.SEMRESATTRS_PROCESS_COMMAND_LINE = exports.SEMRESATTRS_PROCESS_COMMAND = exports.SEMRESATTRS_PROCESS_EXECUTABLE_PATH = exports.SEMRESATTRS_PROCESS_EXECUTABLE_NAME = exports.SEMRESATTRS_PROCESS_PID = exports.SEMRESATTRS_OS_VERSION = exports.SEMRESATTRS_OS_NAME = exports.SEMRESATTRS_OS_DESCRIPTION = exports.SEMRESATTRS_OS_TYPE = exports.SEMRESATTRS_K8S_CRONJOB_NAME = exports.SEMRESATTRS_K8S_CRONJOB_UID = exports.SEMRESATTRS_K8S_JOB_NAME = exports.SEMRESATTRS_K8S_JOB_UID = exports.SEMRESATTRS_K8S_DAEMONSET_NAME = exports.SEMRESATTRS_K8S_DAEMONSET_UID = void 0;
-    exports.TelemetrySdkLanguageValues = exports.TELEMETRYSDKLANGUAGEVALUES_WEBJS = exports.TELEMETRYSDKLANGUAGEVALUES_RUBY = exports.TELEMETRYSDKLANGUAGEVALUES_PYTHON = exports.TELEMETRYSDKLANGUAGEVALUES_PHP = exports.TELEMETRYSDKLANGUAGEVALUES_NODEJS = exports.TELEMETRYSDKLANGUAGEVALUES_JAVA = exports.TELEMETRYSDKLANGUAGEVALUES_GO = exports.TELEMETRYSDKLANGUAGEVALUES_ERLANG = exports.TELEMETRYSDKLANGUAGEVALUES_DOTNET = exports.TELEMETRYSDKLANGUAGEVALUES_CPP = exports.OsTypeValues = exports.OSTYPEVALUES_Z_OS = exports.OSTYPEVALUES_SOLARIS = exports.OSTYPEVALUES_AIX = exports.OSTYPEVALUES_HPUX = exports.OSTYPEVALUES_DRAGONFLYBSD = exports.OSTYPEVALUES_OPENBSD = exports.OSTYPEVALUES_NETBSD = exports.OSTYPEVALUES_FREEBSD = exports.OSTYPEVALUES_DARWIN = exports.OSTYPEVALUES_LINUX = exports.OSTYPEVALUES_WINDOWS = exports.HostArchValues = exports.HOSTARCHVALUES_X86 = exports.HOSTARCHVALUES_PPC64 = exports.HOSTARCHVALUES_PPC32 = exports.HOSTARCHVALUES_IA64 = exports.HOSTARCHVALUES_ARM64 = exports.HOSTARCHVALUES_ARM32 = exports.HOSTARCHVALUES_AMD64 = exports.AwsEcsLaunchtypeValues = exports.AWSECSLAUNCHTYPEVALUES_FARGATE = exports.AWSECSLAUNCHTYPEVALUES_EC2 = exports.CloudPlatformValues = exports.CLOUDPLATFORMVALUES_GCP_APP_ENGINE = exports.CLOUDPLATFORMVALUES_GCP_CLOUD_FUNCTIONS = exports.CLOUDPLATFORMVALUES_GCP_KUBERNETES_ENGINE = exports.CLOUDPLATFORMVALUES_GCP_CLOUD_RUN = void 0;
-    var utils_1 = require_utils();
-    var TMP_CLOUD_PROVIDER = "cloud.provider";
-    var TMP_CLOUD_ACCOUNT_ID = "cloud.account.id";
-    var TMP_CLOUD_REGION = "cloud.region";
-    var TMP_CLOUD_AVAILABILITY_ZONE = "cloud.availability_zone";
-    var TMP_CLOUD_PLATFORM = "cloud.platform";
-    var TMP_AWS_ECS_CONTAINER_ARN = "aws.ecs.container.arn";
-    var TMP_AWS_ECS_CLUSTER_ARN = "aws.ecs.cluster.arn";
-    var TMP_AWS_ECS_LAUNCHTYPE = "aws.ecs.launchtype";
-    var TMP_AWS_ECS_TASK_ARN = "aws.ecs.task.arn";
-    var TMP_AWS_ECS_TASK_FAMILY = "aws.ecs.task.family";
-    var TMP_AWS_ECS_TASK_REVISION = "aws.ecs.task.revision";
-    var TMP_AWS_EKS_CLUSTER_ARN = "aws.eks.cluster.arn";
-    var TMP_AWS_LOG_GROUP_NAMES = "aws.log.group.names";
-    var TMP_AWS_LOG_GROUP_ARNS = "aws.log.group.arns";
-    var TMP_AWS_LOG_STREAM_NAMES = "aws.log.stream.names";
-    var TMP_AWS_LOG_STREAM_ARNS = "aws.log.stream.arns";
-    var TMP_CONTAINER_NAME = "container.name";
-    var TMP_CONTAINER_ID = "container.id";
-    var TMP_CONTAINER_RUNTIME = "container.runtime";
-    var TMP_CONTAINER_IMAGE_NAME = "container.image.name";
-    var TMP_CONTAINER_IMAGE_TAG = "container.image.tag";
-    var TMP_DEPLOYMENT_ENVIRONMENT = "deployment.environment";
-    var TMP_DEVICE_ID = "device.id";
-    var TMP_DEVICE_MODEL_IDENTIFIER = "device.model.identifier";
-    var TMP_DEVICE_MODEL_NAME = "device.model.name";
-    var TMP_FAAS_NAME = "faas.name";
-    var TMP_FAAS_ID = "faas.id";
-    var TMP_FAAS_VERSION = "faas.version";
-    var TMP_FAAS_INSTANCE = "faas.instance";
-    var TMP_FAAS_MAX_MEMORY = "faas.max_memory";
-    var TMP_HOST_ID = "host.id";
-    var TMP_HOST_NAME = "host.name";
-    var TMP_HOST_TYPE = "host.type";
-    var TMP_HOST_ARCH = "host.arch";
-    var TMP_HOST_IMAGE_NAME = "host.image.name";
-    var TMP_HOST_IMAGE_ID = "host.image.id";
-    var TMP_HOST_IMAGE_VERSION = "host.image.version";
-    var TMP_K8S_CLUSTER_NAME = "k8s.cluster.name";
-    var TMP_K8S_NODE_NAME = "k8s.node.name";
-    var TMP_K8S_NODE_UID = "k8s.node.uid";
-    var TMP_K8S_NAMESPACE_NAME = "k8s.namespace.name";
-    var TMP_K8S_POD_UID = "k8s.pod.uid";
-    var TMP_K8S_POD_NAME = "k8s.pod.name";
-    var TMP_K8S_CONTAINER_NAME = "k8s.container.name";
-    var TMP_K8S_REPLICASET_UID = "k8s.replicaset.uid";
-    var TMP_K8S_REPLICASET_NAME = "k8s.replicaset.name";
-    var TMP_K8S_DEPLOYMENT_UID = "k8s.deployment.uid";
-    var TMP_K8S_DEPLOYMENT_NAME = "k8s.deployment.name";
-    var TMP_K8S_STATEFULSET_UID = "k8s.statefulset.uid";
-    var TMP_K8S_STATEFULSET_NAME = "k8s.statefulset.name";
-    var TMP_K8S_DAEMONSET_UID = "k8s.daemonset.uid";
-    var TMP_K8S_DAEMONSET_NAME = "k8s.daemonset.name";
-    var TMP_K8S_JOB_UID = "k8s.job.uid";
-    var TMP_K8S_JOB_NAME = "k8s.job.name";
-    var TMP_K8S_CRONJOB_UID = "k8s.cronjob.uid";
-    var TMP_K8S_CRONJOB_NAME = "k8s.cronjob.name";
-    var TMP_OS_TYPE = "os.type";
-    var TMP_OS_DESCRIPTION = "os.description";
-    var TMP_OS_NAME = "os.name";
-    var TMP_OS_VERSION = "os.version";
-    var TMP_PROCESS_PID = "process.pid";
-    var TMP_PROCESS_EXECUTABLE_NAME = "process.executable.name";
-    var TMP_PROCESS_EXECUTABLE_PATH = "process.executable.path";
-    var TMP_PROCESS_COMMAND = "process.command";
-    var TMP_PROCESS_COMMAND_LINE = "process.command_line";
-    var TMP_PROCESS_COMMAND_ARGS = "process.command_args";
-    var TMP_PROCESS_OWNER = "process.owner";
-    var TMP_PROCESS_RUNTIME_NAME = "process.runtime.name";
-    var TMP_PROCESS_RUNTIME_VERSION = "process.runtime.version";
-    var TMP_PROCESS_RUNTIME_DESCRIPTION = "process.runtime.description";
-    var TMP_SERVICE_NAME = "service.name";
-    var TMP_SERVICE_NAMESPACE = "service.namespace";
-    var TMP_SERVICE_INSTANCE_ID = "service.instance.id";
-    var TMP_SERVICE_VERSION = "service.version";
-    var TMP_TELEMETRY_SDK_NAME = "telemetry.sdk.name";
-    var TMP_TELEMETRY_SDK_LANGUAGE = "telemetry.sdk.language";
-    var TMP_TELEMETRY_SDK_VERSION = "telemetry.sdk.version";
-    var TMP_TELEMETRY_AUTO_VERSION = "telemetry.auto.version";
-    var TMP_WEBENGINE_NAME = "webengine.name";
-    var TMP_WEBENGINE_VERSION = "webengine.version";
-    var TMP_WEBENGINE_DESCRIPTION = "webengine.description";
-    exports.SEMRESATTRS_CLOUD_PROVIDER = TMP_CLOUD_PROVIDER;
-    exports.SEMRESATTRS_CLOUD_ACCOUNT_ID = TMP_CLOUD_ACCOUNT_ID;
-    exports.SEMRESATTRS_CLOUD_REGION = TMP_CLOUD_REGION;
-    exports.SEMRESATTRS_CLOUD_AVAILABILITY_ZONE = TMP_CLOUD_AVAILABILITY_ZONE;
-    exports.SEMRESATTRS_CLOUD_PLATFORM = TMP_CLOUD_PLATFORM;
-    exports.SEMRESATTRS_AWS_ECS_CONTAINER_ARN = TMP_AWS_ECS_CONTAINER_ARN;
-    exports.SEMRESATTRS_AWS_ECS_CLUSTER_ARN = TMP_AWS_ECS_CLUSTER_ARN;
-    exports.SEMRESATTRS_AWS_ECS_LAUNCHTYPE = TMP_AWS_ECS_LAUNCHTYPE;
-    exports.SEMRESATTRS_AWS_ECS_TASK_ARN = TMP_AWS_ECS_TASK_ARN;
-    exports.SEMRESATTRS_AWS_ECS_TASK_FAMILY = TMP_AWS_ECS_TASK_FAMILY;
-    exports.SEMRESATTRS_AWS_ECS_TASK_REVISION = TMP_AWS_ECS_TASK_REVISION;
-    exports.SEMRESATTRS_AWS_EKS_CLUSTER_ARN = TMP_AWS_EKS_CLUSTER_ARN;
-    exports.SEMRESATTRS_AWS_LOG_GROUP_NAMES = TMP_AWS_LOG_GROUP_NAMES;
-    exports.SEMRESATTRS_AWS_LOG_GROUP_ARNS = TMP_AWS_LOG_GROUP_ARNS;
-    exports.SEMRESATTRS_AWS_LOG_STREAM_NAMES = TMP_AWS_LOG_STREAM_NAMES;
-    exports.SEMRESATTRS_AWS_LOG_STREAM_ARNS = TMP_AWS_LOG_STREAM_ARNS;
-    exports.SEMRESATTRS_CONTAINER_NAME = TMP_CONTAINER_NAME;
-    exports.SEMRESATTRS_CONTAINER_ID = TMP_CONTAINER_ID;
-    exports.SEMRESATTRS_CONTAINER_RUNTIME = TMP_CONTAINER_RUNTIME;
-    exports.SEMRESATTRS_CONTAINER_IMAGE_NAME = TMP_CONTAINER_IMAGE_NAME;
-    exports.SEMRESATTRS_CONTAINER_IMAGE_TAG = TMP_CONTAINER_IMAGE_TAG;
-    exports.SEMRESATTRS_DEPLOYMENT_ENVIRONMENT = TMP_DEPLOYMENT_ENVIRONMENT;
-    exports.SEMRESATTRS_DEVICE_ID = TMP_DEVICE_ID;
-    exports.SEMRESATTRS_DEVICE_MODEL_IDENTIFIER = TMP_DEVICE_MODEL_IDENTIFIER;
-    exports.SEMRESATTRS_DEVICE_MODEL_NAME = TMP_DEVICE_MODEL_NAME;
-    exports.SEMRESATTRS_FAAS_NAME = TMP_FAAS_NAME;
-    exports.SEMRESATTRS_FAAS_ID = TMP_FAAS_ID;
-    exports.SEMRESATTRS_FAAS_VERSION = TMP_FAAS_VERSION;
-    exports.SEMRESATTRS_FAAS_INSTANCE = TMP_FAAS_INSTANCE;
-    exports.SEMRESATTRS_FAAS_MAX_MEMORY = TMP_FAAS_MAX_MEMORY;
-    exports.SEMRESATTRS_HOST_ID = TMP_HOST_ID;
-    exports.SEMRESATTRS_HOST_NAME = TMP_HOST_NAME;
-    exports.SEMRESATTRS_HOST_TYPE = TMP_HOST_TYPE;
-    exports.SEMRESATTRS_HOST_ARCH = TMP_HOST_ARCH;
-    exports.SEMRESATTRS_HOST_IMAGE_NAME = TMP_HOST_IMAGE_NAME;
-    exports.SEMRESATTRS_HOST_IMAGE_ID = TMP_HOST_IMAGE_ID;
-    exports.SEMRESATTRS_HOST_IMAGE_VERSION = TMP_HOST_IMAGE_VERSION;
-    exports.SEMRESATTRS_K8S_CLUSTER_NAME = TMP_K8S_CLUSTER_NAME;
-    exports.SEMRESATTRS_K8S_NODE_NAME = TMP_K8S_NODE_NAME;
-    exports.SEMRESATTRS_K8S_NODE_UID = TMP_K8S_NODE_UID;
-    exports.SEMRESATTRS_K8S_NAMESPACE_NAME = TMP_K8S_NAMESPACE_NAME;
-    exports.SEMRESATTRS_K8S_POD_UID = TMP_K8S_POD_UID;
-    exports.SEMRESATTRS_K8S_POD_NAME = TMP_K8S_POD_NAME;
-    exports.SEMRESATTRS_K8S_CONTAINER_NAME = TMP_K8S_CONTAINER_NAME;
-    exports.SEMRESATTRS_K8S_REPLICASET_UID = TMP_K8S_REPLICASET_UID;
-    exports.SEMRESATTRS_K8S_REPLICASET_NAME = TMP_K8S_REPLICASET_NAME;
-    exports.SEMRESATTRS_K8S_DEPLOYMENT_UID = TMP_K8S_DEPLOYMENT_UID;
-    exports.SEMRESATTRS_K8S_DEPLOYMENT_NAME = TMP_K8S_DEPLOYMENT_NAME;
-    exports.SEMRESATTRS_K8S_STATEFULSET_UID = TMP_K8S_STATEFULSET_UID;
-    exports.SEMRESATTRS_K8S_STATEFULSET_NAME = TMP_K8S_STATEFULSET_NAME;
-    exports.SEMRESATTRS_K8S_DAEMONSET_UID = TMP_K8S_DAEMONSET_UID;
-    exports.SEMRESATTRS_K8S_DAEMONSET_NAME = TMP_K8S_DAEMONSET_NAME;
-    exports.SEMRESATTRS_K8S_JOB_UID = TMP_K8S_JOB_UID;
-    exports.SEMRESATTRS_K8S_JOB_NAME = TMP_K8S_JOB_NAME;
-    exports.SEMRESATTRS_K8S_CRONJOB_UID = TMP_K8S_CRONJOB_UID;
-    exports.SEMRESATTRS_K8S_CRONJOB_NAME = TMP_K8S_CRONJOB_NAME;
-    exports.SEMRESATTRS_OS_TYPE = TMP_OS_TYPE;
-    exports.SEMRESATTRS_OS_DESCRIPTION = TMP_OS_DESCRIPTION;
-    exports.SEMRESATTRS_OS_NAME = TMP_OS_NAME;
-    exports.SEMRESATTRS_OS_VERSION = TMP_OS_VERSION;
-    exports.SEMRESATTRS_PROCESS_PID = TMP_PROCESS_PID;
-    exports.SEMRESATTRS_PROCESS_EXECUTABLE_NAME = TMP_PROCESS_EXECUTABLE_NAME;
-    exports.SEMRESATTRS_PROCESS_EXECUTABLE_PATH = TMP_PROCESS_EXECUTABLE_PATH;
-    exports.SEMRESATTRS_PROCESS_COMMAND = TMP_PROCESS_COMMAND;
-    exports.SEMRESATTRS_PROCESS_COMMAND_LINE = TMP_PROCESS_COMMAND_LINE;
-    exports.SEMRESATTRS_PROCESS_COMMAND_ARGS = TMP_PROCESS_COMMAND_ARGS;
-    exports.SEMRESATTRS_PROCESS_OWNER = TMP_PROCESS_OWNER;
-    exports.SEMRESATTRS_PROCESS_RUNTIME_NAME = TMP_PROCESS_RUNTIME_NAME;
-    exports.SEMRESATTRS_PROCESS_RUNTIME_VERSION = TMP_PROCESS_RUNTIME_VERSION;
-    exports.SEMRESATTRS_PROCESS_RUNTIME_DESCRIPTION = TMP_PROCESS_RUNTIME_DESCRIPTION;
-    exports.SEMRESATTRS_SERVICE_NAME = TMP_SERVICE_NAME;
-    exports.SEMRESATTRS_SERVICE_NAMESPACE = TMP_SERVICE_NAMESPACE;
-    exports.SEMRESATTRS_SERVICE_INSTANCE_ID = TMP_SERVICE_INSTANCE_ID;
-    exports.SEMRESATTRS_SERVICE_VERSION = TMP_SERVICE_VERSION;
-    exports.SEMRESATTRS_TELEMETRY_SDK_NAME = TMP_TELEMETRY_SDK_NAME;
-    exports.SEMRESATTRS_TELEMETRY_SDK_LANGUAGE = TMP_TELEMETRY_SDK_LANGUAGE;
-    exports.SEMRESATTRS_TELEMETRY_SDK_VERSION = TMP_TELEMETRY_SDK_VERSION;
-    exports.SEMRESATTRS_TELEMETRY_AUTO_VERSION = TMP_TELEMETRY_AUTO_VERSION;
-    exports.SEMRESATTRS_WEBENGINE_NAME = TMP_WEBENGINE_NAME;
-    exports.SEMRESATTRS_WEBENGINE_VERSION = TMP_WEBENGINE_VERSION;
-    exports.SEMRESATTRS_WEBENGINE_DESCRIPTION = TMP_WEBENGINE_DESCRIPTION;
-    exports.SemanticResourceAttributes = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_CLOUD_PROVIDER,
-      TMP_CLOUD_ACCOUNT_ID,
-      TMP_CLOUD_REGION,
-      TMP_CLOUD_AVAILABILITY_ZONE,
-      TMP_CLOUD_PLATFORM,
-      TMP_AWS_ECS_CONTAINER_ARN,
-      TMP_AWS_ECS_CLUSTER_ARN,
-      TMP_AWS_ECS_LAUNCHTYPE,
-      TMP_AWS_ECS_TASK_ARN,
-      TMP_AWS_ECS_TASK_FAMILY,
-      TMP_AWS_ECS_TASK_REVISION,
-      TMP_AWS_EKS_CLUSTER_ARN,
-      TMP_AWS_LOG_GROUP_NAMES,
-      TMP_AWS_LOG_GROUP_ARNS,
-      TMP_AWS_LOG_STREAM_NAMES,
-      TMP_AWS_LOG_STREAM_ARNS,
-      TMP_CONTAINER_NAME,
-      TMP_CONTAINER_ID,
-      TMP_CONTAINER_RUNTIME,
-      TMP_CONTAINER_IMAGE_NAME,
-      TMP_CONTAINER_IMAGE_TAG,
-      TMP_DEPLOYMENT_ENVIRONMENT,
-      TMP_DEVICE_ID,
-      TMP_DEVICE_MODEL_IDENTIFIER,
-      TMP_DEVICE_MODEL_NAME,
-      TMP_FAAS_NAME,
-      TMP_FAAS_ID,
-      TMP_FAAS_VERSION,
-      TMP_FAAS_INSTANCE,
-      TMP_FAAS_MAX_MEMORY,
-      TMP_HOST_ID,
-      TMP_HOST_NAME,
-      TMP_HOST_TYPE,
-      TMP_HOST_ARCH,
-      TMP_HOST_IMAGE_NAME,
-      TMP_HOST_IMAGE_ID,
-      TMP_HOST_IMAGE_VERSION,
-      TMP_K8S_CLUSTER_NAME,
-      TMP_K8S_NODE_NAME,
-      TMP_K8S_NODE_UID,
-      TMP_K8S_NAMESPACE_NAME,
-      TMP_K8S_POD_UID,
-      TMP_K8S_POD_NAME,
-      TMP_K8S_CONTAINER_NAME,
-      TMP_K8S_REPLICASET_UID,
-      TMP_K8S_REPLICASET_NAME,
-      TMP_K8S_DEPLOYMENT_UID,
-      TMP_K8S_DEPLOYMENT_NAME,
-      TMP_K8S_STATEFULSET_UID,
-      TMP_K8S_STATEFULSET_NAME,
-      TMP_K8S_DAEMONSET_UID,
-      TMP_K8S_DAEMONSET_NAME,
-      TMP_K8S_JOB_UID,
-      TMP_K8S_JOB_NAME,
-      TMP_K8S_CRONJOB_UID,
-      TMP_K8S_CRONJOB_NAME,
-      TMP_OS_TYPE,
-      TMP_OS_DESCRIPTION,
-      TMP_OS_NAME,
-      TMP_OS_VERSION,
-      TMP_PROCESS_PID,
-      TMP_PROCESS_EXECUTABLE_NAME,
-      TMP_PROCESS_EXECUTABLE_PATH,
-      TMP_PROCESS_COMMAND,
-      TMP_PROCESS_COMMAND_LINE,
-      TMP_PROCESS_COMMAND_ARGS,
-      TMP_PROCESS_OWNER,
-      TMP_PROCESS_RUNTIME_NAME,
-      TMP_PROCESS_RUNTIME_VERSION,
-      TMP_PROCESS_RUNTIME_DESCRIPTION,
-      TMP_SERVICE_NAME,
-      TMP_SERVICE_NAMESPACE,
-      TMP_SERVICE_INSTANCE_ID,
-      TMP_SERVICE_VERSION,
-      TMP_TELEMETRY_SDK_NAME,
-      TMP_TELEMETRY_SDK_LANGUAGE,
-      TMP_TELEMETRY_SDK_VERSION,
-      TMP_TELEMETRY_AUTO_VERSION,
-      TMP_WEBENGINE_NAME,
-      TMP_WEBENGINE_VERSION,
-      TMP_WEBENGINE_DESCRIPTION
-    ]);
-    var TMP_CLOUDPROVIDERVALUES_ALIBABA_CLOUD = "alibaba_cloud";
-    var TMP_CLOUDPROVIDERVALUES_AWS = "aws";
-    var TMP_CLOUDPROVIDERVALUES_AZURE = "azure";
-    var TMP_CLOUDPROVIDERVALUES_GCP = "gcp";
-    exports.CLOUDPROVIDERVALUES_ALIBABA_CLOUD = TMP_CLOUDPROVIDERVALUES_ALIBABA_CLOUD;
-    exports.CLOUDPROVIDERVALUES_AWS = TMP_CLOUDPROVIDERVALUES_AWS;
-    exports.CLOUDPROVIDERVALUES_AZURE = TMP_CLOUDPROVIDERVALUES_AZURE;
-    exports.CLOUDPROVIDERVALUES_GCP = TMP_CLOUDPROVIDERVALUES_GCP;
-    exports.CloudProviderValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_CLOUDPROVIDERVALUES_ALIBABA_CLOUD,
-      TMP_CLOUDPROVIDERVALUES_AWS,
-      TMP_CLOUDPROVIDERVALUES_AZURE,
-      TMP_CLOUDPROVIDERVALUES_GCP
-    ]);
-    var TMP_CLOUDPLATFORMVALUES_ALIBABA_CLOUD_ECS = "alibaba_cloud_ecs";
-    var TMP_CLOUDPLATFORMVALUES_ALIBABA_CLOUD_FC = "alibaba_cloud_fc";
-    var TMP_CLOUDPLATFORMVALUES_AWS_EC2 = "aws_ec2";
-    var TMP_CLOUDPLATFORMVALUES_AWS_ECS = "aws_ecs";
-    var TMP_CLOUDPLATFORMVALUES_AWS_EKS = "aws_eks";
-    var TMP_CLOUDPLATFORMVALUES_AWS_LAMBDA = "aws_lambda";
-    var TMP_CLOUDPLATFORMVALUES_AWS_ELASTIC_BEANSTALK = "aws_elastic_beanstalk";
-    var TMP_CLOUDPLATFORMVALUES_AZURE_VM = "azure_vm";
-    var TMP_CLOUDPLATFORMVALUES_AZURE_CONTAINER_INSTANCES = "azure_container_instances";
-    var TMP_CLOUDPLATFORMVALUES_AZURE_AKS = "azure_aks";
-    var TMP_CLOUDPLATFORMVALUES_AZURE_FUNCTIONS = "azure_functions";
-    var TMP_CLOUDPLATFORMVALUES_AZURE_APP_SERVICE = "azure_app_service";
-    var TMP_CLOUDPLATFORMVALUES_GCP_COMPUTE_ENGINE = "gcp_compute_engine";
-    var TMP_CLOUDPLATFORMVALUES_GCP_CLOUD_RUN = "gcp_cloud_run";
-    var TMP_CLOUDPLATFORMVALUES_GCP_KUBERNETES_ENGINE = "gcp_kubernetes_engine";
-    var TMP_CLOUDPLATFORMVALUES_GCP_CLOUD_FUNCTIONS = "gcp_cloud_functions";
-    var TMP_CLOUDPLATFORMVALUES_GCP_APP_ENGINE = "gcp_app_engine";
-    exports.CLOUDPLATFORMVALUES_ALIBABA_CLOUD_ECS = TMP_CLOUDPLATFORMVALUES_ALIBABA_CLOUD_ECS;
-    exports.CLOUDPLATFORMVALUES_ALIBABA_CLOUD_FC = TMP_CLOUDPLATFORMVALUES_ALIBABA_CLOUD_FC;
-    exports.CLOUDPLATFORMVALUES_AWS_EC2 = TMP_CLOUDPLATFORMVALUES_AWS_EC2;
-    exports.CLOUDPLATFORMVALUES_AWS_ECS = TMP_CLOUDPLATFORMVALUES_AWS_ECS;
-    exports.CLOUDPLATFORMVALUES_AWS_EKS = TMP_CLOUDPLATFORMVALUES_AWS_EKS;
-    exports.CLOUDPLATFORMVALUES_AWS_LAMBDA = TMP_CLOUDPLATFORMVALUES_AWS_LAMBDA;
-    exports.CLOUDPLATFORMVALUES_AWS_ELASTIC_BEANSTALK = TMP_CLOUDPLATFORMVALUES_AWS_ELASTIC_BEANSTALK;
-    exports.CLOUDPLATFORMVALUES_AZURE_VM = TMP_CLOUDPLATFORMVALUES_AZURE_VM;
-    exports.CLOUDPLATFORMVALUES_AZURE_CONTAINER_INSTANCES = TMP_CLOUDPLATFORMVALUES_AZURE_CONTAINER_INSTANCES;
-    exports.CLOUDPLATFORMVALUES_AZURE_AKS = TMP_CLOUDPLATFORMVALUES_AZURE_AKS;
-    exports.CLOUDPLATFORMVALUES_AZURE_FUNCTIONS = TMP_CLOUDPLATFORMVALUES_AZURE_FUNCTIONS;
-    exports.CLOUDPLATFORMVALUES_AZURE_APP_SERVICE = TMP_CLOUDPLATFORMVALUES_AZURE_APP_SERVICE;
-    exports.CLOUDPLATFORMVALUES_GCP_COMPUTE_ENGINE = TMP_CLOUDPLATFORMVALUES_GCP_COMPUTE_ENGINE;
-    exports.CLOUDPLATFORMVALUES_GCP_CLOUD_RUN = TMP_CLOUDPLATFORMVALUES_GCP_CLOUD_RUN;
-    exports.CLOUDPLATFORMVALUES_GCP_KUBERNETES_ENGINE = TMP_CLOUDPLATFORMVALUES_GCP_KUBERNETES_ENGINE;
-    exports.CLOUDPLATFORMVALUES_GCP_CLOUD_FUNCTIONS = TMP_CLOUDPLATFORMVALUES_GCP_CLOUD_FUNCTIONS;
-    exports.CLOUDPLATFORMVALUES_GCP_APP_ENGINE = TMP_CLOUDPLATFORMVALUES_GCP_APP_ENGINE;
-    exports.CloudPlatformValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_CLOUDPLATFORMVALUES_ALIBABA_CLOUD_ECS,
-      TMP_CLOUDPLATFORMVALUES_ALIBABA_CLOUD_FC,
-      TMP_CLOUDPLATFORMVALUES_AWS_EC2,
-      TMP_CLOUDPLATFORMVALUES_AWS_ECS,
-      TMP_CLOUDPLATFORMVALUES_AWS_EKS,
-      TMP_CLOUDPLATFORMVALUES_AWS_LAMBDA,
-      TMP_CLOUDPLATFORMVALUES_AWS_ELASTIC_BEANSTALK,
-      TMP_CLOUDPLATFORMVALUES_AZURE_VM,
-      TMP_CLOUDPLATFORMVALUES_AZURE_CONTAINER_INSTANCES,
-      TMP_CLOUDPLATFORMVALUES_AZURE_AKS,
-      TMP_CLOUDPLATFORMVALUES_AZURE_FUNCTIONS,
-      TMP_CLOUDPLATFORMVALUES_AZURE_APP_SERVICE,
-      TMP_CLOUDPLATFORMVALUES_GCP_COMPUTE_ENGINE,
-      TMP_CLOUDPLATFORMVALUES_GCP_CLOUD_RUN,
-      TMP_CLOUDPLATFORMVALUES_GCP_KUBERNETES_ENGINE,
-      TMP_CLOUDPLATFORMVALUES_GCP_CLOUD_FUNCTIONS,
-      TMP_CLOUDPLATFORMVALUES_GCP_APP_ENGINE
-    ]);
-    var TMP_AWSECSLAUNCHTYPEVALUES_EC2 = "ec2";
-    var TMP_AWSECSLAUNCHTYPEVALUES_FARGATE = "fargate";
-    exports.AWSECSLAUNCHTYPEVALUES_EC2 = TMP_AWSECSLAUNCHTYPEVALUES_EC2;
-    exports.AWSECSLAUNCHTYPEVALUES_FARGATE = TMP_AWSECSLAUNCHTYPEVALUES_FARGATE;
-    exports.AwsEcsLaunchtypeValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_AWSECSLAUNCHTYPEVALUES_EC2,
-      TMP_AWSECSLAUNCHTYPEVALUES_FARGATE
-    ]);
-    var TMP_HOSTARCHVALUES_AMD64 = "amd64";
-    var TMP_HOSTARCHVALUES_ARM32 = "arm32";
-    var TMP_HOSTARCHVALUES_ARM64 = "arm64";
-    var TMP_HOSTARCHVALUES_IA64 = "ia64";
-    var TMP_HOSTARCHVALUES_PPC32 = "ppc32";
-    var TMP_HOSTARCHVALUES_PPC64 = "ppc64";
-    var TMP_HOSTARCHVALUES_X86 = "x86";
-    exports.HOSTARCHVALUES_AMD64 = TMP_HOSTARCHVALUES_AMD64;
-    exports.HOSTARCHVALUES_ARM32 = TMP_HOSTARCHVALUES_ARM32;
-    exports.HOSTARCHVALUES_ARM64 = TMP_HOSTARCHVALUES_ARM64;
-    exports.HOSTARCHVALUES_IA64 = TMP_HOSTARCHVALUES_IA64;
-    exports.HOSTARCHVALUES_PPC32 = TMP_HOSTARCHVALUES_PPC32;
-    exports.HOSTARCHVALUES_PPC64 = TMP_HOSTARCHVALUES_PPC64;
-    exports.HOSTARCHVALUES_X86 = TMP_HOSTARCHVALUES_X86;
-    exports.HostArchValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_HOSTARCHVALUES_AMD64,
-      TMP_HOSTARCHVALUES_ARM32,
-      TMP_HOSTARCHVALUES_ARM64,
-      TMP_HOSTARCHVALUES_IA64,
-      TMP_HOSTARCHVALUES_PPC32,
-      TMP_HOSTARCHVALUES_PPC64,
-      TMP_HOSTARCHVALUES_X86
-    ]);
-    var TMP_OSTYPEVALUES_WINDOWS = "windows";
-    var TMP_OSTYPEVALUES_LINUX = "linux";
-    var TMP_OSTYPEVALUES_DARWIN = "darwin";
-    var TMP_OSTYPEVALUES_FREEBSD = "freebsd";
-    var TMP_OSTYPEVALUES_NETBSD = "netbsd";
-    var TMP_OSTYPEVALUES_OPENBSD = "openbsd";
-    var TMP_OSTYPEVALUES_DRAGONFLYBSD = "dragonflybsd";
-    var TMP_OSTYPEVALUES_HPUX = "hpux";
-    var TMP_OSTYPEVALUES_AIX = "aix";
-    var TMP_OSTYPEVALUES_SOLARIS = "solaris";
-    var TMP_OSTYPEVALUES_Z_OS = "z_os";
-    exports.OSTYPEVALUES_WINDOWS = TMP_OSTYPEVALUES_WINDOWS;
-    exports.OSTYPEVALUES_LINUX = TMP_OSTYPEVALUES_LINUX;
-    exports.OSTYPEVALUES_DARWIN = TMP_OSTYPEVALUES_DARWIN;
-    exports.OSTYPEVALUES_FREEBSD = TMP_OSTYPEVALUES_FREEBSD;
-    exports.OSTYPEVALUES_NETBSD = TMP_OSTYPEVALUES_NETBSD;
-    exports.OSTYPEVALUES_OPENBSD = TMP_OSTYPEVALUES_OPENBSD;
-    exports.OSTYPEVALUES_DRAGONFLYBSD = TMP_OSTYPEVALUES_DRAGONFLYBSD;
-    exports.OSTYPEVALUES_HPUX = TMP_OSTYPEVALUES_HPUX;
-    exports.OSTYPEVALUES_AIX = TMP_OSTYPEVALUES_AIX;
-    exports.OSTYPEVALUES_SOLARIS = TMP_OSTYPEVALUES_SOLARIS;
-    exports.OSTYPEVALUES_Z_OS = TMP_OSTYPEVALUES_Z_OS;
-    exports.OsTypeValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_OSTYPEVALUES_WINDOWS,
-      TMP_OSTYPEVALUES_LINUX,
-      TMP_OSTYPEVALUES_DARWIN,
-      TMP_OSTYPEVALUES_FREEBSD,
-      TMP_OSTYPEVALUES_NETBSD,
-      TMP_OSTYPEVALUES_OPENBSD,
-      TMP_OSTYPEVALUES_DRAGONFLYBSD,
-      TMP_OSTYPEVALUES_HPUX,
-      TMP_OSTYPEVALUES_AIX,
-      TMP_OSTYPEVALUES_SOLARIS,
-      TMP_OSTYPEVALUES_Z_OS
-    ]);
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_CPP = "cpp";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_DOTNET = "dotnet";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_ERLANG = "erlang";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_GO = "go";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_JAVA = "java";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_NODEJS = "nodejs";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_PHP = "php";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_PYTHON = "python";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_RUBY = "ruby";
-    var TMP_TELEMETRYSDKLANGUAGEVALUES_WEBJS = "webjs";
-    exports.TELEMETRYSDKLANGUAGEVALUES_CPP = TMP_TELEMETRYSDKLANGUAGEVALUES_CPP;
-    exports.TELEMETRYSDKLANGUAGEVALUES_DOTNET = TMP_TELEMETRYSDKLANGUAGEVALUES_DOTNET;
-    exports.TELEMETRYSDKLANGUAGEVALUES_ERLANG = TMP_TELEMETRYSDKLANGUAGEVALUES_ERLANG;
-    exports.TELEMETRYSDKLANGUAGEVALUES_GO = TMP_TELEMETRYSDKLANGUAGEVALUES_GO;
-    exports.TELEMETRYSDKLANGUAGEVALUES_JAVA = TMP_TELEMETRYSDKLANGUAGEVALUES_JAVA;
-    exports.TELEMETRYSDKLANGUAGEVALUES_NODEJS = TMP_TELEMETRYSDKLANGUAGEVALUES_NODEJS;
-    exports.TELEMETRYSDKLANGUAGEVALUES_PHP = TMP_TELEMETRYSDKLANGUAGEVALUES_PHP;
-    exports.TELEMETRYSDKLANGUAGEVALUES_PYTHON = TMP_TELEMETRYSDKLANGUAGEVALUES_PYTHON;
-    exports.TELEMETRYSDKLANGUAGEVALUES_RUBY = TMP_TELEMETRYSDKLANGUAGEVALUES_RUBY;
-    exports.TELEMETRYSDKLANGUAGEVALUES_WEBJS = TMP_TELEMETRYSDKLANGUAGEVALUES_WEBJS;
-    exports.TelemetrySdkLanguageValues = /* @__PURE__ */ (0, utils_1.createConstMap)([
-      TMP_TELEMETRYSDKLANGUAGEVALUES_CPP,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_DOTNET,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_ERLANG,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_GO,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_JAVA,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_NODEJS,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_PHP,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_PYTHON,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_RUBY,
-      TMP_TELEMETRYSDKLANGUAGEVALUES_WEBJS
-    ]);
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/resource/index.js
-var require_resource = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/resource/index.js"(exports) {
-    "use strict";
-    var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
-      if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m, k);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-        desc = { enumerable: true, get: /* @__PURE__ */ __name(function() {
-          return m[k];
-        }, "get") };
-      }
-      Object.defineProperty(o, k2, desc);
-    }) : (function(o, m, k, k2) {
-      if (k2 === void 0) k2 = k;
-      o[k2] = m[k];
-    }));
-    var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-      for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
-    };
-    Object.defineProperty(exports, "__esModule", { value: true });
-    __exportStar(require_SemanticResourceAttributes(), exports);
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/stable_attributes.js
-var require_stable_attributes = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/stable_attributes.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.DOTNET_GC_HEAP_GENERATION_VALUE_GEN1 = exports.DOTNET_GC_HEAP_GENERATION_VALUE_GEN0 = exports.ATTR_DOTNET_GC_HEAP_GENERATION = exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_TEST = exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_STAGING = exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_PRODUCTION = exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_DEVELOPMENT = exports.ATTR_DEPLOYMENT_ENVIRONMENT_NAME = exports.DB_SYSTEM_NAME_VALUE_POSTGRESQL = exports.DB_SYSTEM_NAME_VALUE_MYSQL = exports.DB_SYSTEM_NAME_VALUE_MICROSOFT_SQL_SERVER = exports.DB_SYSTEM_NAME_VALUE_MARIADB = exports.ATTR_DB_SYSTEM_NAME = exports.ATTR_DB_STORED_PROCEDURE_NAME = exports.ATTR_DB_RESPONSE_STATUS_CODE = exports.ATTR_DB_QUERY_TEXT = exports.ATTR_DB_QUERY_SUMMARY = exports.ATTR_DB_OPERATION_NAME = exports.ATTR_DB_OPERATION_BATCH_SIZE = exports.ATTR_DB_NAMESPACE = exports.ATTR_DB_COLLECTION_NAME = exports.ATTR_CONTAINER_IMAGE_TAGS = exports.ATTR_CONTAINER_IMAGE_REPO_DIGESTS = exports.ATTR_CONTAINER_IMAGE_NAME = exports.ATTR_CONTAINER_ID = exports.ATTR_CODE_STACKTRACE = exports.ATTR_CODE_LINE_NUMBER = exports.ATTR_CODE_FUNCTION_NAME = exports.ATTR_CODE_FILE_PATH = exports.ATTR_CODE_COLUMN_NUMBER = exports.ATTR_CLIENT_PORT = exports.ATTR_CLIENT_ADDRESS = exports.ATTR_ASPNETCORE_USER_IS_AUTHENTICATED = exports.ASPNETCORE_ROUTING_MATCH_STATUS_VALUE_SUCCESS = exports.ASPNETCORE_ROUTING_MATCH_STATUS_VALUE_FAILURE = exports.ATTR_ASPNETCORE_ROUTING_MATCH_STATUS = exports.ATTR_ASPNETCORE_ROUTING_IS_FALLBACK = exports.ATTR_ASPNETCORE_REQUEST_IS_UNHANDLED = exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_REQUEST_CANCELED = exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_GLOBAL_LIMITER = exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_ENDPOINT_LIMITER = exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_ACQUIRED = exports.ATTR_ASPNETCORE_RATE_LIMITING_RESULT = exports.ATTR_ASPNETCORE_RATE_LIMITING_POLICY = exports.ATTR_ASPNETCORE_DIAGNOSTICS_HANDLER_TYPE = exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_UNHANDLED = exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_SKIPPED = exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_HANDLED = exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_ABORTED = exports.ATTR_ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT = void 0;
-    exports.ATTR_K8S_DAEMONSET_LABEL = exports.ATTR_K8S_DAEMONSET_ANNOTATION = exports.ATTR_K8S_CRONJOB_UID = exports.ATTR_K8S_CRONJOB_NAME = exports.ATTR_K8S_CRONJOB_LABEL = exports.ATTR_K8S_CRONJOB_ANNOTATION = exports.ATTR_K8S_CONTAINER_RESTART_COUNT = exports.ATTR_K8S_CONTAINER_NAME = exports.ATTR_K8S_CLUSTER_UID = exports.ATTR_K8S_CLUSTER_NAME = exports.JVM_THREAD_STATE_VALUE_WAITING = exports.JVM_THREAD_STATE_VALUE_TIMED_WAITING = exports.JVM_THREAD_STATE_VALUE_TERMINATED = exports.JVM_THREAD_STATE_VALUE_RUNNABLE = exports.JVM_THREAD_STATE_VALUE_NEW = exports.JVM_THREAD_STATE_VALUE_BLOCKED = exports.ATTR_JVM_THREAD_STATE = exports.ATTR_JVM_THREAD_DAEMON = exports.JVM_MEMORY_TYPE_VALUE_NON_HEAP = exports.JVM_MEMORY_TYPE_VALUE_HEAP = exports.ATTR_JVM_MEMORY_TYPE = exports.ATTR_JVM_MEMORY_POOL_NAME = exports.ATTR_JVM_GC_NAME = exports.ATTR_JVM_GC_ACTION = exports.ATTR_HTTP_ROUTE = exports.ATTR_HTTP_RESPONSE_STATUS_CODE = exports.ATTR_HTTP_RESPONSE_HEADER = exports.ATTR_HTTP_REQUEST_RESEND_COUNT = exports.ATTR_HTTP_REQUEST_METHOD_ORIGINAL = exports.HTTP_REQUEST_METHOD_VALUE_TRACE = exports.HTTP_REQUEST_METHOD_VALUE_PUT = exports.HTTP_REQUEST_METHOD_VALUE_POST = exports.HTTP_REQUEST_METHOD_VALUE_PATCH = exports.HTTP_REQUEST_METHOD_VALUE_OPTIONS = exports.HTTP_REQUEST_METHOD_VALUE_HEAD = exports.HTTP_REQUEST_METHOD_VALUE_GET = exports.HTTP_REQUEST_METHOD_VALUE_DELETE = exports.HTTP_REQUEST_METHOD_VALUE_CONNECT = exports.HTTP_REQUEST_METHOD_VALUE_OTHER = exports.ATTR_HTTP_REQUEST_METHOD = exports.ATTR_HTTP_REQUEST_HEADER = exports.ATTR_EXCEPTION_TYPE = exports.ATTR_EXCEPTION_STACKTRACE = exports.ATTR_EXCEPTION_MESSAGE = exports.ATTR_EXCEPTION_ESCAPED = exports.ERROR_TYPE_VALUE_OTHER = exports.ATTR_ERROR_TYPE = exports.DOTNET_GC_HEAP_GENERATION_VALUE_POH = exports.DOTNET_GC_HEAP_GENERATION_VALUE_LOH = exports.DOTNET_GC_HEAP_GENERATION_VALUE_GEN2 = void 0;
-    exports.ATTR_OTEL_SCOPE_VERSION = exports.ATTR_OTEL_SCOPE_NAME = exports.ATTR_OTEL_EVENT_NAME = exports.NETWORK_TYPE_VALUE_IPV6 = exports.NETWORK_TYPE_VALUE_IPV4 = exports.ATTR_NETWORK_TYPE = exports.NETWORK_TRANSPORT_VALUE_UNIX = exports.NETWORK_TRANSPORT_VALUE_UDP = exports.NETWORK_TRANSPORT_VALUE_TCP = exports.NETWORK_TRANSPORT_VALUE_QUIC = exports.NETWORK_TRANSPORT_VALUE_PIPE = exports.ATTR_NETWORK_TRANSPORT = exports.ATTR_NETWORK_PROTOCOL_VERSION = exports.ATTR_NETWORK_PROTOCOL_NAME = exports.ATTR_NETWORK_PEER_PORT = exports.ATTR_NETWORK_PEER_ADDRESS = exports.ATTR_NETWORK_LOCAL_PORT = exports.ATTR_NETWORK_LOCAL_ADDRESS = exports.ATTR_K8S_STATEFULSET_UID = exports.ATTR_K8S_STATEFULSET_NAME = exports.ATTR_K8S_STATEFULSET_LABEL = exports.ATTR_K8S_STATEFULSET_ANNOTATION = exports.ATTR_K8S_REPLICASET_UID = exports.ATTR_K8S_REPLICASET_NAME = exports.ATTR_K8S_REPLICASET_LABEL = exports.ATTR_K8S_REPLICASET_ANNOTATION = exports.ATTR_K8S_POD_UID = exports.ATTR_K8S_POD_START_TIME = exports.ATTR_K8S_POD_NAME = exports.ATTR_K8S_POD_LABEL = exports.ATTR_K8S_POD_IP = exports.ATTR_K8S_POD_HOSTNAME = exports.ATTR_K8S_POD_ANNOTATION = exports.ATTR_K8S_NODE_UID = exports.ATTR_K8S_NODE_NAME = exports.ATTR_K8S_NODE_LABEL = exports.ATTR_K8S_NODE_ANNOTATION = exports.ATTR_K8S_NAMESPACE_NAME = exports.ATTR_K8S_NAMESPACE_LABEL = exports.ATTR_K8S_NAMESPACE_ANNOTATION = exports.ATTR_K8S_JOB_UID = exports.ATTR_K8S_JOB_NAME = exports.ATTR_K8S_JOB_LABEL = exports.ATTR_K8S_JOB_ANNOTATION = exports.ATTR_K8S_DEPLOYMENT_UID = exports.ATTR_K8S_DEPLOYMENT_NAME = exports.ATTR_K8S_DEPLOYMENT_LABEL = exports.ATTR_K8S_DEPLOYMENT_ANNOTATION = exports.ATTR_K8S_DAEMONSET_UID = exports.ATTR_K8S_DAEMONSET_NAME = void 0;
-    exports.ATTR_USER_AGENT_ORIGINAL = exports.ATTR_URL_SCHEME = exports.ATTR_URL_QUERY = exports.ATTR_URL_PATH = exports.ATTR_URL_FULL = exports.ATTR_URL_FRAGMENT = exports.ATTR_TELEMETRY_SDK_VERSION = exports.ATTR_TELEMETRY_SDK_NAME = exports.TELEMETRY_SDK_LANGUAGE_VALUE_WEBJS = exports.TELEMETRY_SDK_LANGUAGE_VALUE_SWIFT = exports.TELEMETRY_SDK_LANGUAGE_VALUE_RUST = exports.TELEMETRY_SDK_LANGUAGE_VALUE_RUBY = exports.TELEMETRY_SDK_LANGUAGE_VALUE_PYTHON = exports.TELEMETRY_SDK_LANGUAGE_VALUE_PHP = exports.TELEMETRY_SDK_LANGUAGE_VALUE_NODEJS = exports.TELEMETRY_SDK_LANGUAGE_VALUE_KOTLIN = exports.TELEMETRY_SDK_LANGUAGE_VALUE_JAVA = exports.TELEMETRY_SDK_LANGUAGE_VALUE_GO = exports.TELEMETRY_SDK_LANGUAGE_VALUE_ERLANG = exports.TELEMETRY_SDK_LANGUAGE_VALUE_DOTNET = exports.TELEMETRY_SDK_LANGUAGE_VALUE_CPP = exports.ATTR_TELEMETRY_SDK_LANGUAGE = exports.ATTR_TELEMETRY_DISTRO_VERSION = exports.ATTR_TELEMETRY_DISTRO_NAME = exports.SIGNALR_TRANSPORT_VALUE_WEB_SOCKETS = exports.SIGNALR_TRANSPORT_VALUE_SERVER_SENT_EVENTS = exports.SIGNALR_TRANSPORT_VALUE_LONG_POLLING = exports.ATTR_SIGNALR_TRANSPORT = exports.SIGNALR_CONNECTION_STATUS_VALUE_TIMEOUT = exports.SIGNALR_CONNECTION_STATUS_VALUE_NORMAL_CLOSURE = exports.SIGNALR_CONNECTION_STATUS_VALUE_APP_SHUTDOWN = exports.ATTR_SIGNALR_CONNECTION_STATUS = exports.ATTR_SERVICE_VERSION = exports.ATTR_SERVICE_NAMESPACE = exports.ATTR_SERVICE_NAME = exports.ATTR_SERVICE_INSTANCE_ID = exports.ATTR_SERVER_PORT = exports.ATTR_SERVER_ADDRESS = exports.ATTR_OTEL_STATUS_DESCRIPTION = exports.OTEL_STATUS_CODE_VALUE_OK = exports.OTEL_STATUS_CODE_VALUE_ERROR = exports.ATTR_OTEL_STATUS_CODE = void 0;
-    exports.ATTR_ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT = "aspnetcore.diagnostics.exception.result";
-    exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_ABORTED = "aborted";
-    exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_HANDLED = "handled";
-    exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_SKIPPED = "skipped";
-    exports.ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT_VALUE_UNHANDLED = "unhandled";
-    exports.ATTR_ASPNETCORE_DIAGNOSTICS_HANDLER_TYPE = "aspnetcore.diagnostics.handler.type";
-    exports.ATTR_ASPNETCORE_RATE_LIMITING_POLICY = "aspnetcore.rate_limiting.policy";
-    exports.ATTR_ASPNETCORE_RATE_LIMITING_RESULT = "aspnetcore.rate_limiting.result";
-    exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_ACQUIRED = "acquired";
-    exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_ENDPOINT_LIMITER = "endpoint_limiter";
-    exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_GLOBAL_LIMITER = "global_limiter";
-    exports.ASPNETCORE_RATE_LIMITING_RESULT_VALUE_REQUEST_CANCELED = "request_canceled";
-    exports.ATTR_ASPNETCORE_REQUEST_IS_UNHANDLED = "aspnetcore.request.is_unhandled";
-    exports.ATTR_ASPNETCORE_ROUTING_IS_FALLBACK = "aspnetcore.routing.is_fallback";
-    exports.ATTR_ASPNETCORE_ROUTING_MATCH_STATUS = "aspnetcore.routing.match_status";
-    exports.ASPNETCORE_ROUTING_MATCH_STATUS_VALUE_FAILURE = "failure";
-    exports.ASPNETCORE_ROUTING_MATCH_STATUS_VALUE_SUCCESS = "success";
-    exports.ATTR_ASPNETCORE_USER_IS_AUTHENTICATED = "aspnetcore.user.is_authenticated";
-    exports.ATTR_CLIENT_ADDRESS = "client.address";
-    exports.ATTR_CLIENT_PORT = "client.port";
-    exports.ATTR_CODE_COLUMN_NUMBER = "code.column.number";
-    exports.ATTR_CODE_FILE_PATH = "code.file.path";
-    exports.ATTR_CODE_FUNCTION_NAME = "code.function.name";
-    exports.ATTR_CODE_LINE_NUMBER = "code.line.number";
-    exports.ATTR_CODE_STACKTRACE = "code.stacktrace";
-    exports.ATTR_CONTAINER_ID = "container.id";
-    exports.ATTR_CONTAINER_IMAGE_NAME = "container.image.name";
-    exports.ATTR_CONTAINER_IMAGE_REPO_DIGESTS = "container.image.repo_digests";
-    exports.ATTR_CONTAINER_IMAGE_TAGS = "container.image.tags";
-    exports.ATTR_DB_COLLECTION_NAME = "db.collection.name";
-    exports.ATTR_DB_NAMESPACE = "db.namespace";
-    exports.ATTR_DB_OPERATION_BATCH_SIZE = "db.operation.batch.size";
-    exports.ATTR_DB_OPERATION_NAME = "db.operation.name";
-    exports.ATTR_DB_QUERY_SUMMARY = "db.query.summary";
-    exports.ATTR_DB_QUERY_TEXT = "db.query.text";
-    exports.ATTR_DB_RESPONSE_STATUS_CODE = "db.response.status_code";
-    exports.ATTR_DB_STORED_PROCEDURE_NAME = "db.stored_procedure.name";
-    exports.ATTR_DB_SYSTEM_NAME = "db.system.name";
-    exports.DB_SYSTEM_NAME_VALUE_MARIADB = "mariadb";
-    exports.DB_SYSTEM_NAME_VALUE_MICROSOFT_SQL_SERVER = "microsoft.sql_server";
-    exports.DB_SYSTEM_NAME_VALUE_MYSQL = "mysql";
-    exports.DB_SYSTEM_NAME_VALUE_POSTGRESQL = "postgresql";
-    exports.ATTR_DEPLOYMENT_ENVIRONMENT_NAME = "deployment.environment.name";
-    exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_DEVELOPMENT = "development";
-    exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_PRODUCTION = "production";
-    exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_STAGING = "staging";
-    exports.DEPLOYMENT_ENVIRONMENT_NAME_VALUE_TEST = "test";
-    exports.ATTR_DOTNET_GC_HEAP_GENERATION = "dotnet.gc.heap.generation";
-    exports.DOTNET_GC_HEAP_GENERATION_VALUE_GEN0 = "gen0";
-    exports.DOTNET_GC_HEAP_GENERATION_VALUE_GEN1 = "gen1";
-    exports.DOTNET_GC_HEAP_GENERATION_VALUE_GEN2 = "gen2";
-    exports.DOTNET_GC_HEAP_GENERATION_VALUE_LOH = "loh";
-    exports.DOTNET_GC_HEAP_GENERATION_VALUE_POH = "poh";
-    exports.ATTR_ERROR_TYPE = "error.type";
-    exports.ERROR_TYPE_VALUE_OTHER = "_OTHER";
-    exports.ATTR_EXCEPTION_ESCAPED = "exception.escaped";
-    exports.ATTR_EXCEPTION_MESSAGE = "exception.message";
-    exports.ATTR_EXCEPTION_STACKTRACE = "exception.stacktrace";
-    exports.ATTR_EXCEPTION_TYPE = "exception.type";
-    var ATTR_HTTP_REQUEST_HEADER = /* @__PURE__ */ __name((key) => `http.request.header.${key}`, "ATTR_HTTP_REQUEST_HEADER");
-    exports.ATTR_HTTP_REQUEST_HEADER = ATTR_HTTP_REQUEST_HEADER;
-    exports.ATTR_HTTP_REQUEST_METHOD = "http.request.method";
-    exports.HTTP_REQUEST_METHOD_VALUE_OTHER = "_OTHER";
-    exports.HTTP_REQUEST_METHOD_VALUE_CONNECT = "CONNECT";
-    exports.HTTP_REQUEST_METHOD_VALUE_DELETE = "DELETE";
-    exports.HTTP_REQUEST_METHOD_VALUE_GET = "GET";
-    exports.HTTP_REQUEST_METHOD_VALUE_HEAD = "HEAD";
-    exports.HTTP_REQUEST_METHOD_VALUE_OPTIONS = "OPTIONS";
-    exports.HTTP_REQUEST_METHOD_VALUE_PATCH = "PATCH";
-    exports.HTTP_REQUEST_METHOD_VALUE_POST = "POST";
-    exports.HTTP_REQUEST_METHOD_VALUE_PUT = "PUT";
-    exports.HTTP_REQUEST_METHOD_VALUE_TRACE = "TRACE";
-    exports.ATTR_HTTP_REQUEST_METHOD_ORIGINAL = "http.request.method_original";
-    exports.ATTR_HTTP_REQUEST_RESEND_COUNT = "http.request.resend_count";
-    var ATTR_HTTP_RESPONSE_HEADER = /* @__PURE__ */ __name((key) => `http.response.header.${key}`, "ATTR_HTTP_RESPONSE_HEADER");
-    exports.ATTR_HTTP_RESPONSE_HEADER = ATTR_HTTP_RESPONSE_HEADER;
-    exports.ATTR_HTTP_RESPONSE_STATUS_CODE = "http.response.status_code";
-    exports.ATTR_HTTP_ROUTE = "http.route";
-    exports.ATTR_JVM_GC_ACTION = "jvm.gc.action";
-    exports.ATTR_JVM_GC_NAME = "jvm.gc.name";
-    exports.ATTR_JVM_MEMORY_POOL_NAME = "jvm.memory.pool.name";
-    exports.ATTR_JVM_MEMORY_TYPE = "jvm.memory.type";
-    exports.JVM_MEMORY_TYPE_VALUE_HEAP = "heap";
-    exports.JVM_MEMORY_TYPE_VALUE_NON_HEAP = "non_heap";
-    exports.ATTR_JVM_THREAD_DAEMON = "jvm.thread.daemon";
-    exports.ATTR_JVM_THREAD_STATE = "jvm.thread.state";
-    exports.JVM_THREAD_STATE_VALUE_BLOCKED = "blocked";
-    exports.JVM_THREAD_STATE_VALUE_NEW = "new";
-    exports.JVM_THREAD_STATE_VALUE_RUNNABLE = "runnable";
-    exports.JVM_THREAD_STATE_VALUE_TERMINATED = "terminated";
-    exports.JVM_THREAD_STATE_VALUE_TIMED_WAITING = "timed_waiting";
-    exports.JVM_THREAD_STATE_VALUE_WAITING = "waiting";
-    exports.ATTR_K8S_CLUSTER_NAME = "k8s.cluster.name";
-    exports.ATTR_K8S_CLUSTER_UID = "k8s.cluster.uid";
-    exports.ATTR_K8S_CONTAINER_NAME = "k8s.container.name";
-    exports.ATTR_K8S_CONTAINER_RESTART_COUNT = "k8s.container.restart_count";
-    var ATTR_K8S_CRONJOB_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.cronjob.annotation.${key}`, "ATTR_K8S_CRONJOB_ANNOTATION");
-    exports.ATTR_K8S_CRONJOB_ANNOTATION = ATTR_K8S_CRONJOB_ANNOTATION;
-    var ATTR_K8S_CRONJOB_LABEL = /* @__PURE__ */ __name((key) => `k8s.cronjob.label.${key}`, "ATTR_K8S_CRONJOB_LABEL");
-    exports.ATTR_K8S_CRONJOB_LABEL = ATTR_K8S_CRONJOB_LABEL;
-    exports.ATTR_K8S_CRONJOB_NAME = "k8s.cronjob.name";
-    exports.ATTR_K8S_CRONJOB_UID = "k8s.cronjob.uid";
-    var ATTR_K8S_DAEMONSET_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.daemonset.annotation.${key}`, "ATTR_K8S_DAEMONSET_ANNOTATION");
-    exports.ATTR_K8S_DAEMONSET_ANNOTATION = ATTR_K8S_DAEMONSET_ANNOTATION;
-    var ATTR_K8S_DAEMONSET_LABEL = /* @__PURE__ */ __name((key) => `k8s.daemonset.label.${key}`, "ATTR_K8S_DAEMONSET_LABEL");
-    exports.ATTR_K8S_DAEMONSET_LABEL = ATTR_K8S_DAEMONSET_LABEL;
-    exports.ATTR_K8S_DAEMONSET_NAME = "k8s.daemonset.name";
-    exports.ATTR_K8S_DAEMONSET_UID = "k8s.daemonset.uid";
-    var ATTR_K8S_DEPLOYMENT_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.deployment.annotation.${key}`, "ATTR_K8S_DEPLOYMENT_ANNOTATION");
-    exports.ATTR_K8S_DEPLOYMENT_ANNOTATION = ATTR_K8S_DEPLOYMENT_ANNOTATION;
-    var ATTR_K8S_DEPLOYMENT_LABEL = /* @__PURE__ */ __name((key) => `k8s.deployment.label.${key}`, "ATTR_K8S_DEPLOYMENT_LABEL");
-    exports.ATTR_K8S_DEPLOYMENT_LABEL = ATTR_K8S_DEPLOYMENT_LABEL;
-    exports.ATTR_K8S_DEPLOYMENT_NAME = "k8s.deployment.name";
-    exports.ATTR_K8S_DEPLOYMENT_UID = "k8s.deployment.uid";
-    var ATTR_K8S_JOB_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.job.annotation.${key}`, "ATTR_K8S_JOB_ANNOTATION");
-    exports.ATTR_K8S_JOB_ANNOTATION = ATTR_K8S_JOB_ANNOTATION;
-    var ATTR_K8S_JOB_LABEL = /* @__PURE__ */ __name((key) => `k8s.job.label.${key}`, "ATTR_K8S_JOB_LABEL");
-    exports.ATTR_K8S_JOB_LABEL = ATTR_K8S_JOB_LABEL;
-    exports.ATTR_K8S_JOB_NAME = "k8s.job.name";
-    exports.ATTR_K8S_JOB_UID = "k8s.job.uid";
-    var ATTR_K8S_NAMESPACE_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.namespace.annotation.${key}`, "ATTR_K8S_NAMESPACE_ANNOTATION");
-    exports.ATTR_K8S_NAMESPACE_ANNOTATION = ATTR_K8S_NAMESPACE_ANNOTATION;
-    var ATTR_K8S_NAMESPACE_LABEL = /* @__PURE__ */ __name((key) => `k8s.namespace.label.${key}`, "ATTR_K8S_NAMESPACE_LABEL");
-    exports.ATTR_K8S_NAMESPACE_LABEL = ATTR_K8S_NAMESPACE_LABEL;
-    exports.ATTR_K8S_NAMESPACE_NAME = "k8s.namespace.name";
-    var ATTR_K8S_NODE_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.node.annotation.${key}`, "ATTR_K8S_NODE_ANNOTATION");
-    exports.ATTR_K8S_NODE_ANNOTATION = ATTR_K8S_NODE_ANNOTATION;
-    var ATTR_K8S_NODE_LABEL = /* @__PURE__ */ __name((key) => `k8s.node.label.${key}`, "ATTR_K8S_NODE_LABEL");
-    exports.ATTR_K8S_NODE_LABEL = ATTR_K8S_NODE_LABEL;
-    exports.ATTR_K8S_NODE_NAME = "k8s.node.name";
-    exports.ATTR_K8S_NODE_UID = "k8s.node.uid";
-    var ATTR_K8S_POD_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.pod.annotation.${key}`, "ATTR_K8S_POD_ANNOTATION");
-    exports.ATTR_K8S_POD_ANNOTATION = ATTR_K8S_POD_ANNOTATION;
-    exports.ATTR_K8S_POD_HOSTNAME = "k8s.pod.hostname";
-    exports.ATTR_K8S_POD_IP = "k8s.pod.ip";
-    var ATTR_K8S_POD_LABEL = /* @__PURE__ */ __name((key) => `k8s.pod.label.${key}`, "ATTR_K8S_POD_LABEL");
-    exports.ATTR_K8S_POD_LABEL = ATTR_K8S_POD_LABEL;
-    exports.ATTR_K8S_POD_NAME = "k8s.pod.name";
-    exports.ATTR_K8S_POD_START_TIME = "k8s.pod.start_time";
-    exports.ATTR_K8S_POD_UID = "k8s.pod.uid";
-    var ATTR_K8S_REPLICASET_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.replicaset.annotation.${key}`, "ATTR_K8S_REPLICASET_ANNOTATION");
-    exports.ATTR_K8S_REPLICASET_ANNOTATION = ATTR_K8S_REPLICASET_ANNOTATION;
-    var ATTR_K8S_REPLICASET_LABEL = /* @__PURE__ */ __name((key) => `k8s.replicaset.label.${key}`, "ATTR_K8S_REPLICASET_LABEL");
-    exports.ATTR_K8S_REPLICASET_LABEL = ATTR_K8S_REPLICASET_LABEL;
-    exports.ATTR_K8S_REPLICASET_NAME = "k8s.replicaset.name";
-    exports.ATTR_K8S_REPLICASET_UID = "k8s.replicaset.uid";
-    var ATTR_K8S_STATEFULSET_ANNOTATION = /* @__PURE__ */ __name((key) => `k8s.statefulset.annotation.${key}`, "ATTR_K8S_STATEFULSET_ANNOTATION");
-    exports.ATTR_K8S_STATEFULSET_ANNOTATION = ATTR_K8S_STATEFULSET_ANNOTATION;
-    var ATTR_K8S_STATEFULSET_LABEL = /* @__PURE__ */ __name((key) => `k8s.statefulset.label.${key}`, "ATTR_K8S_STATEFULSET_LABEL");
-    exports.ATTR_K8S_STATEFULSET_LABEL = ATTR_K8S_STATEFULSET_LABEL;
-    exports.ATTR_K8S_STATEFULSET_NAME = "k8s.statefulset.name";
-    exports.ATTR_K8S_STATEFULSET_UID = "k8s.statefulset.uid";
-    exports.ATTR_NETWORK_LOCAL_ADDRESS = "network.local.address";
-    exports.ATTR_NETWORK_LOCAL_PORT = "network.local.port";
-    exports.ATTR_NETWORK_PEER_ADDRESS = "network.peer.address";
-    exports.ATTR_NETWORK_PEER_PORT = "network.peer.port";
-    exports.ATTR_NETWORK_PROTOCOL_NAME = "network.protocol.name";
-    exports.ATTR_NETWORK_PROTOCOL_VERSION = "network.protocol.version";
-    exports.ATTR_NETWORK_TRANSPORT = "network.transport";
-    exports.NETWORK_TRANSPORT_VALUE_PIPE = "pipe";
-    exports.NETWORK_TRANSPORT_VALUE_QUIC = "quic";
-    exports.NETWORK_TRANSPORT_VALUE_TCP = "tcp";
-    exports.NETWORK_TRANSPORT_VALUE_UDP = "udp";
-    exports.NETWORK_TRANSPORT_VALUE_UNIX = "unix";
-    exports.ATTR_NETWORK_TYPE = "network.type";
-    exports.NETWORK_TYPE_VALUE_IPV4 = "ipv4";
-    exports.NETWORK_TYPE_VALUE_IPV6 = "ipv6";
-    exports.ATTR_OTEL_EVENT_NAME = "otel.event.name";
-    exports.ATTR_OTEL_SCOPE_NAME = "otel.scope.name";
-    exports.ATTR_OTEL_SCOPE_VERSION = "otel.scope.version";
-    exports.ATTR_OTEL_STATUS_CODE = "otel.status_code";
-    exports.OTEL_STATUS_CODE_VALUE_ERROR = "ERROR";
-    exports.OTEL_STATUS_CODE_VALUE_OK = "OK";
-    exports.ATTR_OTEL_STATUS_DESCRIPTION = "otel.status_description";
-    exports.ATTR_SERVER_ADDRESS = "server.address";
-    exports.ATTR_SERVER_PORT = "server.port";
-    exports.ATTR_SERVICE_INSTANCE_ID = "service.instance.id";
-    exports.ATTR_SERVICE_NAME = "service.name";
-    exports.ATTR_SERVICE_NAMESPACE = "service.namespace";
-    exports.ATTR_SERVICE_VERSION = "service.version";
-    exports.ATTR_SIGNALR_CONNECTION_STATUS = "signalr.connection.status";
-    exports.SIGNALR_CONNECTION_STATUS_VALUE_APP_SHUTDOWN = "app_shutdown";
-    exports.SIGNALR_CONNECTION_STATUS_VALUE_NORMAL_CLOSURE = "normal_closure";
-    exports.SIGNALR_CONNECTION_STATUS_VALUE_TIMEOUT = "timeout";
-    exports.ATTR_SIGNALR_TRANSPORT = "signalr.transport";
-    exports.SIGNALR_TRANSPORT_VALUE_LONG_POLLING = "long_polling";
-    exports.SIGNALR_TRANSPORT_VALUE_SERVER_SENT_EVENTS = "server_sent_events";
-    exports.SIGNALR_TRANSPORT_VALUE_WEB_SOCKETS = "web_sockets";
-    exports.ATTR_TELEMETRY_DISTRO_NAME = "telemetry.distro.name";
-    exports.ATTR_TELEMETRY_DISTRO_VERSION = "telemetry.distro.version";
-    exports.ATTR_TELEMETRY_SDK_LANGUAGE = "telemetry.sdk.language";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_CPP = "cpp";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_DOTNET = "dotnet";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_ERLANG = "erlang";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_GO = "go";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_JAVA = "java";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_KOTLIN = "kotlin";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_NODEJS = "nodejs";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_PHP = "php";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_PYTHON = "python";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_RUBY = "ruby";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_RUST = "rust";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_SWIFT = "swift";
-    exports.TELEMETRY_SDK_LANGUAGE_VALUE_WEBJS = "webjs";
-    exports.ATTR_TELEMETRY_SDK_NAME = "telemetry.sdk.name";
-    exports.ATTR_TELEMETRY_SDK_VERSION = "telemetry.sdk.version";
-    exports.ATTR_URL_FRAGMENT = "url.fragment";
-    exports.ATTR_URL_FULL = "url.full";
-    exports.ATTR_URL_PATH = "url.path";
-    exports.ATTR_URL_QUERY = "url.query";
-    exports.ATTR_URL_SCHEME = "url.scheme";
-    exports.ATTR_USER_AGENT_ORIGINAL = "user_agent.original";
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/stable_metrics.js
-var require_stable_metrics = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/stable_metrics.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.METRIC_SIGNALR_SERVER_ACTIVE_CONNECTIONS = exports.METRIC_KESTREL_UPGRADED_CONNECTIONS = exports.METRIC_KESTREL_TLS_HANDSHAKE_DURATION = exports.METRIC_KESTREL_REJECTED_CONNECTIONS = exports.METRIC_KESTREL_QUEUED_REQUESTS = exports.METRIC_KESTREL_QUEUED_CONNECTIONS = exports.METRIC_KESTREL_CONNECTION_DURATION = exports.METRIC_KESTREL_ACTIVE_TLS_HANDSHAKES = exports.METRIC_KESTREL_ACTIVE_CONNECTIONS = exports.METRIC_JVM_THREAD_COUNT = exports.METRIC_JVM_MEMORY_USED_AFTER_LAST_GC = exports.METRIC_JVM_MEMORY_USED = exports.METRIC_JVM_MEMORY_LIMIT = exports.METRIC_JVM_MEMORY_COMMITTED = exports.METRIC_JVM_GC_DURATION = exports.METRIC_JVM_CPU_TIME = exports.METRIC_JVM_CPU_RECENT_UTILIZATION = exports.METRIC_JVM_CPU_COUNT = exports.METRIC_JVM_CLASS_UNLOADED = exports.METRIC_JVM_CLASS_LOADED = exports.METRIC_JVM_CLASS_COUNT = exports.METRIC_HTTP_SERVER_REQUEST_DURATION = exports.METRIC_HTTP_CLIENT_REQUEST_DURATION = exports.METRIC_DOTNET_TIMER_COUNT = exports.METRIC_DOTNET_THREAD_POOL_WORK_ITEM_COUNT = exports.METRIC_DOTNET_THREAD_POOL_THREAD_COUNT = exports.METRIC_DOTNET_THREAD_POOL_QUEUE_LENGTH = exports.METRIC_DOTNET_PROCESS_MEMORY_WORKING_SET = exports.METRIC_DOTNET_PROCESS_CPU_TIME = exports.METRIC_DOTNET_PROCESS_CPU_COUNT = exports.METRIC_DOTNET_MONITOR_LOCK_CONTENTIONS = exports.METRIC_DOTNET_JIT_COMPILED_METHODS = exports.METRIC_DOTNET_JIT_COMPILED_IL_SIZE = exports.METRIC_DOTNET_JIT_COMPILATION_TIME = exports.METRIC_DOTNET_GC_PAUSE_TIME = exports.METRIC_DOTNET_GC_LAST_COLLECTION_MEMORY_COMMITTED_SIZE = exports.METRIC_DOTNET_GC_LAST_COLLECTION_HEAP_SIZE = exports.METRIC_DOTNET_GC_LAST_COLLECTION_HEAP_FRAGMENTATION_SIZE = exports.METRIC_DOTNET_GC_HEAP_TOTAL_ALLOCATED = exports.METRIC_DOTNET_GC_COLLECTIONS = exports.METRIC_DOTNET_EXCEPTIONS = exports.METRIC_DOTNET_ASSEMBLY_COUNT = exports.METRIC_DB_CLIENT_OPERATION_DURATION = exports.METRIC_ASPNETCORE_ROUTING_MATCH_ATTEMPTS = exports.METRIC_ASPNETCORE_RATE_LIMITING_REQUESTS = exports.METRIC_ASPNETCORE_RATE_LIMITING_REQUEST_LEASE_DURATION = exports.METRIC_ASPNETCORE_RATE_LIMITING_REQUEST_TIME_IN_QUEUE = exports.METRIC_ASPNETCORE_RATE_LIMITING_QUEUED_REQUESTS = exports.METRIC_ASPNETCORE_RATE_LIMITING_ACTIVE_REQUEST_LEASES = exports.METRIC_ASPNETCORE_DIAGNOSTICS_EXCEPTIONS = void 0;
-    exports.METRIC_SIGNALR_SERVER_CONNECTION_DURATION = void 0;
-    exports.METRIC_ASPNETCORE_DIAGNOSTICS_EXCEPTIONS = "aspnetcore.diagnostics.exceptions";
-    exports.METRIC_ASPNETCORE_RATE_LIMITING_ACTIVE_REQUEST_LEASES = "aspnetcore.rate_limiting.active_request_leases";
-    exports.METRIC_ASPNETCORE_RATE_LIMITING_QUEUED_REQUESTS = "aspnetcore.rate_limiting.queued_requests";
-    exports.METRIC_ASPNETCORE_RATE_LIMITING_REQUEST_TIME_IN_QUEUE = "aspnetcore.rate_limiting.request.time_in_queue";
-    exports.METRIC_ASPNETCORE_RATE_LIMITING_REQUEST_LEASE_DURATION = "aspnetcore.rate_limiting.request_lease.duration";
-    exports.METRIC_ASPNETCORE_RATE_LIMITING_REQUESTS = "aspnetcore.rate_limiting.requests";
-    exports.METRIC_ASPNETCORE_ROUTING_MATCH_ATTEMPTS = "aspnetcore.routing.match_attempts";
-    exports.METRIC_DB_CLIENT_OPERATION_DURATION = "db.client.operation.duration";
-    exports.METRIC_DOTNET_ASSEMBLY_COUNT = "dotnet.assembly.count";
-    exports.METRIC_DOTNET_EXCEPTIONS = "dotnet.exceptions";
-    exports.METRIC_DOTNET_GC_COLLECTIONS = "dotnet.gc.collections";
-    exports.METRIC_DOTNET_GC_HEAP_TOTAL_ALLOCATED = "dotnet.gc.heap.total_allocated";
-    exports.METRIC_DOTNET_GC_LAST_COLLECTION_HEAP_FRAGMENTATION_SIZE = "dotnet.gc.last_collection.heap.fragmentation.size";
-    exports.METRIC_DOTNET_GC_LAST_COLLECTION_HEAP_SIZE = "dotnet.gc.last_collection.heap.size";
-    exports.METRIC_DOTNET_GC_LAST_COLLECTION_MEMORY_COMMITTED_SIZE = "dotnet.gc.last_collection.memory.committed_size";
-    exports.METRIC_DOTNET_GC_PAUSE_TIME = "dotnet.gc.pause.time";
-    exports.METRIC_DOTNET_JIT_COMPILATION_TIME = "dotnet.jit.compilation.time";
-    exports.METRIC_DOTNET_JIT_COMPILED_IL_SIZE = "dotnet.jit.compiled_il.size";
-    exports.METRIC_DOTNET_JIT_COMPILED_METHODS = "dotnet.jit.compiled_methods";
-    exports.METRIC_DOTNET_MONITOR_LOCK_CONTENTIONS = "dotnet.monitor.lock_contentions";
-    exports.METRIC_DOTNET_PROCESS_CPU_COUNT = "dotnet.process.cpu.count";
-    exports.METRIC_DOTNET_PROCESS_CPU_TIME = "dotnet.process.cpu.time";
-    exports.METRIC_DOTNET_PROCESS_MEMORY_WORKING_SET = "dotnet.process.memory.working_set";
-    exports.METRIC_DOTNET_THREAD_POOL_QUEUE_LENGTH = "dotnet.thread_pool.queue.length";
-    exports.METRIC_DOTNET_THREAD_POOL_THREAD_COUNT = "dotnet.thread_pool.thread.count";
-    exports.METRIC_DOTNET_THREAD_POOL_WORK_ITEM_COUNT = "dotnet.thread_pool.work_item.count";
-    exports.METRIC_DOTNET_TIMER_COUNT = "dotnet.timer.count";
-    exports.METRIC_HTTP_CLIENT_REQUEST_DURATION = "http.client.request.duration";
-    exports.METRIC_HTTP_SERVER_REQUEST_DURATION = "http.server.request.duration";
-    exports.METRIC_JVM_CLASS_COUNT = "jvm.class.count";
-    exports.METRIC_JVM_CLASS_LOADED = "jvm.class.loaded";
-    exports.METRIC_JVM_CLASS_UNLOADED = "jvm.class.unloaded";
-    exports.METRIC_JVM_CPU_COUNT = "jvm.cpu.count";
-    exports.METRIC_JVM_CPU_RECENT_UTILIZATION = "jvm.cpu.recent_utilization";
-    exports.METRIC_JVM_CPU_TIME = "jvm.cpu.time";
-    exports.METRIC_JVM_GC_DURATION = "jvm.gc.duration";
-    exports.METRIC_JVM_MEMORY_COMMITTED = "jvm.memory.committed";
-    exports.METRIC_JVM_MEMORY_LIMIT = "jvm.memory.limit";
-    exports.METRIC_JVM_MEMORY_USED = "jvm.memory.used";
-    exports.METRIC_JVM_MEMORY_USED_AFTER_LAST_GC = "jvm.memory.used_after_last_gc";
-    exports.METRIC_JVM_THREAD_COUNT = "jvm.thread.count";
-    exports.METRIC_KESTREL_ACTIVE_CONNECTIONS = "kestrel.active_connections";
-    exports.METRIC_KESTREL_ACTIVE_TLS_HANDSHAKES = "kestrel.active_tls_handshakes";
-    exports.METRIC_KESTREL_CONNECTION_DURATION = "kestrel.connection.duration";
-    exports.METRIC_KESTREL_QUEUED_CONNECTIONS = "kestrel.queued_connections";
-    exports.METRIC_KESTREL_QUEUED_REQUESTS = "kestrel.queued_requests";
-    exports.METRIC_KESTREL_REJECTED_CONNECTIONS = "kestrel.rejected_connections";
-    exports.METRIC_KESTREL_TLS_HANDSHAKE_DURATION = "kestrel.tls_handshake.duration";
-    exports.METRIC_KESTREL_UPGRADED_CONNECTIONS = "kestrel.upgraded_connections";
-    exports.METRIC_SIGNALR_SERVER_ACTIVE_CONNECTIONS = "signalr.server.active_connections";
-    exports.METRIC_SIGNALR_SERVER_CONNECTION_DURATION = "signalr.server.connection.duration";
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/stable_events.js
-var require_stable_events = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/stable_events.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    exports.EVENT_EXCEPTION = void 0;
-    exports.EVENT_EXCEPTION = "exception";
-  }
-});
-
-// ../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/index.js
-var require_src = __commonJS({
-  "../../node_modules/.pnpm/@opentelemetry+semantic-conventions@1.43.0/node_modules/@opentelemetry/semantic-conventions/build/src/index.js"(exports) {
-    "use strict";
-    var __createBinding = exports && exports.__createBinding || (Object.create ? (function(o, m, k, k2) {
-      if (k2 === void 0) k2 = k;
-      var desc = Object.getOwnPropertyDescriptor(m, k);
-      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-        desc = { enumerable: true, get: /* @__PURE__ */ __name(function() {
-          return m[k];
-        }, "get") };
-      }
-      Object.defineProperty(o, k2, desc);
-    }) : (function(o, m, k, k2) {
-      if (k2 === void 0) k2 = k;
-      o[k2] = m[k];
-    }));
-    var __exportStar = exports && exports.__exportStar || function(m, exports2) {
-      for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p)) __createBinding(exports2, m, p);
-    };
-    Object.defineProperty(exports, "__esModule", { value: true });
-    __exportStar(require_trace(), exports);
-    __exportStar(require_resource(), exports);
-    __exportStar(require_stable_attributes(), exports);
-    __exportStar(require_stable_metrics(), exports);
-    __exportStar(require_stable_events(), exports);
-  }
-});
-
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs
-var import_semantic_conventions, ATTR_OPERATION_ID, ATTR_HOOK_TYPE, ATTR_CONTEXT;
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs
+var ATTR_DB_COLLECTION_NAME, ATTR_DB_OPERATION_NAME, ATTR_HTTP_RESPONSE_STATUS_CODE, ATTR_HTTP_ROUTE, ATTR_OPERATION_ID, ATTR_HOOK_TYPE, ATTR_CONTEXT;
 var init_attributes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs"() {
-    import_semantic_conventions = __toESM(require_src(), 1);
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/instrumentation/attributes.mjs"() {
+    ATTR_DB_COLLECTION_NAME = "db.collection.name";
+    ATTR_DB_OPERATION_NAME = "db.operation.name";
+    ATTR_HTTP_RESPONSE_STATUS_CODE = "http.response.status_code";
+    ATTR_HTTP_ROUTE = "http.route";
     ATTR_OPERATION_ID = "better_auth.operation_id";
     ATTR_HOOK_TYPE = "better_auth.hook.type";
     ATTR_CONTEXT = "better_auth.context";
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/noop.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/instrumentation/noop.mjs
 function createNoopSpan() {
   const span = {
     end() {
@@ -10279,7 +8631,7 @@ function noopWithSpan(_name, _attributes, fn) {
 }
 var noopOpenTelemetryAPI;
 var init_noop = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/noop.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/instrumentation/noop.mjs"() {
     __name(createNoopSpan, "createNoopSpan");
     __name(createNoopTracer, "createNoopTracer");
     __name(createNoopTraceAPI, "createNoopTraceAPI");
@@ -10289,22 +8641,22 @@ var init_noop = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs
 function createWithSpan(_options) {
   return noopWithSpan;
 }
 var init_pure_index = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/instrumentation/pure.index.mjs"() {
     init_attributes();
     init_noop();
     __name(createWithSpan, "createWithSpan");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/id.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/id.mjs
 var generateId;
 var init_id = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/id.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/id.mjs"() {
     init_random();
     generateId = /* @__PURE__ */ __name((size) => {
       return createRandomStringGenerator("a-z", "A-Z", "0-9")(size || 32);
@@ -10312,10 +8664,10 @@ var init_id = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs
 var initGetDefaultModelName;
 var init_get_default_model_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-default-model-name.mjs"() {
     init_error2();
     initGetDefaultModelName = /* @__PURE__ */ __name(({ usePlural, schema: schema3 }) => {
       const getDefaultModelName = /* @__PURE__ */ __name((model) => {
@@ -10336,7 +8688,7 @@ var init_get_default_model_name = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs
 function encodeDeterministicId(digest2, options) {
   const generateId3 = options.advanced?.database?.generateId;
   if (generateId3 === "serial" && !warnedSerialDeterministicId) {
@@ -10352,7 +8704,7 @@ function encodeDeterministicId(digest2, options) {
 }
 var warnedSerialDeterministicId, initGetIdField;
 var init_get_id_field = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-id-field.mjs"() {
     init_logger();
     init_id();
     init_get_default_model_name();
@@ -10421,9 +8773,9 @@ var init_get_id_field = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/internal.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/internal.mjs
 var init_internal = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/internal.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/internal.mjs"() {
     init_database_index();
     init_get_tables();
     init_schema_diff();
@@ -10432,10 +8784,10 @@ var init_internal = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs
 var initGetDefaultFieldName;
 var init_get_default_field_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-default-field-name.mjs"() {
     init_error2();
     init_get_default_model_name();
     initGetDefaultFieldName = /* @__PURE__ */ __name(({ schema: schema3, usePlural }) => {
@@ -10462,10 +8814,10 @@ var init_get_default_field_name = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs
 var initGetFieldAttributes;
 var init_get_field_attributes = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-field-attributes.mjs"() {
     init_error2();
     init_get_default_model_name();
     init_get_id_field();
@@ -10503,10 +8855,10 @@ var init_get_field_attributes = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs
 var initGetFieldName;
 var init_get_field_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-field-name.mjs"() {
     init_get_default_model_name();
     init_get_default_field_name();
     initGetFieldName = /* @__PURE__ */ __name(({ schema: schema3, usePlural }) => {
@@ -10532,10 +8884,10 @@ var init_get_field_name = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs
 var initGetModelName;
 var init_get_model_name = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/get-model-name.mjs"() {
     init_get_default_model_name();
     initGetModelName = /* @__PURE__ */ __name(({ usePlural, schema: schema3 }) => {
       const getDefaultModelName = initGetDefaultModelName({
@@ -10552,7 +8904,7 @@ var init_get_model_name = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/utils.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/utils.mjs
 function withApplyDefault(value, field, action) {
   if (action === "update") {
     if (value === void 0 && field.onUpdate !== void 0) {
@@ -10572,12 +8924,12 @@ function withApplyDefault(value, field, action) {
   return value;
 }
 var init_utils2 = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/utils.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/utils.mjs"() {
     __name(withApplyDefault, "withApplyDefault");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs
 function createAtomicFallbacks(context) {
   const { adapter, adapterId } = context;
   const outputId = Object.entries(context.mapKeysTransformOutput ?? {}).find(([, field]) => field === "id")?.[0] ?? "id";
@@ -10700,7 +9052,7 @@ function createAtomicFallbacks(context) {
 }
 var MAX_ATTEMPTS, scalar, readSchema, setSchema, mutationSchema, counterSchema;
 var init_atomic_fallback = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/atomic-fallback.mjs"() {
     init_error2();
     init_zod();
     MAX_ATTEMPTS = 5;
@@ -10725,7 +9077,7 @@ var init_atomic_fallback = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/factory.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/factory.mjs
 function formatTransactionId(transactionId2) {
   if (getColorDepth() < 8) return `#${transactionId2}`;
   return `${TTY_COLORS.fg.magenta}#${transactionId2}${TTY_COLORS.reset}`;
@@ -10741,7 +9093,7 @@ function formatAction(action) {
 }
 var debugLogs, transactionId, createAsIsTransaction, createAdapterFactory;
 var init_factory = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/factory.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/factory.mjs"() {
     init_error2();
     init_get_tables();
     init_color_depth();
@@ -11105,8 +9457,8 @@ var init_factory = __esm({
         });
         try {
           if (joinConfig.relation === "one-to-one") result = await withSpan(`db findOne ${modelName}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "findOne",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: modelName
+            [ATTR_DB_OPERATION_NAME]: "findOne",
+            [ATTR_DB_COLLECTION_NAME]: modelName
           }, () => adapterInstance.findOne({
             model: modelName,
             modelKey,
@@ -11115,8 +9467,8 @@ var init_factory = __esm({
           else {
             const limit = joinConfig.limit ?? options.advanced?.database?.defaultFindManyLimit ?? 100;
             result = await withSpan(`db findMany ${modelName}`, {
-              [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "findMany",
-              [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: modelName
+              [ATTR_DB_OPERATION_NAME]: "findMany",
+              [ATTR_DB_COLLECTION_NAME]: modelName
             }, () => adapterInstance.findMany({
               model: modelName,
               modelKey,
@@ -11188,8 +9540,8 @@ var init_factory = __esm({
             data
           });
           const res = await withSpan(`db create ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "create",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "create",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.create({
             data,
             model,
@@ -11229,8 +9581,8 @@ var init_factory = __esm({
             data
           });
           const res = await withSpan(`db update ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "update",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "update",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.update({
             model,
             modelKey,
@@ -11270,8 +9622,8 @@ var init_factory = __esm({
             data
           });
           const updatedCount = await withSpan(`db updateMany ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "updateMany",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "updateMany",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.updateMany({
             model,
             modelKey,
@@ -11316,8 +9668,8 @@ var init_factory = __esm({
             join
           });
           const res = await withSpan(`db findOne ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "findOne",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "findOne",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.findOne({
             model,
             modelKey,
@@ -11367,8 +9719,8 @@ var init_factory = __esm({
             join
           });
           const res = await withSpan(`db findMany ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "findMany",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "findMany",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.findMany({
             model,
             modelKey,
@@ -11408,8 +9760,8 @@ var init_factory = __esm({
             where
           });
           await withSpan(`db delete ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "delete",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "delete",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.delete({
             model,
             modelKey,
@@ -11432,8 +9784,8 @@ var init_factory = __esm({
             where
           });
           const res = await withSpan(`db deleteMany ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "deleteMany",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "deleteMany",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.deleteMany({
             model,
             modelKey,
@@ -11460,8 +9812,8 @@ var init_factory = __esm({
             where
           });
           const res = await withSpan(`db consumeOne ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "consumeOne",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "consumeOne",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.consumeOne ? adapterInstance.consumeOne({
             model,
             modelKey,
@@ -11513,8 +9865,8 @@ var init_factory = __esm({
           else set = unsafeSet;
           if (Object.keys(increment).length === 0 && (!set || Object.keys(set).length === 0)) throw new BetterAuthError("incrementOne resolved to an empty update: every increment/set field was unknown to the schema or transformed away.");
           const res = await withSpan(`db incrementOne ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "incrementOne",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "incrementOne",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.incrementOne ? adapterInstance.incrementOne({
             model,
             modelKey,
@@ -11555,8 +9907,8 @@ var init_factory = __esm({
             where
           });
           const res = await withSpan(`db count ${model}`, {
-            [import_semantic_conventions.ATTR_DB_OPERATION_NAME]: "count",
-            [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model
+            [ATTR_DB_OPERATION_NAME]: "count",
+            [ATTR_DB_COLLECTION_NAME]: model
           }, () => adapterInstance.count({
             model,
             modelKey,
@@ -11610,16 +9962,16 @@ ${separator}`]);
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/index.mjs
 var init_adapter = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/adapter/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/adapter/index.mjs"() {
     init_get_field_name();
     init_get_model_name();
     init_factory();
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_ab0fdbf99ced4ff70d89eaedb0154c0e/node_modules/@better-auth/memory-adapter/dist/index.mjs
+// ../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_c40fe34bcc4ad7ca115613f7bda834b0/node_modules/@better-auth/memory-adapter/dist/index.mjs
 var dist_exports = {};
 __export(dist_exports, {
   memoryAdapter: () => memoryAdapter
@@ -11684,7 +10036,7 @@ function rowChanged(baseRow, cloneRow) {
 }
 var memoryAdapter;
 var init_dist = __esm({
-  "../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_ab0fdbf99ced4ff70d89eaedb0154c0e/node_modules/@better-auth/memory-adapter/dist/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+memory-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_c40fe34bcc4ad7ca115613f7bda834b0/node_modules/@better-auth/memory-adapter/dist/index.mjs"() {
     init_adapter();
     init_env();
     __name(insensitiveCompare, "insensitiveCompare");
@@ -31539,7 +29891,7 @@ var init_dist2 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs
 function sqliteIntegerPrimaryKeyColumn(columns) {
   const primaryKeys = columns.filter((column) => column.pk > 0);
   const primaryKey = primaryKeys.length === 1 ? primaryKeys[0] : void 0;
@@ -31614,7 +29966,7 @@ function createSqliteIntrospector(db) {
 }
 var DEFAULT_MIGRATION_TABLE2, DEFAULT_MIGRATION_LOCK_TABLE2;
 var init_sqlite_introspector_DSCAP82F = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/sqlite-introspector-DSCAP82F.mjs"() {
     init_dist2();
     DEFAULT_MIGRATION_TABLE2 = "kysely_migration";
     DEFAULT_MIGRATION_LOCK_TABLE2 = "kysely_migration_lock";
@@ -31627,24 +29979,24 @@ var init_sqlite_introspector_DSCAP82F = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/string.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/string.mjs
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 var init_string = __esm({
-  "../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/string.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/string.mjs"() {
     __name(capitalizeFirstLetter, "capitalizeFirstLetter");
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs
 var bun_sqlite_dialect_DoOVo4ja_exports = {};
 __export(bun_sqlite_dialect_DoOVo4ja_exports, {
   BunSqliteDialect: () => BunSqliteDialect
 });
 var BunSqliteAdapter, BunSqliteDriver, BunSqliteConnection, ConnectionMutex2, BunSqliteQueryCompiler, BunSqliteDialect;
 var init_bun_sqlite_dialect_DoOVo4ja = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/bun-sqlite-dialect-DoOVo4ja.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_dist2();
     BunSqliteAdapter = class {
@@ -31788,14 +30140,14 @@ var init_bun_sqlite_dialect_DoOVo4ja = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs
 var node_sqlite_dialect_exports = {};
 __export(node_sqlite_dialect_exports, {
   NodeSqliteDialect: () => NodeSqliteDialect
 });
 var NodeSqliteAdapter, NodeSqliteDriver, NodeSqliteConnection, ConnectionMutex3, NodeSqliteQueryCompiler, NodeSqliteDialect;
 var init_node_sqlite_dialect = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/node-sqlite-dialect.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_dist2();
     NodeSqliteAdapter = class {
@@ -31939,7 +30291,7 @@ var init_node_sqlite_dialect = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-m0f01-4z.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-m0f01-4z.mjs
 var d1_sqlite_dialect_m0f01_4z_exports = {};
 __export(d1_sqlite_dialect_m0f01_4z_exports, {
   D1SqliteDialect: () => D1SqliteDialect,
@@ -31977,7 +30329,7 @@ function createD1IndexIntrospector(database) {
 }
 var D1SqliteAdapter, D1SqliteDriver, D1SqliteConnection, D1SqliteIntrospector, D1SqliteQueryCompiler, D1SqliteDialect;
 var init_d1_sqlite_dialect_m0f01_4z = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-m0f01-4z.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/d1-sqlite-dialect-m0f01-4z.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_dist2();
     __name(quoteSqliteStringLiteral, "quoteSqliteStringLiteral");
@@ -32108,7 +30460,7 @@ var init_d1_sqlite_dialect_m0f01_4z = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/index.mjs
+// ../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/index.mjs
 function getKyselyDatabaseType(db) {
   if (!db) return null;
   if ("dialect" in db) return getKyselyDatabaseType(db.dialect);
@@ -32232,7 +30584,7 @@ async function findSchemaProblems(db, dbType, expected) {
 }
 var createKyselyAdapter, kyselyAdapter;
 var init_dist3 = __esm({
-  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@b_23062adcfa06808ffb5273b64f02f837/node_modules/@better-auth/kysely-adapter/dist/index.mjs"() {
+  "../../node_modules/.pnpm/@better-auth+kysely-adapter@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@b_ef9406149ed7eb24e5a9eea0f4552afb/node_modules/@better-auth/kysely-adapter/dist/index.mjs"() {
     init_sqlite_introspector_DSCAP82F();
     init_error2();
     init_dist2();
@@ -32797,7 +31149,7 @@ var init_dist3 = __esm({
   }
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs
 var kysely_adapter_exports = {};
 __export(kysely_adapter_exports, {
   createKyselyAdapter: () => createKyselyAdapter,
@@ -32809,7 +31161,7 @@ __export(kysely_adapter_exports, {
   toPhysicalSchema: () => toPhysicalSchema
 });
 var init_kysely_adapter = __esm({
-  "../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs"() {
+  "../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/adapters/kysely-adapter/index.mjs"() {
     init_dist3();
   }
 });
@@ -33007,7 +31359,7 @@ function readDesktopAsk(values) {
 }
 __name(readDesktopAsk, "readDesktopAsk");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/cookie-utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/cookies/cookie-utils.mjs
 function tryDecode(str) {
   if (str.indexOf("%") === -1) return str;
   try {
@@ -33134,13 +31486,13 @@ function setRequestCookie(headers, name, value) {
 }
 __name(setRequestCookie, "setRequestCookie");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/package.mjs
-var version = "1.7.10";
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/package.mjs
+var version = "1.7.12";
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/version.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/version.mjs
 var PACKAGE_VERSION = version;
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/index.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/index.mjs
 init_error();
 
 // ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/index.mjs
@@ -33151,7 +31503,7 @@ function getWebcryptoSubtle() {
 }
 __name(getWebcryptoSubtle, "getWebcryptoSubtle");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/crypto.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/crypto.mjs
 var algorithm = {
   name: "HMAC",
   hash: "SHA-256"
@@ -33182,7 +31534,7 @@ var signCookieValue = /* @__PURE__ */ __name(async (value, secret) => {
   return value;
 }, "signCookieValue");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/utils.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/utils.mjs
 init_error();
 var jsonContentTypeRegex = /^application\/([a-z0-9.+-]*\+)?json/i;
 async function getBody(request, allowedMediaTypes) {
@@ -33268,7 +31620,7 @@ function isRequest(obj) {
 }
 __name(isRequest, "isRequest");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/cookies.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/cookies.mjs
 var COOKIE_PREFIXES = {
   secure: "__Secure-",
   host: "__Host-"
@@ -33347,10 +31699,10 @@ var serializeSignedCookie = /* @__PURE__ */ __name(async (key, value, secret, op
   return serializeCookieValue(resolveCookie(key, value, opt));
 }, "serializeSignedCookie");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/context.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/context.mjs
 init_error();
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/validator.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/validator.mjs
 async function runValidation(options, context = {}) {
   const request = {
     body: context.body,
@@ -33402,7 +31754,7 @@ function fromError(error3, validating) {
 }
 __name(fromError, "fromError");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/context.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/context.mjs
 var createInternalContext = /* @__PURE__ */ __name(async (context, { options, path }) => {
   const headers = new Headers();
   let responseStatus = void 0;
@@ -33493,7 +31845,7 @@ var createInternalContext = /* @__PURE__ */ __name(async (context, { options, pa
   return internalContext;
 }, "createInternalContext");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/to-response.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/to-response.mjs
 function isJSONSerializable(value) {
   if (value === void 0) return false;
   const t = typeof value;
@@ -33640,7 +31992,7 @@ function toResponse(data, init2) {
 }
 __name(toResponse, "toResponse");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/endpoint.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/endpoint.mjs
 init_error();
 function createEndpoint(pathOrOptions, handlerOrOptions, handlerOrNever) {
   const path = typeof pathOrOptions === "string" ? pathOrOptions : void 0;
@@ -33718,7 +32070,7 @@ createEndpoint.create = (opts) => {
   return createConfiguredEndpoint;
 };
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/middleware.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/middleware.mjs
 init_error();
 function createMiddleware(optionsOrHandler, handler) {
   const internalHandler = /* @__PURE__ */ __name(async (inputCtx) => {
@@ -33765,7 +32117,7 @@ createMiddleware.create = (opts) => {
   return fn;
 };
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/openapi.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/openapi.mjs
 init_zod();
 var paths = {};
 function getTypeFromZodType(zodType) {
@@ -34397,7 +32749,7 @@ function pushSorted(matches, match, dynamicTerminal) {
 }
 __name(pushSorted, "pushSorted");
 
-// ../../node_modules/.pnpm/better-call@1.4.2_zod@4.6.5/node_modules/better-call/dist/router.mjs
+// ../../node_modules/.pnpm/better-call@1.4.4_zod@4.6.5/node_modules/better-call/dist/router.mjs
 var createRouter$1 = /* @__PURE__ */ __name((endpoints, config3) => {
   if (!config3?.openapi?.disabled) {
     const openapi = {
@@ -34505,10 +32857,10 @@ var createRouter$1 = /* @__PURE__ */ __name((endpoints, config3) => {
   };
 }, "createRouter$1");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
 init_global();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/async_hooks/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/async_hooks/index.mjs
 var cachedAsyncLocalStorageConstructor;
 var availabilityWarningLogged = false;
 function getBuiltinAsyncLocalStorage() {
@@ -34552,7 +32904,7 @@ async function getAsyncLocalStorage() {
 }
 __name(getAsyncLocalStorage, "getAsyncLocalStorage");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/context/endpoint-context.mjs
 var getExistingEndpointContextStorage = /* @__PURE__ */ __name(() => {
   return __getBetterAuthGlobal().context.endpointContextAsyncStorage;
 }, "getExistingEndpointContextStorage");
@@ -34578,14 +32930,14 @@ async function runWithEndpointContext(authEndpointContext, fn) {
 }
 __name(runWithEndpointContext, "runWithEndpointContext");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/is-api-error.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/is-api-error.mjs
 init_error2();
 function isAPIError2(error3) {
   return error3 instanceof APIError || error3 instanceof APIError2 || error3?.name === "APIError";
 }
 __name(isAPIError2, "isAPIError");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/api/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/api/index.mjs
 var NO_STORE_HEADERS = {
   "Cache-Control": "no-store",
   Pragma: "no-cache"
@@ -34671,7 +33023,7 @@ var createHMAC = /* @__PURE__ */ __name((algorithm2 = "SHA-256", encoding = "non
   return hmac3;
 }, "createHMAC");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/bearer/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/plugins/bearer/index.mjs
 var BEARER_SCHEME = "bearer ";
 function tryDecode3(str) {
   try {
@@ -34737,10 +33089,10 @@ var bearer = /* @__PURE__ */ __name((options) => {
   };
 }, "bearer");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/index.mjs
 init_get_tables();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema/shared.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/schema/shared.mjs
 init_zod();
 var coreSchema = object({
   id: string2(),
@@ -34748,7 +33100,7 @@ var coreSchema = object({
   updatedAt: date2().default(() => /* @__PURE__ */ new Date())
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema/session.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/schema/session.mjs
 init_zod();
 var sessionSchema = coreSchema.extend({
   userId: coerce_exports.string(),
@@ -34758,7 +33110,7 @@ var sessionSchema = coreSchema.extend({
   userAgent: string2().nullish()
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/db/schema/user.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/db/schema/user.mjs
 init_zod();
 var userSchema = coreSchema.extend({
   email: string2().transform((val) => val.toLowerCase()),
@@ -34767,10 +33119,10 @@ var userSchema = coreSchema.extend({
   image: string2().nullish()
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/schema.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/db.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/db.mjs
 function filterOutputFields(data, additionalFields) {
   if (!data || !additionalFields) return data;
   const returnFiltered = Object.entries(additionalFields).filter(([, { returned }]) => returned === false).map(([key]) => key);
@@ -34781,7 +33133,7 @@ function filterOutputFields(data, additionalFields) {
 }
 __name(filterOutputFields, "filterOutputFields");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/schema.mjs
 var cache = /* @__PURE__ */ new WeakMap();
 function getFields(options, modelName, mode) {
   const cacheKey = `${modelName}:${mode}`;
@@ -34930,7 +33282,7 @@ function mergeSchema(schema3, newSchema) {
 }
 __name(mergeSchema, "mergeSchema");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/time.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/time.mjs
 var SEC = 1e3;
 var MIN = SEC * 60;
 var HOUR = MIN * 60;
@@ -35005,7 +33357,7 @@ function sec(value) {
 }
 __name(sec, "sec");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/error-codes.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/plugins/device-authorization/error-codes.mjs
 init_error_codes();
 var DEVICE_AUTHORIZATION_ERROR_CODES = defineErrorCodes({
   INVALID_DEVICE_CODE: "Invalid device code",
@@ -35023,7 +33375,7 @@ var DEVICE_AUTHORIZATION_ERROR_CODES = defineErrorCodes({
   AUTHENTICATION_REQUIRED: "Authentication required"
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/plugins/device-authorization/schema.mjs
 init_zod();
 var schema = { deviceCode: {
   fields: {
@@ -35085,11 +33437,11 @@ object({
   scope: string2().optional()
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/random.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/crypto/random.mjs
 init_random();
 var generateRandomString = createRandomStringGenerator("a-z", "0-9", "A-Z", "-_");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/store-capabilities.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/context/store-capabilities.mjs
 function hasServerSessionStore(options) {
   return !!options.database || !!options.secondaryStorage;
 }
@@ -35103,7 +33455,7 @@ function shouldBindAccountCookieToSessionUser(options) {
 }
 __name(shouldBindAccountCookieToSessionUser, "shouldBindAccountCookieToSessionUser");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/date.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/date.mjs
 var getDate = /* @__PURE__ */ __name((span, unit = "ms") => {
   return new Date(Date.now() + (unit === "sec" ? span * 1e3 : span));
 }, "getDate");
@@ -37435,7 +35787,7 @@ function decodeJwt(jwt) {
 }
 __name(decodeJwt, "decodeJwt");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/jwt.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/crypto/jwt.mjs
 async function signJWT(payload, secret, expiresIn = 3600) {
   return await new SignJWT(payload).setProtectedHeader({ alg: "HS256" }).setIssuedAt().setExpirationTime(Math.floor(Date.now() / 1e3) + expiresIn).sign(new TextEncoder().encode(secret));
 }
@@ -37579,7 +35931,7 @@ async function symmetricDecodeJWT(token, secret, salt2) {
 }
 __name(symmetricDecodeJWT, "symmetricDecodeJWT");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/session-store.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/cookies/session-store.mjs
 init_json();
 init_zod();
 var MAX_COOKIE_SIZE = 4050;
@@ -37734,7 +36086,7 @@ var getSessionQuerySchema = optional(object({
   disableRefresh: coerce_exports.boolean().meta({ description: "Disable session refresh. Useful for checking session status, without updating the session" }).optional()
 }));
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/wildcard.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/wildcard.mjs
 function escapeRegExpChar(char) {
   if (char === "-" || char === "^" || char === "$" || char === "+" || char === "." || char === "(" || char === ")" || char === "|" || char === "[" || char === "]" || char === "{" || char === "}" || char === "*" || char === "?" || char === "\\") return `\\${char}`;
   else return char;
@@ -37819,7 +36171,7 @@ function wildcardMatch(pattern, options) {
 }
 __name(wildcardMatch, "wildcardMatch");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/url.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/url.mjs
 init_env();
 init_error2();
 var SLASH_CHAR_CODE = "/".charCodeAt(0);
@@ -38001,13 +36353,13 @@ function resolveBaseURL(config3, basePath, source, loadEnv, trustedProxyHeaders)
 }
 __name(resolveBaseURL, "resolveBaseURL");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/is-promise.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/is-promise.mjs
 function isPromise(obj) {
   return !!obj && (typeof obj === "object" || typeof obj === "function") && typeof obj.then === "function";
 }
 __name(isPromise, "isPromise");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/cache.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/cookies/cache.mjs
 init_env();
 init_json();
 init_zod();
@@ -38040,7 +36392,7 @@ function parseCompactCookieCache(value) {
 }
 __name(parseCompactCookieCache, "parseCompactCookieCache");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/cookies/index.mjs
 init_env();
 init_error2();
 init_json();
@@ -38057,7 +36409,7 @@ var binary = {
   encode: /* @__PURE__ */ __name((input) => encoder3.encode(input), "encode")
 };
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/cookies/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/cookies/index.mjs
 function createCookieGetter(options) {
   const baseURLString = typeof options.baseURL === "string" ? options.baseURL : void 0;
   const dynamicProtocol = typeof options.baseURL === "object" && options.baseURL !== null ? options.baseURL.protocol : void 0;
@@ -38278,10 +36630,10 @@ function deleteSessionCookie(ctx, skipDontRememberMe) {
 }
 __name(deleteSessionCookie, "deleteSessionCookie");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/context/index.mjs
 init_global();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/request-state.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/context/request-state.mjs
 init_global();
 var ensureAsyncStorage = /* @__PURE__ */ __name(async () => {
   const betterAuthGlobal = __getBetterAuthGlobal();
@@ -38327,7 +36679,7 @@ function defineRequestState(initFn) {
 }
 __name(defineRequestState, "defineRequestState");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/context/transaction.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/context/transaction.mjs
 init_global();
 init_schema_check();
 init_logger();
@@ -38445,10 +36797,10 @@ var queueAfterTransactionHook = /* @__PURE__ */ __name(async (hook, options) => 
   store.pendingHooks.push(executeHook);
 }, "queueAfterTransactionHook");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/state/should-session-refresh.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/state/should-session-refresh.mjs
 var { get: getShouldSkipSessionRefresh, set: setShouldSkipSessionRefresh } = defineRequestState(() => false);
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/session.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/session.mjs
 init_error2();
 init_zod();
 var getSession = /* @__PURE__ */ __name(() => createAuthEndpoint("/get-session", {
@@ -38653,7 +37005,7 @@ var getSession = /* @__PURE__ */ __name(() => createAuthEndpoint("/get-session",
   } catch (error3) {
     if (isAPIError2(error3)) throw error3;
     ctx.context.logger.error("INTERNAL_SERVER_ERROR", error3);
-    throw APIError2.from("INTERNAL_SERVER_ERROR", BASE_ERROR_CODES.FAILED_TO_GET_SESSION);
+    throw APIError2.from("INTERNAL_SERVER_ERROR", BASE_ERROR_CODES.FAILED_TO_GET_SESSION, { cause: error3 });
   }
 }), "getSession");
 var isStateful = /* @__PURE__ */ __name((ctx) => hasServerSessionStore(ctx.context.options), "isStateful");
@@ -38858,7 +37210,7 @@ var revokeOtherSessions = createAuthEndpoint("/revoke-other-sessions", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/routes.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/plugins/device-authorization/routes.mjs
 init_error2();
 init_zod();
 var defaultCharset = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
@@ -39566,7 +37918,7 @@ var defaultGenerateUserCode = /* @__PURE__ */ __name((length) => {
   return Array.from(crypto.getRandomValues(chars)).map((byte) => defaultCharset[byte % 32]).join("");
 }, "defaultGenerateUserCode");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/plugins/device-authorization/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/plugins/device-authorization/index.mjs
 init_error2();
 init_zod();
 var timeStringSchema = custom((val) => {
@@ -39647,7 +37999,7 @@ var deviceAuthorization = /* @__PURE__ */ __name((options = {}) => {
   };
 }, "deviceAuthorization");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/auth/trusted-origins.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/auth/trusted-origins.mjs
 var CONTROL_CHARACTER_PATTERN = /[\u0000-\u001f\u007f-\u009f]/;
 var RELATIVE_URL_PARSER_ORIGIN = "https://better-auth.invalid";
 var ENCODED_PATH_SEPARATOR_PATTERN = /%2[fF]|%5[cC]/;
@@ -39717,10 +38069,10 @@ var matchesOriginPattern = /* @__PURE__ */ __name((url, pattern, settings) => {
   return parsed.path === parsedPattern.path || parsed.path.startsWith(`${parsedPattern.path}/`);
 }, "matchesOriginPattern");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/url.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/url.mjs
 function normalizePathname(requestUrl, basePath) {
   let pathname;
   try {
@@ -39749,7 +38101,7 @@ function appendQueryParams(input, params) {
 }
 __name(appendQueryParams, "appendQueryParams");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/deprecate.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/deprecate.mjs
 function deprecate(fn, message2, logger2) {
   let warned = false;
   return function(...args) {
@@ -39762,7 +38114,7 @@ function deprecate(fn, message2, logger2) {
 }
 __name(deprecate, "deprecate");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/middlewares/origin-check.mjs
 function shouldSkipCSRFForBackwardCompat(ctx) {
   return ctx.context.skipOriginCheck === true && ctx.context.options.advanced?.disableCSRFCheck === void 0;
 }
@@ -39888,10 +38240,10 @@ async function validateFormCsrf(ctx) {
 }
 __name(validateFormCsrf, "validateFormCsrf");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/rate-limiter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/rate-limiter/index.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/ip.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/ip.mjs
 init_env_impl();
 init_zod();
 var ipv4Schema = ipv42();
@@ -40067,7 +38419,7 @@ function createRateLimitKey(ip, path) {
 }
 __name(createRateLimitKey, "createRateLimitKey");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/rate-limiter/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/rate-limiter/index.mjs
 var memory = /* @__PURE__ */ new Map();
 var MEMORY_STORE_MAX_ENTRIES = 1e5;
 function pruneMemoryStore() {
@@ -40151,7 +38503,7 @@ function createDatabaseStorageWrapper(ctx) {
         value: key
       }]
     }))[0];
-    if (typeof data?.lastRequest === "bigint") data.lastRequest = Number(data.lastRequest);
+    if (data) data.lastRequest = Number(data.lastRequest);
     return data;
   }, "readRow");
   const consume = /* @__PURE__ */ __name(async (key, rule) => {
@@ -40381,11 +38733,11 @@ function getDefaultSpecialRules() {
 }
 __name(getDefaultSpecialRules, "getDefaultSpecialRules");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/state/oauth.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/state/oauth.mjs
 var { get: getRawOAuthState, set: setOAuthState } = defineRequestState(() => null);
 var { get: getOAuthServerContext, set: setOAuthServerContext } = defineRequestState(() => null);
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/validate-user-info.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/validate-user-info.mjs
 init_error2();
 function assertValidUserInfoSource(source) {
   if (!source?.method) throw new APIError2("FORBIDDEN", {
@@ -40423,7 +38775,7 @@ async function assertValidUserInfo(ctx, data) {
 }
 __name(assertValidUserInfo, "assertValidUserInfo");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/verification-token-storage.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/verification-token-storage.mjs
 init_base64();
 
 // ../../node_modules/.pnpm/@better-auth+utils@0.5.0/node_modules/@better-auth/utils/dist/hash.mjs
@@ -40443,7 +38795,7 @@ function createHash(algorithm2, encoding) {
 }
 __name(createHash, "createHash");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/verification-token-storage.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/verification-token-storage.mjs
 var defaultKeyHasher = /* @__PURE__ */ __name(async (identifier) => {
   const hash = await createHash("SHA-256").digest(new TextEncoder().encode(identifier));
   return base64Url.encode(new Uint8Array(hash), { padding: false });
@@ -40467,7 +38819,7 @@ function getStorageOption(identifier, config3) {
 }
 __name(getStorageOption, "getStorageOption");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/with-hooks.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/with-hooks.mjs
 init_pure_index();
 function getWithHooks(adapter, ctx) {
   const withSpan = createWithSpan(ctx.options);
@@ -40480,7 +38832,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) {
         const result = await withSpan(`db create.before ${model}`, {
           [ATTR_HOOK_TYPE]: "create.before",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(actualData, context));
         if (result === false) return null;
@@ -40502,7 +38854,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) await queueAfterTransactionHook(async () => {
         await withSpan(`db create.after ${model}`, {
           [ATTR_HOOK_TYPE]: "create.after",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(created, context));
       });
@@ -40518,7 +38870,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) {
         const result = await withSpan(`db update.before ${model}`, {
           [ATTR_HOOK_TYPE]: "update.before",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(data, context));
         if (result === false) return null;
@@ -40539,7 +38891,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) await queueAfterTransactionHook(async () => {
         await withSpan(`db update.after ${model}`, {
           [ATTR_HOOK_TYPE]: "update.after",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(updated, context));
       });
@@ -40555,7 +38907,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) {
         const result = await withSpan(`db updateMany.before ${model}`, {
           [ATTR_HOOK_TYPE]: "updateMany.before",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(data, context));
         if (result === false) return null;
@@ -40576,7 +38928,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) await queueAfterTransactionHook(async () => {
         await withSpan(`db updateMany.after ${model}`, {
           [ATTR_HOOK_TYPE]: "updateMany.after",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(updated, context));
       });
@@ -40600,7 +38952,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) {
         if (await withSpan(`db delete.before ${model}`, {
           [ATTR_HOOK_TYPE]: "delete.before",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(entityToDelete, context)) === false) return null;
       }
@@ -40615,7 +38967,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) await queueAfterTransactionHook(async () => {
         await withSpan(`db delete.after ${model}`, {
           [ATTR_HOOK_TYPE]: "delete.after",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(entityToDelete, context));
       });
@@ -40638,7 +38990,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) {
         if (await withSpan(`db delete.before ${model}`, {
           [ATTR_HOOK_TYPE]: "delete.before",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(entity, context)) === false) return null;
       }
@@ -40653,7 +39005,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) await queueAfterTransactionHook(async () => {
         await withSpan(`db delete.after ${model}`, {
           [ATTR_HOOK_TYPE]: "delete.after",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(entity, context));
       });
@@ -40683,7 +39035,7 @@ function getWithHooks(adapter, ctx) {
       if (snapshot) {
         for (const { source, fn } of beforeHooks) if (await withSpan(`db delete.before ${model}`, {
           [ATTR_HOOK_TYPE]: "delete.before",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => fn(snapshot, context)) === false) return null;
       }
@@ -40695,7 +39047,7 @@ function getWithHooks(adapter, ctx) {
       if (toRun) await queueAfterTransactionHook(async () => {
         await withSpan(`db delete.after ${model}`, {
           [ATTR_HOOK_TYPE]: "delete.after",
-          [import_semantic_conventions.ATTR_DB_COLLECTION_NAME]: model,
+          [ATTR_DB_COLLECTION_NAME]: model,
           [ATTR_CONTEXT]: source
         }, () => toRun(consumed, context));
       });
@@ -40714,7 +39066,7 @@ function getWithHooks(adapter, ctx) {
 }
 __name(getWithHooks, "getWithHooks");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/internal-adapter.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/internal-adapter.mjs
 init_error2();
 init_id();
 init_json();
@@ -41667,7 +40019,7 @@ var createInternalAdapter = /* @__PURE__ */ __name((adapter, ctx) => {
   };
 }, "createInternalAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/helpers.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/context/helpers.mjs
 init_env();
 init_error2();
 
@@ -41742,7 +40094,7 @@ var defuArrayFn = createDefu((object2, key, currentValue) => {
   }
 });
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/host.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/host.mjs
 var CLOUD_METADATA_HOSTS = /* @__PURE__ */ new Set([
   "metadata.google.internal",
   "metadata.goog",
@@ -41906,7 +40258,7 @@ function isLoopbackHost(host) {
 }
 __name(isLoopbackHost, "isLoopbackHost");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/helpers.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/context/helpers.mjs
 async function runPluginInit(context) {
   let options = context.options;
   const plugins = options.plugins || [];
@@ -42046,7 +40398,7 @@ async function getTrustedProviders(options, request) {
 }
 __name(getTrustedProviders, "getTrustedProviders");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/account-key.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/oauth2/account-key.mjs
 init_error2();
 function toOAuthProfileRecord(profile) {
   return profile;
@@ -42076,7 +40428,7 @@ async function resolveOAuthAccountKeyForAPI(provider2, tokens, profile) {
 }
 __name(resolveOAuthAccountKeyForAPI, "resolveOAuthAccountKeyForAPI");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/errors.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/oauth2/errors.mjs
 var OAUTH_CALLBACK_ERROR_CODES = {
   NO_CODE: "no_code",
   PROVIDER_NOT_FOUND: "oauth_provider_not_found",
@@ -42139,7 +40491,7 @@ async function verifyPassword(hash, password) {
 }
 __name(verifyPassword, "verifyPassword");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/crypto/password.mjs
 var hashPassword$1 = hashPassword;
 var verifyPassword$1 = /* @__PURE__ */ __name(async ({ hash, password }) => {
   return verifyPassword(hash, password);
@@ -43025,7 +41377,7 @@ var xchacha20poly1305 = /* @__PURE__ */ wrapCipher(
   /* @__PURE__ */ _poly1305_aead(xchacha20)
 );
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/crypto/index.mjs
 var ENVELOPE_PREFIX = "$ba$";
 function parseEnvelope(data) {
   if (!data.startsWith(ENVELOPE_PREFIX)) return null;
@@ -43076,7 +41428,7 @@ var symmetricDecrypt = /* @__PURE__ */ __name(async ({ key, data }) => {
   throw new Error("Cannot decrypt legacy bare-hex payload: no legacy secret available. Set BETTER_AUTH_SECRET for backwards compatibility.");
 }, "symmetricDecrypt");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/oauth2/utils.mjs
 function isLikelyEncrypted(token) {
   if (token.startsWith("$ba$")) return true;
   return token.length % 2 === 0 && /^[0-9a-f]+$/i.test(token);
@@ -43108,7 +41460,7 @@ function getOAuthCallbackPath(provider2) {
 }
 __name(getOAuthCallbackPath, "getOAuthCallbackPath");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/request.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/request.mjs
 function safeCloneRequest(request) {
   if (!request) return;
   try {
@@ -43131,7 +41483,7 @@ function safeCloneRequest(request) {
 }
 __name(safeCloneRequest, "safeCloneRequest");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/email-verification.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/email-verification.mjs
 init_error2();
 init_zod();
 async function createEmailVerificationToken(secret, email3, updateTo, expiresIn = 3600, extraPayload) {
@@ -43438,11 +41790,11 @@ var verifyEmail = createAuthEndpoint("/verify-email", {
   });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/link-account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/oauth2/link-account.mjs
 init_env();
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/utils.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/utils.mjs
 init_base64();
 function parseScopeField(scope) {
   if (Array.isArray(scope)) return scope.map((s) => typeof s === "string" ? s.trim() : "").filter(Boolean);
@@ -43484,7 +41836,7 @@ async function generateCodeChallenge(codeVerifier) {
 }
 __name(generateCodeChallenge, "generateCodeChallenge");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/create-authorization-url.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/create-authorization-url.mjs
 var RESERVED_AUTHORIZATION_PARAMS = [
   "state",
   "client_id",
@@ -43538,11 +41890,11 @@ async function createAuthorizationURL({ id, options, authorizationEndpoint: auth
 }
 __name(createAuthorizationURL, "createAuthorizationURL");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/authorization-params.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/authorization-params.mjs
 init_zod();
 var additionalAuthorizationParamsSchema = record(string2(), string2()).refine((value) => !Object.keys(value).some((key) => RESERVED_AUTHORIZATION_PARAMS_SET.has(key)), { message: `additionalParams cannot include reserved OAuth parameters: ${RESERVED_AUTHORIZATION_PARAMS.join(", ")}` }).meta({ description: "Extra query parameters to append to the provider authorization URL (e.g. Cognito identity_provider, Google hd)." }).optional();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/basic-credentials.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/basic-credentials.mjs
 init_base64();
 function formUrlEncode(value) {
   return new URLSearchParams({ v: value }).toString().slice(2);
@@ -43554,7 +41906,7 @@ function encodeBasicCredentials(clientId, clientSecret) {
 }
 __name(encodeBasicCredentials, "encodeBasicCredentials");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/client-assertion.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/client-assertion.mjs
 var CLIENT_ASSERTION_TYPE = "urn:ietf:params:oauth:client-assertion-type:jwt-bearer";
 async function resolveClientAssertionParams({ getClientAssertion, context }) {
   return {
@@ -43564,7 +41916,7 @@ async function resolveClientAssertionParams({ getClientAssertion, context }) {
 }
 __name(resolveClientAssertionParams, "resolveClientAssertionParams");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
 init_error2();
 
 // ../../node_modules/.pnpm/@better-fetch+fetch@1.3.2/node_modules/@better-fetch/fetch/dist/index.js
@@ -44043,7 +42395,7 @@ var betterFetch = /* @__PURE__ */ __name(async (url, options) => {
   };
 }, "betterFetch");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/reject-redirects.mjs
 var httpRedirectStatuses = /* @__PURE__ */ new Set([
   301,
   302,
@@ -44059,13 +42411,12 @@ function redirectRefused(endpoint) {
   return new BetterAuthError(`The OAuth endpoint "${endpoint}" returned an HTTP redirect. Server-side OAuth fetches refuse redirects to prevent SSRF; configure the final endpoint URL.`);
 }
 __name(redirectRefused, "redirectRefused");
-var noFollowRedirect = { redirect: "manual" };
 async function fetchRefusingRedirects(url, options) {
   let redirected = false;
   const onError = options?.onError;
   const result = await betterFetch(url, {
     ...options,
-    ...noFollowRedirect,
+    redirect: "manual",
     async onError(context) {
       if (isRedirectResponse(context.response)) redirected = true;
       await onError?.(context);
@@ -44079,7 +42430,7 @@ async function fetchRefusingRedirects(url, options) {
 }
 __name(fetchRefusingRedirects, "fetchRefusingRedirects");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/token-endpoint-auth.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/token-endpoint-auth.mjs
 function getDefaultTokenEndpointAuth(options, authentication) {
   if (authentication === "basic") return { method: "client_secret_basic" };
   if (options.clientSecret) return { method: "client_secret_post" };
@@ -44184,7 +42535,7 @@ async function applyTokenEndpointAuth({ body, headers, options, tokenEndpoint: t
 }
 __name(applyTokenEndpointAuth, "applyTokenEndpointAuth");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/refresh-access-token.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/refresh-access-token.mjs
 var BLOCKED_REFRESH_TOKEN_PARAMS_SET = /* @__PURE__ */ new Set([
   "grant_type",
   "refresh_token",
@@ -44266,7 +42617,7 @@ async function refreshAccessToken({ refreshToken: refreshToken2, options, tokenE
 }
 __name(refreshAccessToken, "refreshAccessToken");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/validate-authorization-code.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/validate-authorization-code.mjs
 async function authorizationCodeRequest({ code, codeVerifier, redirectURI, options, authentication, tokenEndpointAuth, tokenEndpoint: tokenEndpoint4, deviceId, headers, additionalParams = {}, resource }) {
   options = typeof options === "function" ? await options() : options;
   const request = buildAuthorizationCodeRequest({
@@ -44337,7 +42688,26 @@ async function validateAuthorizationCode({ code, codeVerifier, redirectURI, opti
 }
 __name(validateAuthorizationCode, "validateAuthorizationCode");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/oauth2/verify-id-token.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/oauth2/verify-id-token.mjs
+var ID_TOKEN_CLOCK_TOLERANCE_SECONDS = 30;
+var ID_TOKEN_REQUIRED_CLAIMS = [
+  "iss",
+  "sub",
+  "aud",
+  "exp",
+  "iat"
+];
+function getIdTokenVerifyOptions(options) {
+  return {
+    issuer: options.issuer,
+    audience: options.audience,
+    algorithms: options.algorithms,
+    maxTokenAge: options.maxTokenAge,
+    requiredClaims: ID_TOKEN_REQUIRED_CLAIMS,
+    clockTolerance: ID_TOKEN_CLOCK_TOLERANCE_SECONDS
+  };
+}
+__name(getIdTokenVerifyOptions, "getIdTokenVerifyOptions");
 async function sha256Hex(value) {
   const data = new TextEncoder().encode(value);
   const digest2 = await crypto.subtle.digest("SHA-256", data);
@@ -44351,6 +42721,14 @@ async function nonceMatches(claimNonce, nonce, comparison = "exact") {
   return false;
 }
 __name(nonceMatches, "nonceMatches");
+async function verifyIdToken(token, config3, nonce) {
+  if (![config3.audience].flat().some(Boolean)) throw new Error("ID token audience is not configured");
+  const verified = await jwtVerify(token, config3.jwks, getIdTokenVerifyOptions(config3));
+  if (nonce && !await nonceMatches(verified.payload.nonce, nonce, config3.nonceComparison)) throw new Error("ID token nonce does not match");
+  if (config3.verifyClaims && !config3.verifyClaims(verified.payload)) throw new Error("ID token claims were rejected");
+  return verified;
+}
+__name(verifyIdToken, "verifyIdToken");
 function supportsIdTokenSignIn(provider2) {
   const options = provider2.options ?? {};
   if (options.disableIdTokenSignIn) return false;
@@ -44366,16 +42744,7 @@ async function verifyProviderIdToken(provider2, token, nonce, ctx) {
     if (!config3) return false;
     if ("verify" in config3) return await config3.verify(token, nonce, ctx);
     if (token.split(".").length !== 3) return config3.allowOpaqueToken === true;
-    const { alg: alg2 } = decodeProtectedHeader(token);
-    const { payload } = await jwtVerify(token, config3.jwks, {
-      issuer: config3.issuer,
-      audience: config3.audience,
-      algorithms: config3.algorithms ?? (alg2 ? [alg2] : void 0),
-      maxTokenAge: config3.maxTokenAge,
-      clockTolerance: 30
-    });
-    if (nonce && !await nonceMatches(payload.nonce, nonce, config3.nonceComparison)) return false;
-    if (config3.verifyClaims && !config3.verifyClaims(payload)) return false;
+    await verifyIdToken(token, config3, nonce);
     return true;
   } catch {
     return false;
@@ -44383,7 +42752,7 @@ async function verifyProviderIdToken(provider2, token, nonce, ctx) {
 }
 __name(verifyProviderIdToken, "verifyProviderIdToken");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/link-account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/oauth2/link-account.mjs
 function linkOAuthAccountFailure(code, message2) {
   return {
     linked: false,
@@ -44748,7 +43117,7 @@ async function applyUpdateUserInfoOnLink(c, userId, userInfo) {
 }
 __name(applyUpdateUserInfoOnLink, "applyUpdateUserInfoOnLink");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/crypto/purpose.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/crypto/purpose.mjs
 init_utils();
 var salt = utf8ToBytes("better-auth:oauth-encryption:v1");
 function deriveSecret(secret, purpose) {
@@ -44765,7 +43134,7 @@ function derivePurposeKey(secret, purpose) {
 }
 __name(derivePurposeKey, "derivePurposeKey");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/state.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/state.mjs
 init_error2();
 init_zod();
 var stateDataSchema = looseObject({
@@ -44916,7 +43285,7 @@ async function parseGenericState(c, state, settings) {
 }
 __name(parseGenericState, "parseGenericState");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/oauth2/state.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/oauth2/state.mjs
 init_error2();
 function generateIdTokenNonce(provider2) {
   return provider2.requiresIdTokenNonce ? generateRandomString(32) : void 0;
@@ -44974,10 +43343,10 @@ async function parseState(c) {
 }
 __name(parseState, "parseState");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/account.mjs
 init_error2();
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/apple.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/apple.mjs
 init_error2();
 init_logger();
 var apple = /* @__PURE__ */ __name((options) => {
@@ -45019,6 +43388,7 @@ var apple = /* @__PURE__ */ __name((options) => {
     idToken: {
       jwks: /* @__PURE__ */ __name((header) => getApplePublicKey(header.kid), "jwks"),
       issuer: "https://appleid.apple.com",
+      algorithms: ["RS256"],
       audience: options.audience && options.audience.length ? options.audience : options.appBundleIdentifier ? options.appBundleIdentifier : options.clientId,
       maxTokenAge: "1h",
       nonceComparison: "exact-or-sha256"
@@ -45065,7 +43435,7 @@ var getApplePublicKey = /* @__PURE__ */ __name(async (kid) => {
   return await importJWK(jwk, jwk.alg);
 }, "getApplePublicKey");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/atlassian.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/atlassian.mjs
 init_error2();
 init_logger();
 var atlassian = /* @__PURE__ */ __name((options) => {
@@ -45143,7 +43513,7 @@ var atlassian = /* @__PURE__ */ __name((options) => {
   };
 }, "atlassian");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/cloudflare.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/cloudflare.mjs
 init_logger();
 var authorizationEndpoint = "https://dash.cloudflare.com/oauth2/auth";
 var tokenEndpoint = "https://dash.cloudflare.com/oauth2/token";
@@ -45217,7 +43587,7 @@ var cloudflare = /* @__PURE__ */ __name((options) => {
   };
 }, "cloudflare");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/cognito.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/cognito.mjs
 init_error2();
 init_logger();
 var cognito = /* @__PURE__ */ __name((options) => {
@@ -45297,6 +43667,7 @@ var cognito = /* @__PURE__ */ __name((options) => {
       jwks: /* @__PURE__ */ __name((header) => getCognitoPublicKey(header.kid, options.region, options.userPoolId), "jwks"),
       issuer: `https://cognito-idp.${options.region}.amazonaws.com/${options.userPoolId}`,
       audience: options.clientId,
+      algorithms: ["RS256"],
       maxTokenAge: "1h"
     },
     async getUserInfo(token) {
@@ -45360,7 +43731,7 @@ var getCognitoPublicKey = /* @__PURE__ */ __name(async (kid, region, userPoolId)
   }
 }, "getCognitoPublicKey");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/discord.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/discord.mjs
 var discord = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://discord.com/api/oauth2/token";
   return {
@@ -45430,7 +43801,7 @@ var discord = /* @__PURE__ */ __name((options) => {
   };
 }, "discord");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/dropbox.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/dropbox.mjs
 var dropbox = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.dropboxapi.com/oauth2/token";
   return {
@@ -45498,7 +43869,7 @@ var dropbox = /* @__PURE__ */ __name((options) => {
   };
 }, "dropbox");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/facebook.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/facebook.mjs
 init_error2();
 init_logger();
 async function verifyFacebookAccessToken(accessToken, options) {
@@ -45569,7 +43940,12 @@ var facebook = /* @__PURE__ */ __name((options) => {
       });
     },
     async getUserInfo(token) {
-      if (options.getUserInfo) return options.getUserInfo(token);
+      if (options.getUserInfo) {
+        const isOpaqueIdToken = !!token.idToken && token.idToken.split(".").length !== 3;
+        const clientToken = token.accessToken || (isOpaqueIdToken ? token.idToken : void 0);
+        if (clientToken && !await verifyFacebookAccessToken(clientToken, options)) return null;
+        return options.getUserInfo(token);
+      }
       if (token.idToken && token.idToken.split(".").length === 3) {
         const profile2 = decodeJwt(token.idToken);
         const userMap2 = await options.mapProfileToUser?.(profile2);
@@ -45616,7 +43992,7 @@ var facebook = /* @__PURE__ */ __name((options) => {
   };
 }, "facebook");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/figma.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/figma.mjs
 init_error2();
 init_logger();
 var figma = /* @__PURE__ */ __name((options) => {
@@ -45695,7 +44071,7 @@ var figma = /* @__PURE__ */ __name((options) => {
   };
 }, "figma");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/github.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/github.mjs
 init_logger();
 var github = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://github.com/login/oauth/access_token";
@@ -45782,7 +44158,7 @@ var github = /* @__PURE__ */ __name((options) => {
   };
 }, "github");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/gitlab.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/gitlab.mjs
 var cleanDoubleSlashes = /* @__PURE__ */ __name((input = "") => {
   return input.split("://").map((str) => str.replace(/\/{2,}/g, "/")).join("://");
 }, "cleanDoubleSlashes");
@@ -45857,11 +44233,12 @@ var gitlab = /* @__PURE__ */ __name((options) => {
   };
 }, "gitlab");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/google.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/google.mjs
 init_error2();
 init_logger();
 var GOOGLE_ID_TOKEN_MAX_AGE = "1h";
 var GOOGLE_ID_TOKEN_ALGORITHM = "RS256";
+var GOOGLE_ID_TOKEN_ALGORITHMS = [GOOGLE_ID_TOKEN_ALGORITHM];
 var isGoogleHostedDomainAllowed = /* @__PURE__ */ __name((configuredHostedDomain, tokenHostedDomain) => {
   if (!configuredHostedDomain) return true;
   if (typeof tokenHostedDomain !== "string" || !tokenHostedDomain) return false;
@@ -45929,6 +44306,7 @@ var google = /* @__PURE__ */ __name((options) => {
       jwks: /* @__PURE__ */ __name((header) => getGooglePublicKey(header.kid), "jwks"),
       issuer: ["https://accounts.google.com", "accounts.google.com"],
       audience: options.clientId,
+      algorithms: GOOGLE_ID_TOKEN_ALGORITHMS,
       maxTokenAge: GOOGLE_ID_TOKEN_MAX_AGE,
       verifyClaims: options.hd ? (claims) => isGoogleHostedDomainAllowed(options.hd, claims.hd) : void 0
     },
@@ -45968,7 +44346,7 @@ var getGooglePublicKeys = /* @__PURE__ */ __name(async (kid) => {
   return Promise.all(jwks.map((jwk) => importJWK(jwk, GOOGLE_ID_TOKEN_ALGORITHM)));
 }, "getGooglePublicKeys");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/huggingface.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/huggingface.mjs
 var huggingface = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://huggingface.co/oauth/token";
   return {
@@ -46037,7 +44415,7 @@ var huggingface = /* @__PURE__ */ __name((options) => {
   };
 }, "huggingface");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/kakao.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/kakao.mjs
 var kakao = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://kauth.kakao.com/oauth/token";
   return {
@@ -46103,7 +44481,7 @@ var kakao = /* @__PURE__ */ __name((options) => {
   };
 }, "kakao");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/kick.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/kick.mjs
 var kick = /* @__PURE__ */ __name((options) => {
   return {
     id: "kick",
@@ -46167,7 +44545,7 @@ var kick = /* @__PURE__ */ __name((options) => {
   };
 }, "kick");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/line.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/line.mjs
 var line = /* @__PURE__ */ __name((options) => {
   const authorizationEndpoint3 = "https://access.line.me/oauth2/v2.1/authorize";
   const tokenEndpoint4 = "https://api.line.me/oauth2/v2.1/token";
@@ -46259,7 +44637,7 @@ var line = /* @__PURE__ */ __name((options) => {
   };
 }, "line");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/linear.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/linear.mjs
 var linear = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.linear.app/oauth/token";
   return {
@@ -46340,7 +44718,7 @@ var linear = /* @__PURE__ */ __name((options) => {
   };
 }, "linear");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/linkedin.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/linkedin.mjs
 var linkedin = /* @__PURE__ */ __name((options) => {
   const authorizationEndpoint3 = "https://www.linkedin.com/oauth/v2/authorization";
   const tokenEndpoint4 = "https://www.linkedin.com/oauth/v2/accessToken";
@@ -46409,7 +44787,7 @@ var linkedin = /* @__PURE__ */ __name((options) => {
   };
 }, "linkedin");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/microsoft-entra-id.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/microsoft-entra-id.mjs
 init_error2();
 init_logger();
 init_base64();
@@ -46559,7 +44937,7 @@ var getMicrosoftPublicKey = /* @__PURE__ */ __name(async (kid, tenant, authority
   return await importJWK(jwk, jwk.alg ?? "RS256");
 }, "getMicrosoftPublicKey");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/naver.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/naver.mjs
 var naver = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://nid.naver.com/oauth2.0/token";
   return {
@@ -46620,7 +44998,7 @@ var naver = /* @__PURE__ */ __name((options) => {
   };
 }, "naver");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/notion.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/notion.mjs
 var notion = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.notion.com/v1/oauth/token";
   return {
@@ -46690,7 +45068,7 @@ var notion = /* @__PURE__ */ __name((options) => {
   };
 }, "notion");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/paybin.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/paybin.mjs
 init_error2();
 init_logger();
 var paybin = /* @__PURE__ */ __name((options) => {
@@ -46767,7 +45145,7 @@ var paybin = /* @__PURE__ */ __name((options) => {
   };
 }, "paybin");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/paypal.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/paypal.mjs
 init_error2();
 init_logger();
 var paypal = /* @__PURE__ */ __name((options) => {
@@ -46879,7 +45257,7 @@ var paypal = /* @__PURE__ */ __name((options) => {
   };
 }, "paypal");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/polar.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/polar.mjs
 var polar = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.polar.sh/v1/oauth2/token";
   return {
@@ -46946,7 +45324,7 @@ var polar = /* @__PURE__ */ __name((options) => {
   };
 }, "polar");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/railway.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/railway.mjs
 var authorizationEndpoint2 = "https://backboard.railway.com/oauth/auth";
 var tokenEndpoint2 = "https://backboard.railway.com/oauth/token";
 var userinfoEndpoint = "https://backboard.railway.com/oauth/me";
@@ -47016,7 +45394,7 @@ var railway = /* @__PURE__ */ __name((options) => {
   };
 }, "railway");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/utils/email.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/utils/email.mjs
 init_zod();
 var PLACEHOLDER_EMAIL_DOMAIN = "placeholder.invalid";
 function createPlaceholderEmail({ identifier, namespace }) {
@@ -47026,7 +45404,7 @@ function createPlaceholderEmail({ identifier, namespace }) {
 }
 __name(createPlaceholderEmail, "createPlaceholderEmail");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/reddit.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/reddit.mjs
 var reddit = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://www.reddit.com/api/v1/access_token";
   const tokenRequestOptions = {
@@ -47101,7 +45479,7 @@ var reddit = /* @__PURE__ */ __name((options) => {
   };
 }, "reddit");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/roblox.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/roblox.mjs
 var roblox = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://apis.roblox.com/oauth/v1/token";
   return {
@@ -47166,7 +45544,7 @@ var roblox = /* @__PURE__ */ __name((options) => {
   };
 }, "roblox");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/salesforce.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/salesforce.mjs
 init_error2();
 init_logger();
 var salesforce = /* @__PURE__ */ __name((options) => {
@@ -47249,7 +45627,7 @@ var salesforce = /* @__PURE__ */ __name((options) => {
   };
 }, "salesforce");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/slack.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/slack.mjs
 var slack = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://slack.com/api/openid.connect.token";
   return {
@@ -47313,7 +45691,7 @@ var slack = /* @__PURE__ */ __name((options) => {
   };
 }, "slack");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/spotify.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/spotify.mjs
 var spotify = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://accounts.spotify.com/api/token";
   return {
@@ -47378,7 +45756,7 @@ var spotify = /* @__PURE__ */ __name((options) => {
   };
 }, "spotify");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/tiktok.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/tiktok.mjs
 var tiktok = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://open.tiktokapis.com/v2/oauth/token/";
   const tokenEndpointAuth = {
@@ -47453,7 +45831,7 @@ var tiktok = /* @__PURE__ */ __name((options) => {
   };
 }, "tiktok");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/twitch.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/twitch.mjs
 init_logger();
 var twitch = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://id.twitch.tv/oauth2/token";
@@ -47524,7 +45902,7 @@ var twitch = /* @__PURE__ */ __name((options) => {
   };
 }, "twitch");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/twitter.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/twitter.mjs
 var twitter = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://api.x.com/2/oauth2/token";
   return {
@@ -47608,7 +45986,7 @@ var twitter = /* @__PURE__ */ __name((options) => {
   };
 }, "twitter");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/vercel.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/vercel.mjs
 init_error2();
 var vercel = /* @__PURE__ */ __name((options) => {
   return {
@@ -47663,7 +46041,7 @@ var vercel = /* @__PURE__ */ __name((options) => {
   };
 }, "vercel");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/vk.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/vk.mjs
 var vk = /* @__PURE__ */ __name((options) => {
   const tokenEndpoint4 = "https://id.vk.com/oauth2/auth";
   return {
@@ -47739,7 +46117,7 @@ var vk = /* @__PURE__ */ __name((options) => {
   };
 }, "vk");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/wechat.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/wechat.mjs
 var wechat = /* @__PURE__ */ __name((options) => {
   return {
     id: "wechat",
@@ -47827,7 +46205,7 @@ var wechat = /* @__PURE__ */ __name((options) => {
   };
 }, "wechat");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/zoom.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/zoom.mjs
 var zoom = /* @__PURE__ */ __name((userOptions) => {
   const options = {
     pkce: true,
@@ -47884,7 +46262,7 @@ var zoom = /* @__PURE__ */ __name((userOptions) => {
   };
 }, "zoom");
 
-// ../../node_modules/.pnpm/@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_e9528d1d2fa7801341cf7df0306510db/node_modules/@better-auth/core/dist/social-providers/index.mjs
+// ../../node_modules/.pnpm/@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better-fetch+fetch@1.3.2_better-call_4e6abc5770e5b6084e1066fa802afb79/node_modules/@better-auth/core/dist/social-providers/index.mjs
 init_zod();
 var socialProviders = {
   apple,
@@ -47927,7 +46305,7 @@ var socialProviders = {
 var socialProviderList = Object.keys(socialProviders);
 var SocialProviderListEnum = _enum(socialProviderList).or(string2());
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/account.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/account.mjs
 init_zod();
 function parseStoredScopes(scope) {
   if (!scope) return [];
@@ -48502,11 +46880,67 @@ var accountInfo = createAuthEndpoint("/account-info", {
   });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/hide-metadata.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/oauth2/callback.mjs
+init_json();
+async function exchangeOAuthCallback(ctx, provider2, callback) {
+  if (callback.iss && provider2.issuer && callback.iss !== provider2.issuer) {
+    ctx.context.logger.error("OAuth issuer mismatch", {
+      expected: provider2.issuer,
+      received: callback.iss
+    });
+    return { error: OAUTH_CALLBACK_ERROR_CODES.ISSUER_MISMATCH };
+  }
+  if (provider2.requiresIdTokenNonce && !callback.idTokenNonce) {
+    ctx.context.logger.error("OAuth id_token nonce binding required but no expected nonce was found in state", { providerId: provider2.id });
+    return { error: OAUTH_CALLBACK_ERROR_CODES.NONCE_BINDING_MISSING };
+  }
+  let tokens;
+  try {
+    tokens = await provider2.validateAuthorizationCode({
+      code: callback.code,
+      codeVerifier: callback.codeVerifier,
+      deviceId: callback.deviceId,
+      redirectURI: `${ctx.context.baseURL}${getOAuthCallbackPath(provider2)}`
+    });
+  } catch (error3) {
+    ctx.context.logger.error("Failed to validate authorization code", error3);
+    return { error: OAUTH_CALLBACK_ERROR_CODES.INVALID_CODE };
+  }
+  if (!tokens) return { error: OAUTH_CALLBACK_ERROR_CODES.INVALID_CODE };
+  const result = await provider2.getUserInfo({
+    ...tokens,
+    expectedIdTokenNonce: callback.idTokenNonce,
+    /**
+    * The user object from the provider
+    * This is only available for some providers like Apple
+    */
+    user: safeJSONParse(callback.user) ?? void 0
+  });
+  if (!result?.user) {
+    ctx.context.logger.error("Unable to get user info");
+    return { error: OAUTH_CALLBACK_ERROR_CODES.UNABLE_TO_GET_USER_INFO };
+  }
+  const accountKey = await resolveOAuthAccountKey(provider2, tokens, result.data).catch((error3) => {
+    ctx.context.logger.error("Unable to derive provider account identity", {
+      providerId: provider2.id,
+      error: error3
+    });
+    return null;
+  });
+  if (!accountKey) return { error: OAUTH_CALLBACK_ERROR_CODES.UNABLE_TO_GET_USER_INFO };
+  return {
+    tokens,
+    userInfo: result.user,
+    providerProfile: toOAuthProfileRecord(result.data),
+    accountKey
+  };
+}
+__name(exchangeOAuthCallback, "exchangeOAuthCallback");
+
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/hide-metadata.mjs
 var HIDE_METADATA = { scope: "server" };
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/callback.mjs
-init_json();
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/callback.mjs
 init_zod();
 var schema2 = object({
   code: string2().optional(),
@@ -48589,56 +47023,16 @@ var callbackOAuth = createAuthEndpoint("/callback/:id", {
     c.context.logger.warn("OAuth provider not found", { providerId: c.params.id });
     throw redirectOnError2(OAUTH_CALLBACK_ERROR_CODES.PROVIDER_NOT_FOUND);
   }
-  if (iss && provider2.issuer && iss !== provider2.issuer) {
-    c.context.logger.error("OAuth issuer mismatch", {
-      expected: provider2.issuer,
-      received: iss
-    });
-    throw redirectOnError2(OAUTH_CALLBACK_ERROR_CODES.ISSUER_MISMATCH);
-  }
-  if (provider2.requiresIdTokenNonce && !idTokenNonce) {
-    c.context.logger.error("OAuth id_token nonce binding required but no expected nonce was found in state", { providerId: provider2.id });
-    throw redirectOnError2(OAUTH_CALLBACK_ERROR_CODES.NONCE_BINDING_MISSING);
-  }
-  let tokens;
-  try {
-    tokens = await provider2.validateAuthorizationCode({
-      code,
-      codeVerifier,
-      deviceId: device_id,
-      redirectURI: `${c.context.baseURL}${getOAuthCallbackPath(provider2)}`
-    });
-  } catch (e) {
-    c.context.logger.error("", e);
-    throw redirectOnError2(OAUTH_CALLBACK_ERROR_CODES.INVALID_CODE);
-  }
-  if (!tokens) throw redirectOnError2(OAUTH_CALLBACK_ERROR_CODES.INVALID_CODE);
-  const parsedUserData = userData ? safeJSONParse(userData) : null;
-  const providerResult = await provider2.getUserInfo({
-    ...tokens,
-    ...idTokenNonce ? { expectedIdTokenNonce: idTokenNonce } : {},
-    /**
-    * The user object from the provider
-    * This is only available for some providers like Apple
-    */
-    user: parsedUserData ?? void 0
+  const exchanged = await exchangeOAuthCallback(c, provider2, {
+    code,
+    codeVerifier,
+    iss,
+    deviceId: device_id,
+    user: userData,
+    idTokenNonce
   });
-  if (!providerResult?.user) {
-    c.context.logger.error("Unable to get user info");
-    return redirectOnError2(OAUTH_CALLBACK_ERROR_CODES.UNABLE_TO_GET_USER_INFO);
-  }
-  const userInfo = providerResult.user;
-  const providerProfile = toOAuthProfileRecord(providerResult.data);
-  let accountKey;
-  try {
-    accountKey = await resolveOAuthAccountKey(provider2, tokens, providerResult.data);
-  } catch (error4) {
-    c.context.logger.error("Unable to derive provider account identity", {
-      providerId: provider2.id,
-      error: error4
-    });
-    return redirectOnError2(OAUTH_CALLBACK_ERROR_CODES.UNABLE_TO_GET_USER_INFO);
-  }
+  if (exchanged.error) throw redirectOnError2(exchanged.error);
+  const { tokens, userInfo, providerProfile, accountKey } = exchanged;
   const { accountId } = accountKey;
   if (!callbackURL) {
     c.context.logger.error("No callback URL found");
@@ -48707,7 +47101,7 @@ var callbackOAuth = createAuthEndpoint("/callback/:id", {
   throw c.redirect(toRedirectTo);
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/error.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/error.mjs
 init_env();
 function sanitize(input) {
   return input.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/&(?!amp;|lt;|gt;|quot;|#39;|#x[0-9a-fA-F]+;|#[0-9]+;)/g, "&amp;");
@@ -49091,7 +47485,7 @@ var error2 = createAuthEndpoint("/error", {
   return new Response(html(c.context.options, safeCode, safeDescription), { headers: { "Content-Type": "text/html" } });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/ok.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/ok.mjs
 var ok = createAuthEndpoint("/ok", {
   method: "GET",
   metadata: {
@@ -49115,7 +47509,7 @@ var ok = createAuthEndpoint("/ok", {
   return ctx.json({ ok: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/password.mjs
 init_error2();
 function assertPasswordNotTooShort(ctx, password) {
   if (password.length < ctx.context.password.config.minPasswordLength) {
@@ -49176,7 +47570,7 @@ async function checkPassword(userId, c) {
 }
 __name(checkPassword, "checkPassword");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/password.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/password.mjs
 init_error2();
 init_id();
 init_zod();
@@ -49367,7 +47761,7 @@ var verifyPassword2 = createAuthEndpoint("/verify-password", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/sign-in.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/sign-in.mjs
 init_error2();
 init_zod();
 var socialSignInBodySchema = object({
@@ -49721,7 +48115,7 @@ var signInEmail = /* @__PURE__ */ __name(() => createAuthEndpoint("/sign-in/emai
   });
 }), "signInEmail");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/sign-out.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/sign-out.mjs
 init_zod();
 var signOutBodySchema = object({
   callbackURL: string2().meta({ description: "The URL to redirect to after provider logout" }).optional(),
@@ -49814,7 +48208,7 @@ var signOut = createAuthEndpoint("/sign-out", {
   return ctx.json(signOutResponse());
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/sign-up.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/sign-up.mjs
 init_env();
 init_error2();
 init_id();
@@ -50060,7 +48454,7 @@ var signUpEmail = /* @__PURE__ */ __name(() => createAuthEndpoint("/sign-up/emai
   });
 }), "signUpEmail");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/update-session.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/update-session.mjs
 init_error2();
 init_zod();
 var updateSessionBodySchema = record(string2().meta({ description: "Field name must be a string" }), any());
@@ -50112,7 +48506,7 @@ var updateSession = /* @__PURE__ */ __name(() => createAuthEndpoint("/update-ses
   return ctx.json({ session: parseSessionOutput(ctx.context.options, newSession) });
 }), "updateSession");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/routes/update-user.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/routes/update-user.mjs
 init_error2();
 init_zod();
 var updateUserBodySchema = record(string2().meta({ description: "Field name must be a string" }), any());
@@ -50602,7 +48996,7 @@ var changeEmail = createAuthEndpoint("/change-email", {
   return ctx.json({ status: true });
 });
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/dispatch.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/dispatch.mjs
 init_env();
 init_error2();
 init_pure_index();
@@ -50659,7 +49053,7 @@ async function runBeforeHooks(context, hooks, endpoint, operationId) {
     const route = endpoint.path ?? "/:virtual";
     const result = await withSpan(`hook before ${route} ${hookSource}`, {
       [ATTR_HOOK_TYPE]: "before",
-      [import_semantic_conventions.ATTR_HTTP_ROUTE]: route,
+      [ATTR_HTTP_ROUTE]: route,
       [ATTR_CONTEXT]: hookSource,
       [ATTR_OPERATION_ID]: operationId
     }, () => hook.handler({
@@ -50695,7 +49089,7 @@ async function runAfterHooks(context, hooks, endpoint, operationId) {
     const route = endpoint.path ?? "/:virtual";
     const result = await withSpan(`hook after ${route} ${hookSource}`, {
       [ATTR_HOOK_TYPE]: "after",
-      [import_semantic_conventions.ATTR_HTTP_ROUTE]: route,
+      [ATTR_HTTP_ROUTE]: route,
       [ATTR_CONTEXT]: hookSource,
       [ATTR_OPERATION_ID]: operationId
     }, () => hook.handler(context)).catch((e) => {
@@ -50773,7 +49167,7 @@ async function dispatchAuthEndpoint(endpoint, input) {
     headers: input.headers ? new Headers(input.headers) : void 0
   };
   return withSpan(`${methodName} ${route}`, {
-    [import_semantic_conventions.ATTR_HTTP_ROUTE]: route,
+    [ATTR_HTTP_ROUTE]: route,
     [ATTR_OPERATION_ID]: operationId
   }, async () => runWithEndpointContext(internalContext, async () => {
     const { beforeHooks, afterHooks } = getHooks(internalContext.context);
@@ -50799,7 +49193,7 @@ async function dispatchAuthEndpoint(endpoint, input) {
     internalContext.returnHeaders = true;
     internalContext.returnStatus = true;
     const result = await runWithEndpointContext(internalContext, () => withSpan(`handler ${route}`, {
-      [import_semantic_conventions.ATTR_HTTP_ROUTE]: route,
+      [ATTR_HTTP_ROUTE]: route,
       [ATTR_OPERATION_ID]: operationId
     }, () => endpoint(internalContext))).catch((e) => {
       if (isAPIError2(e)) return {
@@ -50843,7 +49237,7 @@ async function dispatchAuthEndpoint(endpoint, input) {
 }
 __name(dispatchAuthEndpoint, "dispatchAuthEndpoint");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/to-auth-endpoints.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/to-auth-endpoints.mjs
 init_error2();
 async function resolveDynamicContext(rawCtx, input) {
   if (rawCtx.baseURL) return rawCtx;
@@ -50886,7 +49280,7 @@ function toAuthEndpoints(endpoints, ctx) {
 }
 __name(toAuthEndpoints, "toAuthEndpoints");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/api/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/api/index.mjs
 init_env();
 init_error2();
 init_pure_index();
@@ -50959,7 +49353,7 @@ function getEndpoints(ctx, options) {
       const authContext = await ctx;
       return withSpan(`middleware ${m.path} ${plugin.id}`, {
         [ATTR_HOOK_TYPE]: "middleware",
-        [import_semantic_conventions.ATTR_HTTP_ROUTE]: m.path,
+        [ATTR_HTTP_ROUTE]: m.path,
         [ATTR_CONTEXT]: `plugin:${plugin.id}`
       }, () => m.middleware({
         ...context,
@@ -51052,7 +49446,7 @@ var router = /* @__PURE__ */ __name((ctx, options) => {
         const response = await withSpan(`onResponse ${plugin.id}`, {
           [ATTR_HOOK_TYPE]: "onResponse",
           [ATTR_CONTEXT]: `plugin:${plugin.id}`,
-          [import_semantic_conventions.ATTR_HTTP_RESPONSE_STATUS_CODE]: res.status
+          [ATTR_HTTP_RESPONSE_STATUS_CODE]: res.status
         }, () => plugin.onResponse(res, ctx));
         if (response) return response.response;
       }
@@ -53143,7 +51537,7 @@ async function handleApi(request, env2, auth) {
 }
 __name(handleApi, "handleApi");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/adapter-base.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/adapter-base.mjs
 init_env();
 async function getBaseAdapter(options, handleDirectDatabase) {
   let adapter;
@@ -53167,7 +51561,7 @@ async function getBaseAdapter(options, handleDirectDatabase) {
 }
 __name(getBaseAdapter, "getBaseAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/adapter-kysely.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/adapter-kysely.mjs
 init_error2();
 async function getAdapter(options) {
   return getBaseAdapter(options, async (opts) => {
@@ -53183,7 +51577,7 @@ async function getAdapter(options) {
 }
 __name(getAdapter, "getAdapter");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/get-schema.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/get-schema.mjs
 init_internal();
 function buildSchema(config3) {
   const { indexesByTable, tables } = getAuthTablesWithResolvedIndexes(config3);
@@ -53232,7 +51626,7 @@ function buildSchema(config3) {
 }
 __name(buildSchema, "buildSchema");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/db/get-migration.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/db/get-migration.mjs
 init_env();
 init_error2();
 init_dist3();
@@ -53249,6 +51643,7 @@ var map = {
     ],
     number: [
       "int4",
+      "int8",
       "integer",
       "bigint",
       "smallint",
@@ -53916,10 +52311,10 @@ async function getMigrations(config3, { throwOnUnsafe = true } = {}) {
 }
 __name(getMigrations, "getMigrations");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/utils/constants.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/utils/constants.mjs
 var DEFAULT_SECRET = "better-auth-secret-12345678901234567890";
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/secret-utils.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/context/secret-utils.mjs
 init_error2();
 function estimateEntropy(str) {
   const unique = new Set(str).size;
@@ -53970,13 +52365,13 @@ function buildSecretConfig(secrets, legacySecret) {
 }
 __name(buildSecretConfig, "buildSecretConfig");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/create-context.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/context/create-context.mjs
 init_env();
 init_error2();
 init_id();
 init_internal();
 
-// ../../node_modules/.pnpm/@better-auth+telemetry@1.7.10_@better-auth+core@1.7.10_@better-auth+utils@0.5.0_@better_625d6952c06f65c6938be90461a7287e/node_modules/@better-auth/telemetry/dist/index.mjs
+// ../../node_modules/.pnpm/@better-auth+telemetry@1.7.12_@better-auth+core@1.7.12_@better-auth+utils@0.5.0_@better_4a1ad187fa3bae5c913a95ed8a6c8f30/node_modules/@better-auth/telemetry/dist/index.mjs
 init_env();
 init_base64();
 init_random();
@@ -54362,7 +52757,7 @@ async function createTelemetry(options, context) {
 }
 __name(createTelemetry, "createTelemetry");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/create-context.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/context/create-context.mjs
 function estimateEntropy2(str) {
   const unique = new Set(str).size;
   if (unique === 0) return 0;
@@ -54569,7 +52964,7 @@ Most of the features of Better Auth will not work correctly.`);
 }
 __name(createAuthContext, "createAuthContext");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/context/init.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/context/init.mjs
 init_error2();
 init_dist3();
 var init = /* @__PURE__ */ __name(async (options) => {
@@ -54584,7 +52979,7 @@ var init = /* @__PURE__ */ __name(async (options) => {
   return ctx;
 }, "init");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/auth/base.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/auth/base.mjs
 init_error2();
 init_internal();
 var createBetterAuth = /* @__PURE__ */ __name((options, initFn) => {
@@ -54645,12 +53040,12 @@ var createBetterAuth = /* @__PURE__ */ __name((options, initFn) => {
   };
 }, "createBetterAuth");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/auth/full.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/auth/full.mjs
 var betterAuth = /* @__PURE__ */ __name((options) => {
   return createBetterAuth(options, init);
 }, "betterAuth");
 
-// ../../node_modules/.pnpm/better-auth@1.7.10_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_df60974d74a1be3ba2e9e0a2eea1d462/node_modules/better-auth/dist/index.mjs
+// ../../node_modules/.pnpm/better-auth@1.7.12_react-dom@19.3.1_react@19.3.1__react@19.3.1_vitest@5.0.5_@types+node_14e5982f014cc4a3bbedae97662fa584/node_modules/better-auth/dist/index.mjs
 init_env();
 init_error2();
 init_error_codes();
